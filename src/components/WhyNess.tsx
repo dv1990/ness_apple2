@@ -234,7 +234,7 @@ function LuxuryManufacturingShowcase() {
 
     const interval = setInterval(() => {
       setActiveStep((prev) => (prev + 1) % STEPS.length)
-    }, 4000)
+    }, 8000)
     return () => clearInterval(interval)
   }, [isPlaying])
 
