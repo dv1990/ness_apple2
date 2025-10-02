@@ -213,90 +213,98 @@ const CommercialEnhanced = () => {
           </div>
         </section>
 
-        {/* Benefits Section - Apple-grade 4 Cards */}
+        {/* Benefits Section - Why Solar + ESS */}
         <section className="py-32 bg-background">
           <div className="max-w-7xl mx-auto px-8">
             
-            {/* Grid of 4 cards */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Grid: 4 equal cards (3/12 desktop, 6/12 tablet, 12/12 mobile) */}
+            <div className="grid grid-cols-12 gap-6">
               
               {/* Card 1: Bill Savings */}
-              <div className="group bg-card border border-border hover:border-energy/40 rounded-3xl p-10 transition-all duration-300 hover:shadow-[0_0_40px_-10px_rgba(var(--energy),0.2)] cursor-pointer">
-                <div className="space-y-6">
-                  {/* Icon */}
-                  <div className="w-14 h-14 rounded-2xl bg-energy/5 flex items-center justify-center group-hover:bg-energy/10 transition-colors">
-                    <TrendingUp className="w-7 h-7 text-energy stroke-[1.5]" />
+              <div className="col-span-12 md:col-span-6 lg:col-span-3 group">
+                <div className="bg-white dark:bg-card rounded-2xl shadow-soft hover:shadow-lifted p-6 h-full transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                  <div className="space-y-4">
+                    {/* Icon - line art, single color */}
+                    <div className="w-8 h-8 flex items-center justify-start">
+                      <TrendingUp className="w-8 h-8 text-muted-foreground group-hover:text-energy transition-colors stroke-[1.5]" />
+                    </div>
+                    
+                    {/* Title */}
+                    <h3 className="text-xl font-semibold text-foreground leading-tight">
+                      Bill Savings
+                    </h3>
+                    
+                    {/* Description - max 14 words, 2 lines */}
+                    <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
+                      Store solar for peak time; save 20–40% annually.
+                    </p>
                   </div>
-                  
-                  {/* Title */}
-                  <h3 className="text-2xl font-semibold text-foreground leading-tight">
-                    Bill Savings
-                  </h3>
-                  
-                  {/* Description */}
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    Store the sun's energy and use it at peak times. Save 20–40% annually.
-                  </p>
                 </div>
               </div>
 
               {/* Card 2: Demand Charge Control */}
-              <div className="group bg-card border border-border hover:border-energy/40 rounded-3xl p-10 transition-all duration-300 hover:shadow-[0_0_40px_-10px_rgba(var(--energy),0.2)] cursor-pointer">
-                <div className="space-y-6">
-                  {/* Icon */}
-                  <div className="w-14 h-14 rounded-2xl bg-energy/5 flex items-center justify-center group-hover:bg-energy/10 transition-colors">
-                    <BarChart3 className="w-7 h-7 text-energy stroke-[1.5]" />
+              <div className="col-span-12 md:col-span-6 lg:col-span-3 group">
+                <div className="bg-white dark:bg-card rounded-2xl shadow-soft hover:shadow-lifted p-6 h-full transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                  <div className="space-y-4">
+                    {/* Icon - line art, single color */}
+                    <div className="w-8 h-8 flex items-center justify-start">
+                      <BarChart3 className="w-8 h-8 text-muted-foreground group-hover:text-energy transition-colors stroke-[1.5]" />
+                    </div>
+                    
+                    {/* Title */}
+                    <h3 className="text-xl font-semibold text-foreground leading-tight">
+                      Demand Charge Control
+                    </h3>
+                    
+                    {/* Description - max 14 words, 2 lines */}
+                    <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
+                      Clip short, expensive spikes; lower demand penalties.
+                    </p>
                   </div>
-                  
-                  {/* Title */}
-                  <h3 className="text-2xl font-semibold text-foreground leading-tight">
-                    Demand Charge Control
-                  </h3>
-                  
-                  {/* Description */}
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    Clip expensive power spikes and reduce demand penalties.
-                  </p>
                 </div>
               </div>
 
               {/* Card 3: Resilience */}
-              <div className="group bg-card border border-border hover:border-energy/40 rounded-3xl p-10 transition-all duration-300 hover:shadow-[0_0_40px_-10px_rgba(var(--energy),0.2)] cursor-pointer">
-                <div className="space-y-6">
-                  {/* Icon */}
-                  <div className="w-14 h-14 rounded-2xl bg-energy/5 flex items-center justify-center group-hover:bg-energy/10 transition-colors">
-                    <Shield className="w-7 h-7 text-energy stroke-[1.5]" />
+              <div className="col-span-12 md:col-span-6 lg:col-span-3 group">
+                <div className="bg-white dark:bg-card rounded-2xl shadow-soft hover:shadow-lifted p-6 h-full transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                  <div className="space-y-4">
+                    {/* Icon - line art, single color */}
+                    <div className="w-8 h-8 flex items-center justify-start">
+                      <Shield className="w-8 h-8 text-muted-foreground group-hover:text-energy transition-colors stroke-[1.5]" />
+                    </div>
+                    
+                    {/* Title */}
+                    <h3 className="text-xl font-semibold text-foreground leading-tight">
+                      Resilience
+                    </h3>
+                    
+                    {/* Description - max 14 words, 2 lines */}
+                    <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
+                      Grid fails? Operations keep running.
+                    </p>
                   </div>
-                  
-                  {/* Title */}
-                  <h3 className="text-2xl font-semibold text-foreground leading-tight">
-                    Resilience
-                  </h3>
-                  
-                  {/* Description */}
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    Grid fails? Operations keep running. No downtime, no losses.
-                  </p>
                 </div>
               </div>
 
               {/* Card 4: Diesel Replacement */}
-              <div className="group bg-card border border-border hover:border-energy/40 rounded-3xl p-10 transition-all duration-300 hover:shadow-[0_0_40px_-10px_rgba(var(--energy),0.2)] cursor-pointer">
-                <div className="space-y-6">
-                  {/* Icon */}
-                  <div className="w-14 h-14 rounded-2xl bg-energy/5 flex items-center justify-center group-hover:bg-energy/10 transition-colors">
-                    <Fuel className="w-7 h-7 text-energy stroke-[1.5]" />
+              <div className="col-span-12 md:col-span-6 lg:col-span-3 group">
+                <div className="bg-white dark:bg-card rounded-2xl shadow-soft hover:shadow-lifted p-6 h-full transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                  <div className="space-y-4">
+                    {/* Icon - line art, single color */}
+                    <div className="w-8 h-8 flex items-center justify-start">
+                      <Fuel className="w-8 h-8 text-muted-foreground group-hover:text-energy transition-colors stroke-[1.5]" />
+                    </div>
+                    
+                    {/* Title */}
+                    <h3 className="text-xl font-semibold text-foreground leading-tight">
+                      Diesel Replacement
+                    </h3>
+                    
+                    {/* Description - max 14 words, 2 lines */}
+                    <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
+                      Avoid gensets: cut fuel, noise, and maintenance.
+                    </p>
                   </div>
-                  
-                  {/* Title */}
-                  <h3 className="text-2xl font-semibold text-foreground leading-tight">
-                    Diesel Replacement
-                  </h3>
-                  
-                  {/* Description */}
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    Cut fuel bills, noise, and pollution by avoiding gensets.
-                  </p>
                 </div>
               </div>
 
