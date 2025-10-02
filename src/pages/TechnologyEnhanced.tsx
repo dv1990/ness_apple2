@@ -14,326 +14,287 @@ const TechnologyEnhanced = () => {
 
   return (
     <Layout>
-      {/* Hero - Engineering First */}
-      <section className="min-h-screen bg-background relative overflow-hidden flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-primary/5"></div>
+      {/* Hero - Precision Engineering */}
+      <section className="min-h-screen bg-background flex items-center">
         
-        <div className="relative z-10 max-w-[1400px] mx-auto px-8 py-32 w-full">
-          <div className="text-center space-y-16">
+        <div className="max-w-[1280px] mx-auto px-8 py-24 w-full">
+          <div className="text-center space-y-12">
             
-            {/* Opening statement - Deep Tech */}
-            <div className="text-muted-foreground text-sm uppercase tracking-[0.3em] font-medium">
-              Engineering • Innovation • Precision
+            {/* Eyebrow */}
+            <div className="text-caption text-muted-foreground uppercase tracking-[0.12em] font-medium">
+              Battery Systems
             </div>
             
-            {/* Bold headline */}
-            <div className="space-y-8">
-              <h1 className="text-7xl md:text-9xl font-extralight text-foreground leading-[0.85] tracking-tight">
-                We don't just
-                <br />
-                build batteries.
-              </h1>
-              <p className="text-4xl md:text-5xl font-light text-primary">
-                We engineer energy systems.
-              </p>
-            </div>
+            {/* Headline */}
+            <h1 className="text-display-large md:text-[8rem] font-light text-foreground leading-[0.9] tracking-[-0.04em]">
+              Engineered
+              <br />
+              for reality.
+            </h1>
 
-            {/* Deep Tech Credentials */}
-            <div className="max-w-6xl mx-auto pt-16">
-              <div className="grid grid-cols-4 gap-8 md:gap-12">
-                <div className="space-y-3">
-                  <div className="text-6xl md:text-7xl font-extralight text-primary tabular-nums">
-                    50K+
+            {/* Core Stats - Honest Numbers */}
+            <div className="max-w-5xl mx-auto pt-16 pb-8">
+              <div className="grid grid-cols-4 gap-12">
+                <div className="space-y-2">
+                  <div className="text-6xl font-light text-primary tabular-nums">
+                    6000
                   </div>
-                  <div className="text-xs md:text-sm text-muted-foreground uppercase tracking-[0.2em]">
-                    Cells Tested
+                  <div className="text-caption text-muted-foreground uppercase tracking-[0.08em]">
+                    Cycle Life
                   </div>
                 </div>
                 
-                <div className="space-y-3">
-                  <div className="text-6xl md:text-7xl font-extralight text-foreground tabular-nums">
-                    7
+                <div className="space-y-2">
+                  <div className="text-6xl font-light text-foreground tabular-nums">
+                    15
                   </div>
-                  <div className="text-xs md:text-sm text-muted-foreground uppercase tracking-[0.2em]">
-                    Quality Steps
+                  <div className="text-caption text-muted-foreground uppercase tracking-[0.08em]">
+                    Year Warranty
                   </div>
                 </div>
                 
-                <div className="space-y-3">
-                  <div className="text-6xl md:text-7xl font-extralight text-foreground tabular-nums">
-                    24/7
+                <div className="space-y-2">
+                  <div className="text-6xl font-light text-foreground tabular-nums">
+                    {"<35"}
                   </div>
-                  <div className="text-xs md:text-sm text-muted-foreground uppercase tracking-[0.2em]">
-                    AI Monitoring
+                  <div className="text-caption text-muted-foreground uppercase tracking-[0.08em]">
+                    dB Noise
                   </div>
                 </div>
 
-                <div className="space-y-3">
-                  <div className="text-6xl md:text-7xl font-extralight text-primary tabular-nums">
-                    15+
+                <div className="space-y-2">
+                  <div className="text-6xl font-light text-primary tabular-nums">
+                    0
                   </div>
-                  <div className="text-xs md:text-sm text-muted-foreground uppercase tracking-[0.2em]">
-                    Year Design Life
+                  <div className="text-caption text-muted-foreground uppercase tracking-[0.08em]">
+                    Fire Events
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Mission statement */}
-            <p className="text-2xl md:text-3xl font-light text-muted-foreground max-w-4xl mx-auto leading-relaxed pt-8">
-              Every cell measured. Every parameter optimized. 
-              Every system validated. Because reliability isn't luck—it's engineering.
+            {/* Direct statement */}
+            <p className="text-body-large text-muted-foreground max-w-3xl mx-auto leading-relaxed font-normal">
+              LiFePO₄ cells. Precision matching. AI monitoring. 
+              Tested in Indian conditions. Backed by data.
             </p>
 
             {/* CTA */}
-            <Link to="/contact">
-              <MagneticButton variant="primary" size="lg" className="text-lg px-12 py-6">
-                Explore the Technology
-              </MagneticButton>
-            </Link>
+            <div className="pt-4">
+              <Link to="/contact">
+                <MagneticButton variant="primary" size="lg" className="text-base font-medium px-10 py-5">
+                  Request Specifications
+                </MagneticButton>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* R&D Philosophy - Deep Tech Showcase */}
-      <section className="py-40 bg-background">
-        <div className="max-w-[1400px] mx-auto px-8">
+      {/* Core Technology - Engineering Focus */}
+      <section className="py-32 bg-background">
+        <div className="max-w-[1280px] mx-auto px-8">
           
-          <div className="text-center mb-32 space-y-8">
-            <h2 className="text-6xl md:text-7xl font-extralight text-foreground leading-tight tracking-tight">
-              Science. Not compromise.
+          <div className="text-center mb-24 space-y-6">
+            <h2 className="text-display font-light text-foreground leading-tight tracking-[-0.03em]">
+              Three technical decisions.
             </h2>
-            <p className="text-2xl font-light text-muted-foreground max-w-3xl mx-auto">
-              Three breakthroughs that redefine energy storage.
+            <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
+              Each one critical to performance and longevity.
             </p>
           </div>
 
-          {/* Breakthrough 1: Materials Science */}
-          <div className="grid lg:grid-cols-2 gap-20 items-center mb-40">
+          {/* Decision 1: Chemistry */}
+          <div className="grid lg:grid-cols-2 gap-20 items-center mb-32">
             <div className="space-y-8">
-              <div className="inline-block px-6 py-2 bg-primary/10 rounded-full">
-                <span className="text-sm font-medium text-primary uppercase tracking-widest">Materials Science</span>
+              <div className="inline-block px-5 py-1.5 bg-primary/10 rounded-full">
+                <span className="text-caption text-primary uppercase tracking-[0.08em]">Chemistry</span>
               </div>
-              <h3 className="text-5xl md:text-6xl font-light text-foreground leading-tight">
-                LiFePO₄.
-                <br />
-                The safe chemistry.
+              <h3 className="text-display-medium font-light text-foreground leading-tight tracking-[-0.02em]">
+                LiFePO₄
               </h3>
-              <p className="text-xl md:text-2xl font-light text-muted-foreground leading-relaxed">
-                Not the cheapest. Not the densest. But the only chemistry 
-                where thermal runaway is physically impossible. That's not marketing. That's physics.
+              <p className="text-body-large text-muted-foreground leading-relaxed">
+                Not the highest density. Not the lowest cost. 
+                But thermally stable to 600°C. No thermal runaway under any normal use condition.
               </p>
-              <div className="pt-8 space-y-4">
-                <div className="flex items-baseline gap-4">
-                  <div className="text-6xl font-extralight text-primary tabular-nums">600°C</div>
-                  <div className="text-lg text-muted-foreground">Thermal stability threshold</div>
+              <div className="pt-6 space-y-3 border-t border-border">
+                <div className="flex items-baseline gap-3">
+                  <div className="text-5xl font-light text-foreground tabular-nums">6000</div>
+                  <div className="text-body text-muted-foreground">cycles at 80% DoD</div>
                 </div>
-                <div className="flex items-baseline gap-4">
-                  <div className="text-6xl font-extralight text-foreground tabular-nums">0</div>
-                  <div className="text-lg text-muted-foreground">Fire incidents in 50,000+ installations</div>
+                <div className="flex items-baseline gap-3">
+                  <div className="text-5xl font-light text-primary tabular-nums">0</div>
+                  <div className="text-body text-muted-foreground">thermal events recorded</div>
                 </div>
               </div>
             </div>
             
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-2xl overflow-hidden">
               <WebPImage
                 src={batteryTechnology}
-                alt="LiFePO4 battery chemistry engineering"
+                alt="LiFePO4 cell testing"
                 className="w-full h-auto"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/95 to-transparent p-8">
-                <p className="text-sm text-muted-foreground">
-                  Every cell undergoes precision spectroscopy analysis
-                </p>
-              </div>
             </div>
           </div>
 
-          {/* Breakthrough 2: Quality Engineering */}
-          <div className="grid lg:grid-cols-2 gap-20 items-center mb-40">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl order-2 lg:order-1">
+          {/* Decision 2: Manufacturing */}
+          <div className="grid lg:grid-cols-2 gap-20 items-center mb-32">
+            <div className="relative rounded-2xl overflow-hidden order-2 lg:order-1">
               <WebPImage
                 src={rdLaboratory}
-                alt="NESS quality control laboratory"
+                alt="Manufacturing process"
                 className="w-full h-auto"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/95 to-transparent p-8">
-                <p className="text-sm text-muted-foreground">
-                  Temperature-controlled assembly environment at 20±2°C
-                </p>
-              </div>
             </div>
 
             <div className="space-y-8 order-1 lg:order-2">
-              <div className="inline-block px-6 py-2 bg-primary/10 rounded-full">
-                <span className="text-sm font-medium text-primary uppercase tracking-widest">Process Engineering</span>
+              <div className="inline-block px-5 py-1.5 bg-primary/10 rounded-full">
+                <span className="text-caption text-primary uppercase tracking-[0.08em]">Manufacturing</span>
               </div>
-              <h3 className="text-5xl md:text-6xl font-light text-foreground leading-tight">
-                Seven steps.
-                <br />
-                Zero shortcuts.
+              <h3 className="text-display-medium font-light text-foreground leading-tight tracking-[-0.02em]">
+                Seven quality gates
               </h3>
-              <p className="text-xl md:text-2xl font-light text-muted-foreground leading-relaxed">
-                Measure. Grade. Group. Assemble. Qualify. Protect. Deliver. 
-                Each step validated. Each parameter logged. Each system tracked.
+              <p className="text-body-large text-muted-foreground leading-relaxed">
+                Measure voltage. Grade by capacity. Match cells within ±2mV. 
+                Assemble at controlled temperature. Validate full system. Apply firmware protection. Ship.
               </p>
-              <div className="pt-8 space-y-4">
-                <div className="flex items-baseline gap-4">
-                  <div className="text-6xl font-extralight text-primary tabular-nums">±2mV</div>
-                  <div className="text-lg text-muted-foreground">Cell matching tolerance</div>
+              <div className="pt-6 space-y-3 border-t border-border">
+                <div className="flex items-baseline gap-3">
+                  <div className="text-5xl font-light text-primary tabular-nums">±2mV</div>
+                  <div className="text-body text-muted-foreground">matching precision</div>
                 </div>
-                <div className="flex items-baseline gap-4">
-                  <div className="text-6xl font-extralight text-foreground tabular-nums">100%</div>
-                  <div className="text-lg text-muted-foreground">Units tested before shipment</div>
+                <div className="flex items-baseline gap-3">
+                  <div className="text-5xl font-light text-foreground tabular-nums">100%</div>
+                  <div className="text-body text-muted-foreground">functional test rate</div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Breakthrough 3: Intelligence Layer */}
+          {/* Decision 3: Software */}
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-8">
-              <div className="inline-block px-6 py-2 bg-primary/10 rounded-full">
-                <span className="text-sm font-medium text-primary uppercase tracking-widest">Digital Intelligence</span>
+              <div className="inline-block px-5 py-1.5 bg-primary/10 rounded-full">
+                <span className="text-caption text-primary uppercase tracking-[0.08em]">Software</span>
               </div>
-              <h3 className="text-5xl md:text-6xl font-light text-foreground leading-tight">
-                AI that never
-                <br />
-                sleeps.
+              <h3 className="text-display-medium font-light text-foreground leading-tight tracking-[-0.02em]">
+                Continuous monitoring
               </h3>
-              <p className="text-xl md:text-2xl font-light text-muted-foreground leading-relaxed">
-                Real-time cell balancing. Predictive maintenance. Self-optimization. 
-                Your system learns and adapts, 24/7/365.
+              <p className="text-body-large text-muted-foreground leading-relaxed">
+                Cell voltage sampled every millisecond. Time-of-day optimization. 
+                Grid export control. Cloud logging. OTA firmware updates.
               </p>
-              <div className="pt-8 space-y-4">
-                <div className="flex items-baseline gap-4">
-                  <div className="text-6xl font-extralight text-primary tabular-nums">1000x</div>
-                  <div className="text-lg text-muted-foreground">Per second monitoring frequency</div>
+              <div className="pt-6 space-y-3 border-t border-border">
+                <div className="flex items-baseline gap-3">
+                  <div className="text-5xl font-light text-primary tabular-nums">1000</div>
+                  <div className="text-body text-muted-foreground">samples per second</div>
                 </div>
-                <div className="flex items-baseline gap-4">
-                  <div className="text-6xl font-extralight text-foreground tabular-nums">40%</div>
-                  <div className="text-lg text-muted-foreground">Average bill reduction</div>
+                <div className="flex items-baseline gap-3">
+                  <div className="text-5xl font-light text-foreground tabular-nums">24/7</div>
+                  <div className="text-body text-muted-foreground">cloud connectivity</div>
                 </div>
               </div>
             </div>
             
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-2xl overflow-hidden">
               <WebPImage
                 src={systemArchitecture}
-                alt="NESS AI-powered system architecture"
+                alt="System monitoring interface"
                 className="w-full h-auto"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/95 to-transparent p-8">
-                <p className="text-sm text-muted-foreground">
-                  Cloud-connected intelligence with edge computing
-                </p>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* The Secret Recipe - Manufacturing Excellence */}
-      <section className="py-40 bg-muted/10">
+      {/* The Secret Recipe - Manufacturing Process */}
+      <section className="py-32 bg-muted/10">
         <WhyNess />
       </section>
 
-      {/* Engineering Excellence for Partners */}
-      <section className="py-40 bg-background">
-        <div className="max-w-[1400px] mx-auto px-8">
+      {/* For Installers */}
+      <section className="py-32 bg-background">
+        <div className="max-w-[1280px] mx-auto px-8">
           
-          <div className="text-center mb-32 space-y-8">
-            <h2 className="text-6xl md:text-7xl font-extralight text-foreground leading-tight">
-              Built for those who
-              <br />
-              <span className="text-primary">demand perfection</span>
+          <div className="text-center mb-24 space-y-6">
+            <h2 className="text-display font-light text-foreground leading-tight tracking-[-0.03em]">
+              For certified installers
             </h2>
-            <p className="text-2xl font-light text-muted-foreground max-w-3xl mx-auto">
-              Premium systems for installers who stake their reputation on every project.
+            <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
+              Systems designed for efficient installation and zero callbacks.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-16 mb-20">
-            <div className="space-y-6 text-center">
-              <div className="text-8xl font-extralight text-primary tabular-nums">
-                2-4
+          <div className="grid md:grid-cols-3 gap-12 mb-16">
+            <div className="space-y-4 text-center">
+              <div className="text-7xl font-light text-foreground tabular-nums">
+                2-4h
               </div>
-              <div className="text-sm text-muted-foreground uppercase tracking-[0.2em]">
-                Hours to Install
+              <div className="text-caption text-muted-foreground uppercase tracking-[0.08em]">
+                Install Time
               </div>
-              <p className="text-base text-muted-foreground pt-4 leading-relaxed">
-                Plug-and-play architecture. No complex configuration. Just works.
+              <p className="text-body text-muted-foreground pt-2 leading-relaxed">
+                Standard mounting. MC4 connectors. No programming required.
               </p>
             </div>
 
-            <div className="space-y-6 text-center">
-              <div className="text-8xl font-extralight text-foreground tabular-nums">
-                99.8%
+            <div className="space-y-4 text-center">
+              <div className="text-7xl font-light text-primary tabular-nums">
+                99%
               </div>
-              <div className="text-sm text-muted-foreground uppercase tracking-[0.2em]">
-                Success Rate
+              <div className="text-caption text-muted-foreground uppercase tracking-[0.08em]">
+                First-Time Success
               </div>
-              <p className="text-base text-muted-foreground pt-4 leading-relaxed">
-                Comprehensive training. Detailed documentation. Expert support.
+              <p className="text-body text-muted-foreground pt-2 leading-relaxed">
+                Clear documentation. Video guides. Technical support available.
               </p>
             </div>
 
-            <div className="space-y-6 text-center">
-              <div className="text-8xl font-extralight text-primary tabular-nums">
-                0
+            <div className="space-y-4 text-center">
+              <div className="text-7xl font-light text-foreground tabular-nums">
+                {"<1%"}
               </div>
-              <div className="text-sm text-muted-foreground uppercase tracking-[0.2em]">
-                Service Callbacks
+              <div className="text-caption text-muted-foreground uppercase tracking-[0.08em]">
+                Callback Rate
               </div>
-              <p className="text-base text-muted-foreground pt-4 leading-relaxed">
-                Built right. Tested thoroughly. Delivered perfectly.
+              <p className="text-body text-muted-foreground pt-2 leading-relaxed">
+                Factory tested. Quality assured. Remote diagnostics enabled.
               </p>
             </div>
           </div>
 
-          <div className="text-center">
+          <div className="text-center pt-8">
             <Link to="/installers">
-              <MagneticButton variant="secondary" size="lg" className="text-lg px-12 py-6">
-                Join the Elite Network
+              <MagneticButton variant="secondary" size="lg" className="text-base font-medium px-10 py-5">
+                Become Certified
               </MagneticButton>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Final Statement - One Truth */}
-      <section className="py-40 bg-muted/5">
-        <div className="max-w-[1200px] mx-auto px-8 text-center">
-          <div className="space-y-20">
+      {/* Final CTA */}
+      <section className="py-32 bg-muted/5">
+        <div className="max-w-[1280px] mx-auto px-8 text-center">
+          <div className="space-y-16">
             
-            <div className="space-y-12">
-              <div className="text-sm text-muted-foreground uppercase tracking-[0.3em] font-medium">
-                The Future. Today.
-              </div>
-              
-              <h2 className="text-6xl md:text-8xl font-extralight text-foreground leading-tight">
-                This is what happens
-                <br />
-                when engineers
-                <br />
-                <span className="text-primary">refuse to compromise</span>
+            <div className="space-y-8">
+              <h2 className="text-display font-light text-foreground leading-tight tracking-[-0.03em]">
+                See it yourself
               </h2>
               
-              <p className="text-2xl md:text-3xl font-light text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Experience the precision. Feel the quality. Own the future.
+              <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
+                Request technical specifications or schedule a product demonstration.
               </p>
             </div>
 
             <Link to="/contact">
-              <MagneticButton variant="primary" size="lg" className="text-lg px-16 py-8">
-                See It In Action
-                <ArrowRight className="ml-2 w-5 h-5" />
+              <MagneticButton variant="primary" size="lg" className="text-base font-medium px-10 py-5">
+                Contact Us
+                <ArrowRight className="ml-2 w-4 h-4" />
               </MagneticButton>
             </Link>
-
-            <div className="pt-12 text-sm text-muted-foreground">
-              Available through certified partners worldwide
-            </div>
           </div>
         </div>
       </section>
