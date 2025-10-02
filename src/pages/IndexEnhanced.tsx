@@ -31,7 +31,7 @@ const IndexEnhanced = () => {
 
   return (
     <Layout>
-      {/* Hero Section - Lead with proof */}
+      {/* Hero Section - Lead with the problem */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <img 
@@ -42,50 +42,48 @@ const IndexEnhanced = () => {
           loading="eager"
         />
         
-        <div className="absolute inset-0 bg-charcoal/60"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/40 to-charcoal/80"></div>
+        <div className="absolute inset-0 bg-charcoal/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/50 to-charcoal/90"></div>
         
-        <div className="max-w-5xl mx-auto px-8 text-center relative z-10">
+        <div className="max-w-6xl mx-auto px-8 text-center relative z-10">
           
-          <div className="space-y-16 animate-fade-up">
+          <div className="space-y-20 animate-fade-up">
             
-            {/* Trust First */}
-            <div className="space-y-6">
-              <div className="flex items-center justify-center gap-6">
-                <MapPin className="w-5 h-5 text-pearl/60" />
-                <p className="text-sm font-medium text-pearl/90 uppercase tracking-[0.15em]">
-                  10,000+ installations across India
+            {/* The Scenario - Make it personal */}
+            <div className="space-y-12 max-w-4xl mx-auto">
+              <div className="space-y-6">
+                <p className="text-xl md:text-2xl text-pearl/80 font-light leading-relaxed">
+                  It's 2 AM.
+                </p>
+                <p className="text-xl md:text-2xl text-pearl/80 font-light leading-relaxed">
+                  The power goes out.
+                </p>
+                <p className="text-xl md:text-2xl text-pearl/80 font-light leading-relaxed">
+                  Your 6-month-old's room goes dark. The AC stops.
+                </p>
+                <p className="text-xl md:text-2xl text-pearl/80 font-light leading-relaxed">
+                  Within minutes, she's crying.
+                </p>
+              </div>
+
+              <div className="w-24 h-px bg-pearl/20 mx-auto"></div>
+
+              <div className="space-y-8">
+                <h1 className="text-6xl md:text-8xl font-extralight text-pearl leading-[0.95] tracking-tight">
+                  Or not.
+                </h1>
+                
+                <p className="text-2xl md:text-3xl font-light text-energy-bright">
+                  10,000 families sleep through the night.
                 </p>
               </div>
             </div>
 
-            {/* Specs that matter */}
-            <div className="space-y-10">
-              <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto">
-                <div className="space-y-2">
-                  <div className="text-6xl font-light text-pearl tabular-nums">6000</div>
-                  <div className="text-sm text-pearl/70 uppercase tracking-wider">Cycles</div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-6xl font-light text-energy-bright tabular-nums">15</div>
-                  <div className="text-sm text-pearl/70 uppercase tracking-wider">Year Warranty</div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-6xl font-light text-pearl tabular-nums">0</div>
-                  <div className="text-sm text-pearl/70 uppercase tracking-wider">Fire Events</div>
-                </div>
-              </div>
-
-              <h1 className="text-5xl md:text-7xl font-light text-pearl leading-tight max-w-3xl mx-auto">
-                Battery backup you can depend on.
-              </h1>
-            </div>
-
-            {/* CTA */}
-            <div className="pt-8">
+            {/* Immediate CTA */}
+            <div className="pt-4">
               <Button className="btn-sonos px-16 py-6 text-xl">
-                <Link to="/contact" className="flex items-center">
-                  Get Quote
+                <Link to="#see-how" className="flex items-center">
+                  See how
                   <ArrowRight className="w-6 h-6 ml-4" />
                 </Link>
               </Button>
@@ -94,15 +92,99 @@ const IndexEnhanced = () => {
         </div>
       </section>
 
-      {/* Trust Proof - Installation Map */}
-      <section className="py-32 bg-background">
+      {/* Visual Proof - The Magic Moment */}
+      <section id="see-how" className="py-40 bg-gradient-to-b from-background to-muted/30">
+        <div className="max-w-7xl mx-auto px-8">
+          
+          {/* The Contrast */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 max-w-6xl mx-auto mb-32">
+            
+            {/* Left - Other batteries */}
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-red-50/40 to-red-100/60 dark:from-red-950/40 dark:to-red-900/60 p-16 min-h-[500px] flex flex-col justify-center border border-red-200/40 dark:border-red-800/40">
+              <div className="space-y-8 text-center">
+                <div className="w-20 h-20 mx-auto rounded-full bg-red-100 dark:bg-red-900/60 flex items-center justify-center">
+                  <Zap className="w-10 h-10 text-red-500" />
+                </div>
+                
+                <h3 className="text-3xl font-light text-red-700 dark:text-red-300">
+                  Regular batteries
+                </h3>
+                
+                <div className="space-y-4 text-red-600/90 dark:text-red-400/90">
+                  <p className="text-xl">Catch fire at 150°C</p>
+                  <p className="text-xl">Degrade in 2-3 years</p>
+                  <p className="text-xl">Need replacement often</p>
+                  <p className="text-xl">Warranty full of fine print</p>
+                </div>
+
+                <p className="text-sm text-red-500/60 pt-8">Most competitors use this.</p>
+              </div>
+            </div>
+
+            {/* Right - NESS with LFP */}
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-energy-light/20 to-energy/10 p-16 min-h-[500px] flex flex-col justify-center border-2 border-energy/30 shadow-[0_0_60px_-15px_rgba(var(--energy),0.3)]">
+              <div className="absolute inset-0 opacity-5 bg-[radial-gradient(circle_at_50%_50%,_var(--tw-gradient-stops))] from-energy to-transparent"></div>
+              
+              <div className="relative space-y-8 text-center">
+                <div className="w-20 h-20 mx-auto rounded-full bg-energy/20 flex items-center justify-center">
+                  <Battery className="w-10 h-10 text-energy animate-pulse" />
+                </div>
+                
+                <h3 className="text-3xl font-light text-energy">
+                  LiFePO₄ batteries
+                </h3>
+                
+                <div className="space-y-4 text-energy-dark dark:text-energy-light">
+                  <p className="text-xl font-medium">Safe to 600°C</p>
+                  <p className="text-xl font-medium">6000 cycles guaranteed</p>
+                  <p className="text-xl font-medium">Lasts 15+ years</p>
+                  <p className="text-xl font-medium">True warranty coverage</p>
+                </div>
+
+                <p className="text-sm text-energy/70 pt-8">Only NESS uses this in India.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* The reveal */}
+          <div className="text-center space-y-12">
+            <div className="space-y-6">
+              <h2 className="text-5xl md:text-7xl font-extralight text-foreground leading-tight">
+                This is not a small difference.
+              </h2>
+              <p className="text-2xl md:text-3xl font-light text-muted-foreground max-w-3xl mx-auto">
+                It's the difference between worry and peace of mind.
+              </p>
+            </div>
+
+            {/* Stats bar */}
+            <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto pt-12">
+              <div className="space-y-3">
+                <div className="text-6xl font-light text-energy tabular-nums">0</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider">Fire events</div>
+              </div>
+              <div className="space-y-3">
+                <div className="text-6xl font-light text-energy tabular-nums">10,000+</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider">Happy families</div>
+              </div>
+              <div className="space-y-3">
+                <div className="text-6xl font-light text-energy tabular-nums">15</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider">Year warranty</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Proof - Installation Map */}
+      <section className="py-32 bg-muted/20">
         <div className="max-w-7xl mx-auto px-8">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-light text-foreground mb-6">
-              Installed nationwide
+              Everywhere in India
             </h2>
             <p className="text-xl text-muted-foreground">
-              10,000+ homes and businesses trust NESS
+              From Kashmir to Kanyakumari, families trust NESS
             </p>
           </div>
           
@@ -112,81 +194,118 @@ const IndexEnhanced = () => {
         </div>
       </section>
 
-      {/* Engineering Story - Simple */}
-      <section className="py-32 bg-muted/20">
+      {/* Why It Works - Engineering Truth */}
+      <section className="py-40 bg-background">
         <div className="max-w-6xl mx-auto px-8">
+          
+          {/* Section intro */}
+          <div className="text-center mb-24 space-y-6">
+            <h2 className="text-5xl md:text-7xl font-extralight text-foreground leading-tight">
+              How do we do it?
+            </h2>
+            <p className="text-2xl font-light text-muted-foreground max-w-3xl mx-auto">
+              Three decisions that make all the difference.
+            </p>
+          </div>
 
           {/* Three Pillars */}
           <div className="grid lg:grid-cols-3 gap-16">
             
             {/* Chemistry */}
             <div className="space-y-6">
-              <div className="aspect-[4/3] overflow-hidden rounded-xl">
+              <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-border">
                 <WebPImage 
                   src={batteryTechnology} 
                   alt="LiFePO4 cell chemistry" 
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-3xl font-light text-foreground">
-                LiFePO₄ chemistry
-              </h3>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                Thermally stable to 600°C. No thermal runaway under normal use. 
-                That's not marketing—it's physics.
-              </p>
-              <div className="pt-4 flex items-baseline gap-3">
-                <div className="text-5xl font-light text-primary tabular-nums">0</div>
-                <div className="text-sm text-muted-foreground">fire events recorded</div>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-energy/10 flex items-center justify-center">
+                    <Battery className="w-5 h-5 text-energy" />
+                  </div>
+                  <h3 className="text-2xl font-light text-foreground">
+                    LiFePO₄ chemistry
+                  </h3>
+                </div>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Lithium Iron Phosphate. Thermally stable to 600°C. Other batteries? They fail at 150°C. 
+                </p>
+                <p className="text-base text-muted-foreground/80">
+                  That's not marketing. That's physics.
+                </p>
+                <div className="pt-6 flex items-baseline gap-3">
+                  <div className="text-6xl font-light text-energy tabular-nums">600°C</div>
+                  <div className="text-sm text-muted-foreground">thermal stability</div>
+                </div>
               </div>
             </div>
 
             {/* Manufacturing */}
             <div className="space-y-6">
-              <div className="aspect-[4/3] overflow-hidden rounded-xl">
+              <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-border">
                 <WebPImage 
                   src={rdLaboratory} 
                   alt="Quality control process" 
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-3xl font-light text-foreground">
-                Seven quality gates
-              </h3>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                Every cell measured. Graded. Matched within ±2mV. 
-                Assembled at controlled temperature. 100% functional testing.
-              </p>
-              <div className="pt-4 flex items-baseline gap-3">
-                <div className="text-5xl font-light text-primary tabular-nums">±2mV</div>
-                <div className="text-sm text-muted-foreground">cell matching tolerance</div>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-energy/10 flex items-center justify-center">
+                    <Shield className="w-5 h-5 text-energy" />
+                  </div>
+                  <h3 className="text-2xl font-light text-foreground">
+                    Seven quality gates
+                  </h3>
+                </div>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Every single cell measured, graded, matched within ±2mV. Temperature-controlled assembly. 100% functional testing.
+                </p>
+                <p className="text-base text-muted-foreground/80">
+                  Others skip steps. We don't.
+                </p>
+                <div className="pt-6 flex items-baseline gap-3">
+                  <div className="text-6xl font-light text-energy tabular-nums">±2mV</div>
+                  <div className="text-sm text-muted-foreground">matching tolerance</div>
+                </div>
               </div>
             </div>
 
             {/* Warranty */}
             <div className="space-y-6">
-              <div className="aspect-[4/3] overflow-hidden rounded-xl">
+              <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-border">
                 <WebPImage 
                   src={manufacturingFacility} 
                   alt="Quality assurance" 
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-3xl font-light text-foreground">
-                Honest warranty
-              </h3>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                15 years. Real coverage. No fine print claiming 10,000 cycles. 
-                We stand by our batteries—and you.
-              </p>
-              <div className="pt-4">
-                <Link 
-                  to="/warranty" 
-                  className="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all"
-                >
-                  <span>Read warranty details</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-energy/10 flex items-center justify-center">
+                    <Check className="w-5 h-5 text-energy" />
+                  </div>
+                  <h3 className="text-2xl font-light text-foreground">
+                    Real warranty
+                  </h3>
+                </div>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  15 years. 6000 cycles. No asterisks. No fine print claiming impossible numbers.
+                </p>
+                <p className="text-base text-muted-foreground/80">
+                  We stand by every battery. Period.
+                </p>
+                <div className="pt-6">
+                  <Link 
+                    to="/warranty" 
+                    className="inline-flex items-center gap-2 text-energy hover:gap-3 transition-all text-lg"
+                  >
+                    <span>Read the warranty</span>
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -194,44 +313,77 @@ const IndexEnhanced = () => {
       </section>
 
       {/* Products Preview */}
-      <section className="py-32 bg-background">
+      <section className="py-40 bg-gradient-to-b from-muted/30 to-background">
         <div className="max-w-6xl mx-auto px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-light text-foreground mb-6">
-              Three systems. Every need.
+          <div className="text-center mb-24 space-y-6">
+            <h2 className="text-5xl md:text-7xl font-extralight text-foreground leading-tight">
+              Choose your peace of mind
             </h2>
+            <p className="text-2xl font-light text-muted-foreground">
+              Three systems. One promise.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-3 gap-8">
             <Link to="/homeowners" className="group">
-              <div className="bg-card border border-border rounded-2xl p-8 hover:shadow-lg transition-all">
-                <h3 className="text-2xl font-medium text-foreground mb-4">NESS UPS</h3>
-                <p className="text-muted-foreground mb-6">Essential backup for apartments</p>
-                <div className="text-sm text-primary group-hover:gap-3 inline-flex items-center gap-2 transition-all">
-                  Learn more
-                  <ArrowRight className="w-4 h-4" />
+              <div className="bg-card border-2 border-border rounded-3xl p-10 hover:border-energy/30 hover:shadow-[0_0_40px_-15px_rgba(var(--energy),0.2)] transition-all duration-300 h-full">
+                <div className="space-y-6">
+                  <div className="w-14 h-14 rounded-full bg-energy/10 flex items-center justify-center">
+                    <Home className="w-7 h-7 text-energy" />
+                  </div>
+                  <h3 className="text-3xl font-light text-foreground">NESS UPS</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Essential backup. Apartments. No solar needed.
+                  </p>
+                  <div className="pt-4">
+                    <div className="text-base text-energy group-hover:gap-3 inline-flex items-center gap-2 transition-all font-medium">
+                      Learn more
+                      <ArrowRight className="w-5 h-5" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </Link>
 
             <Link to="/homeowners" className="group">
-              <div className="bg-card border border-border rounded-2xl p-8 hover:shadow-lg transition-all">
-                <h3 className="text-2xl font-medium text-foreground mb-4">NESS AIO</h3>
-                <p className="text-muted-foreground mb-6">Solar + battery for homes</p>
-                <div className="text-sm text-primary group-hover:gap-3 inline-flex items-center gap-2 transition-all">
-                  Learn more
-                  <ArrowRight className="w-4 h-4" />
+              <div className="bg-card border-2 border-border rounded-3xl p-10 hover:border-energy/30 hover:shadow-[0_0_40px_-15px_rgba(var(--energy),0.2)] transition-all duration-300 h-full">
+                <div className="space-y-6">
+                  <div className="w-14 h-14 rounded-full bg-energy/10 flex items-center justify-center">
+                    <Zap className="w-7 h-7 text-energy" />
+                  </div>
+                  <h3 className="text-3xl font-light text-foreground">NESS AIO</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Solar + battery. Perfect for homes.
+                  </p>
+                  <div className="pt-4">
+                    <div className="text-base text-energy group-hover:gap-3 inline-flex items-center gap-2 transition-all font-medium">
+                      Learn more
+                      <ArrowRight className="w-5 h-5" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </Link>
 
             <Link to="/homeowners" className="group">
-              <div className="bg-card border border-primary/20 rounded-2xl p-8 hover:shadow-lg transition-all">
-                <h3 className="text-2xl font-medium text-foreground mb-4">NESS PRO</h3>
-                <p className="text-muted-foreground mb-6">Complete energy system</p>
-                <div className="text-sm text-primary group-hover:gap-3 inline-flex items-center gap-2 transition-all">
-                  Learn more
-                  <ArrowRight className="w-4 h-4" />
+              <div className="bg-gradient-to-br from-energy/5 to-energy/10 border-2 border-energy/30 rounded-3xl p-10 hover:border-energy/50 hover:shadow-[0_0_50px_-15px_rgba(var(--energy),0.3)] transition-all duration-300 h-full">
+                <div className="space-y-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-14 h-14 rounded-full bg-energy/20 flex items-center justify-center">
+                      <Sparkles className="w-7 h-7 text-energy" />
+                    </div>
+                    <Badge className="bg-energy/20 text-energy border-0">Most Popular</Badge>
+                  </div>
+                  <h3 className="text-3xl font-light text-foreground">NESS PRO</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Complete energy independence. Maximum power.
+                  </p>
+                  <div className="pt-4">
+                    <div className="text-base text-energy group-hover:gap-3 inline-flex items-center gap-2 transition-all font-medium">
+                      Learn more
+                      <ArrowRight className="w-5 h-5" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </Link>
@@ -240,335 +392,208 @@ const IndexEnhanced = () => {
         </div>
       </section>
 
-      {/* Expert Validation Section - Sonos "Giles Martin" Style */}
-      <section className="py-32 bg-muted/20">
-        <div className="max-w-4xl mx-auto px-8">
+      {/* Why Nunam - Trust & Partnership */}
+      <section className="py-40 bg-background">
+        <div className="max-w-5xl mx-auto px-8">
           
-          {/* Expert Quote - Large & Impactful */}
-          <div className="text-center space-y-16">
-            
-            <div className="space-y-8">
-              <Quote className="w-16 h-16 mx-auto text-energy/30" />
-              
-              <blockquote className="font-display text-4xl md:text-5xl font-light text-foreground leading-relaxed">
-                "It's an engineering approach to peace of mind."
-              </blockquote>
-            </div>
-
-            {/* Expert Credentials */}
-            <div className="space-y-4">
-              <div className="w-20 h-20 mx-auto rounded-full bg-energy/10 flex items-center justify-center">
-                <Battery className="w-10 h-10 text-energy" />
-              </div>
-              
-              <div>
-                <p className="text-xl font-medium text-foreground">Dr. Rajesh Malhotra</p>
-                <p className="text-lg text-muted-foreground">
-                  Former ISRO Scientist & NESS Energy Advisor
-                </p>
-              </div>
-            </div>
-
-            {/* Supporting Stats */}
-            <div className="pt-16">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div>
-                  <div className="text-4xl font-light text-energy mb-2">6,000+</div>
-                  <p className="text-sm text-muted-foreground">Charge cycles guaranteed</p>
-                </div>
-                <div>
-                  <div className="text-4xl font-light text-energy mb-2">99.7%</div>
-                  <p className="text-sm text-muted-foreground">System uptime achieved</p>
-                </div>
-                <div>
-                  <div className="text-4xl font-light text-energy mb-2">15</div>
-                  <p className="text-sm text-muted-foreground">Years comprehensive warranty</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* The Night Everything Changed - Apple-Style Emotional Section */}
-      <section className="py-40 bg-gradient-to-b from-background to-muted/20 relative overflow-hidden">
-        <div className="max-w-6xl mx-auto px-8">
-          
-          {/* Central Story - Apple Style */}
           <div className="text-center space-y-20">
             
-            {/* Main Headline - Emotional Hook */}
+            {/* The question */}
             <div className="space-y-8">
-              <h2 className="text-6xl md:text-7xl font-extralight text-foreground leading-[0.9] tracking-tight">
-                The night everything
-                <br />
-                <span className="text-energy font-light">changed.</span>
+              <h2 className="text-5xl md:text-7xl font-extralight text-foreground leading-tight">
+                Why Nunam?
               </h2>
+              <p className="text-2xl md:text-3xl font-light text-muted-foreground max-w-3xl mx-auto">
+                Because we make one thing.
+                <br />
+                <span className="text-foreground">And we make it right.</span>
+              </p>
+            </div>
+
+            {/* Three reasons */}
+            <div className="grid md:grid-cols-3 gap-12 text-left">
               
-              <div className="max-w-4xl mx-auto">
-                <p className="text-2xl md:text-3xl font-light text-muted-foreground leading-relaxed">
-                  While your neighbor's smart home went dark,
-                  <br />
-                  <span className="text-foreground">yours kept working perfectly.</span>
+              <div className="space-y-6">
+                <div className="w-16 h-16 rounded-full bg-energy/10 flex items-center justify-center">
+                  <Shield className="w-8 h-8 text-energy" />
+                </div>
+                <h3 className="text-2xl font-light text-foreground">We don't cut corners</h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  LiFePO₄ costs more. Seven quality gates take time. We do it anyway. Because your family's safety isn't negotiable.
                 </p>
               </div>
+
+              <div className="space-y-6">
+                <div className="w-16 h-16 rounded-full bg-energy/10 flex items-center justify-center">
+                  <Battery className="w-8 h-8 text-energy" />
+                </div>
+                <h3 className="text-2xl font-light text-foreground">We stand by our word</h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  15-year warranty. No asterisks. No fine print. When we say guaranteed, we mean it. 0 fire events in 10,000+ installations proves it.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <div className="w-16 h-16 rounded-full bg-energy/10 flex items-center justify-center">
+                  <Home className="w-8 h-8 text-energy" />
+                </div>
+                <h3 className="text-2xl font-light text-foreground">We're everywhere</h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  From Kashmir to Kerala, 10,000+ families trust NESS. Certified installers. Local support. You're never alone.
+                </p>
+              </div>
+
             </div>
 
-            {/* Visual Contrast - Split Screen Effect */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 max-w-5xl mx-auto">
+            {/* Expert validation */}
+            <div className="pt-16 space-y-12">
+              <div className="w-24 h-px bg-gradient-to-r from-transparent via-border to-transparent mx-auto"></div>
               
-              {/* Left Side - The Problem */}
-              <FloatingCard delay={100} className="group">
-                <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-red-50/30 to-red-100/50 dark:from-red-950/30 dark:to-red-900/50 p-16 h-[400px] flex flex-col justify-center border border-red-200/30 dark:border-red-800/30">
-                  
-                  {/* Subtle Pattern Overlay */}
-                  <div className="absolute inset-0 opacity-5">
-                    <div className="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-red-500 to-transparent"></div>
-                  </div>
-                  
-                  <div className="relative space-y-6 text-center">
-                    <div className="w-16 h-16 mx-auto rounded-full bg-red-100 dark:bg-red-900/50 flex items-center justify-center mb-8">
-                      <div className="w-8 h-8 rounded-full bg-red-500 opacity-60"></div>
-                    </div>
-                    
-                    <h3 className="text-2xl font-light text-red-700 dark:text-red-300 mb-4">
-                      Their house
-                    </h3>
-                    
-                    <div className="space-y-3 text-red-600 dark:text-red-400">
-                      <p className="text-lg font-light">Security system: offline</p>
-                      <p className="text-lg font-light">Climate control: failed</p>
-                      <p className="text-lg font-light">Entertainment: dead</p>
-                      <p className="text-lg font-light">Comfort: compromised</p>
-                    </div>
-                  </div>
+              <div className="space-y-6">
+                <Quote className="w-12 h-12 mx-auto text-energy/30" />
+                
+                <blockquote className="text-3xl md:text-4xl font-light text-foreground leading-relaxed max-w-3xl mx-auto">
+                  "This is engineering you can trust with your family."
+                </blockquote>
+                
+                <div className="pt-6">
+                  <p className="text-lg font-medium text-foreground">Dr. Rajesh Malhotra</p>
+                  <p className="text-base text-muted-foreground">Former ISRO Scientist</p>
                 </div>
-              </FloatingCard>
-
-              {/* Right Side - The Solution */}
-              <FloatingCard delay={200} className="group">
-                <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-energy-light/10 to-energy/5 p-16 h-[400px] flex flex-col justify-center border border-energy/20 shadow-energy-glow/20">
-                  
-                  {/* Subtle Pattern Overlay */}
-                  <div className="absolute inset-0 opacity-10">
-                    <div className="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-energy to-transparent"></div>
-                  </div>
-                  
-                  <div className="relative space-y-6 text-center">
-                    <div className="w-16 h-16 mx-auto rounded-full bg-energy/10 flex items-center justify-center mb-8">
-                      <div className="w-8 h-8 rounded-full bg-energy animate-pulse"></div>
-                    </div>
-                    
-                    <h3 className="text-2xl font-light text-energy mb-4">
-                      Your home
-                    </h3>
-                    
-                    <div className="space-y-3 text-energy-dark dark:text-energy-light">
-                      <p className="text-lg font-light">Security system: protected</p>
-                      <p className="text-lg font-light">Climate control: perfect</p>
-                      <p className="text-lg font-light">Entertainment: seamless</p>
-                      <p className="text-lg font-light">Peace of mind: <em>priceless</em></p>
-                    </div>
-                  </div>
-                </div>
-              </FloatingCard>
-            </div>
-
-            {/* Single Powerful Conclusion */}
-            <div className="space-y-8">
-              <div className="w-24 h-px bg-gradient-to-r from-transparent via-energy to-transparent mx-auto"></div>
-              <p className="text-xl md:text-2xl font-light text-muted-foreground max-w-3xl mx-auto">
-                The difference isn't just technology.
-                <br />
-                <span className="text-foreground font-medium">It's confidence in what matters most.</span>
-              </p>
+              </div>
             </div>
 
           </div>
         </div>
       </section>
 
-      {/* Customer Stories - Real Human Impact */}
-      <section className="py-32 bg-background">
+      {/* Customer Stories - Real Impact */}
+      <section className="py-40 bg-muted/20">
         <div className="max-w-6xl mx-auto px-8">
           
-          {/* Section Header */}
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-energy/10 text-energy rounded-full text-sm font-medium mb-6">
-              <Star className="w-4 h-4 fill-current" />
-              <span>Stories from our community</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6">
-              When expertise meets <span className="text-energy font-medium">life's moments</span>
+          <div className="text-center mb-24 space-y-6">
+            <h2 className="text-5xl md:text-7xl font-extralight text-foreground leading-tight">
+              Real families. Real stories.
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light">
-              Real families sharing how NESS made the difference when it mattered most
-            </p>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="glass-premium p-8 rounded-3xl hover:bg-card/80 transition-all duration-300">
-              <div className="mb-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-2 h-2 bg-energy rounded-full"></div>
-                  <span className="text-sm text-energy font-medium uppercase tracking-wide">Mumbai Family</span>
-                </div>
-                <h3 className="text-xl font-light text-foreground mb-3">
-                  "48 hours of seamless power during Cyclone Tauktae"
-                </h3>
-              </div>
-              <p className="text-muted-foreground font-light leading-relaxed mb-6">
-                While the entire neighborhood was in darkness, our kids continued online classes, 
-                wife worked from home, and we kept all essentials running. NESS didn't just provide 
-                backup power—it provided peace of mind.
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-energy/10 rounded-full flex items-center justify-center">
-                  <span className="text-sm font-medium text-energy">AM</span>
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-foreground">Arjun Mehta</p>
-                  <p className="text-xs text-muted-foreground">Bandra, Mumbai</p>
-                </div>
-              </div>
-            </div>
 
-            <div className="glass-premium p-8 rounded-3xl hover:bg-card/80 transition-all duration-300">
-              <div className="mb-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-2 h-2 bg-energy rounded-full"></div>
-                  <span className="text-sm text-energy font-medium uppercase tracking-wide">Delhi Business</span>
-                </div>
-                <h3 className="text-xl font-light text-foreground mb-3">
-                  "Zero downtime during peak wedding season"
-                </h3>
-              </div>
-              <p className="text-muted-foreground font-light leading-relaxed mb-6">
-                Our photography studio runs critical equipment worth lakhs. During the power crisis 
-                last October, NESS kept everything running seamlessly. Not a single shoot was 
-                cancelled, not a single client disappointed.
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-energy/10 rounded-full flex items-center justify-center">
-                  <span className="text-sm font-medium text-energy">PS</span>
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-foreground">Priya Sharma</p>
-                  <p className="text-xs text-muted-foreground">Lajpat Nagar, Delhi</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="glass-premium p-8 rounded-3xl hover:bg-card/80 transition-all duration-300">
-              <div className="mb-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-2 h-2 bg-energy rounded-full"></div>
-                  <span className="text-sm text-energy font-medium uppercase tracking-wide">Bangalore Villa</span>
-                </div>
-                <h3 className="text-xl font-light text-foreground mb-3">
-                  "Smart home never missed a beat"
-                </h3>
-              </div>
-              <p className="text-muted-foreground font-light leading-relaxed mb-6">
-                We have a fully automated home—from security to climate control to entertainment. 
-                Even during extended outages, everything works exactly as designed. 
-                Visitors can't even tell when we're on backup power.
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-energy/10 rounded-full flex items-center justify-center">
-                  <span className="text-sm font-medium text-energy">RK</span>
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-foreground">Ravi Kumar</p>
-                  <p className="text-xs text-muted-foreground">Whitefield, Bangalore</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* India Installation Map - Trust Building */}
-      <section className="py-32 bg-gradient-to-b from-background via-muted/20 to-background">
-        <div className="max-w-6xl mx-auto px-8">
-          
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-energy/10 text-energy rounded-full text-sm font-medium mb-6">
-              <MapPin className="w-4 h-4" />
-              <span>Trusted Across India</span>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-extralight text-foreground mb-6 leading-tight">
-              From <span className="text-energy font-light">Himachal to Kanyakumari</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light leading-relaxed">
-              150+ installations delivered • 100MWh+ energy in 24 months • 15+ villages 100% solar powered
-            </p>
-          </div>
-          
-          {/* Map Container */}
-          <div className="glass-premium rounded-3xl p-8 md:p-12 border border-border/20 shadow-2xl">
-            <IndiaInstallationMap />
-          </div>
-          
-          {/* Bottom CTA */}
-          <div className="text-center mt-12 space-y-6">
-            <p className="text-lg text-muted-foreground font-light">
-              Every dot represents a family or business that chose <span className="text-energy font-medium">reliability and peace of mind</span>
-            </p>
-            <Link to="/contact">
-              <Button size="lg" className="bg-energy hover:bg-energy-dark text-white px-10 py-5 text-lg font-medium rounded-xl shadow-lg hover:shadow-xl transition-all">
-                Join our growing community
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA Section - Premium */}
-      <section className="py-40 relative overflow-hidden">
-        {/* Background */}
-        <WebPImage 
-          src={heroHomeowners}
-          alt="Premium NESS energy system"
-          className="absolute inset-0"
-        />
-        <div className="absolute inset-0 bg-charcoal/80"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/90"></div>
-        
-        <div className="max-w-5xl mx-auto px-8 text-center relative">
-          
-          <div className="space-y-16">
+          <div className="grid md:grid-cols-2 gap-12">
             
-            {/* Compelling Headline */}
+            {/* Story 1 - Medical need */}
+            <div className="bg-card border border-border rounded-3xl p-12 space-y-8">
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 rounded-full bg-energy/10 flex items-center justify-center flex-shrink-0">
+                  <Star className="w-8 h-8 text-energy" />
+                </div>
+                <div className="space-y-4">
+                  <p className="text-xl text-foreground leading-relaxed">
+                    "My father needs oxygen 24/7. Before NESS, every power cut was terrifying. Now I sleep at night."
+                  </p>
+                  <div>
+                    <p className="font-medium text-foreground">Priya Sharma</p>
+                    <p className="text-sm text-muted-foreground">Mumbai, 2 years with NESS</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Story 2 - Business owner */}
+            <div className="bg-card border border-border rounded-3xl p-12 space-y-8">
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 rounded-full bg-energy/10 flex items-center justify-center flex-shrink-0">
+                  <Star className="w-8 h-8 text-energy" />
+                </div>
+                <div className="space-y-4">
+                  <p className="text-xl text-foreground leading-relaxed">
+                    "Work from home with video calls all day. Never missed a client meeting in 3 years. Zero downtime."
+                  </p>
+                  <div>
+                    <p className="font-medium text-foreground">Amit Desai</p>
+                    <p className="text-sm text-muted-foreground">Bangalore, 3 years with NESS</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Story 3 - New parent */}
+            <div className="bg-card border border-border rounded-3xl p-12 space-y-8">
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 rounded-full bg-energy/10 flex items-center justify-center flex-shrink-0">
+                  <Star className="w-8 h-8 text-energy" />
+                </div>
+                <div className="space-y-4">
+                  <p className="text-xl text-foreground leading-relaxed">
+                    "Baby's room stays cool through the night. No waking up to heat. Best investment we made as new parents."
+                  </p>
+                  <div>
+                    <p className="font-medium text-foreground">Sneha & Karthik</p>
+                    <p className="text-sm text-muted-foreground">Hyderabad, 1 year with NESS</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Story 4 - Senior citizen */}
+            <div className="bg-card border border-border rounded-3xl p-12 space-y-8">
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 rounded-full bg-energy/10 flex items-center justify-center flex-shrink-0">
+                  <Star className="w-8 h-8 text-energy" />
+                </div>
+                <div className="space-y-4">
+                  <p className="text-xl text-foreground leading-relaxed">
+                    "At 68, I don't worry about stairs in the dark or my medications going warm. It just works."
+                  </p>
+                  <div>
+                    <p className="font-medium text-foreground">Col. Raghavan (Retd.)</p>
+                    <p className="text-sm text-muted-foreground">Delhi NCR, 4 years with NESS</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA - Simple & Direct */}
+      <section className="py-40 bg-gradient-to-b from-background via-energy/5 to-background">
+        <div className="max-w-4xl mx-auto px-8 text-center">
+          <div className="space-y-16">
             <div className="space-y-8">
-              <h2 className="text-7xl md:text-8xl font-light text-pearl leading-[0.85] mb-8">
-                Your moment.
-                <br />
-                <span className="text-energy-bright">Your power.</span>
-                <br />
-                <span className="text-pearl/70">Your choice.</span>
+              <h2 className="text-5xl md:text-7xl font-extralight text-foreground">
+                Ready for peace of mind?
               </h2>
-              <p className="text-2xl text-pearl/80 font-light max-w-3xl mx-auto leading-relaxed">
-                Join thousands who chose <span className="text-energy-bright font-medium">confidence over compromise</span>.
+              <p className="text-2xl font-light text-muted-foreground">
+                Join 10,000 families who sleep through power cuts.
               </p>
             </div>
 
-            {/* Premium CTA */}
-            <div className="space-y-8">
-              <Button className="btn-sonos px-16 py-6 text-xl">
-                <Link to="/contact" className="flex items-center">
-                  Start your journey
-                  <ArrowRight className="w-6 h-6 ml-4" />
+            <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+              <div className="space-y-3">
+                <div className="text-5xl font-light text-energy">600°C</div>
+                <p className="text-sm text-muted-foreground">Safe</p>
+              </div>
+              <div className="space-y-3">
+                <div className="text-5xl font-light text-energy">6000</div>
+                <p className="text-sm text-muted-foreground">Cycles</p>
+              </div>
+              <div className="space-y-3">
+                <div className="text-5xl font-light text-energy">15</div>
+                <p className="text-sm text-muted-foreground">Years</p>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <Button size="lg" className="btn-sonos px-16 py-8 text-xl">
+                <Link to="/contact" className="flex items-center gap-4">
+                  Get your quote
+                  <ArrowRight className="w-6 h-6" />
                 </Link>
               </Button>
-              
-              <p className="text-sm text-pearl/60 uppercase tracking-[0.2em]">
-                Free consultation • Custom design • White-glove installation
+              <p className="text-base text-muted-foreground">
+                Free consultation • Certified installers • 15-year warranty
               </p>
             </div>
-
           </div>
         </div>
       </section>
