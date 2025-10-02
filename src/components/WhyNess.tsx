@@ -307,22 +307,47 @@ function LuxuryManufacturingShowcase() {
         </div>
       </div>
 
-      <div
-        key={activeStep}
-        className="text-center max-w-4xl mx-auto opacity-0 translate-y-8 animate-fade-in"
-      >
-        <h4 className="text-4xl font-light text-foreground mb-8 tracking-tight">{currentStep.title}</h4>
-
-        <p className="text-xl text-muted-foreground font-light leading-relaxed mb-16 max-w-2xl mx-auto">
-          {currentStory}
-        </p>
-
-        <button
-          onClick={() => setIsPlaying(!isPlaying)}
-          className="inline-flex items-center gap-3 px-6 py-3 bg-card/60 hover:bg-card/80 rounded-full text-muted-foreground text-sm font-medium transition-all duration-300 border border-border"
+      <div className="text-center max-w-4xl mx-auto">
+        <div
+          key={activeStep}
+          className="animate-fade-in"
         >
-          {isPlaying ? "Pause" : "Continue"}
-        </button>
+          <h4 className="text-4xl font-light text-foreground mb-6 tracking-tight">{currentStep.title}</h4>
+
+          <p className="text-xl text-muted-foreground font-light leading-relaxed mb-12 max-w-3xl mx-auto min-h-[80px]">
+            {currentStory}
+          </p>
+        </div>
+
+        <div className="flex items-center justify-center gap-4">
+          <button
+            onClick={() => setIsPlaying(!isPlaying)}
+            className="inline-flex items-center gap-3 px-8 py-3 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full text-sm font-medium transition-all duration-300 shadow-lg"
+          >
+            {isPlaying ? "Pause" : "Continue"}
+          </button>
+          
+          <div className="flex gap-2">
+            <button
+              onClick={() => setActiveStep((prev) => (prev - 1 + STEPS.length) % STEPS.length)}
+              className="p-3 bg-card/60 hover:bg-card/80 rounded-full transition-all duration-300 border border-border"
+              aria-label="Previous step"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M15 18l-6-6 6-6"/>
+              </svg>
+            </button>
+            <button
+              onClick={() => setActiveStep((prev) => (prev + 1) % STEPS.length)}
+              className="p-3 bg-card/60 hover:bg-card/80 rounded-full transition-all duration-300 border border-border"
+              aria-label="Next step"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   )
