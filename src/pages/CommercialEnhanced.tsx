@@ -213,47 +213,96 @@ const CommercialEnhanced = () => {
           </div>
         </section>
 
-        {/* Human Benefits - The Real Value */}
-        <StorySection background="muted">
-          <div className="max-w-6xl mx-auto px-8 py-32">
-            <div className="text-center mb-24">
-              <AppleHeadline
-                primary="Four ways we eliminate"
-                secondary="what drains your profits."
-              />
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-12">
-              <HumanBenefit
-                icon={<TrendingUp className="w-10 h-10" />}
-                benefit="Peak Shaving"
-                proof="Slash demand charges by 60%"
-                detail="Our AI predicts your consumption patterns and automatically caps peak loads. What used to cost ₹8 lakhs a month now costs ₹3.2 lakhs."
-              />
+        {/* Benefits Section - Apple-grade 4 Cards */}
+        <section className="py-32 bg-background">
+          <div className="max-w-7xl mx-auto px-8">
+            
+            {/* Grid of 4 cards */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               
-              <HumanBenefit
-                icon={<BarChart3 className="w-10 h-10" />}
-                benefit="Demand Charge Optimization"
-                proof="Pay only for what you actually use"
-                detail="Stop subsidizing the grid's infrastructure. Smart arbitrage buys power when it's cheap, stores it, and delivers when rates spike."
-              />
+              {/* Card 1: Bill Savings */}
+              <div className="group bg-card border border-border hover:border-energy/40 rounded-3xl p-10 transition-all duration-300 hover:shadow-[0_0_40px_-10px_rgba(var(--energy),0.2)] cursor-pointer">
+                <div className="space-y-6">
+                  {/* Icon */}
+                  <div className="w-14 h-14 rounded-2xl bg-energy/5 flex items-center justify-center group-hover:bg-energy/10 transition-colors">
+                    <TrendingUp className="w-7 h-7 text-energy stroke-[1.5]" />
+                  </div>
+                  
+                  {/* Title */}
+                  <h3 className="text-2xl font-semibold text-foreground leading-tight">
+                    Bill Savings
+                  </h3>
+                  
+                  {/* Description */}
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    Store the sun's energy and use it at peak times. Save 20–40% annually.
+                  </p>
+                </div>
+              </div>
 
-              <HumanBenefit
-                icon={<Battery className="w-10 h-10" />}
-                benefit="Microgrid Mode"
-                proof="100% uptime, guaranteed"
-                detail="When the grid fails, you don't. Seamless transition to island mode keeps critical operations running without a flicker."
-              />
+              {/* Card 2: Demand Charge Control */}
+              <div className="group bg-card border border-border hover:border-energy/40 rounded-3xl p-10 transition-all duration-300 hover:shadow-[0_0_40px_-10px_rgba(var(--energy),0.2)] cursor-pointer">
+                <div className="space-y-6">
+                  {/* Icon */}
+                  <div className="w-14 h-14 rounded-2xl bg-energy/5 flex items-center justify-center group-hover:bg-energy/10 transition-colors">
+                    <BarChart3 className="w-7 h-7 text-energy stroke-[1.5]" />
+                  </div>
+                  
+                  {/* Title */}
+                  <h3 className="text-2xl font-semibold text-foreground leading-tight">
+                    Demand Charge Control
+                  </h3>
+                  
+                  {/* Description */}
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    Clip expensive power spikes and reduce demand penalties.
+                  </p>
+                </div>
+              </div>
 
-              <HumanBenefit
-                icon={<Fuel className="w-10 h-10" />}
-                benefit="Diesel Generator Abatement"
-                proof="Silent. Clean. 80% cheaper."
-                detail="Replace noisy, polluting generators with silent battery systems. Zero emissions, zero maintenance headaches, zero guilt."
-              />
+              {/* Card 3: Resilience */}
+              <div className="group bg-card border border-border hover:border-energy/40 rounded-3xl p-10 transition-all duration-300 hover:shadow-[0_0_40px_-10px_rgba(var(--energy),0.2)] cursor-pointer">
+                <div className="space-y-6">
+                  {/* Icon */}
+                  <div className="w-14 h-14 rounded-2xl bg-energy/5 flex items-center justify-center group-hover:bg-energy/10 transition-colors">
+                    <Shield className="w-7 h-7 text-energy stroke-[1.5]" />
+                  </div>
+                  
+                  {/* Title */}
+                  <h3 className="text-2xl font-semibold text-foreground leading-tight">
+                    Resilience
+                  </h3>
+                  
+                  {/* Description */}
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    Grid fails? Operations keep running. No downtime, no losses.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 4: Diesel Replacement */}
+              <div className="group bg-card border border-border hover:border-energy/40 rounded-3xl p-10 transition-all duration-300 hover:shadow-[0_0_40px_-10px_rgba(var(--energy),0.2)] cursor-pointer">
+                <div className="space-y-6">
+                  {/* Icon */}
+                  <div className="w-14 h-14 rounded-2xl bg-energy/5 flex items-center justify-center group-hover:bg-energy/10 transition-colors">
+                    <Fuel className="w-7 h-7 text-energy stroke-[1.5]" />
+                  </div>
+                  
+                  {/* Title */}
+                  <h3 className="text-2xl font-semibold text-foreground leading-tight">
+                    Diesel Replacement
+                  </h3>
+                  
+                  {/* Description */}
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    Cut fuel bills, noise, and pollution by avoiding gensets.
+                  </p>
+                </div>
+              </div>
+
             </div>
           </div>
-        </StorySection>
+        </section>
 
         {/* Scalability Story - Build as You Grow */}
         <StorySection>
