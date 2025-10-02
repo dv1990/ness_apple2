@@ -217,6 +217,14 @@ const CommercialEnhanced = () => {
         <section className="py-32 bg-background">
           <div className="max-w-7xl mx-auto px-8">
             
+            {/* Premium Section Heading */}
+            <div className="text-center mb-20">
+              <h2 className="text-5xl md:text-7xl font-extralight text-foreground leading-tight tracking-tight mb-4">
+                Why Solar + ESS
+              </h2>
+              <div className="w-20 h-px bg-energy mx-auto"></div>
+            </div>
+            
             {/* Grid: 4 equal cards (3/12 desktop, 6/12 tablet, 12/12 mobile) */}
             <div className="grid grid-cols-12 gap-6">
               
