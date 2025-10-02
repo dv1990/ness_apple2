@@ -80,55 +80,54 @@ const CommercialEnhanced = () => {
   return (
     <Layout>
       <div className="min-h-screen bg-background">
-        {/* Hero Section - Pure Steve Jobs Style for Industrial Audience */}
+        {/* Hero - Proof first */}
         <section className="min-h-screen flex items-center justify-center px-4 md:px-8 relative overflow-hidden">
-          {/* Subtle gradient */}
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-muted/10" />
           
           <div className="relative z-10 max-w-6xl mx-auto text-center">
-            <div className="space-y-24">
-              {/* The Big Idea - Ultra Minimal */}
-              <div className="space-y-16 animate-fade-in">
-                <h1 className="text-7xl md:text-9xl lg:text-[12rem] font-extralight text-foreground leading-[0.85] tracking-[-0.05em]">
-                  Zero
-                  <span className="block">downtime.</span>
-                </h1>
+            <div className="space-y-20 animate-fade-in">
+              
+              <h1 className="text-7xl md:text-9xl font-light text-foreground leading-tight tracking-tight">
+                Zero downtime.
+              </h1>
+              
+              <div className="h-px w-32 bg-primary/40 mx-auto" />
+              
+              {/* ROI Calculator - Immediate */}
+              <div className="max-w-2xl mx-auto bg-card border border-border rounded-2xl p-8">
+                <h2 className="text-2xl font-medium text-foreground mb-6">Calculate your savings</h2>
                 
-                <div className="h-px w-32 bg-primary/40 mx-auto" />
-                
-                <p className="text-2xl md:text-3xl lg:text-4xl font-light text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-                  Industrial energy storage that pays for itself.
-                </p>
-              </div>
-
-              {/* Minimal CTA */}
-              <div className="space-y-8">
-                <MagneticButton 
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white px-16 py-8 text-xl rounded-full"
-                  onClick={() => document.getElementById('calculator')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  Calculate ROI
-                </MagneticButton>
-                
-                <div className="flex items-center justify-center gap-8 text-sm text-muted-foreground font-light">
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    <span>42% energy cost reduction</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    <span>100% uptime guarantee</span>
-                  </div>
+                <div className="space-y-4 mb-6">
+                  <Input
+                    type="number"
+                    placeholder="Monthly electricity spend (₹)"
+                    value={monthlySpend}
+                    onChange={(e) => setMonthlySpend(e.target.value)}
+                    className="text-lg"
+                  />
                 </div>
-              </div>
-            </div>
-          </div>
 
-          {/* Scroll indicator */}
-          <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex items-start justify-center p-2">
-              <div className="w-1 h-2 bg-muted-foreground/30 rounded-full" />
+                {savings && (
+                  <div className="grid grid-cols-2 gap-6 pt-6 border-t border-border">
+                    <div>
+                      <div className="text-3xl font-light text-primary mb-1">
+                        {formatCurrency(savings.annualSavings)}
+                      </div>
+                      <div className="text-sm text-muted-foreground">Annual savings</div>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-light text-foreground mb-1">
+                        {savings.paybackMonths}m
+                      </div>
+                      <div className="text-sm text-muted-foreground">Payback period</div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Industrial battery systems that cut peak demand charges and eliminate diesel.
+              </p>
             </div>
           </div>
         </section>
@@ -254,120 +253,85 @@ const CommercialEnhanced = () => {
           </div>
         </StorySection>
 
-        {/* Reference Project - Real Numbers */}
+        {/* Case Study - Numbers first */}
         <StorySection background="muted">
           <div className="max-w-6xl mx-auto px-8 py-32">
-            <div className="text-center mb-24">
-              <AppleHeadline
-                primary="Numbers don't lie."
-                secondary="Neither do our customers."
-              />
+            <div className="text-center mb-20">
+              <h2 className="text-5xl md:text-6xl font-light text-foreground mb-4">
+                Apex Auto Components
+              </h2>
+              <p className="text-xl text-muted-foreground">Chennai manufacturing, 2 MW facility</p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              {/* Left: The Story */}
-              <div className="space-y-8">
-                <div className="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-6 py-2">
-                  <Target className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-medium text-primary">Case Study: Chennai Manufacturing</span>
-                </div>
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
+              
+              {/* Chart first */}
+              <div className="space-y-6">
+                <div className="bg-card border border-border rounded-2xl p-8">
+                  <div className="space-y-8">
+                    <div className="text-center pb-6 border-b border-border/20">
+                      <div className="text-sm text-muted-foreground mb-2">Investment</div>
+                      <div className="text-5xl font-light text-foreground">₹1.8 Cr</div>
+                    </div>
 
-                <h3 className="text-4xl font-light text-foreground leading-tight">
-                  How Apex Auto Components eliminated ₹96 lakhs in annual demand charges
-                </h3>
+                    <div className="space-y-6">
+                      <div className="flex justify-between items-baseline">
+                        <div className="text-sm text-muted-foreground">Demand charges cut</div>
+                        <div className="text-2xl font-medium text-primary">₹96L/yr</div>
+                      </div>
 
-                <div className="space-y-6 text-muted-foreground leading-relaxed">
-                  <p>
-                    Apex was hemorrhaging money. Their 2 MW factory triggered peak demand charges every month. 
-                    The grid couldn't keep up during production spikes. Their diesel generator ran 12 hours a day.
-                  </p>
-                  <p>
-                    We installed 3 MWh of NESS CUBE systems across three buildings. Within 18 months, 
-                    the system paid for itself. Now it prints money.
-                  </p>
-                </div>
+                      <div className="flex justify-between items-baseline">
+                        <div className="text-sm text-muted-foreground">Diesel eliminated</div>
+                        <div className="text-2xl font-medium text-primary">₹18L/yr</div>
+                      </div>
 
-                <div className="pt-8 space-y-4">
-                  <div className="flex items-start gap-4">
-                    <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-medium text-foreground">Peak demand cut by 62%</div>
-                      <div className="text-sm text-muted-foreground">From 2.8 MW to 1.06 MW registered demand</div>
+                      <div className="pt-6 border-t border-border/20 flex justify-between items-baseline">
+                        <div className="text-sm text-muted-foreground">Annual savings</div>
+                        <div className="text-3xl font-medium text-primary">₹1.18 Cr</div>
+                      </div>
+
+                      <div className="pt-6 flex justify-between items-baseline">
+                        <div className="text-sm text-muted-foreground">Payback</div>
+                        <div className="text-4xl font-bold text-foreground">18 months</div>
+                      </div>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4">
-                    <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-medium text-foreground">Diesel generator retired</div>
-                      <div className="text-sm text-muted-foreground">₹18 lakhs annual fuel + maintenance savings</div>
+                </div>
+              </div>
+
+              {/* Brief story */}
+              <div className="space-y-6">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  2 MW factory. Peak demand charges: ₹96L annually. Diesel running 12 hours daily.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Installed 3 MWh NESS systems. Peak demand cut by 62%. Diesel generator retired. System paid back in 18 months.
+                </p>
+
+                <div className="pt-6 space-y-3">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <div className="text-base text-muted-foreground">
+                      Peak: 2.8 MW → 1.06 MW
                     </div>
                   </div>
-                  <div className="flex items-start gap-4">
-                    <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-medium text-foreground">Zero downtime</div>
-                      <div className="text-sm text-muted-foreground">Microgrid mode activated 47 times in first year</div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <div className="text-base text-muted-foreground">
+                      Microgrid activated 47 times in Year 1
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <div className="text-base text-muted-foreground">
+                      Zero production downtime
                     </div>
                   </div>
                 </div>
 
                 <div className="pt-6">
-                  <WebPImage
-                    src={manufacturingFacility}
-                    alt="Apex Manufacturing facility with NESS energy storage"
-                    className="w-full rounded-xl"
-                  />
-                </div>
-              </div>
-
-              {/* Right: The Numbers */}
-              <div className="space-y-6">
-                <AnimatedCard hover="glow" className="bg-card">
-                  <CardContent className="pt-8">
-                    <div className="space-y-8">
-                      <div className="text-center pb-6 border-b border-border/20">
-                        <div className="text-sm text-muted-foreground mb-2">System Investment</div>
-                        <div className="text-5xl font-extralight text-foreground">₹1.8 Cr</div>
-                      </div>
-
-                      <div className="space-y-6">
-                        <div className="space-y-2">
-                          <div className="text-sm text-muted-foreground">Annual Demand Charge Savings</div>
-                          <div className="text-3xl font-light text-primary">₹96 lakhs</div>
-                        </div>
-
-                        <div className="space-y-2">
-                          <div className="text-sm text-muted-foreground">Annual Fuel Cost Savings</div>
-                          <div className="text-3xl font-light text-primary">₹18 lakhs</div>
-                        </div>
-
-                        <div className="space-y-2">
-                          <div className="text-sm text-muted-foreground">Annual Maintenance Savings</div>
-                          <div className="text-3xl font-light text-primary">₹4 lakhs</div>
-                        </div>
-
-                        <div className="pt-6 border-t border-border/20 space-y-2">
-                          <div className="text-sm text-muted-foreground">Total Annual Savings</div>
-                          <div className="text-4xl font-medium text-primary">₹1.18 Cr</div>
-                        </div>
-
-                        <div className="pt-6 space-y-2">
-                          <div className="text-sm text-muted-foreground">Payback Period</div>
-                          <div className="text-5xl font-bold text-foreground">18 months</div>
-                        </div>
-
-                        <div className="pt-6 border-t border-border/20 space-y-2">
-                          <div className="text-sm text-muted-foreground">25-Year Net Value</div>
-                          <div className="text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">₹27.7 Cr</div>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </AnimatedCard>
-
-                <div className="text-center">
-                  <p className="text-sm text-muted-foreground italic">
-                    "The system paid for itself faster than we financed it. We're essentially getting free power and printing money now."
+                  <p className="text-base text-muted-foreground italic">
+                    "System paid for itself faster than we financed it."
                     <br />
                     <span className="text-foreground font-medium">— Rajesh Kumar, CFO</span>
                   </p>

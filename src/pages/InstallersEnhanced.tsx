@@ -39,266 +39,224 @@ const InstallersEnhanced = () => {
 
   return (
     <Layout>
-      {/* Hero Section - Join the Movement */}
-      <section className="relative min-h-screen flex items-end overflow-hidden">
-        <div className="absolute inset-0">
-          <Carousel 
-            className="w-full h-full"
-            plugins={[
-              Autoplay({
-                delay: 5000,
-                stopOnInteraction: false,
-              }),
-            ]}
-          >
-            <CarouselContent className="w-full h-full -ml-0">
-              <CarouselItem className="w-full h-full pl-0">
-                <img 
-                  src={heroIndustrialInstallation} 
-                  alt="Professional installation of solar and battery system on industrial shed"
-                  className="w-full h-full object-cover"
-                />
-              </CarouselItem>
-              <CarouselItem className="w-full h-full pl-0">
-                <img 
-                  src={heroResidentialInstallation} 
-                  alt="Professional installation of solar and battery system on home rooftop"
-                  className="w-full h-full object-cover"
-                />
-              </CarouselItem>
-            </CarouselContent>
-          </Carousel>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent w-1/2"></div>
-        </div>
-
-        <ParallaxContainer speed={0.5}>
-          <div className="relative z-10 max-w-[1600px] mx-auto px-8 pb-24 w-full">
-            <div className="max-w-4xl space-y-12">
-              
-              <Badge variant="outline" className="border-white/20 text-white">
-                <Sparkles className="w-4 h-4 mr-2" />
-                Clean Energy Movement
-              </Badge>
-
-              <div className="space-y-8">
-                <h1 className="text-7xl md:text-8xl font-extralight text-white leading-[0.85] tracking-tight">
-                  Join the
-                  <br />
-                  <span className="bg-gradient-to-r from-primary to-brand-glow bg-clip-text text-transparent">movement</span>
-                </h1>
-
-                 <p className="text-xl font-light text-white/90 leading-relaxed max-w-2xl">
-                   Help families feel genuinely good about their energy choices. 
-                   Build the future your own children will inherit.
-                 </p>
-               </div>
-
-               <div className="flex items-center space-x-6 pt-4">
-                 <MagneticButton variant="secondary" size="lg">
-                   <Link to="#join" className="flex items-center">
-                     Join the Movement
-                     <ArrowRight className="w-5 h-5 ml-2" />
-                   </Link>
-                 </MagneticButton>
-                 
-                 <PlayButton 
-                   onClick={() => {/* TODO: Implement video player */}} 
-                   label="Watch the transformation"
-                   size="lg"
-                 />
-               </div>
-
-               {/* Movement Impact */}
-               <div className="flex flex-wrap gap-8 pt-8 text-white/80">
-                 <div className="text-center">
-                   <div className="text-2xl font-thin">2,500+</div>
-                   <div className="text-sm">Movement Members</div>
-                 </div>
-                 <div className="text-center">
-                   <div className="text-2xl font-thin">₹480Cr</div>
-                   <div className="text-sm">Clean Revenue</div>
-                 </div>
-                 <div className="text-center">
-                   <div className="text-2xl font-thin">95%</div>
-                   <div className="text-sm">Life Satisfaction</div>
-                 </div>
-               </div>
-            </div>
-          </div>
-        </ParallaxContainer>
-      </section>
-
-      {/* The Transformation Story - Lead with Purpose */}
-      <section className="py-32 bg-background">
-        <div className="max-w-6xl mx-auto px-8">
-          <div className="text-center mb-20">
-            <h2 className="font-display text-5xl md:text-7xl font-thin text-foreground mb-12 tracking-tight leading-[0.85]">
-              From installer
+      {/* Hero - Business First */}
+      <section className="relative min-h-[60vh] flex items-center bg-background">
+        <div className="max-w-6xl mx-auto px-8 w-full">
+          <div className="max-w-3xl">
+            <h1 className="text-7xl md:text-8xl font-light text-foreground leading-tight mb-8 tracking-tight">
+              Certified
               <br />
-              <span className="text-primary">to pioneer</span>
-            </h2>
-            <p className="text-xl font-light text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              This is what happens when business meets purpose
-            </p>
-          </div>
-
-          {/* The Hero Story - Rajesh's Transformation */}
-          <div className="max-w-4xl mx-auto">
-            <FloatingCard className="bg-gradient-to-br from-background to-muted/10 border-0 shadow-2xl overflow-hidden" delay={0.2}>
-              <CardContent className="p-16">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                  
-                  {/* Quote Section */}
-                  <div className="space-y-8">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                      <Quote className="w-8 h-8 text-primary" />
-                    </div>
-                    
-                    <p className="text-2xl font-light text-foreground leading-relaxed">
-                      "We don't just install batteries—we help families feel genuinely good about their energy choices. 
-                      Every installation creates a cleaner legacy for the next generation."
-                    </p>
-                    
-                    <div className="flex items-center gap-2">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-primary fill-current" />
-                      ))}
-                    </div>
-
-                    <div className="space-y-2">
-                      <h4 className="text-xl font-medium text-foreground">Rajesh Singh</h4>
-                      <p className="text-muted-foreground">Solar Solutions Mumbai</p>
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <MapPin className="w-4 h-4" />
-                        Mumbai, Maharashtra
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Transformation Metrics */}
-                  <div className="space-y-8">
-                    <div className="text-center p-6 bg-primary/5 rounded-2xl">
-                      <div className="text-sm text-muted-foreground mb-2">Business Growth</div>
-                      <div className="text-4xl font-thin text-primary mb-2">300%</div>
-                      <div className="text-sm text-muted-foreground">Since joining the movement</div>
-                    </div>
-                    
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="text-center p-4 bg-background/50 rounded-xl">
-                        <div className="text-lg font-thin text-foreground">₹2.4Cr</div>
-                        <div className="text-xs text-muted-foreground">Annual Revenue</div>
-                      </div>
-                      <div className="text-center p-4 bg-background/50 rounded-xl">
-                        <div className="text-lg font-thin text-foreground">450+</div>
-                        <div className="text-xs text-muted-foreground">Clean Homes</div>
-                      </div>
-                    </div>
-                    
-                    <div className="text-center p-4 bg-gradient-to-r from-primary/10 to-brand-glow/10 rounded-xl">
-                      <div className="text-sm font-medium text-primary">The Real Victory</div>
-                      <div className="text-xs text-muted-foreground mt-1">Building India's clean energy future</div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </FloatingCard>
-          </div>
-
-          {/* Movement Impact */}
-          <div className="mt-20 text-center">
-            <div className="inline-flex items-center space-x-12 text-sm text-muted-foreground">
-              <div className="text-center">
-                <div className="text-2xl font-thin text-primary">385%</div>
-                <div>Average Growth</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-thin text-primary">₹4.2Cr</div>
-                <div>Average Revenue</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-thin text-primary">18mo</div>
-                <div>Payback Period</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Join the Movement - Simple */}
-      <section id="join" className="py-32 bg-muted/10">
-        <div className="max-w-3xl mx-auto px-8 text-center">
-          <div className="space-y-12">
-            <h2 className="font-display text-5xl md:text-7xl font-thin text-foreground leading-[0.85] tracking-tight">
-              Ready to become a
-              <br />
-              <span className="text-primary">clean energy pioneer?</span>
-            </h2>
+              <span className="text-primary">Installer Program</span>
+            </h1>
             
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              One partnership. One purpose. Transform families. Build legacies.
+            <p className="text-2xl text-muted-foreground mb-12 leading-relaxed">
+              Premium margins. Technical support. Certification training. 
+              Build a profitable clean energy business.
             </p>
+
+            <Button 
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-6 text-lg rounded-full"
+              onClick={() => document.getElementById('program')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              View Program Details
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Program Details */}
+      <section id="program" className="py-32 bg-muted/10">
+        <div className="max-w-6xl mx-auto px-8">
+          
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-light text-foreground mb-6">
+              Program Structure
+            </h2>
           </div>
 
-          <FloatingCard className="bg-gradient-to-br from-background to-primary/5 border-0 shadow-2xl max-w-2xl mx-auto mt-16">
+          <div className="grid md:grid-cols-3 gap-8">
+            
+            {/* Certification */}
+            <Card className="border-border">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                  <Award className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-medium text-foreground mb-4">Certification</h3>
+                <ul className="space-y-3 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span>3-day technical training</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span>Hands-on installation practice</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span>System design & commissioning</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span>Safety & troubleshooting</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Support */}
+            <Card className="border-border">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                  <Users className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-medium text-foreground mb-4">Support</h3>
+                <ul className="space-y-3 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span>Dedicated technical hotline</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span>Remote diagnostics access</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span>Marketing collateral library</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span>Lead generation assistance</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Economics */}
+            <Card className="border-primary/20 bg-primary/5">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                  <TrendingUp className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-medium text-foreground mb-4">Economics</h3>
+                <ul className="space-y-3 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span>25-30% gross margins</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span>Territory exclusivity options</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span>30-day payment terms</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span>Volume-based incentives</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial */}
+      <section className="py-32 bg-background">
+        <div className="max-w-4xl mx-auto px-8">
+          <Card className="border-border">
             <CardContent className="p-12">
-              <div className="space-y-8">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
                 
-                {/* Simple Partnership Promise */}
-                <div className="text-center space-y-6">
-                  <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                    <Trophy className="w-10 h-10 text-primary" />
+                <div className="space-y-6">
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-primary fill-current" />
+                    ))}
                   </div>
                   
-                  <h3 className="text-3xl font-light text-foreground">NESS Partner</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Join the movement to transform India's energy landscape. One partnership, unlimited purpose.
+                  <p className="text-xl text-foreground leading-relaxed">
+                    "Margins are solid. Support picks up in 2 rings. No callbacks on 200+ installations. 
+                    That's all I need."
                   </p>
+                  
+                  <div className="space-y-1">
+                    <div className="text-lg font-medium text-foreground">Rajesh Singh</div>
+                    <div className="text-sm text-muted-foreground">Solar Solutions Mumbai</div>
+                    <div className="text-sm text-muted-foreground">Mumbai, Maharashtra</div>
+                  </div>
                 </div>
 
-                {/* What You Get */}
                 <div className="space-y-4">
-                  {[
-                    "World-class training & certification",
-                    "Dedicated support team",
-                    "Premium pricing & margins",
-                    "Marketing co-op funds",
-                    "Lead generation support",
-                    "Exclusive configurator tools"
-                  ].map((benefit, i) => (
-                    <div key={i} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                      <span className="text-foreground">{benefit}</span>
+                  <div className="text-center p-6 bg-muted/50 rounded-xl">
+                    <div className="text-4xl font-light text-primary mb-2">₹2.4Cr</div>
+                    <div className="text-sm text-muted-foreground">Annual revenue</div>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="text-center p-4 bg-muted/30 rounded-xl">
+                      <div className="text-2xl font-light text-foreground">450+</div>
+                      <div className="text-xs text-muted-foreground">Installations</div>
                     </div>
-                  ))}
-                </div>
-
-                {/* Simple Form */}
-                <div className="space-y-4 pt-6 border-t border-border/20">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <Input placeholder="Your name" />
-                    <Input placeholder="Company name" />
+                    <div className="text-center p-4 bg-muted/30 rounded-xl">
+                      <div className="text-2xl font-light text-foreground">3.5yr</div>
+                      <div className="text-xs text-muted-foreground">Partner since</div>
+                    </div>
                   </div>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <Input type="email" placeholder="Email address" />
-                    <Input placeholder="Phone number" />
-                  </div>
-                  <Textarea placeholder="Tell us about your experience and why you want to join the movement..." rows={3} />
-                </div>
-
-                {/* Single Action */}
-                <div className="text-center pt-6">
-                  <MagneticButton variant="primary" size="lg" onClick={handleJoinMovement}>
-                    Join the Movement
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </MagneticButton>
-                  <p className="text-sm text-muted-foreground mt-4">
-                    We'll contact you within 24 hours to welcome you to the family
-                  </p>
                 </div>
               </div>
             </CardContent>
-          </FloatingCard>
+          </Card>
+        </div>
+      </section>
+
+      {/* Application Form */}
+      <section id="apply" className="py-32 bg-muted/10">
+        <div className="max-w-2xl mx-auto px-8">
+          
+          <div className="text-center mb-12">
+            <h2 className="text-5xl font-light text-foreground mb-4">
+              Apply Now
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Review within 48 hours
+            </p>
+          </div>
+
+          <Card className="border-border">
+            <CardContent className="p-8">
+              <div className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <Input placeholder="Your name" />
+                  <Input placeholder="Company name" />
+                </div>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <Input type="email" placeholder="Email" />
+                  <Input placeholder="Phone" />
+                </div>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <Input placeholder="City, State" />
+                  <Input type="number" placeholder="Years experience" />
+                </div>
+                <Textarea placeholder="Why do you want to become a certified installer?" rows={3} />
+
+                <Button 
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-lg"
+                  onClick={handleJoinMovement}
+                >
+                  Submit Application
+                  <Send className="ml-2 w-5 h-5" />
+                </Button>
+
+                <p className="text-sm text-center text-muted-foreground">
+                  Review within 48 hours
+                </p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 

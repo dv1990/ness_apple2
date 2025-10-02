@@ -8,157 +8,89 @@ const ResidentialEnhanced = () => {
 
   return (
     <Layout>
-      {/* Hero - Emotional Connection */}
+      {/* Hero - One concrete scenario */}
       <section className="min-h-screen flex items-center justify-center bg-background px-6 sm:px-8 relative overflow-hidden">
-        {/* Subtle animated background */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background"></div>
         
         <div className="max-w-6xl mx-auto text-center relative z-10">
           
-          {/* Emotional indicator with icon */}
-          <div className="inline-flex items-center gap-3 mb-12 sm:mb-16 animate-fade-in">
-            <Heart className="w-4 h-4 text-primary" />
-            <span className="text-xs sm:text-sm text-muted-foreground tracking-[0.2em] uppercase font-light">
-              For Your Family's Comfort
-            </span>
-          </div>
-
-          {/* Emotionally resonant headline */}
-          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[9rem] leading-[0.85] tracking-tight text-foreground mb-6 sm:mb-8 font-extralight animate-fade-in">
-            Never worry about
-            <br />
-            <span className="text-primary font-light">power again</span>
-          </h1>
+          <div className="space-y-16 animate-fade-in">
+            
+            <h1 className="text-6xl sm:text-8xl md:text-9xl leading-[0.9] tracking-tight text-foreground font-light">
+              Power stays on.
+              <br />
+              <span className="text-primary">Always.</span>
+            </h1>
           
-          {/* Emotional benefit statement */}
-          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 sm:mb-20 leading-relaxed font-light animate-fade-in">
-            Your children sleep soundly. Your work continues uninterrupted. 
-            Your home stays comfortable. <span className="text-foreground font-normal">Always.</span>
-          </p>
+            {/* ONE concrete scenario */}
+            <div className="max-w-2xl mx-auto bg-card/50 backdrop-blur-sm rounded-3xl p-8 border border-border/50">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                It's 3 AM. Your baby's AC is running. 
+                The whole street goes dark. <span className="text-foreground font-medium">Your home doesn't.</span>
+              </p>
+            </div>
 
-          {/* Dual action with emotional appeal */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center animate-fade-in">
-            <Button 
-              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 sm:px-10 py-4 sm:py-6 rounded-full text-base sm:text-lg font-medium tracking-wide transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto"
-              onClick={() => document.getElementById('emotional-story')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              See How It Protects You
-              <Heart className="ml-2 w-4 h-4" />
-            </Button>
-            <Button 
-              variant="outline"
-              className="border-2 px-8 sm:px-10 py-4 sm:py-6 rounded-full text-base sm:text-lg font-medium w-full sm:w-auto"
-              onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Find Your System
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
+            {/* CTA */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button 
+                className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-6 rounded-full text-lg font-medium w-full sm:w-auto"
+                onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Find Your System
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Emotional Story Section */}
-      <section id="emotional-story" className="py-20 sm:py-32 md:py-40 bg-muted/30">
+      {/* Three Key Scenarios */}
+      <section id="scenarios" className="py-32 bg-muted/30">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           
-          {/* Life moments that matter */}
-          <div className="text-center mb-16 sm:mb-24">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.9] tracking-tight text-foreground mb-6 sm:mb-8 font-extralight">
-              Life's precious moments
-              <br />
-              <span className="text-primary font-light">protected</span>
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl leading-tight tracking-tight text-foreground mb-6 font-light">
+              When it matters most
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
-              Because some things can't wait for the power to come back
-            </p>
           </div>
 
-          {/* Emotional scenarios grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16 sm:mb-24">
-            
-            {/* Scenario 1: Family Time */}
-            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-border/50 hover:border-primary/50 transition-all duration-300 hover-scale">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
-                <Home className="w-7 h-7 sm:w-8 sm:h-8 text-primary" />
+          {/* 3 scenarios only */}
+          <div className="grid lg:grid-cols-3 gap-8 mb-20">
+            {/* Baby sleeping - AC runs */}
+            <div className="bg-card border border-border rounded-2xl p-8">
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                <Sparkles className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-light text-foreground mb-3 sm:mb-4">Family dinner time</h3>
-              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed font-light">
-                The lights dim across the neighborhood. But at your table, the warm glow continues. 
-                Your children don't even notice—they're too busy sharing stories from their day.
+              <h3 className="text-2xl font-medium text-foreground mb-4">Your baby sleeps through</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">
+                AC stays on. Temperature steady at 24°C. 
+                Power cut? Your child doesn't wake up sweating.
               </p>
             </div>
 
-            {/* Scenario 2: Work from Home */}
-            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-border/50 hover:border-primary/50 transition-all duration-300 hover-scale">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
-                <Zap className="w-7 h-7 sm:w-8 sm:h-8 text-primary" />
+            {/* Work call doesn't drop */}
+            <div className="bg-card border border-border rounded-2xl p-8">
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                <Zap className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-light text-foreground mb-3 sm:mb-4">That important call</h3>
-              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed font-light">
-                Mid-presentation, the grid fails. Your neighbor's screen goes dark. 
-                Yours doesn't. Your client never knows there was a problem.
+              <h3 className="text-2xl font-medium text-foreground mb-4">Your call doesn't drop</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">
+                Mid-presentation. Grid fails. 
+                Your internet, screen, and lights stay on. Client never notices.
               </p>
             </div>
 
-            {/* Scenario 3: Summer Comfort */}
-            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-border/50 hover:border-primary/50 transition-all duration-300 hover-scale">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
-                <Sparkles className="w-7 h-7 sm:w-8 sm:h-8 text-primary" />
+            {/* Medical device runs */}
+            <div className="bg-card border border-border rounded-2xl p-8">
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                <Shield className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-light text-foreground mb-3 sm:mb-4">Cool summer nights</h3>
-              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed font-light">
-                45°C outside. The AC hums quietly. Your baby sleeps peacefully. 
-                Even when the whole street is in darkness, your home remains a sanctuary.
+              <h3 className="text-2xl font-medium text-foreground mb-4">Medical devices run</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">
+                CPAP machine. Oxygen concentrator. Refrigerated insulin. 
+                Power failures stop being life-or-death anxiety.
               </p>
             </div>
-
-            {/* Scenario 4: Elderly Care */}
-            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-border/50 hover:border-primary/50 transition-all duration-300 hover-scale">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
-                <Shield className="w-7 h-7 sm:w-8 sm:h-8 text-primary" />
-              </div>
-              <h3 className="text-xl sm:text-2xl font-light text-foreground mb-3 sm:mb-4">Medical peace of mind</h3>
-              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed font-light">
-                Your parent's oxygen concentrator. Their CPAP machine. Refrigerated medicines. 
-                Power failures are no longer a source of anxiety.
-              </p>
-            </div>
-
-            {/* Scenario 5: Morning Routine */}
-            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-border/50 hover:border-primary/50 transition-all duration-300 hover-scale">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
-                <Smile className="w-7 h-7 sm:w-8 sm:h-8 text-primary" />
-              </div>
-              <h3 className="text-xl sm:text-2xl font-light text-foreground mb-3 sm:mb-4">Stress-free mornings</h3>
-              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed font-light">
-                No more rushing to charge phones before the cut. No morning panic. 
-                Just a smooth start to everyone's day, every single day.
-              </p>
-            </div>
-
-            {/* Scenario 6: Security */}
-            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-border/50 hover:border-primary/50 transition-all duration-300 hover-scale">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
-                <Shield className="w-7 h-7 sm:w-8 sm:h-8 text-primary" />
-              </div>
-              <h3 className="text-xl sm:text-2xl font-light text-foreground mb-3 sm:mb-4">Always secure</h3>
-              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed font-light">
-                Your cameras stay online. Your smart locks keep working. Your gate opens when you arrive. 
-                Security doesn't take a break when the grid does.
-              </p>
-            </div>
-          </div>
-
-          {/* Emotional pull quote */}
-          <div className="text-center max-w-4xl mx-auto">
-            <blockquote className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extralight text-foreground leading-tight mb-6 sm:mb-8">
-              "We don't just sell batteries.
-              <br />
-              <span className="text-primary font-light">We protect what matters most to you."</span>
-            </blockquote>
-            <p className="text-base sm:text-lg text-muted-foreground font-light">
-              Every NESS system is designed with your family's well-being at its heart.
-            </p>
           </div>
         </div>
       </section>
@@ -167,22 +99,10 @@ const ResidentialEnhanced = () => {
       <section id="products" className="py-40 bg-pearl">
         <div className="max-w-7xl mx-auto px-8">
           
-          {/* Emotional section introduction */}
-          <div className="text-center mb-20 sm:mb-32">
-            <div className="inline-flex items-center gap-3 mb-8 sm:mb-12">
-              <Heart className="w-5 h-5 text-primary" />
-              <span className="text-xs sm:text-sm text-muted-foreground tracking-[0.2em] uppercase font-light">
-                Choose Your Protection
-              </span>
-            </div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.9] tracking-tight text-foreground mb-6 sm:mb-8 font-extralight">
-              Find your peace of mind
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl leading-tight tracking-tight text-foreground mb-6 font-light">
+              Choose your system
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
-              Every home is unique. Every family's needs are different. 
-              <br className="hidden sm:block" />
-              <span className="text-foreground font-normal">We have the perfect solution for yours.</span>
-            </p>
           </div>
 
           {/* Products - Clean grid, no decoration */}
@@ -207,15 +127,15 @@ const ResidentialEnhanced = () => {
                   <div className="grid grid-cols-3 gap-4 text-center">
                     <div>
                       <div className="text-title text-charcoal font-light">12h</div>
-                      <div className="text-caption text-silver">Backup</div>
+                      <div className="text-caption text-silver">Backup time</div>
                     </div>
                     <div>
-                      <div className="text-title text-charcoal font-light">5ms</div>
-                      <div className="text-caption text-silver">Switch</div>
+                      <div className="text-title text-charcoal font-light">No flicker</div>
+                      <div className="text-caption text-silver">Switchover</div>
                     </div>
                     <div>
                       <div className="text-title text-charcoal font-light">5yr</div>
-                      <div className="text-caption text-silver">Warranty</div>
+                      <div className="text-caption text-silver">Coverage</div>
                     </div>
                   </div>
                   
@@ -252,15 +172,15 @@ const ResidentialEnhanced = () => {
                   <div className="grid grid-cols-3 gap-4 text-center">
                     <div>
                       <div className="text-title text-charcoal font-light">24h</div>
-                      <div className="text-caption text-silver">Backup</div>
+                      <div className="text-caption text-silver">Backup time</div>
                     </div>
                     <div>
-                      <div className="text-title text-charcoal font-light">8ms</div>
-                      <div className="text-caption text-silver">Switch</div>
+                      <div className="text-title text-charcoal font-light">Instant</div>
+                      <div className="text-caption text-silver">Switchover</div>
                     </div>
                     <div>
                       <div className="text-title text-charcoal font-light">7yr</div>
-                      <div className="text-caption text-silver">Warranty</div>
+                      <div className="text-caption text-silver">Coverage</div>
                     </div>
                   </div>
                   
@@ -302,15 +222,15 @@ const ResidentialEnhanced = () => {
                   <div className="grid grid-cols-3 gap-4 text-center">
                     <div>
                       <div className="text-title text-charcoal font-light">48h</div>
-                      <div className="text-caption text-silver">Backup</div>
+                      <div className="text-caption text-silver">Backup time</div>
                     </div>
                     <div>
-                      <div className="text-title text-charcoal font-light">3ms</div>
-                      <div className="text-caption text-silver">Switch</div>
+                      <div className="text-title text-charcoal font-light">Seamless</div>
+                      <div className="text-caption text-silver">Switchover</div>
                     </div>
                     <div>
                       <div className="text-title text-charcoal font-light">10yr</div>
-                      <div className="text-caption text-silver">Warranty</div>
+                      <div className="text-caption text-silver">Coverage</div>
                     </div>
                   </div>
                   

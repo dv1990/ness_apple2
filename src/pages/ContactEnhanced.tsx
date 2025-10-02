@@ -173,205 +173,118 @@ const ContactEnhanced = () => {
 
   return (
     <Layout>
-      {/* Enhanced Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-background via-background to-muted/20 overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary rounded-full animate-ping"></div>
-          <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-brand-glow rounded-full animate-ping" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-primary rounded-full animate-ping" style={{ animationDelay: '4s' }}></div>
-        </div>
-
-        <div className="max-w-4xl mx-auto px-8 text-center relative z-10">
-          <Badge variant="outline" className="mb-8 px-4 py-2">
-            <Sparkles className="w-4 h-4 mr-2" />
-            Smart Contact System
-          </Badge>
+      {/* Hero - Simple */}
+      <section className="relative py-32 bg-background">
+        <div className="max-w-3xl mx-auto px-8 text-center">
           
-          <h1 className="font-display text-6xl md:text-7xl font-thin text-foreground leading-none tracking-tight mb-8">
-            Let's build your
-            <br />
-            <span className="bg-gradient-to-r from-primary via-brand-glow to-primary bg-clip-text text-transparent">energy future</span>
+          <h1 className="text-6xl md:text-7xl font-light text-foreground leading-tight mb-8">
+            Get in touch
           </h1>
           
-           <p className="text-xl font-light text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-12">
-             Get your custom clean energy solution that feels as good as it performs. 
-             Create a legacy your children will thank you for.
-           </p>
-
-          {/* Live Metrics */}
-          <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-primary" />
-              <span>&lt; 2 min assessment</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Calculator className="w-4 h-4 text-primary" />
-              <span>Instant ROI preview</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Users className="w-4 h-4 text-primary" />
-              <span>Expert matching</span>
-            </div>
-          </div>
+          <p className="text-xl text-muted-foreground mb-12">
+            Request specifications, schedule site visit, or ask technical questions.
+          </p>
         </div>
       </section>
 
-      {/* Smart Contact Assessment */}
+      {/* Contact Form - One Step */}
       <section className="py-16 bg-background">
-        <div className="max-w-4xl mx-auto px-8">
+        <div className="max-w-2xl mx-auto px-8">
           
-          {/* Progress Indicator */}
-          <div className="mb-12">
-            <div className="flex items-center justify-between mb-4">
-              <div className="text-sm text-muted-foreground">
-                Step {currentStep} of {progressSteps.length}
-              </div>
-              <div className="text-sm text-muted-foreground">
-                {Math.round(progressPercentage)}% Complete
-              </div>
-            </div>
-            <Progress value={progressPercentage} className="h-2 mb-8" />
-            
-            {/* Step Indicators */}
-            <div className="flex justify-between">
-              {progressSteps.map((step, index) => (
-                <div key={step.step} className="flex flex-col items-center">
-                  <div className={cn(
-                    "w-10 h-10 rounded-full flex items-center justify-center mb-2 transition-all duration-300",
-                    currentStep >= step.step 
-                      ? "bg-primary text-white" 
-                      : "bg-muted text-muted-foreground"
-                  )}>
-                    <step.icon className="w-5 h-5" />
-                  </div>
-                  <div className={cn(
-                    "text-xs text-center max-w-20",
-                    currentStep >= step.step ? "text-foreground" : "text-muted-foreground"
-                  )}>
-                    {step.title}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <FloatingCard className="bg-gradient-to-br from-background to-muted/20 border-0 shadow-2xl">
+          <Card className="border-border">
             <CardContent className="p-12">
+              <div className="space-y-6">
 
-              {/* Step 1: Needs Assessment */}
-              {currentStep === 1 && (
-                <div className="space-y-8">
-                  <div className="text-center space-y-4">
-                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto">
-                      <Target className="w-8 h-8 text-primary" />
-                    </div>
-                    <h2 className="text-3xl font-light text-foreground">Tell us about your needs</h2>
-                    <p className="text-muted-foreground">This helps us recommend the perfect solution</p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label>Name</Label>
+                    <Input 
+                      placeholder="Your name"
+                      value={formData.name}
+                      onChange={(e) => handleInputChange('name', e.target.value)}
+                    />
                   </div>
-
-                  <div className="space-y-6">
-                    {/* Property Type */}
-                    <div className="space-y-3">
-                      <Label className="text-base font-medium">What type of property do you have?</Label>
-                      <div className="grid md:grid-cols-2 gap-3">
-                        {[
-                          { id: "apartment", label: "Apartment", icon: Building2 },
-                          { id: "villa", label: "Villa/House", icon: Home },
-                          { id: "office", label: "Office", icon: Building2 },
-                          { id: "factory", label: "Factory/Industrial", icon: Wrench }
-                        ].map(option => (
-                          <button
-                            key={option.id}
-                            onClick={() => setNeedsAssessment(prev => ({ ...prev, propertyType: option.id }))}
-                            className={cn(
-                              "flex items-center gap-3 p-4 rounded-xl border transition-all duration-200 hover:shadow-md",
-                              needsAssessment.propertyType === option.id
-                                ? "border-primary bg-primary/5 text-primary"
-                                : "border-border hover:border-primary/50"
-                            )}
-                          >
-                            <option.icon className="w-5 h-5" />
-                            <span className="font-medium">{option.label}</span>
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Monthly Bill Slider */}
-                    <div className="space-y-4">
-                      <Label className="text-base font-medium">
-                        What's your monthly electricity bill?
-                      </Label>
-                      <div className="space-y-4">
-                        <Slider
-                          value={[needsAssessment.monthlyBill]}
-                          onValueChange={(value) => setNeedsAssessment(prev => ({ ...prev, monthlyBill: value[0] }))}
-                          min={1000}
-                          max={200000}
-                          step={1000}
-                          className="w-full"
-                        />
-                        <div className="text-center">
-                          <span className="text-3xl font-thin text-foreground">₹{needsAssessment.monthlyBill.toLocaleString()}</span>
-                          <div className="text-sm text-muted-foreground mt-1">per month</div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Current Backup */}
-                    <div className="space-y-3">
-                      <Label className="text-base font-medium">Do you have existing backup power?</Label>
-                      <div className="grid md:grid-cols-3 gap-3">
-                        {[
-                          { id: "none", label: "No backup" },
-                          { id: "inverter", label: "Battery inverter" },
-                          { id: "generator", label: "Diesel generator" }
-                        ].map(option => (
-                          <button
-                            key={option.id}
-                            onClick={() => setNeedsAssessment(prev => ({ ...prev, currentBackup: option.id }))}
-                            className={cn(
-                              "p-4 rounded-xl border transition-all duration-200 hover:shadow-md text-center",
-                              needsAssessment.currentBackup === option.id
-                                ? "border-primary bg-primary/5 text-primary"
-                                : "border-border hover:border-primary/50"
-                            )}
-                          >
-                            <span className="font-medium">{option.label}</span>
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Primary Goal */}
-                    <div className="space-y-3">
-                      <Label className="text-base font-medium">What's your primary goal?</Label>
-                      <div className="grid md:grid-cols-2 gap-3">
-                        {[
-                          { id: "savings", label: "Reduce electricity costs", icon: DollarSign },
-                          { id: "backup", label: "Reliable backup power", icon: Shield },
-                          { id: "green", label: "Go green/sustainable", icon: Lightbulb },
-                          { id: "independence", label: "Energy independence", icon: Zap }
-                        ].map(option => (
-                          <button
-                            key={option.id}
-                            onClick={() => setNeedsAssessment(prev => ({ ...prev, primaryGoal: option.id }))}
-                            className={cn(
-                              "flex items-center gap-3 p-4 rounded-xl border transition-all duration-200 hover:shadow-md",
-                              needsAssessment.primaryGoal === option.id
-                                ? "border-primary bg-primary/5 text-primary"
-                                : "border-border hover:border-primary/50"
-                            )}
-                          >
-                            <option.icon className="w-5 h-5" />
-                            <span className="font-medium">{option.label}</span>
-                          </button>
-                        ))}
-                      </div>
-                    </div>
+                  <div className="space-y-2">
+                    <Label>Email</Label>
+                    <Input 
+                      type="email"
+                      placeholder="your@email.com"
+                      value={formData.email}
+                      onChange={(e) => handleInputChange('email', e.target.value)}
+                    />
                   </div>
                 </div>
-              )}
+
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label>Phone</Label>
+                    <Input 
+                      placeholder="+91"
+                      value={formData.phone}
+                      onChange={(e) => handleInputChange('phone', e.target.value)}
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label>Location</Label>
+                    <Input 
+                      placeholder="City, State"
+                      value={formData.location}
+                      onChange={(e) => handleInputChange('location', e.target.value)}
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <Label>Property type</Label>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    {[
+                      { id: "apartment", label: "Apartment" },
+                      { id: "villa", label: "Villa" },
+                      { id: "office", label: "Office" },
+                      { id: "factory", label: "Factory" }
+                    ].map(option => (
+                      <button
+                        key={option.id}
+                        onClick={() => setNeedsAssessment(prev => ({ ...prev, propertyType: option.id }))}
+                        className={cn(
+                          "p-3 rounded-xl border text-sm transition-all",
+                          needsAssessment.propertyType === option.id
+                            ? "border-primary bg-primary/5 text-primary"
+                            : "border-border hover:border-primary/50"
+                        )}
+                      >
+                        {option.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <Label>Message</Label>
+                  <Textarea 
+                    placeholder="What can we help you with?"
+                    rows={4}
+                    value={formData.message}
+                    onChange={(e) => handleInputChange('message', e.target.value)}
+                  />
+                </div>
+
+                <Button 
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-lg"
+                  onClick={handleSubmit}
+                >
+                  Send Message
+                  <Send className="ml-2 w-5 h-5" />
+                </Button>
+
+                <p className="text-sm text-center text-muted-foreground">
+                  Response within 24 hours
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
 
               {/* Step 2: ROI Preview */}
               {currentStep === 2 && (
