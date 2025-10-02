@@ -13,7 +13,7 @@ import {
   ArrowRight, Calculator, Award, Users, Wrench, BookOpen, Download, 
   Sparkles, CheckCircle, Target, Clock, Play, Star, Quote, MapPin,
   TrendingUp, Building2, Phone, Mail, Calendar, FileText, Zap,
-  ChevronRight, Upload, User, Shield, Trophy, Briefcase
+  ChevronRight, Upload, User, Shield, Trophy, Briefcase, Send
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
