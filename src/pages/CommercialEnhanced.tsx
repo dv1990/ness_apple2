@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -34,9 +34,11 @@ import { WebPImage } from "@/components/ui/webp-image";
 
 // Import images - they'll be lazy-loaded via WebPImage component
 import industrialHero from "@/assets/industrial-complex-hero.jpg";
+import ciHeroPremium from "@/assets/ci-hero-premium.jpg";
 import manufacturingFacility from "@/assets/manufacturing-facility.jpg";
 import officeInterior from "@/assets/office-interior.jpg";
 import nessCube from "@/assets/ness-cube-product.png";
+import nessProProduct from "@/assets/ness-pro-product.png";
 
 // Form validation schema
 const contactSchema = z.object({
@@ -53,6 +55,16 @@ const CommercialEnhanced = () => {
     monthlySpend: ""
   });
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
+  const [isCtaSticky, setIsCtaSticky] = useState(false);
+
+  // Sticky CTA on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsCtaSticky(window.scrollY > 800);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const calculateSavings = (spend: number) => {
     const annualSavings = spend * 12 * 0.42; // 42% savings
@@ -80,54 +92,123 @@ const CommercialEnhanced = () => {
   return (
     <Layout>
       <div className="min-h-screen bg-background">
-        {/* Hero - Proof first */}
-        <section className="min-h-screen flex items-center justify-center px-4 md:px-8 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-muted/10" />
-          
-          <div className="relative z-10 max-w-6xl mx-auto text-center">
-            <div className="space-y-20 animate-fade-in">
+        
+        {/* Sticky CTA Button */}
+        <div 
+          className={`fixed top-24 right-8 z-50 transition-all duration-500 ${
+            isCtaSticky ? 'translate-y-0 opacity-100' : '-translate-y-20 opacity-0 pointer-events-none'
+          }`}
+        >
+          <Button 
+            size="lg"
+            className="bg-energy hover:bg-energy-dark text-white shadow-2xl hover:shadow-[0_0_40px_rgba(var(--energy),0.4)] px-8 py-6 text-lg font-semibold rounded-xl border-2 border-energy-bright/20"
+          >
+            Get My ROI Estimate
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Button>
+        </div>
+
+        {/* Hero Section - Steve Jobs Style */}
+        <section className="relative min-h-screen flex items-center overflow-hidden">
+          {/* Cinematic Background */}
+          <div className="absolute inset-0">
+            <img 
+              src={ciHeroPremium}
+              alt="Premium industrial facility with solar and battery storage"
+              className="w-full h-full object-cover"
+              loading="eager"
+              fetchPriority="high"
+            />
+            {/* Dark overlay for text contrast */}
+            <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 via-charcoal/70 to-charcoal/90" />
+            <div className="absolute inset-0 bg-gradient-to-r from-charcoal/60 via-transparent to-charcoal/60" />
+          </div>
+
+          {/* Content Grid */}
+          <div className="relative z-10 w-full max-w-[1600px] mx-auto px-8 lg:px-16">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
               
-              <h1 className="text-7xl md:text-9xl font-light text-foreground leading-tight tracking-tight">
-                Zero downtime.
-              </h1>
-              
-              <div className="h-px w-32 bg-primary/40 mx-auto" />
-              
-              {/* ROI Calculator - Immediate */}
-              <div className="max-w-2xl mx-auto bg-card border border-border rounded-2xl p-8">
-                <h2 className="text-2xl font-medium text-foreground mb-6">Calculate your savings</h2>
-                
-                <div className="space-y-4 mb-6">
-                  <Input
-                    type="number"
-                    placeholder="Monthly electricity spend (₹)"
-                    value={monthlySpend}
-                    onChange={(e) => setMonthlySpend(e.target.value)}
-                    className="text-lg"
-                  />
+              {/* Left: Bold Typography */}
+              <div className="space-y-12 animate-fade-in">
+                <div className="space-y-8">
+                  {/* Headline - Bold, Direct */}
+                  <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight text-pearl leading-[0.9] tracking-tight">
+                    Cut energy costs.
+                    <br />
+                    <span className="text-energy-bright font-light">Keep the lights on.</span>
+                    <br />
+                    <span className="text-pearl/80">Say goodbye to diesel.</span>
+                  </h1>
+                  
+                  {/* Subline */}
+                  <p className="text-xl md:text-2xl lg:text-3xl font-light text-pearl/90 leading-relaxed max-w-2xl">
+                    One smart solar + storage system that powers your business reliably, day and night.
+                  </p>
                 </div>
 
-                {savings && (
-                  <div className="grid grid-cols-2 gap-6 pt-6 border-t border-border">
-                    <div>
-                      <div className="text-3xl font-light text-primary mb-1">
-                        {formatCurrency(savings.annualSavings)}
-                      </div>
-                      <div className="text-sm text-muted-foreground">Annual savings</div>
-                    </div>
-                    <div>
-                      <div className="text-3xl font-light text-foreground mb-1">
-                        {savings.paybackMonths}m
-                      </div>
-                      <div className="text-sm text-muted-foreground">Payback period</div>
-                    </div>
+                {/* Premium CTA */}
+                <div className="pt-8">
+                  <Button 
+                    size="lg"
+                    className="bg-energy hover:bg-energy-dark text-white shadow-xl hover:shadow-[0_0_50px_rgba(var(--energy),0.5)] px-12 py-8 text-xl font-semibold rounded-2xl border-2 border-energy-bright/30 transition-all duration-300"
+                  >
+                    Get My ROI Estimate
+                    <ArrowRight className="w-6 h-6 ml-3" />
+                  </Button>
+                </div>
+
+                {/* Trust Indicators */}
+                <div className="grid grid-cols-3 gap-8 pt-12 border-t border-pearl/20">
+                  <div className="space-y-2">
+                    <div className="text-4xl lg:text-5xl font-light text-energy-bright tabular-nums">42%</div>
+                    <div className="text-sm text-pearl/70 uppercase tracking-wider">Avg. savings</div>
                   </div>
-                )}
+                  <div className="space-y-2">
+                    <div className="text-4xl lg:text-5xl font-light text-energy-bright tabular-nums">18m</div>
+                    <div className="text-sm text-pearl/70 uppercase tracking-wider">Payback</div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="text-4xl lg:text-5xl font-light text-energy-bright tabular-nums">0</div>
+                    <div className="text-sm text-pearl/70 uppercase tracking-wider">Downtime</div>
+                  </div>
+                </div>
               </div>
 
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Industrial battery systems that cut peak demand charges and eliminate diesel.
-              </p>
+              {/* Right: Premium Product Render */}
+              <div className="relative hidden lg:block">
+                <div className="relative">
+                  {/* Glow effect behind product */}
+                  <div className="absolute inset-0 bg-energy/20 blur-[120px] scale-75" />
+                  
+                  {/* Product Image - Cinematic */}
+                  <div className="relative">
+                    <img 
+                      src={nessProProduct}
+                      alt="NESS PRO Industrial Battery System"
+                      className="w-full h-auto object-contain drop-shadow-[0_0_80px_rgba(var(--energy),0.3)] transform hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+
+                  {/* Floating specs */}
+                  <div className="absolute -bottom-8 -left-8 bg-pearl/10 backdrop-blur-xl border border-pearl/20 rounded-2xl p-6 shadow-2xl">
+                    <div className="text-3xl font-light text-energy-bright mb-1">3 MWh</div>
+                    <div className="text-sm text-pearl/70">Scalable capacity</div>
+                  </div>
+
+                  <div className="absolute -top-8 -right-8 bg-pearl/10 backdrop-blur-xl border border-pearl/20 rounded-2xl p-6 shadow-2xl">
+                    <div className="text-3xl font-light text-energy-bright mb-1">99.7%</div>
+                    <div className="text-sm text-pearl/70">Uptime guaranteed</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          {/* Scroll indicator */}
+          <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
+            <div className="w-6 h-10 border-2 border-pearl/30 rounded-full flex items-start justify-center p-2">
+              <div className="w-1.5 h-3 bg-energy-bright rounded-full animate-pulse" />
             </div>
           </div>
         </section>
