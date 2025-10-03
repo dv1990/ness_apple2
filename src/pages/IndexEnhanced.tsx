@@ -49,20 +49,20 @@ const IndexEnhanced = () => {
           
           <div className="space-y-20 animate-fade-up">
             
-            {/* The Scenario - Make it personal */}
+            {/* The Scenario - Make it universal */}
             <div className="space-y-12 max-w-4xl mx-auto">
               <div className="space-y-6">
                 <p className="text-xl md:text-2xl text-pearl/80 font-light leading-relaxed">
-                  It's 2 AM.
+                  The grid fails.
                 </p>
                 <p className="text-xl md:text-2xl text-pearl/80 font-light leading-relaxed">
-                  The power goes out.
+                  Operations stop.
                 </p>
                 <p className="text-xl md:text-2xl text-pearl/80 font-light leading-relaxed">
-                  Your 6-month-old's room goes dark. The AC stops.
+                  Critical equipment goes dark.
                 </p>
                 <p className="text-xl md:text-2xl text-pearl/80 font-light leading-relaxed">
-                  Within minutes, she's crying.
+                  Revenue evaporates.
                 </p>
               </div>
 
@@ -74,7 +74,7 @@ const IndexEnhanced = () => {
                 </h1>
                 
                 <p className="text-2xl md:text-3xl font-light text-energy-bright">
-                  10,000 families sleep through the night.
+                  10,000+ installations running 24/7.
                 </p>
               </div>
             </div>
@@ -165,7 +165,7 @@ const IndexEnhanced = () => {
               </div>
               <div className="space-y-3">
                 <div className="text-6xl font-light text-energy tabular-nums">10,000+</div>
-                <div className="text-sm text-muted-foreground uppercase tracking-wider">Happy families</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider">Installations</div>
               </div>
               <div className="space-y-3">
                 <div className="text-6xl font-light text-energy tabular-nums">15</div>
@@ -184,7 +184,7 @@ const IndexEnhanced = () => {
               Everywhere in India
             </h2>
             <p className="text-xl text-muted-foreground">
-              From Kashmir to Kanyakumari, families trust NESS
+              From Kashmir to Kanyakumari, across homes and businesses
             </p>
           </div>
           
@@ -419,7 +419,7 @@ const IndexEnhanced = () => {
                 </div>
                 <h3 className="text-2xl font-light text-foreground">We don't cut corners</h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  LiFePO₄ costs more. Seven quality gates take time. We do it anyway. Because your family's safety isn't negotiable.
+                  LiFePO₄ costs more. Seven quality gates take time. We do it anyway. Because safety and reliability aren't negotiable.
                 </p>
               </div>
 
@@ -439,7 +439,7 @@ const IndexEnhanced = () => {
                 </div>
                 <h3 className="text-2xl font-light text-foreground">We're everywhere</h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  From Kashmir to Kerala, 10,000+ families trust NESS. Certified installers. Local support. You're never alone.
+                  From Kashmir to Kerala, 10,000+ installations nationwide. Certified installers. Local support. You're never alone.
                 </p>
               </div>
 
@@ -453,7 +453,7 @@ const IndexEnhanced = () => {
                 <Quote className="w-12 h-12 mx-auto text-energy/30" />
                 
                 <blockquote className="text-3xl md:text-4xl font-light text-foreground leading-relaxed max-w-3xl mx-auto">
-                  "This is engineering you can trust with your family."
+                  "This is engineering you can trust with what matters most."
                 </blockquote>
                 
                 <div className="pt-6">
@@ -473,13 +473,13 @@ const IndexEnhanced = () => {
           
           <div className="text-center mb-24 space-y-6">
             <h2 className="text-5xl md:text-7xl font-extralight text-foreground leading-tight">
-              Real families. Real stories.
+              Real impact. Real results.
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
             
-            {/* Story 1 - Medical need */}
+            {/* Story 1 - Medical need (Home) */}
             <div className="bg-card border border-border rounded-3xl p-12 space-y-8">
               <div className="flex items-start gap-6">
                 <div className="w-16 h-16 rounded-full bg-energy/10 flex items-center justify-center flex-shrink-0">
@@ -491,13 +491,13 @@ const IndexEnhanced = () => {
                   </p>
                   <div>
                     <p className="font-medium text-foreground">Priya Sharma</p>
-                    <p className="text-sm text-muted-foreground">Mumbai, 2 years with NESS</p>
+                    <p className="text-sm text-muted-foreground">Residential • Mumbai</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Story 2 - Business owner */}
+            {/* Story 2 - Manufacturing (C&I) */}
             <div className="bg-card border border-border rounded-3xl p-12 space-y-8">
               <div className="flex items-start gap-6">
                 <div className="w-16 h-16 rounded-full bg-energy/10 flex items-center justify-center flex-shrink-0">
@@ -505,17 +505,17 @@ const IndexEnhanced = () => {
                 </div>
                 <div className="space-y-4">
                   <p className="text-xl text-foreground leading-relaxed">
-                    "Work from home with video calls all day. Never missed a client meeting in 3 years. Zero downtime."
+                    "Eliminated diesel. Cut our energy costs by 32%. Production runs 24/7 with zero grid dependency."
                   </p>
                   <div>
-                    <p className="font-medium text-foreground">Amit Desai</p>
-                    <p className="text-sm text-muted-foreground">Bangalore, 3 years with NESS</p>
+                    <p className="font-medium text-foreground">Rajesh Kumar</p>
+                    <p className="text-sm text-muted-foreground">Manufacturing • Pune</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Story 3 - New parent */}
+            {/* Story 3 - Healthcare (C&I) */}
             <div className="bg-card border border-border rounded-3xl p-12 space-y-8">
               <div className="flex items-start gap-6">
                 <div className="w-16 h-16 rounded-full bg-energy/10 flex items-center justify-center flex-shrink-0">
@@ -523,17 +523,17 @@ const IndexEnhanced = () => {
                 </div>
                 <div className="space-y-4">
                   <p className="text-xl text-foreground leading-relaxed">
-                    "Baby's room stays cool through the night. No waking up to heat. Best investment we made as new parents."
+                    "Critical care equipment can't go down. NESS gave us 100% uptime. Lives depend on this reliability."
                   </p>
                   <div>
-                    <p className="font-medium text-foreground">Sneha & Karthik</p>
-                    <p className="text-sm text-muted-foreground">Hyderabad, 1 year with NESS</p>
+                    <p className="font-medium text-foreground">Dr. Meera Reddy</p>
+                    <p className="text-sm text-muted-foreground">Hospital • Hyderabad</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Story 4 - Senior citizen */}
+            {/* Story 4 - Tech office (C&I) */}
             <div className="bg-card border border-border rounded-3xl p-12 space-y-8">
               <div className="flex items-start gap-6">
                 <div className="w-16 h-16 rounded-full bg-energy/10 flex items-center justify-center flex-shrink-0">
@@ -541,11 +541,11 @@ const IndexEnhanced = () => {
                 </div>
                 <div className="space-y-4">
                   <p className="text-xl text-foreground leading-relaxed">
-                    "At 68, I don't worry about stairs in the dark or my medications going warm. It just works."
+                    "Data center stays online. Never missed an SLA. Peak shaving saved us ₹18L annually."
                   </p>
                   <div>
-                    <p className="font-medium text-foreground">Col. Raghavan (Retd.)</p>
-                    <p className="text-sm text-muted-foreground">Delhi NCR, 4 years with NESS</p>
+                    <p className="font-medium text-foreground">Vikram Malhotra</p>
+                    <p className="text-sm text-muted-foreground">Tech Campus • Bangalore</p>
                   </div>
                 </div>
               </div>
@@ -561,10 +561,10 @@ const IndexEnhanced = () => {
           <div className="space-y-16">
             <div className="space-y-8">
               <h2 className="text-5xl md:text-7xl font-extralight text-foreground">
-                Ready for peace of mind?
+                Ready for uninterrupted power?
               </h2>
               <p className="text-2xl font-light text-muted-foreground">
-                Join 10,000 families who sleep through power cuts.
+                Join 10,000+ installations running 24/7 with zero compromises.
               </p>
             </div>
 
