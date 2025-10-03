@@ -320,6 +320,221 @@ const CommercialEnhanced = () => {
           </div>
         </section>
 
+        {/* Product Information - Radial Callouts */}
+        <section className="relative py-40 bg-gradient-to-b from-background to-muted/20 overflow-hidden">
+          <div className="max-w-[1800px] mx-auto px-8">
+            
+            {/* Section Heading */}
+            <div className="text-center mb-32">
+              <h2 className="text-5xl md:text-7xl font-extralight text-foreground leading-tight tracking-tight mb-4">
+                Intelligence Built In
+              </h2>
+              <div className="w-20 h-px bg-energy mx-auto"></div>
+            </div>
+
+            {/* Desktop: Radial Layout | Mobile: Stacked */}
+            <div className="relative">
+              
+              {/* Central Product Render - Desktop */}
+              <div className="hidden lg:flex items-center justify-center mb-20">
+                <div className="relative w-[500px] h-[500px]">
+                  {/* Ambient Glow */}
+                  <div className="absolute inset-0 bg-energy/10 blur-[150px] scale-90 animate-pulse" />
+                  
+                  {/* Product Image */}
+                  <img 
+                    src={nessProProduct}
+                    alt="NESS PRO - Intelligent Power Control System"
+                    className="relative z-10 w-full h-full object-contain drop-shadow-[0_0_60px_rgba(var(--energy),0.25)]"
+                  />
+                </div>
+              </div>
+
+              {/* Mobile Product - Top */}
+              <div className="lg:hidden flex items-center justify-center mb-16">
+                <div className="relative w-full max-w-md">
+                  <div className="absolute inset-0 bg-energy/10 blur-[100px]" />
+                  <img 
+                    src={nessProProduct}
+                    alt="NESS PRO - Intelligent Power Control System"
+                    className="relative z-10 w-full h-auto object-contain"
+                  />
+                </div>
+              </div>
+
+              {/* Callout Cards - Radial on Desktop, Stacked on Mobile */}
+              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto lg:max-w-none">
+                
+                {/* Callout 1: Intelligent Power Control - Top Left */}
+                <div className="lg:col-start-1 lg:row-start-1 group cursor-pointer">
+                  <div className="relative">
+                    {/* Connecting Line - Desktop Only */}
+                    <div className="hidden lg:block absolute top-1/2 left-full w-32 h-px bg-gradient-to-r from-energy/40 to-transparent group-hover:from-energy group-hover:shadow-[0_0_20px_rgba(var(--energy),0.6)] transition-all duration-300 -translate-y-1/2" />
+                    
+                    {/* Card */}
+                    <div className="bg-card/50 backdrop-blur-xl border border-border rounded-3xl p-8 group-hover:border-energy/40 group-hover:shadow-[0_0_40px_-10px_rgba(var(--energy),0.3)] transition-all duration-300 group-hover:scale-[1.02]">
+                      {/* Title & Tagline */}
+                      <div className="space-y-2 mb-6">
+                        <h3 className="text-3xl font-semibold text-foreground">Intelligent Power Control</h3>
+                        <p className="text-lg text-energy font-medium">"Always-On Control"</p>
+                      </div>
+                      
+                      {/* Benefit */}
+                      <p className="text-muted-foreground leading-relaxed mb-4">
+                        Chooses solar, grid, storage, or DG instantly.
+                      </p>
+                      
+                      {/* Proof Rails - Appear on Hover */}
+                      <div className="space-y-2 text-sm text-muted-foreground/70 opacity-0 group-hover:opacity-100 transition-all duration-300 max-h-0 group-hover:max-h-32 overflow-hidden">
+                        <div className="flex items-center gap-2 pt-4 border-t border-border/50">
+                          <CheckCircle2 className="w-4 h-4 text-energy flex-shrink-0" />
+                          <span>&lt;20 ms critical switching</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-energy flex-shrink-0" />
+                          <span>&lt;100 ms non-critical loads</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-energy flex-shrink-0" />
+                          <span>Zero-export compliant ✓</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Callout 2: Scalable Storage - Top Right */}
+                <div className="lg:col-start-2 lg:row-start-1 group cursor-pointer">
+                  <div className="relative">
+                    {/* Connecting Line - Desktop Only */}
+                    <div className="hidden lg:block absolute top-1/2 right-full w-32 h-px bg-gradient-to-l from-energy/40 to-transparent group-hover:from-energy group-hover:shadow-[0_0_20px_rgba(var(--energy),0.6)] transition-all duration-300 -translate-y-1/2" />
+                    
+                    {/* Card */}
+                    <div className="bg-card/50 backdrop-blur-xl border border-border rounded-3xl p-8 group-hover:border-energy/40 group-hover:shadow-[0_0_40px_-10px_rgba(var(--energy),0.3)] transition-all duration-300 group-hover:scale-[1.02]">
+                      {/* Title & Tagline */}
+                      <div className="space-y-2 mb-6">
+                        <h3 className="text-3xl font-semibold text-foreground">Scalable Storage</h3>
+                        <p className="text-lg text-energy font-medium">"Capacity That Grows"</p>
+                      </div>
+                      
+                      {/* Benefit */}
+                      <p className="text-muted-foreground leading-relaxed mb-4">
+                        From 50 kWh to multi-MWh. Extendable warranty.
+                      </p>
+                      
+                      {/* Proof Rails - Appear on Hover */}
+                      <div className="space-y-2 text-sm text-muted-foreground/70 opacity-0 group-hover:opacity-100 transition-all duration-300 max-h-0 group-hover:max-h-32 overflow-hidden">
+                        <div className="flex items-center gap-2 pt-4 border-t border-border/50">
+                          <CheckCircle2 className="w-4 h-4 text-energy flex-shrink-0" />
+                          <span>10+ years lifecycle</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-energy flex-shrink-0" />
+                          <span>Hot-swap modules</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-energy flex-shrink-0" />
+                          <span>Expandable capacity</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Callout 3: Peak & Tariff Intelligence - Bottom Left */}
+                <div className="lg:col-start-1 lg:row-start-2 group cursor-pointer">
+                  <div className="relative">
+                    {/* Connecting Line - Desktop Only */}
+                    <div className="hidden lg:block absolute bottom-1/2 left-full w-32 h-px bg-gradient-to-r from-energy/40 to-transparent group-hover:from-energy group-hover:shadow-[0_0_20px_rgba(var(--energy),0.6)] transition-all duration-300 translate-y-1/2" />
+                    
+                    {/* Card */}
+                    <div className="bg-card/50 backdrop-blur-xl border border-border rounded-3xl p-8 group-hover:border-energy/40 group-hover:shadow-[0_0_40px_-10px_rgba(var(--energy),0.3)] transition-all duration-300 group-hover:scale-[1.02]">
+                      {/* Title & Tagline */}
+                      <div className="space-y-2 mb-6">
+                        <h3 className="text-3xl font-semibold text-foreground">Peak & Tariff Intelligence</h3>
+                        <p className="text-lg text-energy font-medium">"Smart Savings"</p>
+                      </div>
+                      
+                      {/* Benefit */}
+                      <p className="text-muted-foreground leading-relaxed mb-4">
+                        Flattens peaks, shifts ToD, saves in ₹.
+                      </p>
+                      
+                      {/* Proof Rails - Appear on Hover */}
+                      <div className="space-y-2 text-sm text-muted-foreground/70 opacity-0 group-hover:opacity-100 transition-all duration-300 max-h-0 group-hover:max-h-32 overflow-hidden">
+                        <div className="flex items-center gap-2 pt-4 border-t border-border/50">
+                          <CheckCircle2 className="w-4 h-4 text-energy flex-shrink-0" />
+                          <span>15–30% peak clipping</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-energy flex-shrink-0" />
+                          <span>ToD tariff aware</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-energy flex-shrink-0" />
+                          <span>CFO-ready reports</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Callout 4: Certified Safety & Service - Bottom Right */}
+                <div className="lg:col-start-2 lg:row-start-2 group cursor-pointer">
+                  <div className="relative">
+                    {/* Connecting Line - Desktop Only */}
+                    <div className="hidden lg:block absolute bottom-1/2 right-full w-32 h-px bg-gradient-to-l from-energy/40 to-transparent group-hover:from-energy group-hover:shadow-[0_0_20px_rgba(var(--energy),0.6)] transition-all duration-300 translate-y-1/2" />
+                    
+                    {/* Card */}
+                    <div className="bg-card/50 backdrop-blur-xl border border-border rounded-3xl p-8 group-hover:border-energy/40 group-hover:shadow-[0_0_40px_-10px_rgba(var(--energy),0.3)] transition-all duration-300 group-hover:scale-[1.02]">
+                      {/* Title & Tagline */}
+                      <div className="space-y-2 mb-6">
+                        <h3 className="text-3xl font-semibold text-foreground">Certified Safety & Service</h3>
+                        <p className="text-lg text-energy font-medium">"Built for Trust"</p>
+                      </div>
+                      
+                      {/* Benefit */}
+                      <p className="text-muted-foreground leading-relaxed mb-4">
+                        Compliant, monitored, SLA-backed.
+                      </p>
+                      
+                      {/* Proof Rails - Appear on Hover */}
+                      <div className="space-y-2 text-sm text-muted-foreground/70 opacity-0 group-hover:opacity-100 transition-all duration-300 max-h-0 group-hover:max-h-32 overflow-hidden">
+                        <div className="flex items-center gap-2 pt-4 border-t border-border/50">
+                          <CheckCircle2 className="w-4 h-4 text-energy flex-shrink-0" />
+                          <span>IEC/IS certified</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-energy flex-shrink-0" />
+                          <span>&lt;4 hr triage response</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-energy flex-shrink-0" />
+                          <span>T+1 onsite (metros)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            {/* Sticky CTA */}
+            <div className="flex justify-center mt-20">
+              <Button 
+                size="lg"
+                className="bg-energy hover:bg-energy-dark text-white shadow-xl hover:shadow-[0_0_50px_rgba(var(--energy),0.5)] px-12 py-8 text-xl font-semibold rounded-2xl border-2 border-energy-bright/30 transition-all duration-300 group"
+              >
+                Get My ROI Estimate
+                <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform" />
+              </Button>
+            </div>
+
+          </div>
+        </section>
+
         {/* Scalability Story - Build as You Grow */}
         <StorySection>
           <div className="max-w-6xl mx-auto px-8 py-32">
