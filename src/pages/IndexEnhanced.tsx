@@ -86,91 +86,70 @@ const IndexEnhanced = () => {
         </div>
       </section>
 
-      {/* Trust Through Story */}
+      {/* What Makes NESS Different */}
       <section className="py-48 bg-gradient-to-b from-black to-background">
         <div className="max-w-6xl mx-auto px-8">
           
           <div className="text-center space-y-32">
             
-            {/* The Question */}
+            {/* Core Philosophy */}
             <div className="space-y-16">
               <h2 className="text-5xl md:text-7xl font-extralight text-foreground leading-tight">
                 What makes NESS different?
               </h2>
               <p className="text-2xl md:text-3xl text-muted-foreground/80 font-light max-w-4xl mx-auto leading-relaxed">
-                We asked ourselves a simple question:<br />
-                <span className="text-foreground italic">"What could we never compromise on?"</span>
+                We believe technology should disappear.<br />
+                <span className="text-foreground italic">You shouldn't notice your power system—until you do.</span>
               </p>
             </div>
 
-            {/* The Answer */}
-            <div className="space-y-12 max-w-4xl mx-auto">
+            {/* The Commitment */}
+            <div className="space-y-16 max-w-4xl mx-auto">
               <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-                The answer led us to a material that costs more,<br />
-                takes longer to source, and is harder to work with.
+                Most companies optimize for what's easiest to manufacture.<br />
+                We optimize for what's safest in your home.
               </p>
-              <p className="text-3xl md:text-5xl font-light text-energy leading-tight py-8">
-                LiFePO₄
-              </p>
-              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-                Because when it's in your home, next to your family,<br />
-                <span className="text-foreground font-normal">"good enough" isn't good enough.</span>
-              </p>
-            </div>
-
-            {/* The Reality */}
-            <div className="space-y-16">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                
-                {/* Industry Standard */}
-                <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-muted/30 to-muted/10 p-12 border border-border/50">
-                  <div className="space-y-6 text-center">
-                    <p className="text-sm uppercase tracking-wider text-muted-foreground/60">Industry Standard</p>
-                    <div className="text-6xl font-light text-muted-foreground">150°C</div>
-                    <p className="text-base text-muted-foreground/80">Thermal runaway begins</p>
-                  </div>
-                </div>
-
-                {/* NESS Standard */}
-                <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-energy/10 to-energy/5 p-12 border-2 border-energy/30 shadow-[0_0_60px_-15px_rgba(var(--energy),0.3)]">
-                  <div className="space-y-6 text-center">
-                    <p className="text-sm uppercase tracking-wider text-energy/60">NESS Standard</p>
-                    <div className="text-6xl font-light text-energy">600°C</div>
-                    <p className="text-base text-energy">Remains stable</p>
-                  </div>
-                </div>
-              </div>
-
-              <p className="text-lg text-muted-foreground/70 max-w-2xl mx-auto leading-relaxed">
-                That's not a small difference.<br />
-                That's the difference between worrying and not worrying.
-              </p>
-            </div>
-
-            {/* The Proof */}
-            <div className="space-y-12">
-              <div className="inline-block px-2 py-1 rounded-full bg-energy/5 border border-energy/10">
-                <span className="text-sm uppercase tracking-wider text-energy/60">Tested in the real world</span>
+              
+              <div className="py-16 space-y-8">
+                <p className="text-3xl md:text-5xl font-light text-energy leading-tight">
+                  LiFePO₄
+                </p>
+                <p className="text-base uppercase tracking-widest text-energy/60">
+                  The stable choice
+                </p>
               </div>
               
-              <div className="space-y-6">
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+                It costs more. It's harder to source.<br />
+                <span className="text-foreground font-normal">And it's the only chemistry we'll put our name on.</span>
+              </p>
+            </div>
+
+            {/* Proven Trust */}
+            <div className="space-y-16">
+              <div className="inline-block px-2 py-1 rounded-full bg-energy/5 border border-energy/10">
+                <span className="text-sm uppercase tracking-wider text-energy/60">Proven in the field</span>
+              </div>
+              
+              <div className="space-y-8">
                 <div className="text-7xl md:text-8xl font-extralight text-foreground">
                   10,000<span className="text-energy">+</span>
                 </div>
-                <p className="text-xl text-muted-foreground">
-                  Installations. Homes and businesses.<br />
-                  Extreme heat. Monsoons. Daily cycling.
+                <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+                  Homes and businesses powered.<br />
+                  From coastal humidity to desert heat.<br />
+                  Every single day.
                 </p>
               </div>
 
               <div className="inline-flex items-center gap-4 px-12 py-6 rounded-full bg-energy/10 border border-energy/20">
                 <Check className="w-6 h-6 text-energy" />
-                <span className="text-xl text-foreground font-light">Zero thermal incidents</span>
+                <span className="text-xl text-foreground font-light">Reliability you can count on</span>
               </div>
 
               <p className="text-lg text-muted-foreground/70 max-w-2xl mx-auto leading-relaxed pt-8">
-                Numbers are just numbers.<br />
-                Until they represent families sleeping soundly at night.
+                When the lights stay on,<br />
+                that's when we've done our job.
               </p>
             </div>
 
