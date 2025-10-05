@@ -31,111 +31,122 @@ const IndexEnhanced = () => {
 
   return (
     <Layout>
-      {/* Hero Section - Steve Jobs Style */}
+      {/* Hero Section - Alternative: Product Reveal Style */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
         
-        {/* Cinematic Background - Multiple layers for depth */}
-        <div className="absolute inset-0">
-          {/* Base image with parallax effect */}
-          <div className="absolute inset-0 scale-105">
-            <img 
-              src={heroHomeowners}
-              alt="Energy independence"
-              className="w-full h-full object-cover opacity-30"
-              fetchPriority="high"
-              loading="eager"
-            />
-          </div>
-          
-          {/* Gradient overlays for dramatic effect */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black/95"></div>
-          <div className="absolute inset-0 bg-gradient-radial from-energy/5 via-transparent to-black/50"></div>
-          
-          {/* Subtle animated glow */}
-          <div className="absolute inset-0 bg-gradient-to-t from-energy/10 via-transparent to-transparent animate-pulse" style={{ animationDuration: '4s' }}></div>
-        </div>
+        {/* Minimalist gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-charcoal/20 to-black"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_rgba(var(--energy-rgb),0.15)_0%,_transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,_rgba(var(--energy-rgb),0.1)_0%,_transparent_50%)]"></div>
         
         <div className="max-w-7xl mx-auto px-8 text-center relative z-10">
           
-          <div className="space-y-24 animate-fade-up">
+          <div className="space-y-32 animate-fade-up">
             
-            {/* The Opening - Steve Jobs style build-up */}
-            <div className="space-y-16 max-w-5xl mx-auto">
+            {/* The Build-Up */}
+            <div className="space-y-20 max-w-6xl mx-auto">
               
-              {/* The Problem - Universal */}
-              <div className="space-y-8">
-                <p className="text-2xl md:text-4xl text-pearl/60 font-extralight tracking-wide">
-                  In India, power cuts aren't a question of if.
-                </p>
-                <p className="text-2xl md:text-4xl text-pearl/60 font-extralight tracking-wide">
-                  They're a question of when.
+              {/* Simple stat intro */}
+              <div className="space-y-6">
+                <p className="text-lg md:text-xl text-pearl/40 font-light tracking-wider uppercase">
+                  Energy Storage. Reimagined.
                 </p>
               </div>
 
-              {/* The Divider */}
-              <div className="flex items-center justify-center gap-3">
-                <div className="w-16 h-px bg-gradient-to-r from-transparent via-energy to-transparent"></div>
-                <Zap className="w-6 h-6 text-energy" />
-                <div className="w-16 h-px bg-gradient-to-r from-energy via-energy to-transparent"></div>
-              </div>
-
-              {/* The Dream - Bold and Simple */}
-              <div className="space-y-12">
-                <h1 className="text-7xl md:text-9xl font-extralight text-pearl leading-[0.9] tracking-tighter">
-                  What if you
-                  <br />
-                  <span className="text-energy font-light">never noticed?</span>
+              {/* The Big Statement */}
+              <div className="space-y-10">
+                <h1 className="text-6xl md:text-[10rem] font-extralight text-pearl leading-[0.85] tracking-tighter">
+                  600°C
                 </h1>
-                
-                <p className="text-xl md:text-2xl font-light text-pearl/70 max-w-3xl mx-auto leading-relaxed">
-                  No diesel generators. No voltage fluctuations. No interruptions.
+                <p className="text-2xl md:text-4xl font-light text-pearl/70 max-w-4xl mx-auto">
+                  While others catch fire at 150°C,
                   <br />
-                  <span className="text-energy-bright">Just continuous, clean power.</span>
+                  <span className="text-energy">we're just getting started.</span>
                 </p>
               </div>
 
-              {/* The Proof Point */}
-              <div className="inline-flex items-center gap-4 px-8 py-4 rounded-full bg-energy/10 border border-energy/20 backdrop-blur-sm">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-energy animate-pulse"></div>
-                  <span className="text-energy font-medium text-lg">10,000+ systems</span>
+              {/* The Divider with icon */}
+              <div className="flex items-center justify-center gap-4 py-8">
+                <div className="w-20 h-px bg-gradient-to-r from-transparent via-energy/50 to-energy"></div>
+                <Battery className="w-8 h-8 text-energy" />
+                <div className="w-20 h-px bg-gradient-to-l from-transparent via-energy/50 to-energy"></div>
+              </div>
+
+              {/* The Reveal */}
+              <div className="space-y-12">
+                <div className="inline-block">
+                  <h2 className="text-4xl md:text-6xl font-light text-pearl tracking-tight">
+                    LiFePO₄ batteries.
+                  </h2>
+                  <div className="h-1 w-full bg-gradient-to-r from-energy to-energy-bright mt-4"></div>
                 </div>
-                <div className="w-px h-6 bg-energy/30"></div>
-                <span className="text-pearl/60 text-lg">24/7 uptime</span>
-                <div className="w-px h-6 bg-energy/30"></div>
-                <span className="text-pearl/60 text-lg">Zero compromises</span>
+                
+                <p className="text-xl md:text-2xl text-pearl/60 max-w-3xl mx-auto leading-relaxed">
+                  The safest battery chemistry on Earth.
+                  <br />
+                  15+ year lifespan. 6000+ cycles guaranteed.
+                  <br />
+                  <span className="text-energy-bright font-medium">Only one company uses it exclusively in India.</span>
+                </p>
+              </div>
+
+              {/* Triple benefit showcase */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto pt-12">
+                <div className="space-y-4 p-8 rounded-2xl bg-energy/5 border border-energy/10 backdrop-blur-sm hover:bg-energy/10 transition-all duration-300">
+                  <div className="text-5xl font-extralight text-energy">4x</div>
+                  <div className="text-pearl/70 text-lg">Safer than alternatives</div>
+                </div>
+                <div className="space-y-4 p-8 rounded-2xl bg-energy/5 border border-energy/10 backdrop-blur-sm hover:bg-energy/10 transition-all duration-300">
+                  <div className="text-5xl font-extralight text-energy">3x</div>
+                  <div className="text-pearl/70 text-lg">Longer lifecycle</div>
+                </div>
+                <div className="space-y-4 p-8 rounded-2xl bg-energy/5 border border-energy/10 backdrop-blur-sm hover:bg-energy/10 transition-all duration-300">
+                  <div className="text-5xl font-extralight text-energy">0</div>
+                  <div className="text-pearl/70 text-lg">Compromises</div>
+                </div>
               </div>
             </div>
 
-            {/* Dual CTA - for both audiences */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
-              <Link to="/residential">
-                <Button size="lg" className="btn-sonos px-10 py-6 text-lg group">
-                  <Home className="w-5 h-5 mr-3" />
-                  For Your Home
-                  <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
-              
-              <Link to="/commercial">
-                <Button size="lg" variant="outline" className="px-10 py-6 text-lg border-energy/30 hover:bg-energy/10 hover:border-energy group">
-                  <Shield className="w-5 h-5 mr-3" />
-                  For Your Business
-                  <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
+            {/* Two-path CTA */}
+            <div className="space-y-8">
+              <p className="text-pearl/50 text-sm uppercase tracking-widest">Choose your path</p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <Link to="/residential" className="group">
+                  <Button size="lg" className="btn-sonos px-12 py-7 text-lg">
+                    <div className="flex items-center gap-4">
+                      <Home className="w-6 h-6" />
+                      <div className="text-left">
+                        <div className="font-semibold">Homes</div>
+                        <div className="text-xs text-pearl/60">Peace of mind, always</div>
+                      </div>
+                    </div>
+                  </Button>
+                </Link>
+                
+                <Link to="/commercial" className="group">
+                  <Button size="lg" variant="outline" className="px-12 py-7 text-lg border-energy/30 hover:bg-energy/10 hover:border-energy">
+                    <div className="flex items-center gap-4">
+                      <Shield className="w-6 h-6" />
+                      <div className="text-left">
+                        <div className="font-semibold">Business</div>
+                        <div className="text-xs text-pearl/60">Uptime, guaranteed</div>
+                      </div>
+                    </div>
+                  </Button>
+                </Link>
+              </div>
             </div>
 
-            {/* Scroll indicator */}
-            <div className="pt-16">
-              <a href="#the-difference" className="inline-flex flex-col items-center gap-3 group cursor-pointer">
-                <span className="text-pearl/40 text-sm uppercase tracking-widest">See the difference</span>
-                <div className="w-6 h-10 rounded-full border-2 border-pearl/20 flex items-start justify-center p-2">
-                  <div className="w-1 h-3 bg-energy rounded-full animate-bounce"></div>
-                </div>
-              </a>
-            </div>
           </div>
+        </div>
+
+        {/* Subtle scroll prompt */}
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20">
+          <a href="#the-difference" className="flex flex-col items-center gap-2 opacity-40 hover:opacity-100 transition-opacity group">
+            <div className="w-5 h-8 rounded-full border border-pearl/30 flex items-start justify-center p-1.5">
+              <div className="w-1 h-2 bg-energy rounded-full animate-bounce"></div>
+            </div>
+          </a>
         </div>
       </section>
 
