@@ -31,69 +31,116 @@ const IndexEnhanced = () => {
 
   return (
     <Layout>
-      {/* Hero Section - Lead with the problem */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <img 
-          src={heroHomeowners}
-          alt="Modern home with NESS energy system"
-          className="absolute inset-0 w-full h-full object-cover"
-          fetchPriority="high"
-          loading="eager"
-        />
+      {/* Hero Section - Steve Jobs Style */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
         
-        <div className="absolute inset-0 bg-charcoal/70"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/50 to-charcoal/90"></div>
-        
-        <div className="max-w-6xl mx-auto px-8 text-center relative z-10">
+        {/* Cinematic Background - Multiple layers for depth */}
+        <div className="absolute inset-0">
+          {/* Base image with parallax effect */}
+          <div className="absolute inset-0 scale-105">
+            <img 
+              src={heroHomeowners}
+              alt="Energy independence"
+              className="w-full h-full object-cover opacity-30"
+              fetchPriority="high"
+              loading="eager"
+            />
+          </div>
           
-          <div className="space-y-20 animate-fade-up">
+          {/* Gradient overlays for dramatic effect */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black/95"></div>
+          <div className="absolute inset-0 bg-gradient-radial from-energy/5 via-transparent to-black/50"></div>
+          
+          {/* Subtle animated glow */}
+          <div className="absolute inset-0 bg-gradient-to-t from-energy/10 via-transparent to-transparent animate-pulse" style={{ animationDuration: '4s' }}></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-8 text-center relative z-10">
+          
+          <div className="space-y-24 animate-fade-up">
             
-            {/* The Scenario - Make it universal */}
-            <div className="space-y-12 max-w-4xl mx-auto">
-              <div className="space-y-6">
-                <p className="text-xl md:text-2xl text-pearl/80 font-light leading-relaxed">
-                  The grid fails.
+            {/* The Opening - Steve Jobs style build-up */}
+            <div className="space-y-16 max-w-5xl mx-auto">
+              
+              {/* The Problem - Universal */}
+              <div className="space-y-8">
+                <p className="text-2xl md:text-4xl text-pearl/60 font-extralight tracking-wide">
+                  In India, power cuts aren't a question of if.
                 </p>
-                <p className="text-xl md:text-2xl text-pearl/80 font-light leading-relaxed">
-                  Operations stop.
-                </p>
-                <p className="text-xl md:text-2xl text-pearl/80 font-light leading-relaxed">
-                  Critical equipment goes dark.
-                </p>
-                <p className="text-xl md:text-2xl text-pearl/80 font-light leading-relaxed">
-                  Revenue evaporates.
+                <p className="text-2xl md:text-4xl text-pearl/60 font-extralight tracking-wide">
+                  They're a question of when.
                 </p>
               </div>
 
-              <div className="w-24 h-px bg-pearl/20 mx-auto"></div>
+              {/* The Divider */}
+              <div className="flex items-center justify-center gap-3">
+                <div className="w-16 h-px bg-gradient-to-r from-transparent via-energy to-transparent"></div>
+                <Zap className="w-6 h-6 text-energy" />
+                <div className="w-16 h-px bg-gradient-to-r from-energy via-energy to-transparent"></div>
+              </div>
 
-              <div className="space-y-8">
-                <h1 className="text-6xl md:text-8xl font-extralight text-pearl leading-[0.95] tracking-tight">
-                  Or not.
+              {/* The Dream - Bold and Simple */}
+              <div className="space-y-12">
+                <h1 className="text-7xl md:text-9xl font-extralight text-pearl leading-[0.9] tracking-tighter">
+                  What if you
+                  <br />
+                  <span className="text-energy font-light">never noticed?</span>
                 </h1>
                 
-                <p className="text-2xl md:text-3xl font-light text-energy-bright">
-                  10,000+ installations running 24/7.
+                <p className="text-xl md:text-2xl font-light text-pearl/70 max-w-3xl mx-auto leading-relaxed">
+                  No diesel generators. No voltage fluctuations. No interruptions.
+                  <br />
+                  <span className="text-energy-bright">Just continuous, clean power.</span>
                 </p>
+              </div>
+
+              {/* The Proof Point */}
+              <div className="inline-flex items-center gap-4 px-8 py-4 rounded-full bg-energy/10 border border-energy/20 backdrop-blur-sm">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-energy animate-pulse"></div>
+                  <span className="text-energy font-medium text-lg">10,000+ systems</span>
+                </div>
+                <div className="w-px h-6 bg-energy/30"></div>
+                <span className="text-pearl/60 text-lg">24/7 uptime</span>
+                <div className="w-px h-6 bg-energy/30"></div>
+                <span className="text-pearl/60 text-lg">Zero compromises</span>
               </div>
             </div>
 
-            {/* Immediate CTA */}
-            <div className="pt-4">
-              <Button className="btn-sonos px-16 py-6 text-xl">
-                <Link to="#see-how" className="flex items-center">
-                  See how
-                  <ArrowRight className="w-6 h-6 ml-4" />
-                </Link>
-              </Button>
+            {/* Dual CTA - for both audiences */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
+              <Link to="/residential">
+                <Button size="lg" className="btn-sonos px-10 py-6 text-lg group">
+                  <Home className="w-5 h-5 mr-3" />
+                  For Your Home
+                  <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              
+              <Link to="/commercial">
+                <Button size="lg" variant="outline" className="px-10 py-6 text-lg border-energy/30 hover:bg-energy/10 hover:border-energy group">
+                  <Shield className="w-5 h-5 mr-3" />
+                  For Your Business
+                  <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </div>
+
+            {/* Scroll indicator */}
+            <div className="pt-16">
+              <a href="#the-difference" className="inline-flex flex-col items-center gap-3 group cursor-pointer">
+                <span className="text-pearl/40 text-sm uppercase tracking-widest">See the difference</span>
+                <div className="w-6 h-10 rounded-full border-2 border-pearl/20 flex items-start justify-center p-2">
+                  <div className="w-1 h-3 bg-energy rounded-full animate-bounce"></div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       {/* Visual Proof - The Magic Moment */}
-      <section id="see-how" className="py-40 bg-gradient-to-b from-background to-muted/30">
+      <section id="the-difference" className="py-40 bg-gradient-to-b from-black via-background to-muted/30">
         <div className="max-w-7xl mx-auto px-8">
           
           {/* The Contrast */}
