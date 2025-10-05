@@ -53,104 +53,63 @@ const IndexEnhanced = () => {
           
           <div className="space-y-24 animate-fade-up">
             
-            {/* The Dream State */}
-            <div className="space-y-16 max-w-5xl mx-auto">
+            {/* The Promise - Clear and Direct */}
+            <div className="space-y-20 max-w-5xl mx-auto">
               
-              {/* Opening - Paint the picture */}
-              <div className="space-y-10">
-                <p className="text-lg md:text-xl text-pearl/50 font-light tracking-[0.2em] uppercase">
-                  Imagine
-                </p>
-                
-                <h1 className="text-5xl md:text-8xl lg:text-9xl font-extralight text-pearl leading-[0.9] tracking-tighter">
-                  Life without
+              {/* Hero Message - Steve Jobs clarity */}
+              <div className="space-y-12">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-extralight text-pearl leading-[1.1] tracking-tight">
+                  For your family's
                   <br />
-                  <span className="text-energy font-light italic">interruptions</span>
+                  peace of mind.
+                  <br />
+                  <span className="text-energy font-light">Start here.</span>
                 </h1>
-              </div>
-
-              {/* The Vision - Create desire */}
-              <div className="space-y-8 max-w-3xl mx-auto">
-                <p className="text-xl md:text-3xl text-pearl/80 font-extralight leading-relaxed">
-                  No more waiting for the grid.
-                </p>
-                <p className="text-xl md:text-3xl text-pearl/80 font-extralight leading-relaxed">
-                  No diesel fumes at 3 AM.
-                </p>
-                <p className="text-xl md:text-3xl text-pearl/80 font-extralight leading-relaxed">
-                  No compromises.
-                </p>
                 
-                <div className="py-8">
-                  <div className="w-24 h-px bg-gradient-to-r from-transparent via-energy to-transparent mx-auto"></div>
-                </div>
-
-                <p className="text-2xl md:text-4xl text-pearl font-light leading-relaxed">
-                  Just pure, silent,
+                <p className="text-xl md:text-2xl text-pearl/70 font-light max-w-2xl mx-auto leading-relaxed">
+                  No diesel. No waiting. No interruptions.
                   <br />
-                  <span className="text-energy-bright font-normal">continuous power.</span>
+                  Just continuous, silent power when it matters most.
                 </p>
               </div>
 
-              {/* Social proof - subtle but powerful */}
-              <div className="pt-8">
-                <div className="inline-flex items-center gap-6 px-10 py-5 rounded-full bg-gradient-to-r from-energy/10 via-energy/5 to-energy/10 border border-energy/20 backdrop-blur-xl">
-                  <div className="flex items-center gap-3">
-                    <div className="relative">
-                      <div className="w-2.5 h-2.5 rounded-full bg-energy"></div>
-                      <div className="absolute inset-0 w-2.5 h-2.5 rounded-full bg-energy animate-ping"></div>
-                    </div>
-                    <span className="text-energy-bright font-medium text-lg">10,000+ powered</span>
-                  </div>
-                  <div className="w-px h-8 bg-energy/30"></div>
-                  <div className="flex -space-x-3">
-                    <div className="w-10 h-10 rounded-full bg-energy/20 border-2 border-black flex items-center justify-center">
-                      <Home className="w-5 h-5 text-energy" />
-                    </div>
-                    <div className="w-10 h-10 rounded-full bg-energy/20 border-2 border-black flex items-center justify-center">
-                      <Shield className="w-5 h-5 text-energy" />
-                    </div>
-                  </div>
-                  <span className="text-pearl/60 text-base">homes & businesses</span>
-                </div>
-              </div>
-            </div>
-
-            {/* CTAs - Clear paths */}
-            <div className="space-y-10 pt-8">
-              <p className="text-pearl/40 text-sm tracking-[0.3em] uppercase">
-                Your journey starts here
-              </p>
-              
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              {/* Primary CTA - Hero level */}
+              <div className="flex flex-col items-center gap-8">
                 <Link to="/residential" className="w-full sm:w-auto group">
-                  <Button size="lg" className="btn-sonos w-full sm:w-auto px-14 py-8 text-xl relative overflow-hidden">
+                  <Button size="lg" className="btn-sonos w-full sm:w-auto px-16 py-9 text-2xl relative overflow-hidden shadow-2xl shadow-energy/20">
                     <div className="flex items-center gap-4 relative z-10">
-                      <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-all">
-                        <Home className="w-5 h-5" />
+                      <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-all">
+                        <Home className="w-6 h-6" />
                       </div>
-                      <div className="text-left">
-                        <div className="font-semibold">For Your Home</div>
-                        <div className="text-xs text-pearl/70 font-light">Peace. Always on.</div>
-                      </div>
+                      <span className="font-semibold">Explore Home Systems</span>
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-r from-energy-bright/0 via-energy-bright/20 to-energy-bright/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                   </Button>
                 </Link>
-                
-                <Link to="/commercial" className="w-full sm:w-auto group">
-                  <Button size="lg" variant="outline" className="w-full sm:w-auto px-14 py-8 text-xl border-energy/30 hover:bg-energy/10 hover:border-energy bg-black/30 backdrop-blur-sm">
-                    <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-full bg-energy/10 flex items-center justify-center group-hover:bg-energy/20 transition-all">
-                        <Shield className="w-5 h-5 text-energy" />
-                      </div>
-                      <div className="text-left">
-                        <div className="font-semibold">For Your Business</div>
-                        <div className="text-xs text-pearl/60 font-light">Uptime. Guaranteed.</div>
-                      </div>
-                    </div>
+
+                {/* Secondary path - less prominent but available */}
+                <Link to="/commercial" className="group">
+                  <Button size="lg" variant="ghost" className="px-10 py-6 text-lg text-pearl/60 hover:text-pearl hover:bg-white/5">
+                    <Shield className="w-5 h-5 mr-3" />
+                    Business Solutions
+                    <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
+              </div>
+
+              {/* Social proof - condensed */}
+              <div className="pt-4">
+                <div className="inline-flex items-center gap-4 px-8 py-4 rounded-full bg-energy/10 border border-energy/20 backdrop-blur-xl">
+                  <div className="flex items-center gap-2">
+                    <div className="relative">
+                      <div className="w-2 h-2 rounded-full bg-energy"></div>
+                      <div className="absolute inset-0 w-2 h-2 rounded-full bg-energy animate-ping"></div>
+                    </div>
+                    <span className="text-energy-bright font-medium">10,000+ installations</span>
+                  </div>
+                  <div className="w-px h-5 bg-energy/30"></div>
+                  <span className="text-pearl/50 text-sm">powered 24/7</span>
+                </div>
               </div>
             </div>
 

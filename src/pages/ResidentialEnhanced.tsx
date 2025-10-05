@@ -8,95 +8,119 @@ const ResidentialEnhanced = () => {
 
   return (
     <Layout>
-      {/* Hero - One concrete scenario */}
-      <section className="min-h-screen flex items-center justify-center bg-background px-6 sm:px-8 relative overflow-hidden">
+      {/* Hero - Direct and Clear */}
+      <section className="py-20 bg-background px-6 sm:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background"></div>
         
-        <div className="max-w-6xl mx-auto text-center relative z-10">
+        <div className="max-w-7xl mx-auto relative z-10">
           
-          <div className="space-y-16 animate-fade-in">
-            
-            <h1 className="text-6xl sm:text-8xl md:text-9xl leading-[0.9] tracking-tight text-foreground font-light">
-              Power stays on.
+          <div className="text-center mb-16 space-y-8 animate-fade-in">
+            <h1 className="text-5xl sm:text-7xl md:text-8xl leading-[1] tracking-tight text-foreground font-light">
+              Power for your home.
               <br />
-              <span className="text-primary">Always.</span>
+              <span className="text-primary font-normal">Always on.</span>
             </h1>
-          
-            {/* ONE concrete scenario */}
-            <div className="max-w-2xl mx-auto bg-card/50 backdrop-blur-sm rounded-3xl p-8 border border-border/50">
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                It's 3 AM. Your baby's AC is running. 
-                The whole street goes dark. <span className="text-foreground font-medium">Your home doesn't.</span>
-              </p>
-            </div>
+            
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              It's 3 AM. Your baby's AC is running. The street goes dark.
+              <br />
+              <span className="text-foreground font-medium">Your home doesn't.</span>
+            </p>
+          </div>
 
-            {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-6 rounded-full text-lg font-medium w-full sm:w-auto"
-                onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Find Your System
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
+          {/* 6-Step Journey - Visual and Clear */}
+          <div className="max-w-6xl mx-auto mb-24">
+            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-border/50">
+              <h2 className="text-2xl md:text-3xl font-light text-center mb-12 text-foreground">
+                6 Steps to Get Your NESS
+              </h2>
+              
+              <div className="grid md:grid-cols-3 gap-8 md:gap-6">
+                {/* Step 1 */}
+                <div className="relative">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">
+                      1
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Select Your NESS</h3>
+                      <p className="text-sm text-muted-foreground">Choose the system that fits your home</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Step 2 */}
+                <div className="relative">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">
+                      2
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Customize</h3>
+                      <p className="text-sm text-muted-foreground">Tailor capacity and features</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Step 3 */}
+                <div className="relative">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">
+                      3
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Pre-Order</h3>
+                      <p className="text-sm text-muted-foreground">Reserve with provisional payment</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Step 4 */}
+                <div className="relative">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">
+                      4
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Inspection</h3>
+                      <p className="text-sm text-muted-foreground">Certified installer visits your site</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Step 5 */}
+                <div className="relative">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">
+                      5
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Shipping</h3>
+                      <p className="text-sm text-muted-foreground">NESS arrives at your location</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Step 6 */}
+                <div className="relative">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">
+                      6
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Installation</h3>
+                      <p className="text-sm text-muted-foreground">Professional setup, you're powered</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Three Key Scenarios */}
-      <section id="scenarios" className="py-32 bg-muted/30">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8">
-          
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl leading-tight tracking-tight text-foreground mb-6 font-light">
-              When it matters most
-            </h2>
-          </div>
-
-          {/* 3 scenarios only */}
-          <div className="grid lg:grid-cols-3 gap-8 mb-20">
-            {/* Baby sleeping - AC runs */}
-            <div className="bg-card border border-border rounded-2xl p-8">
-              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
-                <Sparkles className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-2xl font-medium text-foreground mb-4">Your baby sleeps through</h3>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                AC stays on. Temperature steady at 24°C. 
-                Power cut? Your child doesn't wake up sweating.
-              </p>
-            </div>
-
-            {/* Work call doesn't drop */}
-            <div className="bg-card border border-border rounded-2xl p-8">
-              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
-                <Zap className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-2xl font-medium text-foreground mb-4">Your call doesn't drop</h3>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                Mid-presentation. Grid fails. 
-                Your internet, screen, and lights stay on. Client never notices.
-              </p>
-            </div>
-
-            {/* Medical device runs */}
-            <div className="bg-card border border-border rounded-2xl p-8">
-              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
-                <Shield className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-2xl font-medium text-foreground mb-4">Medical devices run</h3>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                CPAP machine. Oxygen concentrator. Refrigerated insulin. 
-                Power failures stop being life-or-death anxiety.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Products - Ive's product showcase precision */}
-      <section id="products" className="py-40 bg-pearl">
+      {/* Products - Direct Access, No Jump Required */}
+      <section id="products" className="py-24 bg-pearl">
         <div className="max-w-7xl mx-auto px-8">
           
           <div className="text-center mb-20">
@@ -245,6 +269,56 @@ const ResidentialEnhanced = () => {
                     Configure PRO
                   </Button>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* When It Matters Most - After Products */}
+          <div className="mt-32 mb-20">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl leading-tight tracking-tight text-foreground mb-4 font-light">
+                When it matters most
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Real moments. Real peace of mind.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-3 gap-8">
+              {/* Baby sleeping - AC runs */}
+              <div className="bg-card border border-border rounded-2xl p-8">
+                <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                  <Sparkles className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="text-xl font-medium text-foreground mb-3">Your baby sleeps through</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  AC stays on. Temperature steady at 24°C. 
+                  Power cut? Your child doesn't wake up sweating.
+                </p>
+              </div>
+
+              {/* Work call doesn't drop */}
+              <div className="bg-card border border-border rounded-2xl p-8">
+                <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                  <Zap className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="text-xl font-medium text-foreground mb-3">Your call doesn't drop</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Mid-presentation. Grid fails. 
+                  Your internet, screen, and lights stay on. Client never notices.
+                </p>
+              </div>
+
+              {/* Medical device runs */}
+              <div className="bg-card border border-border rounded-2xl p-8">
+                <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                  <Shield className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="text-xl font-medium text-foreground mb-3">Medical devices run</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  CPAP machine. Oxygen concentrator. Refrigerated insulin. 
+                  Power failures stop being life-or-death anxiety.
+                </p>
               </div>
             </div>
           </div>
