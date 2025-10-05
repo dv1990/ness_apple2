@@ -11,19 +11,19 @@
     --font-body: "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     --font-display: "Playfair Display", Georgia, serif;
 
-    /* Sophisticated Color Palette - Inspired by Apple/Sonos */
-    --charcoal: 0 0% 8%;             /* #141414 - Deep charcoal */
-    --pearl: 0 0% 99%;               /* #fcfcfc - Pure pearl white */
-    --graphite: 0 0% 20%;            /* #333333 - Premium graphite */
-    --silver: 0 0% 45%;              /* #737373 - Elegant silver */
-    --platinum: 0 0% 85%;            /* #d9d9d9 - Refined platinum */
-    --whisper: 0 0% 96%;             /* #f5f5f5 - Soft whisper */
+    /* Apple-Inspired Premium Palette */
+    --charcoal: 0 0% 10%;            /* #1a1a1a - Refined dark */
+    --pearl: 0 0% 100%;              /* #ffffff - Pure white */
+    --graphite: 0 0% 18%;            /* #2e2e2e - Soft black */
+    --silver: 0 0% 58%;              /* #949494 - Apple gray */
+    --platinum: 0 0% 92%;            /* #ebebeb - Whisper gray */
+    --whisper: 0 0% 98%;             /* #fafafa - Off white */
     
-    /* Energy Brand Colors - Refined */
-    --energy-core: 142 76% 36%;      /* #16a34a - Core energy green */
-    --energy-bright: 142 76% 46%;    /* #22c55e - Vibrant energy */
-    --energy-subtle: 142 50% 85%;    /* #dcfce7 - Subtle energy tint */
-    --energy-glow: 142 76% 56%;      /* #34d399 - Energy glow */
+    /* Restrained Accent - Used Sparingly */
+    --energy-core: 142 35% 40%;      /* Muted professional green */
+    --energy-bright: 142 35% 45%;    /* Subtle highlight */
+    --energy-subtle: 142 20% 92%;    /* Barely-there tint */
+    --energy-glow: 142 35% 50%;      /* Reserved glow */
     
     /* Premium Gradients */
     --gradient-energy: linear-gradient(135deg, hsl(var(--energy-core)), hsl(var(--energy-bright)));
