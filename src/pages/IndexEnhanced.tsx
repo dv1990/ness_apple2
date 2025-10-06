@@ -40,15 +40,15 @@ const IndexEnhanced = () => {
           <div className="space-y-20 animate-fade-up">
             
             {/* The Promise */}
-            <div className="space-y-16">
+            <div className="space-y-24">
               <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight text-charcoal leading-[1.05] tracking-tight">
                 Power that never
                 <br />
                 lets you down.
               </h1>
               
-              <p className="text-2xl md:text-3xl text-silver font-light max-w-3xl mx-auto leading-relaxed">
-                For your family's peace of mind.
+              <p className="text-3xl md:text-4xl text-charcoal/60 font-extralight max-w-3xl mx-auto leading-[1.4]">
+                The power system you'll never think about.
               </p>
             </div>
 
@@ -86,70 +86,59 @@ const IndexEnhanced = () => {
         </div>
       </section>
 
-      {/* What Makes NESS Different */}
+      {/* Why NESS */}
       <section className="py-48 bg-pearl">
         <div className="max-w-6xl mx-auto px-8">
           
-          <div className="text-center space-y-32">
+          <div className="text-center space-y-40">
             
             {/* Core Philosophy */}
-            <div className="space-y-16">
+            <div className="space-y-24">
               <h2 className="text-5xl md:text-7xl font-extralight text-foreground leading-tight">
-                What makes NESS different?
+                Why NESS?
               </h2>
-              <p className="text-2xl md:text-3xl text-muted-foreground/80 font-light max-w-4xl mx-auto leading-relaxed">
-                We believe technology should disappear.<br />
-                <span className="text-foreground italic">You shouldn't notice your power system—until you do.</span>
+              <p className="text-2xl md:text-3xl text-charcoal/60 font-extralight max-w-4xl mx-auto leading-[1.6]">
+                Technology should disappear.
               </p>
             </div>
 
-            {/* The Commitment */}
-            <div className="space-y-16 max-w-4xl mx-auto">
-              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-                Most companies optimize for what's easiest to manufacture.<br />
-                We optimize for what's safest in your home.
-              </p>
-              
-              <div className="py-16 space-y-8">
-                <p className="text-3xl md:text-5xl font-light text-charcoal leading-tight">
+            {/* The Chemistry */}
+            <div className="space-y-20 max-w-3xl mx-auto">
+              <div className="space-y-12">
+                <p className="text-4xl md:text-6xl font-extralight text-charcoal leading-tight">
                   LiFePO₄
                 </p>
-                <p className="text-base uppercase tracking-widest text-silver">
-                  The stable choice
+                <p className="text-lg uppercase tracking-[0.3em] text-silver/60">
+                  The chemistry that lets you forget
                 </p>
               </div>
               
-              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-                It costs more. It's harder to source.<br />
-                <span className="text-foreground font-normal">And it's the only chemistry we'll put our name on.</span>
+              <p className="text-xl md:text-2xl text-charcoal/50 font-light leading-relaxed">
+                Because peace of mind shouldn't compromise.
               </p>
             </div>
 
             {/* Proven Trust */}
-            <div className="space-y-16">
-              <div className="inline-block px-6 py-2 rounded-full bg-whisper border border-platinum">
-                <span className="text-sm uppercase tracking-wider text-silver">Proven in the field</span>
-              </div>
-              
-              <div className="space-y-8">
-                <div className="text-7xl md:text-8xl font-extralight text-charcoal">
-                  10,000<span className="text-charcoal">+</span>
+            <div className="space-y-20">
+              <div className="space-y-12">
+                <div className="text-7xl md:text-9xl font-extralight text-charcoal tracking-tight">
+                  10,000+
                 </div>
-                <p className="text-xl md:text-2xl text-silver leading-relaxed">
-                  Homes and businesses powered.<br />
-                  From coastal humidity to desert heat.<br />
-                  Every single day.
+                <p className="text-xl md:text-2xl text-charcoal/50 font-light leading-relaxed max-w-2xl mx-auto">
+                  families trust NESS.
                 </p>
               </div>
 
-              <div className="inline-flex items-center gap-4 px-12 py-6 rounded-full bg-whisper border border-platinum">
-                <Check className="w-6 h-6 text-charcoal" />
-                <span className="text-xl text-charcoal font-light">Reliability you can count on</span>
-              </div>
+              <p className="text-lg md:text-xl text-silver/60 font-light max-w-2xl mx-auto leading-relaxed">
+                From desert heat to coastal storms.<br />
+                Day after day. Year after year.
+              </p>
+            </div>
 
-              <p className="text-lg text-silver max-w-2xl mx-auto leading-relaxed pt-8">
-                When the lights stay on,<br />
-                that's when we've done our job.
+            {/* The Unexpected Moment */}
+            <div className="pt-16 max-w-3xl mx-auto">
+              <p className="text-2xl md:text-3xl text-charcoal/40 font-extralight italic leading-relaxed">
+                "In 10 years, we've never had to explain<br className="hidden md:block" /> what peace of mind means to a family who has it."
               </p>
             </div>
 
@@ -171,44 +160,42 @@ const IndexEnhanced = () => {
             
             {/* Homes */}
             <Link to="/residential" className="group">
-              <div className="bg-pearl border border-platinum rounded-3xl p-16 hover:border-silver/40 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-500 min-h-[400px] flex flex-col justify-between">
-                <div className="space-y-8">
+              <div className="bg-pearl border border-platinum rounded-3xl p-20 hover:border-silver/40 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-500 min-h-[440px] flex flex-col justify-between">
+                <div className="space-y-12">
                   <div className="w-20 h-20 rounded-full bg-whisper flex items-center justify-center">
                     <Home className="w-10 h-10 text-charcoal" />
                   </div>
-                  <div className="space-y-4">
-                    <h3 className="text-4xl font-light text-charcoal">For Homes</h3>
-                    <p className="text-xl text-silver leading-relaxed">
-                      Seamless backup power.<br />
-                      Your family never notices when the grid fails.
+                  <div className="space-y-6">
+                    <h3 className="text-4xl font-extralight text-charcoal">Homes</h3>
+                    <p className="text-2xl text-charcoal/50 font-light leading-relaxed">
+                      Never notice an outage.
                     </p>
                   </div>
                 </div>
-                <div className="pt-8 flex items-center gap-3 text-charcoal text-lg group-hover:gap-4 transition-all">
-                  <span>Explore systems</span>
-                  <ArrowRight className="w-6 h-6" />
+                <div className="pt-12 flex items-center gap-3 text-charcoal/60 text-lg group-hover:gap-4 group-hover:text-charcoal transition-all">
+                  <span className="font-light">Explore</span>
+                  <ArrowRight className="w-5 h-5" />
                 </div>
               </div>
             </Link>
 
             {/* Business */}
             <Link to="/commercial" className="group">
-              <div className="bg-pearl border border-platinum rounded-3xl p-16 hover:border-silver/40 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-500 min-h-[400px] flex flex-col justify-between">
-                <div className="space-y-8">
+              <div className="bg-pearl border border-platinum rounded-3xl p-20 hover:border-silver/40 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-500 min-h-[440px] flex flex-col justify-between">
+                <div className="space-y-12">
                   <div className="w-20 h-20 rounded-full bg-whisper flex items-center justify-center">
                     <Shield className="w-10 h-10 text-charcoal" />
                   </div>
-                  <div className="space-y-4">
-                    <h3 className="text-4xl font-light text-charcoal">For Business</h3>
-                    <p className="text-xl text-silver leading-relaxed">
-                      Industrial-grade reliability.<br />
-                      Zero downtime. Zero diesel. Zero compromise.
+                  <div className="space-y-6">
+                    <h3 className="text-4xl font-extralight text-charcoal">Business</h3>
+                    <p className="text-2xl text-charcoal/50 font-light leading-relaxed">
+                      Uninterrupted operations.
                     </p>
                   </div>
                 </div>
-                <div className="pt-8 flex items-center gap-3 text-charcoal text-lg group-hover:gap-4 transition-all">
-                  <span>Explore systems</span>
-                  <ArrowRight className="w-6 h-6" />
+                <div className="pt-12 flex items-center gap-3 text-charcoal/60 text-lg group-hover:gap-4 group-hover:text-charcoal transition-all">
+                  <span className="font-light">Explore</span>
+                  <ArrowRight className="w-5 h-5" />
                 </div>
               </div>
             </Link>
