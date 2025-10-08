@@ -289,9 +289,13 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="animate-fade-in" style={{ animationDelay: '400ms' }}>
+            <div className="animate-fade-in space-y-8" style={{ animationDelay: '400ms' }}>
               <p className="text-4xl md:text-6xl font-light leading-relaxed">
-                Backed by intelligent circular supply.
+                10 years. Fully covered.
+              </p>
+              <p className="text-xl md:text-2xl font-light text-background/60 max-w-3xl mx-auto leading-relaxed">
+                We don't just promise a decade. We guarantee it. Every cell monitored. Every system tested. 
+                Because when we say 10 years, we mean it.
               </p>
             </div>
             
