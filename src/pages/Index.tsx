@@ -132,75 +132,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 3️⃣ The NESS Ecosystem */}
-      <section className="py-40 bg-background">
-        <div className="max-w-6xl mx-auto px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-light text-foreground mb-8">
-              The NESS <span className="text-energy font-medium">Ecosystem</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
-              NESS integrates advanced battery technology, adaptive power electronics, and intelligent control — scaling seamlessly from 5 kWh home systems to multi-MWh industrial installations.
-            </p>
-          </div>
-
-          {/* Flow diagram */}
-          <div className="relative py-16">
-            <div className="flex items-center justify-between max-w-4xl mx-auto">
-              
-              {/* Solar */}
-              <div className="flex flex-col items-center space-y-4 flex-1">
-                <div className="w-16 h-16 rounded-2xl bg-energy/10 flex items-center justify-center">
-                  <Zap className="w-8 h-8 text-energy" />
-                </div>
-                <div className="text-center">
-                  <div className="font-medium text-foreground">Solar</div>
-                  <div className="text-xs text-muted-foreground">Clean generation</div>
-                </div>
-              </div>
-
-              <ArrowRight className="w-6 h-6 text-energy flex-shrink-0 mx-4" />
-
-              {/* Battery */}
-              <div className="flex flex-col items-center space-y-4 flex-1">
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
-                  <Shield className="w-8 h-8 text-primary" />
-                </div>
-                <div className="text-center">
-                  <div className="font-medium text-foreground">Battery</div>
-                  <div className="text-xs text-muted-foreground">LFP storage</div>
-                </div>
-              </div>
-
-              <ArrowRight className="w-6 h-6 text-energy flex-shrink-0 mx-4" />
-
-              {/* Smart Control */}
-              <div className="flex flex-col items-center space-y-4 flex-1">
-                <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center">
-                  <Award className="w-8 h-8 text-accent" />
-                </div>
-                <div className="text-center">
-                  <div className="font-medium text-foreground">Smart Control</div>
-                  <div className="text-xs text-muted-foreground">AI optimization</div>
-                </div>
-              </div>
-
-              <ArrowRight className="w-6 h-6 text-energy flex-shrink-0 mx-4" />
-
-              {/* Loads & Grid */}
-              <div className="flex flex-col items-center space-y-4 flex-1">
-                <div className="w-16 h-16 rounded-2xl bg-energy/10 flex items-center justify-center">
-                  <Home className="w-8 h-8 text-energy" />
-                </div>
-                <div className="text-center">
-                  <div className="font-medium text-foreground">Your Power</div>
-                  <div className="text-xs text-muted-foreground">Always on</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* 4️⃣ For Homes */}
       <section className="py-40 bg-muted/20">
@@ -343,29 +274,29 @@ const Index = () => {
       </section>
 
       {/* 6️⃣ Why NESS (Unified Value Section) */}
-      <section className="py-40 bg-foreground text-background">
-        <div className="max-w-4xl mx-auto px-8 text-center">
-          <div className="space-y-16">
-            <div className="space-y-8 animate-fade-in">
-              <p className="text-3xl md:text-4xl font-light leading-relaxed">
+      <section className="py-60 bg-foreground text-background">
+        <div className="max-w-5xl mx-auto px-8 text-center">
+          <div className="space-y-32">
+            <div className="animate-fade-in">
+              <p className="text-4xl md:text-6xl font-light leading-relaxed">
                 Designed for India's heat.
               </p>
             </div>
             
-            <div className="space-y-8 animate-fade-in" style={{ animationDelay: '200ms' }}>
-              <p className="text-3xl md:text-4xl font-light leading-relaxed">
+            <div className="animate-fade-in" style={{ animationDelay: '200ms' }}>
+              <p className="text-4xl md:text-6xl font-light leading-relaxed">
                 Built for a decade of trust.
               </p>
             </div>
             
-            <div className="space-y-8 animate-fade-in" style={{ animationDelay: '400ms' }}>
-              <p className="text-3xl md:text-4xl font-light leading-relaxed">
+            <div className="animate-fade-in" style={{ animationDelay: '400ms' }}>
+              <p className="text-4xl md:text-6xl font-light leading-relaxed">
                 Backed by intelligent circular supply.
               </p>
             </div>
             
-            <div className="space-y-8 animate-fade-in" style={{ animationDelay: '600ms' }}>
-              <p className="text-4xl md:text-5xl font-medium text-energy leading-relaxed">
+            <div className="animate-fade-in" style={{ animationDelay: '600ms' }}>
+              <p className="text-5xl md:text-7xl font-medium text-energy leading-relaxed">
                 Energy, reinvented.
               </p>
             </div>
@@ -373,84 +304,47 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 7️⃣ Case Studies Carousel */}
+      {/* 7️⃣ Featured Case Study */}
       <section className="py-40 bg-muted/20">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="max-w-5xl mx-auto px-8">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-light text-foreground mb-8">
               Proven <span className="text-energy font-medium">Performance</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light">
-              Real installations. Real results. Real impact.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Case Study 1 */}
-            <div className="bg-card/60 backdrop-blur-xl border border-border/20 rounded-3xl p-8 hover:bg-card/80 transition-all duration-300 hover:-translate-y-1">
-              <div className="mb-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-2 h-2 bg-energy rounded-full"></div>
-                  <span className="text-sm text-energy font-medium uppercase tracking-wide">Bangalore Home</span>
-                </div>
-                <h3 className="text-2xl font-light text-foreground mb-2">10 kWh NESS System</h3>
-                <p className="text-muted-foreground text-sm">24-hour backup for entire home</p>
+          {/* Single prominent case study */}
+          <div className="bg-card/60 backdrop-blur-xl border border-border/20 rounded-3xl p-16 hover:bg-card/80 transition-all duration-500">
+            <div className="max-w-3xl mx-auto text-center space-y-8">
+              <div className="flex items-center justify-center gap-3">
+                <div className="w-3 h-3 bg-primary rounded-full"></div>
+                <span className="text-lg text-primary font-medium uppercase tracking-wider">EV Charging Hub, Delhi</span>
               </div>
-              <div className="space-y-3 text-sm">
-                <div className="flex items-center">
-                  <CheckCircle className="w-4 h-4 mr-3 text-energy" />
-                  <span className="text-muted-foreground">₹18,000 annual savings</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-4 h-4 mr-3 text-energy" />
-                  <span className="text-muted-foreground">Zero power cuts in 2 years</span>
-                </div>
-              </div>
-            </div>
+              
+              <h3 className="text-4xl md:text-5xl font-light text-foreground leading-tight">
+                500 kWh NESS System
+              </h3>
+              
+              <p className="text-2xl text-muted-foreground font-light leading-relaxed">
+                Peak demand management delivering consistent results.
+              </p>
 
-            {/* Case Study 2 */}
-            <div className="bg-card/60 backdrop-blur-xl border border-border/20 rounded-3xl p-8 hover:bg-card/80 transition-all duration-300 hover:-translate-y-1">
-              <div className="mb-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-sm text-primary font-medium uppercase tracking-wide">EV Charging Hub</span>
+              <div className="grid md:grid-cols-2 gap-8 pt-8">
+                <div className="space-y-3">
+                  <div className="text-5xl font-light text-energy">₹2.5L</div>
+                  <div className="text-lg text-muted-foreground">Monthly savings</div>
                 </div>
-                <h3 className="text-2xl font-light text-foreground mb-2">500 kWh NESS</h3>
-                <p className="text-muted-foreground text-sm">Peak demand management</p>
-              </div>
-              <div className="space-y-3 text-sm">
-                <div className="flex items-center">
-                  <CheckCircle className="w-4 h-4 mr-3 text-primary" />
-                  <span className="text-muted-foreground">₹2.5L monthly savings</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-4 h-4 mr-3 text-primary" />
-                  <span className="text-muted-foreground">30% peak shaving achieved</span>
+                <div className="space-y-3">
+                  <div className="text-5xl font-light text-energy">30%</div>
+                  <div className="text-lg text-muted-foreground">Peak shaving achieved</div>
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* Case Study 3 */}
-            <div className="bg-card/60 backdrop-blur-xl border border-border/20 rounded-3xl p-8 hover:bg-card/80 transition-all duration-300 hover:-translate-y-1">
-              <div className="mb-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-2 h-2 bg-accent rounded-full"></div>
-                  <span className="text-sm text-accent font-medium uppercase tracking-wide">Factory, Pune</span>
-                </div>
-                <h3 className="text-2xl font-light text-foreground mb-2">1 MWh NESS</h3>
-                <p className="text-muted-foreground text-sm">Grid + solar optimization</p>
-              </div>
-              <div className="space-y-3 text-sm">
-                <div className="flex items-center">
-                  <CheckCircle className="w-4 h-4 mr-3 text-accent" />
-                  <span className="text-muted-foreground">27% tariff reduction</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-4 h-4 mr-3 text-accent" />
-                  <span className="text-muted-foreground">100% uptime maintained</span>
-                </div>
-              </div>
-            </div>
+          {/* Subtle indicator of more stories */}
+          <div className="text-center mt-12">
+            <p className="text-sm text-muted-foreground">One of many success stories</p>
           </div>
         </div>
       </section>
