@@ -241,8 +241,8 @@ const ResidentialPremium = () => {
                     { icon: Shield, title: "Silent Guardian", desc: "Works invisibly, protecting your home 24/7" },
                     { icon: Zap, title: "Instant Response", desc: "10ms switching—faster than a heartbeat" },
                     { icon: Smartphone, title: "Intuitive Control", desc: "Monitor and manage from anywhere" }
-                  ].map((feature, i) => (
-                    <div key={i} className="flex items-start space-x-6 group cursor-pointer">
+                  ].map((feature) => (
+                    <div key={feature.title} className="flex items-start space-x-6 group cursor-pointer">
                       <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
                         <feature.icon className="w-6 h-6 text-primary" />
                       </div>
@@ -282,11 +282,11 @@ const ResidentialPremium = () => {
                 <div className="w-12 h-px bg-primary mx-auto"></div>
               </div>
 
-              <div className="flex items-center justify-center space-x-16 opacity-60">
-                <div className="flex items-center space-x-3">
-                  <div className="flex -space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                <div className="flex items-center justify-center space-x-16 opacity-60">
+                  <div className="flex items-center space-x-3">
+                    <div className="flex -space-x-1">
+                      {[...Array(5)].map((_, starIdx) => (
+                        <Star key={starIdx} className="w-4 h-4 fill-primary text-primary" />
                     ))}
                   </div>
                   <span className="text-sm text-muted-foreground">4.9/5</span>

@@ -209,7 +209,7 @@ export const ProductComparison = () => {
                           : 'border-muted-foreground/30'
                       }`}>
                         {selectedProducts.includes(product.id) && (
-                          <CheckCircle className="w-4 h-4 text-white" />
+                          <CheckCircle className="w-4 h-4 text-primary-foreground" />
                         )}
                       </div>
                     </div>
@@ -241,11 +241,11 @@ export const ProductComparison = () => {
                   </div>
 
                   {/* Ideal For */}
-                  <div className="space-y-2">
-                    <div className="text-sm font-medium text-foreground">Ideal for:</div>
-                    <div className="flex flex-wrap gap-2">
-                      {product.ideal.map((use, index) => (
-                        <Badge key={index} variant="secondary" className="text-xs">
+                    <div className="space-y-2">
+                      <div className="text-sm font-medium text-foreground">Ideal for:</div>
+                      <div className="flex flex-wrap gap-2">
+                        {product.ideal.map((use) => (
+                          <Badge key={use} variant="secondary" className="text-xs">
                           {use}
                         </Badge>
                       ))}
@@ -332,9 +332,9 @@ export const ProductComparison = () => {
                   <div></div>
                   {selectedProductsData.map((product) => (
                     <div key={product.id} className="space-y-2">
-                      {product.features.map((feature, index) => (
-                        <div key={index} className="flex items-center space-x-2 text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                      {product.features.map((feature) => (
+                        <div key={feature} className="flex items-center space-x-2 text-sm">
+                          <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
                           <span>{feature}</span>
                         </div>
                       ))}

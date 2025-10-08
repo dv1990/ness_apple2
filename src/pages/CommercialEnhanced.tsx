@@ -101,7 +101,7 @@ const CommercialEnhanced = () => {
         >
           <Button 
             size="lg"
-            className="bg-energy hover:bg-energy-dark text-white shadow-2xl hover:shadow-[0_0_40px_rgba(var(--energy),0.4)] px-8 py-6 text-lg font-semibold rounded-xl border-2 border-energy-bright/20"
+            className="bg-energy hover:bg-energy-dark text-primary-foreground shadow-2xl hover:shadow-[0_0_40px_rgba(var(--energy),0.4)] px-8 py-6 text-lg font-semibold rounded-xl border-2 border-energy-bright/20"
           >
             Get My ROI Estimate
             <ArrowRight className="w-5 h-5 ml-2" />
@@ -150,7 +150,7 @@ const CommercialEnhanced = () => {
                 <div className="pt-8">
                   <Button 
                     size="lg"
-                    className="bg-energy hover:bg-energy-dark text-white shadow-xl hover:shadow-[0_0_50px_rgba(var(--energy),0.5)] px-12 py-8 text-xl font-semibold rounded-2xl border-2 border-energy-bright/30 transition-all duration-300"
+                    className="bg-energy hover:bg-energy-dark text-primary-foreground shadow-xl hover:shadow-[0_0_50px_rgba(var(--energy),0.5)] px-12 py-8 text-xl font-semibold rounded-2xl border-2 border-energy-bright/30 transition-all duration-300"
                   >
                     Get My ROI Estimate
                     <ArrowRight className="w-6 h-6 ml-3" />
@@ -230,7 +230,7 @@ const CommercialEnhanced = () => {
               
               {/* Card 1: Bill Savings */}
               <div className="col-span-12 md:col-span-6 lg:col-span-3 group">
-                <div className="bg-white dark:bg-card rounded-2xl shadow-soft hover:shadow-lifted p-6 h-full transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                <div className="bg-card rounded-2xl shadow-soft hover:shadow-lifted p-6 h-full transition-all duration-300 hover:-translate-y-1 cursor-pointer">
                   <div className="space-y-4">
                     {/* Icon - line art, single color */}
                     <div className="w-8 h-8 flex items-center justify-start">
@@ -252,7 +252,7 @@ const CommercialEnhanced = () => {
 
               {/* Card 2: Demand Charge Control */}
               <div className="col-span-12 md:col-span-6 lg:col-span-3 group">
-                <div className="bg-white dark:bg-card rounded-2xl shadow-soft hover:shadow-lifted p-6 h-full transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                <div className="bg-card rounded-2xl shadow-soft hover:shadow-lifted p-6 h-full transition-all duration-300 hover:-translate-y-1 cursor-pointer">
                   <div className="space-y-4">
                     {/* Icon - line art, single color */}
                     <div className="w-8 h-8 flex items-center justify-start">
@@ -274,7 +274,7 @@ const CommercialEnhanced = () => {
 
               {/* Card 3: Resilience */}
               <div className="col-span-12 md:col-span-6 lg:col-span-3 group">
-                <div className="bg-white dark:bg-card rounded-2xl shadow-soft hover:shadow-lifted p-6 h-full transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                <div className="bg-card rounded-2xl shadow-soft hover:shadow-lifted p-6 h-full transition-all duration-300 hover:-translate-y-1 cursor-pointer">
                   <div className="space-y-4">
                     {/* Icon - line art, single color */}
                     <div className="w-8 h-8 flex items-center justify-start">
@@ -296,7 +296,7 @@ const CommercialEnhanced = () => {
 
               {/* Card 4: Diesel Replacement */}
               <div className="col-span-12 md:col-span-6 lg:col-span-3 group">
-                <div className="bg-white dark:bg-card rounded-2xl shadow-soft hover:shadow-lifted p-6 h-full transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                <div className="bg-card rounded-2xl shadow-soft hover:shadow-lifted p-6 h-full transition-all duration-300 hover:-translate-y-1 cursor-pointer">
                   <div className="space-y-4">
                     {/* Icon - line art, single color */}
                     <div className="w-8 h-8 flex items-center justify-start">
@@ -525,7 +525,7 @@ const CommercialEnhanced = () => {
             <div className="flex justify-center mt-20">
               <Button 
                 size="lg"
-                className="bg-energy hover:bg-energy-dark text-white shadow-xl hover:shadow-[0_0_50px_rgba(var(--energy),0.5)] px-12 py-8 text-xl font-semibold rounded-2xl border-2 border-energy-bright/30 transition-all duration-300 group"
+                className="bg-energy hover:bg-energy-dark text-primary-foreground shadow-xl hover:shadow-[0_0_50px_rgba(var(--energy),0.5)] px-12 py-8 text-xl font-semibold rounded-2xl border-2 border-energy-bright/30 transition-all duration-300 group"
               >
                 Get My ROI Estimate
                 <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform" />
@@ -802,7 +802,7 @@ const CommercialEnhanced = () => {
                       </div>
 
                       <div className="text-center pt-6">
-                        <MagneticButton size="lg" className="bg-primary hover:bg-primary/90 text-white px-12 py-6 rounded-2xl">
+                        <MagneticButton size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-6 rounded-2xl">
                           Get Detailed Proposal
                           <ArrowRight className="ml-3 w-5 h-5" />
                         </MagneticButton>
@@ -874,7 +874,7 @@ const CommercialEnhanced = () => {
                     <Button 
                       type="submit"
                       size="lg"
-                      className="w-full bg-primary hover:bg-primary/90 text-white py-6 rounded-2xl text-lg hover:scale-105 transition-transform duration-300"
+                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 rounded-2xl text-lg hover:scale-105 transition-transform duration-300"
                     >
                       Request Technical Consultation
                     </Button>

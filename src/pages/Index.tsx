@@ -36,7 +36,7 @@ const Index = () => {
             </p>
 
             <Link to="/contact">
-              <Button className="bg-energy hover:bg-energy-dark text-white px-16 py-8 text-2xl font-medium rounded-2xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-500 mt-8">
+              <Button className="bg-energy hover:bg-energy-dark text-primary-foreground px-16 py-8 text-2xl font-medium rounded-2xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-500 mt-8">
                 Begin your transformation
                 <ArrowRight className="w-8 h-8 ml-4" />
               </Button>
@@ -320,7 +320,7 @@ const Index = () => {
               Every dot represents a family or business that chose reliability and peace of mind
             </p>
             <Link to="/contact">
-              <Button size="lg" className="bg-energy hover:bg-energy-dark text-white px-10 py-5 text-lg font-medium rounded-xl">
+              <Button size="lg" className="bg-energy hover:bg-energy-dark text-primary-foreground px-10 py-5 text-lg font-medium rounded-xl">
                 Join our growing community
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
@@ -409,7 +409,7 @@ const Index = () => {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
             <Link to="/contact">
-              <Button size="lg" className="bg-energy hover:bg-energy-dark text-white px-12 py-6 text-xl font-medium rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+              <Button size="lg" className="bg-energy hover:bg-energy-dark text-primary-foreground px-12 py-6 text-xl font-medium rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                 Start Your NESS Journey
                 <ArrowRight className="w-6 h-6 ml-3" />
               </Button>

@@ -134,8 +134,8 @@ export const ProductShowcase = ({
   }>;
 }) => (
   <div className="grid lg:grid-cols-3 gap-12">
-    {products.map((product, index) => (
-      <div key={index} className="group">
+    {products.map((product) => (
+      <div key={product.name} className="group">
         <div className="bg-card/30 rounded-3xl p-12 hover:bg-card/50 transition-all duration-500 hover:-translate-y-2 cursor-pointer">
           <div className="aspect-square mb-8 rounded-2xl overflow-hidden bg-gradient-to-br from-muted/10 to-background">
             <img 

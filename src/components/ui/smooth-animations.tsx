@@ -182,7 +182,7 @@ export const StaggerReveal: React.FC<StaggerRevealProps> = ({
     <div className={className}>
       {children.map((child, index) => (
         <SmoothFade
-          key={index}
+          key={`smooth-fade-${index}`}
           delay={index * stagger}
           duration={600}
         >

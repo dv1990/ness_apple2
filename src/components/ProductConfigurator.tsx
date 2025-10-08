@@ -359,9 +359,9 @@ export const ProductConfigurator = () => {
                   {recommendation.features.length > 0 && (
                     <div className="space-y-2">
                       <h4 className="font-medium text-foreground">Included Features:</h4>
-                      {recommendation.features.map((feature, index) => (
-                        <div key={index} className="flex items-center space-x-2 text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-500" />
+                      {recommendation.features.map((feature) => (
+                        <div key={feature} className="flex items-center space-x-2 text-sm">
+                          <CheckCircle className="w-4 h-4 text-primary" />
                           <span>{feature}</span>
                         </div>
                       ))}
@@ -372,8 +372,8 @@ export const ProductConfigurator = () => {
                   {recommendation.warnings.length > 0 && (
                     <div className="space-y-2">
                       <h4 className="font-medium text-foreground">Consider:</h4>
-                      {recommendation.warnings.map((warning, index) => (
-                        <div key={index} className="flex items-start space-x-2 text-sm">
+                      {recommendation.warnings.map((warning) => (
+                        <div key={warning} className="flex items-start space-x-2 text-sm">
                           <AlertCircle className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
                           <span>{warning}</span>
                         </div>

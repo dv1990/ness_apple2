@@ -51,7 +51,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="w-8 h-8 gradient-brand rounded-lg flex items-center justify-center brand-shadow group-hover:scale-105 transition-transform">
-              <span className="text-white font-bold text-sm">N</span>
+              <span className="text-primary-foreground font-bold text-sm">N</span>
             </div>
             <span className="text-xl font-semibold text-foreground">NESS Energy</span>
           </Link>
@@ -149,7 +149,7 @@ const Navigation = () => {
                   <div className="p-6 border-b">
                     <Link to="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>
                       <div className="w-8 h-8 gradient-brand rounded-lg flex items-center justify-center">
-                        <span className="text-white font-bold text-sm">N</span>
+                        <span className="text-primary-foreground font-bold text-sm">N</span>
                       </div>
                       <span className="text-xl font-semibold">NESS Energy</span>
                     </Link>

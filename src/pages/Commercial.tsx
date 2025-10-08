@@ -148,7 +148,7 @@ const Commercial = () => {
               </p>
             </div>
 
-            <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl font-medium rounded-2xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-500">
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-6 text-xl font-medium rounded-2xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-500">
               Secure Your Operations
               <ArrowRight className="w-6 h-6 ml-4" />
             </Button>
@@ -539,8 +539,8 @@ const Commercial = () => {
                       Key Applications
                     </div>
                     <div className="flex flex-wrap gap-2">
-                      {industry.applications.slice(0, 3).map((app, i) => (
-                        <div key={i} className="bg-muted/30 text-muted-foreground px-3 py-1.5 rounded-full text-sm font-light">
+                      {industry.applications.slice(0, 3).map((app) => (
+                        <div key={app} className="bg-muted/30 text-muted-foreground px-3 py-1.5 rounded-full text-sm font-light">
                           {app}
                         </div>
                       ))}

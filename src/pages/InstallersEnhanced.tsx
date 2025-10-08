@@ -173,8 +173,8 @@ const InstallersEnhanced = () => {
                 
                 <div className="space-y-6">
                   <div className="flex gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-primary fill-current" />
+                    {[...Array(5)].map((_, starIdx) => (
+                      <Star key={starIdx} className="w-5 h-5 text-primary fill-current" />
                     ))}
                   </div>
                   
@@ -316,8 +316,8 @@ const InstallersEnhanced = () => {
                   "Optimal component sizing", 
                   "ROI calculations",
                   "Professional documentation"
-                ].map((feature, i) => (
-                  <div key={i} className="flex items-center space-x-3">
+                ].map((feature) => (
+                  <div key={feature} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-primary" />
                     <span className="text-foreground">{feature}</span>
                   </div>

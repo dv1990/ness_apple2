@@ -60,7 +60,7 @@ function BatteryPack({ packCount = 16 }: { packCount?: number }) {
     <group>
       {positions.map((position, index) => (
         <BatteryCell
-          key={index}
+          key={`battery-cell-${index}`}
           position={position}
           active={activeCells.has(index)}
         />

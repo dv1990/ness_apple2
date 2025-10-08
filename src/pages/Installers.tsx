@@ -116,14 +116,14 @@ const Installers = () => {
           <div className="max-w-4xl space-y-12">
             
             {/* Badge */}
-            <div className="inline-flex items-center space-x-2 text-white/70">
+            <div className="inline-flex items-center space-x-2 text-primary-foreground/70">
               <div className="w-1 h-1 rounded-full bg-primary"></div>
               <span className="text-xs font-mono uppercase tracking-[0.4em]">Partner Network</span>
             </div>
 
             {/* Headline */}
             <div className="space-y-8">
-              <h1 className="text-7xl md:text-8xl font-extralight text-white leading-[0.85] tracking-tight">
+              <h1 className="text-7xl md:text-8xl font-extralight text-primary-foreground leading-[0.85] tracking-tight">
                 Make your customers
                 <br />
                 <span className="text-primary font-light">never worry</span>
@@ -131,19 +131,19 @@ const Installers = () => {
                 about power again
               </h1>
 
-              <p className="text-xl font-light text-white/90 leading-relaxed max-w-2xl">
+              <p className="text-xl font-light text-primary-foreground/90 leading-relaxed max-w-2xl">
                 Install NESS. Your customers get 48-hour backup with zero fire risk. You get zero callbacks and happy customers for life.
               </p>
             </div>
 
             {/* Actions */}
             <div className="flex items-center space-x-6 pt-4">
-              <Button className="bg-white text-black hover:bg-white/90 px-8 py-4 rounded-full font-medium text-lg transition-all duration-500 hover:scale-105">
+              <Button className="bg-background text-foreground hover:bg-background/90 px-8 py-4 rounded-full font-medium text-lg transition-all duration-500 hover:scale-105">
                 Become a partner
               </Button>
               
-              <button className="group inline-flex items-center space-x-3 text-white/80 hover:text-white transition-colors duration-300">
-                <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center group-hover:border-white/60 transition-colors duration-300">
+              <button className="group inline-flex items-center space-x-3 text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300">
+                <div className="w-12 h-12 rounded-full border border-primary-foreground/30 flex items-center justify-center group-hover:border-primary-foreground/60 transition-colors duration-300">
                   <Play className="w-5 h-5 ml-1" fill="currentColor" />
                 </div>
                 <span className="font-light">Watch overview</span>
@@ -154,9 +154,9 @@ const Installers = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 right-8">
-          <div className="flex flex-col items-center space-y-2 text-white/50">
+          <div className="flex flex-col items-center space-y-2 text-primary-foreground/50">
             <span className="text-xs font-light tracking-wider">Explore</span>
-            <div className="w-px h-8 bg-white/20"></div>
+            <div className="w-px h-8 bg-primary-foreground/20"></div>
             <ArrowRight className="w-3 h-3 rotate-90" />
           </div>
         </div>
@@ -225,8 +225,8 @@ const Installers = () => {
 
                     {/* Features */}
                     <div className="space-y-3">
-                      {tier.features.map((feature, i) => (
-                        <div key={i} className="flex items-center space-x-3">
+                      {tier.features.map((feature) => (
+                        <div key={feature} className="flex items-center space-x-3">
                           <div className={`w-1.5 h-1.5 rounded-full ${
                             tier.highlight ? 'bg-background/60' : 'bg-primary'
                           }`}></div>
@@ -293,8 +293,8 @@ const Installers = () => {
                       "Optimal component sizing", 
                       "ROI calculations",
                       "Professional documentation"
-                    ].map((feature, i) => (
-                      <div key={i} className="flex items-center space-x-3">
+                    ].map((feature) => (
+                      <div key={feature} className="flex items-center space-x-3">
                         <CheckCircle className="w-4 h-4 text-primary" />
                         <span className="text-sm text-muted-foreground">{feature}</span>
                       </div>
@@ -344,8 +344,8 @@ const Installers = () => {
 
           {/* Resources Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {resources.map((resource, index) => (
-              <div key={index} className="group p-8 rounded-2xl border border-border/50 hover:border-border transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+            {resources.map((resource) => (
+              <div key={resource.title} className="group p-8 rounded-2xl border border-border/50 hover:border-border transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                 <div className="space-y-6">
                   
                   <div className="w-12 h-12 rounded-xl bg-muted/50 flex items-center justify-center group-hover:bg-muted transition-colors duration-300">

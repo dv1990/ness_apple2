@@ -146,7 +146,7 @@ const IndiaInstallationMap = () => {
             const isAnimated = animatedDots.includes(index);
             
             return (
-              <g key={index} opacity={isAnimated ? 1 : 0}>
+              <g key={`${installation.lat}-${installation.lng}`} opacity={isAnimated ? 1 : 0}>
                 {/* Pulse ring */}
                 <circle
                   cx={x}

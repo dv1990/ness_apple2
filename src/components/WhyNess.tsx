@@ -212,12 +212,12 @@ function LuxuryProgressRail({ activeStep, totalSteps, onStepChange }: { activeSt
 
       {/* Step markers */}
       <div className="absolute top-0 left-0 right-0 flex justify-between">
-        {Array.from({ length: totalSteps }).map((_, i) => (
+        {Array.from({ length: totalSteps }).map((_, stepIdx) => (
           <div
-            key={i}
+            key={stepIdx}
             className={`w-1 h-1 rounded-full transition-all duration-300 ${
-              i <= activeStep ? "bg-primary scale-150" : "bg-muted"
-            } ${i === activeStep ? "scale-150" : ""}`}
+              stepIdx <= activeStep ? "bg-primary scale-150" : "bg-muted"
+            } ${stepIdx === activeStep ? "scale-150" : ""}`}
           />
         ))}
       </div>
@@ -296,9 +296,9 @@ function LuxuryManufacturingShowcase() {
 
       <div className="flex justify-center mb-16">
         <div className="flex gap-2">
-          {STEPS.map((_, index) => (
+          {STEPS.map((step, index) => (
             <div
-              key={index}
+              key={step.key}
             className={`h-1 rounded-full transition-all duration-500 ${
               index === activeStep ? "w-8 bg-primary" : "w-2 bg-muted"
             }`}

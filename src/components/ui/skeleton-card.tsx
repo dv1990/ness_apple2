@@ -35,8 +35,8 @@ export const SkeletonCard = ({ className, variant = 'product' }: SkeletonCardPro
     testimonial: (
       <CardContent className="p-8 space-y-6">
         <div className="flex space-x-1">
-          {[...Array(5)].map((_, i) => (
-            <Skeleton key={i} className="w-5 h-5 rounded-sm" />
+          {[...Array(5)].map((_, idx) => (
+            <Skeleton key={idx} className="w-5 h-5 rounded-sm" />
           ))}
         </div>
         <div className="space-y-2">
