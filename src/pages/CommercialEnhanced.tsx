@@ -117,7 +117,6 @@ const CommercialEnhanced = () => {
               alt="Premium industrial facility with solar and battery storage"
               className="w-full h-full object-cover"
               loading="eager"
-              fetchPriority="high"
             />
             {/* Dark overlay for text contrast */}
             <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 via-charcoal/70 to-charcoal/90" />

@@ -28,7 +28,6 @@ const IndexEnhanced = () => {
               src={heroHomeowners}
               alt="Uninterrupted power for your home"
               className="w-full h-full object-cover opacity-[0.03] scale-105"
-              fetchPriority="high"
               loading="eager"
             />
           </div>
