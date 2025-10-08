@@ -1,6 +1,8 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import { 
   ArrowRight, 
   Shield, 
@@ -27,32 +29,44 @@ const Index = () => {
       {/* 1️⃣ Hero: "Effortless Energy. For Every Scale." */}
       <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden">
         
-        {/* Dual imagery background */}
-        <div className="absolute inset-0 grid grid-cols-2">
-          {/* Home side */}
-          <div className="relative overflow-hidden">
-            <img 
-              src={heroHome}
-              alt="Modern home with NESS battery system"
-              className="w-full h-full object-cover opacity-20"
-              loading="eager"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/60 to-transparent"></div>
-          </div>
+        {/* Carousel Background */}
+        <div className="absolute inset-0">
+          <Carousel
+            opts={{ loop: true }}
+            plugins={[Autoplay({ delay: 5000 })]}
+            className="w-full h-full"
+          >
+            <CarouselContent className="h-screen -ml-0">
+              {/* Home Image Slide */}
+              <CarouselItem className="pl-0">
+                <div className="relative w-full h-screen overflow-hidden">
+                  <img 
+                    src={heroHome}
+                    alt="Modern home with NESS battery system"
+                    className="w-full h-full object-cover opacity-20"
+                    loading="eager"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/80"></div>
+                </div>
+              </CarouselItem>
+              
+              {/* Industrial Image Slide */}
+              <CarouselItem className="pl-0">
+                <div className="relative w-full h-screen overflow-hidden">
+                  <img 
+                    src={industrialHero}
+                    alt="Industrial facility with NESS energy storage"
+                    className="w-full h-full object-cover opacity-20"
+                    loading="eager"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/80"></div>
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+          </Carousel>
           
-          {/* Commercial/Industrial side */}
-          <div className="relative overflow-hidden">
-            <img 
-              src={industrialHero}
-              alt="Industrial facility with NESS energy storage"
-              className="w-full h-full object-cover opacity-20"
-              loading="eager"
-            />
-            <div className="absolute inset-0 bg-gradient-to-l from-background/80 via-background/60 to-transparent"></div>
-          </div>
-          
-          {/* Subtle energy line connecting both */}
-          <div className="absolute inset-0 flex items-center justify-center">
+          {/* Subtle energy line */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div className="h-px w-32 bg-gradient-to-r from-transparent via-energy to-transparent animate-pulse"></div>
           </div>
         </div>
