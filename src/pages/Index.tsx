@@ -43,10 +43,10 @@ const Index = () => {
                   <img 
                     src={heroHome}
                     alt="Modern home with NESS battery system"
-                    className="w-full h-full object-cover opacity-20"
+                    className="w-full h-full object-cover opacity-40"
                     loading="eager"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/80"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/60"></div>
                 </div>
               </CarouselItem>
               
@@ -56,10 +56,10 @@ const Index = () => {
                   <img 
                     src={industrialHero}
                     alt="Industrial facility with NESS energy storage"
-                    className="w-full h-full object-cover opacity-20"
+                    className="w-full h-full object-cover opacity-40"
                     loading="eager"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/80"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/60"></div>
                 </div>
               </CarouselItem>
             </CarouselContent>
