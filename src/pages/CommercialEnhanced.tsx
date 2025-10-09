@@ -54,14 +54,9 @@ const CommercialEnhanced = () => {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
           <div className="max-w-5xl mx-auto px-8 text-center space-y-12">
             <div className="space-y-6 animate-fade-in">
-              <h1 className="text-6xl md:text-8xl font-light text-foreground leading-[1.05] tracking-tight">
-                Your factory pays for electricity.
-                <br />
-                <span className="text-energy">Or it doesn't.</span>
+              <h1 className="text-7xl md:text-9xl font-light text-foreground leading-[0.95] tracking-tight">
+                Stop paying for electricity.
               </h1>
-              <p className="text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Two options. One decision.
-              </p>
             </div>
             <Button 
               size="lg"
