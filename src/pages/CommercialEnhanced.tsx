@@ -54,44 +54,26 @@ const CommercialEnhanced = () => {
             <div className="grid lg:grid-cols-2 gap-20 items-center">
               
               {/* Left: The Story */}
-              <div className="space-y-12 animate-fade-in">
-                <div className="space-y-8">
-                  {/* Kicker */}
-                  <div className="text-energy text-sm uppercase tracking-wider font-medium">
-                    Apex Auto Components, Chennai
-                  </div>
-                  
-                  {/* Headline */}
-                  <h1 className="text-5xl md:text-7xl font-light text-foreground leading-[1.1] tracking-tight">
-                    This factory stopped paying for diesel.
-                    <br />
-                    <span className="text-muted-foreground">18 months later,</span>
-                    <br />
-                    <span className="text-energy">the system paid for itself.</span>
-                  </h1>
-                  
-                  {/* Subhead */}
-                  <p className="text-xl text-muted-foreground leading-relaxed">
-                    2 MW manufacturing facility. Peak demand charges: ₹96L annually. 
-                    Diesel generator running 12 hours daily.
-                  </p>
+              <div className="space-y-8 animate-fade-in">
+                {/* Kicker */}
+                <div className="text-energy text-sm uppercase tracking-wider font-medium">
+                  Apex Auto Components, Chennai
                 </div>
-
-                {/* Quick Stats */}
-                <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border">
-                  <div className="space-y-1">
-                    <div className="text-3xl font-light text-energy">₹1.8Cr</div>
-                    <div className="text-xs text-muted-foreground uppercase tracking-wide">Invested</div>
-                  </div>
-                  <div className="space-y-1">
-                    <div className="text-3xl font-light text-energy">18mo</div>
-                    <div className="text-xs text-muted-foreground uppercase tracking-wide">Payback</div>
-                  </div>
-                  <div className="space-y-1">
-                    <div className="text-3xl font-light text-energy">62%</div>
-                    <div className="text-xs text-muted-foreground uppercase tracking-wide">Peak cut</div>
-                  </div>
-                </div>
+                
+                {/* Headline */}
+                <h1 className="text-5xl md:text-7xl font-light text-foreground leading-[1.1] tracking-tight">
+                  This factory stopped paying for diesel.
+                  <br />
+                  <span className="text-muted-foreground">18 months later,</span>
+                  <br />
+                  <span className="text-energy">the system paid for itself.</span>
+                </h1>
+                
+                {/* Subhead */}
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  2 MW manufacturing facility. Peak demand charges: ₹96L annually. 
+                  Diesel generator running 12 hours daily.
+                </p>
               </div>
 
               {/* Right: The Numbers */}
