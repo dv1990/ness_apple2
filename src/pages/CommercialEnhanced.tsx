@@ -105,12 +105,7 @@ const CommercialEnhanced = () => {
                 </div>
 
                 {/* Premium CTA */}
-                <div className="pt-8">
-                  <Button size="lg" className="bg-energy hover:bg-energy-dark text-primary-foreground shadow-xl hover:shadow-[0_0_50px_rgba(var(--energy),0.5)] px-12 py-8 text-xl font-semibold rounded-2xl border-2 border-energy-bright/30 transition-all duration-300">
-                    Get My ROI Estimate
-                    <ArrowRight className="w-6 h-6 ml-3" />
-                  </Button>
-                </div>
+                
 
                 {/* Trust Indicators */}
                 <div className="grid grid-cols-3 gap-8 pt-12 border-t border-pearl/20">
