@@ -5,31 +5,9 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { AnimatedCard } from "@/components/ui/animated-card";
 import Layout from "@/components/Layout";
-import { 
-  ArrowRight, 
-  Shield, 
-  Target,
-  TrendingUp,
-  BarChart3,
-  Battery,
-  Zap,
-  Layers,
-  Repeat,
-  CheckCircle2,
-  Fuel,
-  Cloud
-} from "lucide-react";
-import { 
-  EmotionalHero,
-  AppleHeadline,
-  HumanBenefit,
-  StorySection,
-  StoryChapter
-} from "@/components/AppleInspiredContent";
-import { 
-  MagneticButton,
-  FloatingCard,
-} from "@/components/EnhancedInteractions";
+import { ArrowRight, Shield, Target, TrendingUp, BarChart3, Battery, Zap, Layers, Repeat, CheckCircle2, Fuel, Cloud } from "lucide-react";
+import { EmotionalHero, AppleHeadline, HumanBenefit, StorySection, StoryChapter } from "@/components/AppleInspiredContent";
+import { MagneticButton, FloatingCard } from "@/components/EnhancedInteractions";
 import { WebPImage } from "@/components/ui/webp-image";
 
 // Import images - they'll be lazy-loaded via WebPImage component
@@ -46,7 +24,6 @@ const contactSchema = z.object({
   contact: z.string().trim().min(2, "Contact name required").max(100, "Name too long"),
   monthlySpend: z.string().trim().min(1, "Monthly spend required").max(20, "Invalid amount")
 });
-
 const CommercialEnhanced = () => {
   const [monthlySpend, setMonthlySpend] = useState("");
   const [formData, setFormData] = useState({
@@ -65,19 +42,16 @@ const CommercialEnhanced = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const calculateSavings = (spend: number) => {
     const annualSavings = spend * 12 * 0.42; // 42% savings
-    const paybackMonths = Math.round((spend * 12 * 4.3) / annualSavings);
+    const paybackMonths = Math.round(spend * 12 * 4.3 / annualSavings);
     const twentyFiveYearValue = annualSavings * 25;
-    
     return {
       annualSavings: Math.round(annualSavings),
       paybackMonths,
       twentyFiveYearValue: Math.round(twentyFiveYearValue)
     };
   };
-
   const formatCurrency = (amount: number) => {
     if (amount >= 10000000) {
       return `₹${(amount / 10000000).toFixed(1)}Cr`;
@@ -86,23 +60,13 @@ const CommercialEnhanced = () => {
     }
     return `₹${amount.toLocaleString()}`;
   };
-
   const savings = monthlySpend ? calculateSavings(parseInt(monthlySpend)) : null;
-
-  return (
-    <Layout>
+  return <Layout>
       <div className="min-h-screen bg-background">
         
         {/* Sticky CTA Button */}
-        <div 
-          className={`fixed top-24 right-8 z-50 transition-all duration-500 ${
-            isCtaSticky ? 'translate-y-0 opacity-100' : '-translate-y-20 opacity-0 pointer-events-none'
-          }`}
-        >
-          <Button 
-            size="lg"
-            className="bg-energy hover:bg-energy-dark text-primary-foreground shadow-2xl hover:shadow-[0_0_40px_rgba(var(--energy),0.4)] px-8 py-6 text-lg font-semibold rounded-xl border-2 border-energy-bright/20"
-          >
+        <div className={`fixed top-24 right-8 z-50 transition-all duration-500 ${isCtaSticky ? 'translate-y-0 opacity-100' : '-translate-y-20 opacity-0 pointer-events-none'}`}>
+          <Button size="lg" className="bg-energy hover:bg-energy-dark text-primary-foreground shadow-2xl hover:shadow-[0_0_40px_rgba(var(--energy),0.4)] px-8 py-6 text-lg font-semibold rounded-xl border-2 border-energy-bright/20">
             Get My ROI Estimate
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
@@ -112,12 +76,7 @@ const CommercialEnhanced = () => {
         <section className="relative min-h-screen flex items-center overflow-hidden">
           {/* Cinematic Background */}
           <div className="absolute inset-0">
-            <img 
-              src={ciHeroPremium}
-              alt="Premium industrial facility with solar and battery storage"
-              className="w-full h-full object-cover"
-              loading="eager"
-            />
+            <img src={ciHeroPremium} alt="Premium industrial facility with solar and battery storage" className="w-full h-full object-cover" loading="eager" />
             {/* Dark overlay for text contrast */}
             <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 via-charcoal/70 to-charcoal/90" />
             <div className="absolute inset-0 bg-gradient-to-r from-charcoal/60 via-transparent to-charcoal/60" />
@@ -147,10 +106,7 @@ const CommercialEnhanced = () => {
 
                 {/* Premium CTA */}
                 <div className="pt-8">
-                  <Button 
-                    size="lg"
-                    className="bg-energy hover:bg-energy-dark text-primary-foreground shadow-xl hover:shadow-[0_0_50px_rgba(var(--energy),0.5)] px-12 py-8 text-xl font-semibold rounded-2xl border-2 border-energy-bright/30 transition-all duration-300"
-                  >
+                  <Button size="lg" className="bg-energy hover:bg-energy-dark text-primary-foreground shadow-xl hover:shadow-[0_0_50px_rgba(var(--energy),0.5)] px-12 py-8 text-xl font-semibold rounded-2xl border-2 border-energy-bright/30 transition-all duration-300">
                     Get My ROI Estimate
                     <ArrowRight className="w-6 h-6 ml-3" />
                   </Button>
@@ -179,6 +135,10 @@ const CommercialEnhanced = () => {
                   {/* Glow effect behind product */}
                   <div className="absolute inset-0 bg-energy/20 blur-[120px] scale-75" />
                   
+                  {/* Product Image - Cinematic */}
+                  <div className="relative">
+                    
+                  </div>
 
                   {/* Floating specs */}
                   <div className="absolute -bottom-8 -left-8 bg-pearl/10 backdrop-blur-xl border border-pearl/20 rounded-2xl p-6 shadow-2xl">
@@ -333,11 +293,7 @@ const CommercialEnhanced = () => {
                   <div className="absolute inset-0 bg-energy/10 blur-[150px] scale-90 animate-pulse" />
                   
                   {/* Product Image */}
-                  <img 
-                    src={nessProProduct}
-                    alt="NESS PRO - Intelligent Power Control System"
-                    className="relative z-10 w-full h-full object-contain drop-shadow-[0_0_60px_rgba(var(--energy),0.25)]"
-                  />
+                  <img src={nessProProduct} alt="NESS PRO - Intelligent Power Control System" className="relative z-10 w-full h-full object-contain drop-shadow-[0_0_60px_rgba(var(--energy),0.25)]" />
                 </div>
               </div>
 
@@ -345,11 +301,7 @@ const CommercialEnhanced = () => {
               <div className="lg:hidden flex items-center justify-center mb-16">
                 <div className="relative w-full max-w-md">
                   <div className="absolute inset-0 bg-energy/10 blur-[100px]" />
-                  <img 
-                    src={nessProProduct}
-                    alt="NESS PRO - Intelligent Power Control System"
-                    className="relative z-10 w-full h-auto object-contain"
-                  />
+                  <img src={nessProProduct} alt="NESS PRO - Intelligent Power Control System" className="relative z-10 w-full h-auto object-contain" />
                 </div>
               </div>
 
@@ -514,10 +466,7 @@ const CommercialEnhanced = () => {
 
             {/* Sticky CTA */}
             <div className="flex justify-center mt-20">
-              <Button 
-                size="lg"
-                className="bg-energy hover:bg-energy-dark text-primary-foreground shadow-xl hover:shadow-[0_0_50px_rgba(var(--energy),0.5)] px-12 py-8 text-xl font-semibold rounded-2xl border-2 border-energy-bright/30 transition-all duration-300 group"
-              >
+              <Button size="lg" className="bg-energy hover:bg-energy-dark text-primary-foreground shadow-xl hover:shadow-[0_0_50px_rgba(var(--energy),0.5)] px-12 py-8 text-xl font-semibold rounded-2xl border-2 border-energy-bright/30 transition-all duration-300 group">
                 Get My ROI Estimate
                 <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform" />
               </Button>
@@ -529,11 +478,7 @@ const CommercialEnhanced = () => {
         {/* Scalability Story - Build as You Grow */}
         <StorySection>
           <div className="max-w-6xl mx-auto px-8 py-32">
-            <StoryChapter
-              kicker="Infinite Scale"
-              headline="Start small. Scale infinitely. Never rebuild."
-              narrative="One 100 kWh system. Or 100 linked together. The architecture is identical. Stack units like building blocks—each one autonomous, all coordinated. If one needs maintenance, the others continue. This is redundancy by design."
-            />
+            <StoryChapter kicker="Infinite Scale" headline="Start small. Scale infinitely. Never rebuild." narrative="One 100 kWh system. Or 100 linked together. The architecture is identical. Stack units like building blocks—each one autonomous, all coordinated. If one needs maintenance, the others continue. This is redundancy by design." />
 
             <div className="grid md:grid-cols-3 gap-12 mt-24">
               <AnimatedCard animation="fade-up" delay={0} hover="lift">
@@ -697,20 +642,13 @@ const CommercialEnhanced = () => {
         <StorySection>
           <div className="max-w-6xl mx-auto px-8 py-32">
             <div className="text-center space-y-12 mb-20">
-              <AppleHeadline
-                primary="While others shut down"
-                secondary="our customers stayed open."
-              />
+              <AppleHeadline primary="While others shut down" secondary="our customers stayed open." />
             </div>
 
             <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
               <AnimatedCard animation="fade-up" delay={0} hover="lift">
                 <CardContent className="pt-8 space-y-6">
-                  <WebPImage
-                    src={officeInterior}
-                    alt="TechPark Bangalore powered by NESS energy storage"
-                    className="w-full h-48 object-cover rounded-lg"
-                  />
+                  <WebPImage src={officeInterior} alt="TechPark Bangalore powered by NESS energy storage" className="w-full h-48 object-cover rounded-lg" />
                   <h3 className="text-xl font-semibold">TechPark Bangalore</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     "Zero tenant complaints during the 6-hour grid failure. 
@@ -722,11 +660,7 @@ const CommercialEnhanced = () => {
 
               <AnimatedCard animation="fade-up" delay={100} hover="lift">
                 <CardContent className="pt-8 space-y-6">
-                  <WebPImage
-                    src={nessCube}
-                    alt="Hospital facility with NESS backup power"
-                    className="w-full h-48 object-contain rounded-lg bg-muted/20"
-                  />
+                  <WebPImage src={nessCube} alt="Hospital facility with NESS backup power" className="w-full h-48 object-contain rounded-lg bg-muted/20" />
                   <h3 className="text-xl font-semibold">Mumbai Healthcare</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     "During the 18-hour blackout, our ICU never missed a heartbeat. 
@@ -743,10 +677,7 @@ const CommercialEnhanced = () => {
         <StorySection background="muted">
           <div id="calculator" className="max-w-4xl mx-auto px-8 py-32">
             <div className="text-center mb-16">
-              <AppleHeadline
-                primary="Your business needs are unique."
-                secondary="Your savings will be too."
-              />
+              <AppleHeadline primary="Your business needs are unique." secondary="Your savings will be too." />
             </div>
 
             <AnimatedCard hover="lift" className="bg-card">
@@ -758,19 +689,12 @@ const CommercialEnhanced = () => {
                     </label>
                     <div className="relative">
                       <span className="absolute left-6 top-1/2 -translate-y-1/2 text-2xl text-muted-foreground">₹</span>
-                      <Input
-                        type="number"
-                        value={monthlySpend}
-                        onChange={(e) => setMonthlySpend(e.target.value)}
-                        className="pl-12 pr-6 py-8 text-3xl font-light text-center rounded-2xl border-2 focus:border-primary"
-                        placeholder="500000"
-                      />
+                      <Input type="number" value={monthlySpend} onChange={e => setMonthlySpend(e.target.value)} className="pl-12 pr-6 py-8 text-3xl font-light text-center rounded-2xl border-2 focus:border-primary" placeholder="500000" />
                     </div>
                     <p className="text-sm text-muted-foreground text-center">Enter your average monthly electricity bill</p>
                   </div>
 
-                  {savings && (
-                    <div className="pt-8 space-y-6 border-t border-border/20 animate-fade-in">
+                  {savings && <div className="pt-8 space-y-6 border-t border-border/20 animate-fade-in">
                       <div className="grid md:grid-cols-3 gap-6">
                         <div className="text-center space-y-2">
                           <div className="text-sm text-muted-foreground">Annual Savings</div>
@@ -798,8 +722,7 @@ const CommercialEnhanced = () => {
                           <ArrowRight className="ml-3 w-5 h-5" />
                         </MagneticButton>
                       </div>
-                    </div>
-                  )}
+                    </div>}
                 </div>
               </CardContent>
             </AnimatedCard>
@@ -810,63 +733,49 @@ const CommercialEnhanced = () => {
         <StorySection>
           <div className="max-w-4xl mx-auto px-8 py-32">
             <div className="text-center space-y-16">
-              <AppleHeadline
-                primary="Transform your facility's"
-                secondary="energy economics."
-              />
+              <AppleHeadline primary="Transform your facility's" secondary="energy economics." />
               
               <AnimatedCard hover="glow" className="bg-card max-w-2xl mx-auto">
                 <CardContent className="pt-12 pb-12">
-                  <form className="space-y-6" onSubmit={(e) => {
-                    e.preventDefault();
-                    setFormErrors({});
-                    const validation = contactSchema.safeParse(formData);
-                    if (!validation.success) {
-                      const errors: Record<string, string> = {};
-                      validation.error.errors.forEach(err => {
-                        if (err.path[0]) errors[err.path[0].toString()] = err.message;
-                      });
-                      setFormErrors(errors);
-                      return;
-                    }
-                    // Handle form submission
-                    const message = `New C&I inquiry from ${encodeURIComponent(formData.company)}. Contact: ${encodeURIComponent(formData.contact)}. Monthly spend: ₹${encodeURIComponent(formData.monthlySpend)}`;
-                    window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
-                  }}>
+                  <form className="space-y-6" onSubmit={e => {
+                  e.preventDefault();
+                  setFormErrors({});
+                  const validation = contactSchema.safeParse(formData);
+                  if (!validation.success) {
+                    const errors: Record<string, string> = {};
+                    validation.error.errors.forEach(err => {
+                      if (err.path[0]) errors[err.path[0].toString()] = err.message;
+                    });
+                    setFormErrors(errors);
+                    return;
+                  }
+                  // Handle form submission
+                  const message = `New C&I inquiry from ${encodeURIComponent(formData.company)}. Contact: ${encodeURIComponent(formData.contact)}. Monthly spend: ₹${encodeURIComponent(formData.monthlySpend)}`;
+                  window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+                }}>
                     <div className="space-y-2">
-                      <Input
-                        placeholder="Company name"
-                        className={`text-lg py-6 border-2 focus:border-primary transition-colors rounded-xl ${formErrors.company ? 'border-red-500' : ''}`}
-                        value={formData.company}
-                        onChange={(e) => setFormData(prev => ({ ...prev, company: e.target.value }))}
-                      />
+                      <Input placeholder="Company name" className={`text-lg py-6 border-2 focus:border-primary transition-colors rounded-xl ${formErrors.company ? 'border-red-500' : ''}`} value={formData.company} onChange={e => setFormData(prev => ({
+                      ...prev,
+                      company: e.target.value
+                    }))} />
                       {formErrors.company && <p className="text-sm text-red-500">{formErrors.company}</p>}
                     </div>
                     <div className="space-y-2">
-                      <Input
-                        placeholder="Contact person name"
-                        className={`text-lg py-6 border-2 focus:border-primary transition-colors rounded-xl ${formErrors.contact ? 'border-red-500' : ''}`}
-                        value={formData.contact}
-                        onChange={(e) => setFormData(prev => ({ ...prev, contact: e.target.value }))}
-                      />
+                      <Input placeholder="Contact person name" className={`text-lg py-6 border-2 focus:border-primary transition-colors rounded-xl ${formErrors.contact ? 'border-red-500' : ''}`} value={formData.contact} onChange={e => setFormData(prev => ({
+                      ...prev,
+                      contact: e.target.value
+                    }))} />
                       {formErrors.contact && <p className="text-sm text-red-500">{formErrors.contact}</p>}
                     </div>
                     <div className="space-y-2">
-                      <Input
-                        placeholder="Monthly electricity spend (₹)"
-                        type="number"
-                        className={`text-lg py-6 border-2 focus:border-primary transition-colors rounded-xl ${formErrors.monthlySpend ? 'border-red-500' : ''}`}
-                        value={formData.monthlySpend}
-                        onChange={(e) => setFormData(prev => ({ ...prev, monthlySpend: e.target.value }))}
-                      />
+                      <Input placeholder="Monthly electricity spend (₹)" type="number" className={`text-lg py-6 border-2 focus:border-primary transition-colors rounded-xl ${formErrors.monthlySpend ? 'border-red-500' : ''}`} value={formData.monthlySpend} onChange={e => setFormData(prev => ({
+                      ...prev,
+                      monthlySpend: e.target.value
+                    }))} />
                       {formErrors.monthlySpend && <p className="text-sm text-red-500">{formErrors.monthlySpend}</p>}
                     </div>
                     
-                    <Button 
-                      type="submit"
-                      size="lg"
-                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 rounded-2xl text-lg hover:scale-105 transition-transform duration-300"
-                    >
+                    <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 rounded-2xl text-lg hover:scale-105 transition-transform duration-300">
                       Request Technical Consultation
                     </Button>
                   </form>
@@ -881,8 +790,6 @@ const CommercialEnhanced = () => {
           </div>
         </StorySection>
       </div>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default CommercialEnhanced;
