@@ -22,11 +22,11 @@ const features = [
   {
     icon: Zap,
     title: "Reliability That Lasts",
-    shortDesc: "15 year+ design life with premium components",
+    shortDesc: "10 year+ design life with premium components",
     fullDesc:
       "Rigorous testing and premium components ensure consistent performance in Indian conditions with industry-leading longevity.",
     benefit: "Tested in 45°C+ Indian summers",
-    metric: "15+",
+    metric: "10+",
     metricLabel: "Year Warranty",
   },
   {
