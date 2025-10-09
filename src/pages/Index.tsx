@@ -21,7 +21,7 @@ import heroHome from "@/assets/hero-homeowners.jpg";
 import industrialHero from "@/assets/industrial-complex-hero.jpg";
 import nessPodProduct from "@/assets/ness-pod-product.png";
 import nessProProduct from "@/assets/ness-pro-product.png";
-import nessCubeProduct from "@/assets/ness-cube-product.png";
+import nessCubeProduct from "@/assets/ness-cube-resort.webp";
 
 const Index = () => {
   return (
@@ -261,8 +261,8 @@ const Index = () => {
               <div className="relative rounded-3xl overflow-hidden bg-card/50 p-12">
                 <img 
                   src={nessCubeProduct}
-                  alt="NESS Commercial Battery System"
-                  className="w-full h-auto object-contain drop-shadow-2xl"
+                  alt="NESS CUBE Commercial Battery System - Resort Installation"
+                  className="w-full h-auto object-cover rounded-2xl drop-shadow-2xl"
                 />
               </div>
             </div>
