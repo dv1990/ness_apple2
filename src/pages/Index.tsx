@@ -159,9 +159,9 @@ const Index = () => {
               </div>
 
               <h2 className="text-5xl md:text-6xl font-light text-foreground leading-tight tracking-tight">
-                Beautiful energy.
+                Power, perfected.
                 <br />
-                <span className="text-energy font-medium">Zero compromise.</span>
+                <span className="text-energy font-medium">Beautifully simple.</span>
               </h2>
 
               <p className="text-xl text-muted-foreground font-light leading-relaxed">
