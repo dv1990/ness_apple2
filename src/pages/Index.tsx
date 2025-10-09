@@ -385,7 +385,7 @@ const Index = () => {
 
           {/* Subtle indicator of more stories */}
           <div className="text-center mt-12">
-            <p className="text-sm text-gray-500">Trusted across 2,000+ installations nationwide</p>
+            <p className="text-sm text-gray-500">Trusted across 150+ installations nationwide</p>
           </div>
         </div>
       </section>
