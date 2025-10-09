@@ -16,6 +16,7 @@ import ContactEnhanced from "./pages/ContactEnhanced";
 
 // Secondary pages - Lazy loaded
 const TrueWarranty = lazy(() => import("./pages/TrueWarranty"));
+const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
 
 // Legacy components - lazy loaded
 const Hiring = lazy(() => import("./pages/Hiring"));
@@ -91,6 +92,9 @@ const App = () => {
           
           {/* Downloads */}
           <Route path="/downloads" element={<Downloads />} />
+          
+          {/* Legal Pages */}
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
           
           {/* Legacy redirects for existing routes */}
           <Route path="/residential" element={<ResidentialEnhanced />} />
