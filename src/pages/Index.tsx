@@ -75,28 +75,30 @@ const Index = () => {
         <div className="relative z-10 max-w-5xl mx-auto px-8 text-center">
           <div className="space-y-12 animate-fade-in">
             <h1 className="text-6xl md:text-8xl font-light text-foreground leading-tight tracking-tight">
-              Cut Energy Bills by 40%.
+              The lights stay on.
               <br />
-              <span className="text-energy font-semibold">24+ Hour Guaranteed Backup.</span>
+              <span className="text-energy font-semibold">Life stays normal.</span>
             </h1>
             
             <p className="text-2xl md:text-3xl font-light text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Trusted by 1,000+ homes and 10+ businesses.
+              When everyone else goes dark, you don't even notice.
+              <br />
+              <span className="text-lg">1,000+ Indian families trust NESS.</span>
             </p>
 
-            {/* Dual CTA buttons */}
+            {/* Single Clear CTA */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
               <Link to="/residential">
                 <Button size="lg" className="bg-energy hover:bg-energy-dark text-primary-foreground px-12 py-6 text-xl font-medium rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
-                  <Home className="w-6 h-6 mr-3" />
-                  For Homes
+                  For Your Home
+                  <ArrowRight className="w-6 h-6 ml-3" />
                 </Button>
               </Link>
               
               <Link to="/commercial">
-                <Button size="lg" variant="outline" className="border-border hover:bg-muted px-12 py-6 text-xl font-medium rounded-2xl transition-all duration-300 hover:scale-105">
-                  <Building2 className="w-6 h-6 mr-3" />
-                  For Businesses
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-6 text-xl font-medium rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+                  For Your Business
+                  <ArrowRight className="w-6 h-6 ml-3" />
                 </Button>
               </Link>
             </div>
@@ -104,29 +106,24 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 2️⃣ Brand Trust Bar */}
-      <section className="py-12 bg-gray-50/50 border-y border-gray-200/50">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+      {/* 2️⃣ Built for India Statement */}
+      <section className="py-20 bg-foreground text-background">
+        <div className="max-w-5xl mx-auto px-8 text-center">
+          <h2 className="text-4xl md:text-5xl font-light mb-6 leading-tight">
+            Built for India. <span className="text-energy font-semibold">Proven in Jharkhand.</span>
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8 mt-12 text-center">
             <div className="space-y-2">
-              <div className="text-sm font-medium text-gray-900 uppercase tracking-wider">Tested at 50°C</div>
-              <div className="text-xs text-gray-500">Jharkhand, 3 years running</div>
+              <div className="text-3xl font-light text-energy">50°C</div>
+              <div className="text-sm text-background/70">Extreme summer heat</div>
             </div>
             <div className="space-y-2">
-              <div className="text-sm font-medium text-gray-900 uppercase tracking-wider">10+ Year Life</div>
-              <div className="text-xs text-gray-500">LFP Technology</div>
+              <div className="text-3xl font-light text-energy">160-270V</div>
+              <div className="text-sm text-background/70">Voltage chaos handled</div>
             </div>
             <div className="space-y-2">
-              <div className="text-sm font-medium text-gray-900 uppercase tracking-wider">BIS Certified</div>
-              <div className="text-xs text-gray-500">IEC Standards</div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-sm font-medium text-gray-900 uppercase tracking-wider">99.5% Uptime</div>
-              <div className="text-xs text-gray-500">2,000+ Installations</div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-sm font-medium text-gray-900 uppercase tracking-wider">Made for India</div>
-              <div className="text-xs text-gray-500">48V to 400V</div>
+              <div className="text-3xl font-light text-energy">3 Years</div>
+              <div className="text-sm text-background/70">Zero failures</div>
             </div>
           </div>
         </div>
@@ -273,119 +270,156 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 6️⃣ Why NESS (Unified Value Section) */}
-      <section className="py-60 bg-foreground text-background">
-        <div className="max-w-5xl mx-auto px-8 text-center">
-          <div className="space-y-32">
-            <div className="animate-fade-in space-y-4">
-              <p className="text-4xl md:text-5xl font-light leading-relaxed">
-                Tested at 50°C in Jharkhand.
-              </p>
-              <p className="text-xl md:text-2xl font-light text-white/60 max-w-3xl mx-auto leading-relaxed">
-                3 years running seamlessly. Zero degradation. Built for India's voltage fluctuations (160V-270V).
-              </p>
-            </div>
+      {/* 6️⃣ Honest Differentiator Section */}
+      <section className="py-32 bg-muted/30">
+        <div className="max-w-4xl mx-auto px-8 text-center">
+          <div className="space-y-8">
+            <p className="text-4xl md:text-5xl font-light text-foreground leading-tight">
+              Battery shopping is confusing.
+            </p>
+            <p className="text-4xl md:text-6xl font-semibold text-energy leading-tight">
+              We made it simple.
+            </p>
+            <p className="text-2xl md:text-3xl font-light text-muted-foreground max-w-2xl mx-auto leading-relaxed pt-4">
+              Tell us your needs, we'll tell you exactly what works.
+            </p>
             
-            <div className="animate-fade-in" style={{ animationDelay: '200ms' }}>
-              <p className="text-4xl md:text-5xl font-light leading-relaxed">
-                Unlike imported batteries, engineered for Indian conditions.
-              </p>
-            </div>
-            
-            <div className="animate-fade-in space-y-8" style={{ animationDelay: '400ms' }}>
-              <p className="text-4xl md:text-6xl font-light leading-relaxed">
-                10 years. Fully covered.
-              </p>
-              <p className="text-xl md:text-2xl font-light text-background/60 max-w-3xl mx-auto leading-relaxed">
-                We don't just promise a decade. We guarantee it. Every cell monitored. Every system tested. 
-                Because when we say 10 years, we mean it.
-              </p>
-            </div>
-            
-            <div className="animate-fade-in" style={{ animationDelay: '600ms' }}>
-              <p className="text-5xl md:text-7xl font-medium text-energy leading-relaxed">
-                Energy, reinvented.
-              </p>
+            <div className="pt-8">
+              <Link to="/contact">
+                <Button size="lg" className="bg-energy hover:bg-energy-dark text-primary-foreground px-12 py-6 text-xl font-medium rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+                  Talk to Our Experts
+                  <ArrowRight className="w-6 h-6 ml-3" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 7️⃣ Case Studies - Dual Stories */}
-      <section className="py-40 bg-white">
+      {/* 7️⃣ Why NESS Lasts Longer */}
+      <section className="py-40 bg-background">
+        <div className="max-w-5xl mx-auto px-8 text-center">
+          <div className="space-y-16">
+            <div>
+              <h2 className="text-5xl md:text-6xl font-light text-foreground leading-tight mb-6">
+                Why NESS lasts <span className="text-energy font-semibold">10+ years</span>
+                <br />
+                <span className="text-muted-foreground">when others fail in 3.</span>
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                Purpose-built for India. Not adapted for it.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 pt-8">
+              <div className="space-y-4 p-8 bg-card rounded-2xl border border-border">
+                <div className="w-12 h-12 rounded-xl bg-energy/10 flex items-center justify-center mx-auto">
+                  <Shield className="w-6 h-6 text-energy" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground">LFP Chemistry</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Unlike cheaper lithium batteries, LiFePO₄ doesn't catch fire. Even at 50°C.
+                </p>
+              </div>
+
+              <div className="space-y-4 p-8 bg-card rounded-2xl border border-border">
+                <div className="w-12 h-12 rounded-xl bg-energy/10 flex items-center justify-center mx-auto">
+                  <Zap className="w-6 h-6 text-energy" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground">Voltage Protection</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  160V to 270V swings don't phase it. Most batteries fail at this range.
+                </p>
+              </div>
+
+              <div className="space-y-4 p-8 bg-card rounded-2xl border border-border">
+                <div className="w-12 h-12 rounded-xl bg-energy/10 flex items-center justify-center mx-auto">
+                  <Award className="w-6 h-6 text-energy" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground">Real Testing</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  3 years in Jharkhand's heat. Real conditions, real proof.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 8️⃣ Case Studies - Real Stories */}
+      <section className="py-40 bg-muted/20">
         <div className="max-w-6xl mx-auto px-8">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-light text-foreground mb-8">
-              Proven <span className="text-energy font-medium">Performance</span>
+              Real families. <span className="text-energy font-semibold">Real results.</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              From homes to industries, real savings and real reliability.
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Not marketing promises. Actual performance.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Residential Case Study */}
-            <div className="bg-gray-50 border border-gray-200/50 rounded-3xl p-12 hover:bg-gray-100/50 transition-all duration-500">
+            <div className="bg-card border border-border rounded-3xl p-12 hover:shadow-lg transition-all duration-500">
               <div className="space-y-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-energy rounded-full"></div>
-                  <span className="text-sm text-gray-900 font-medium uppercase tracking-wider">Villa, Gurgaon</span>
+                  <Home className="w-5 h-5 text-energy" />
+                  <span className="text-sm text-muted-foreground font-medium uppercase tracking-wider">Villa, Gurgaon</span>
                 </div>
                 
-                <h3 className="text-3xl font-light text-foreground leading-tight">
-                  15 kWh Home System
-                </h3>
+                <blockquote className="text-2xl font-light text-foreground leading-tight italic">
+                  "The lights stayed on during the 12-hour outage. My kids didn't even know it happened."
+                </blockquote>
                 
-                <p className="text-lg text-gray-600 font-light leading-relaxed">
-                  Running fully off-grid for 18 months. Zero grid dependency.
+                <p className="text-muted-foreground leading-relaxed">
+                  15 kWh system. 18 months. Zero grid bills.
                 </p>
 
-                <div className="grid grid-cols-2 gap-6 pt-4">
-                  <div className="space-y-2">
+                <div className="grid grid-cols-2 gap-6 pt-4 border-t border-border">
+                  <div className="space-y-2 pt-4">
                     <div className="text-4xl font-light text-energy">₹18K</div>
-                    <div className="text-sm text-gray-600">Monthly savings</div>
+                    <div className="text-sm text-muted-foreground">Saved monthly</div>
                   </div>
-                  <div className="space-y-2">
-                    <div className="text-4xl font-light text-energy">24hrs</div>
-                    <div className="text-sm text-gray-600">Daily backup</div>
+                  <div className="space-y-2 pt-4">
+                    <div className="text-4xl font-light text-energy">100%</div>
+                    <div className="text-sm text-muted-foreground">Off-grid</div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Commercial Case Study */}
-            <div className="bg-gray-50 border border-gray-200/50 rounded-3xl p-12 hover:bg-gray-100/50 transition-all duration-500">
+            <div className="bg-card border border-border rounded-3xl p-12 hover:shadow-lg transition-all duration-500">
               <div className="space-y-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                  <span className="text-sm text-gray-900 font-medium uppercase tracking-wider">EV Hub, Delhi</span>
+                  <Building2 className="w-5 h-5 text-primary" />
+                  <span className="text-sm text-muted-foreground font-medium uppercase tracking-wider">EV Hub, Delhi</span>
                 </div>
                 
-                <h3 className="text-3xl font-light text-foreground leading-tight">
-                  500 kWh System
-                </h3>
+                <blockquote className="text-2xl font-light text-foreground leading-tight italic">
+                  "Peak hours used to cost us a fortune. Not anymore."
+                </blockquote>
                 
-                <p className="text-lg text-gray-600 font-light leading-relaxed">
-                  Peak demand management delivering consistent results.
+                <p className="text-muted-foreground leading-relaxed">
+                  500 kWh system. Smart load management. Consistent results.
                 </p>
 
-                <div className="grid grid-cols-2 gap-6 pt-4">
-                  <div className="space-y-2">
+                <div className="grid grid-cols-2 gap-6 pt-4 border-t border-border">
+                  <div className="space-y-2 pt-4">
                     <div className="text-4xl font-light text-energy">₹2.5L</div>
-                    <div className="text-sm text-gray-600">Monthly savings</div>
+                    <div className="text-sm text-muted-foreground">Saved monthly</div>
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-2 pt-4">
                     <div className="text-4xl font-light text-energy">30%</div>
-                    <div className="text-sm text-gray-600">Peak shaving</div>
+                    <div className="text-sm text-muted-foreground">Peak reduction</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Subtle indicator of more stories */}
           <div className="text-center mt-12">
-            <p className="text-sm text-gray-500">Trusted across 150+ installations nationwide</p>
+            <p className="text-sm text-muted-foreground">1,000+ families and businesses trust NESS</p>
           </div>
         </div>
       </section>
@@ -393,40 +427,40 @@ const Index = () => {
       {/* Why NESS Component - Manufacturing */}
       <WhyNess />
 
-      {/* 8️⃣ Unified CTA Section */}
-      <section className="py-32 bg-white">
+      {/* 9️⃣ Final CTA Section */}
+      <section className="py-32 bg-background">
         <div className="max-w-4xl mx-auto px-8 text-center">
           <h2 className="text-5xl md:text-6xl font-light text-foreground mb-6 leading-tight">
-            Ready to <span className="text-energy font-semibold">cut your energy bills?</span>
+            Ready to stop worrying about <span className="text-energy font-semibold">power cuts?</span>
           </h2>
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Calculate your savings or speak with our energy experts.
+            One conversation. Clear answers. No confusion.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
             <Link to="/contact">
               <Button 
                 size="lg" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-6 text-lg font-medium rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                className="bg-energy hover:bg-energy-dark text-primary-foreground px-12 py-6 text-lg font-medium rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
               >
-                Calculate Your Savings
+                Talk to Our Experts
                 <ArrowRight className="w-5 h-5 ml-3" />
               </Button>
             </Link>
-            <Link to="/contact">
+            <Link to="/residential">
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-foreground/20 bg-white hover:bg-muted/50 text-foreground px-12 py-6 text-lg font-medium rounded-full transition-all duration-300 hover:border-foreground/30"
+                className="border-2 border-border hover:bg-muted text-foreground px-12 py-6 text-lg font-medium rounded-full transition-all duration-300 hover:border-foreground/30"
               >
-                Talk to an Expert
+                See Solutions
               </Button>
             </Link>
           </div>
 
           <div className="pt-8">
             <p className="text-sm text-muted-foreground">
-              No hidden costs. 10-year warranty. 4-hour installation.
+              No jargon. No pressure. Just honest answers.
             </p>
           </div>
         </div>
