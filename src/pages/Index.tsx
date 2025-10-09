@@ -130,19 +130,24 @@ const Index = () => {
       </section>
 
 
-      {/* 4️⃣ For Homes */}
+      {/* 4️⃣ For Homes - Premium Positioning */}
       <section className="py-40 bg-muted/20">
         <div className="max-w-7xl mx-auto px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             
             {/* Visual */}
             <div className="relative order-2 lg:order-1">
-              <div className="relative rounded-3xl overflow-hidden bg-card/50 p-12">
+              <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-card/80 to-card/40 p-16 border border-border/50">
                 <img 
                   src={nessProProduct}
-                  alt="NESS Home Battery System"
+                  alt="NESS Home Battery System - Premium Energy Storage"
                   className="w-full h-auto object-contain drop-shadow-2xl"
                 />
+                <div className="absolute top-8 right-8">
+                  <Badge className="bg-energy/10 text-energy border-energy/20 px-4 py-1 text-sm">
+                    Silent Luxury
+                  </Badge>
+                </div>
               </div>
             </div>
 
@@ -151,50 +156,81 @@ const Index = () => {
               <div className="inline-flex items-center space-x-2">
                 <div className="w-1 h-1 rounded-full bg-energy"></div>
                 <span className="text-sm font-mono text-energy uppercase tracking-[0.2em]">
-                  For Homes
+                  For Discerning Homeowners
                 </span>
               </div>
 
               <h2 className="text-5xl md:text-6xl font-light text-foreground leading-tight tracking-tight">
-                Power, perfected.
+                Your child's exam.
                 <br />
-                <span className="text-energy font-medium">Beautifully simple.</span>
+                Your work deadline.
+                <br />
+                <span className="text-energy font-medium">None of it stops.</span>
               </h2>
 
               <p className="text-xl text-muted-foreground font-light leading-relaxed">
-                Silent, safe, and stylish energy backup for modern Indian homes.
+                The new luxury isn't a louder generator. It's <span className="text-foreground font-medium">silence</span>. It's clean energy that works invisibly, keeping life uninterrupted while your neighbors scramble in the dark.
               </p>
 
-              {/* Features list */}
-              <div className="space-y-4 pt-4">
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-energy flex-shrink-0" />
-                  <span className="text-foreground">5–20 kWh capacity</span>
+              <div className="pt-2 pb-4 border-l-2 border-energy/30 pl-6">
+                <p className="text-lg text-foreground/80 italic leading-relaxed">
+                  "Most families notice their battery when it fails.
+                  <br />
+                  NESS families don't notice it at all."
+                </p>
+              </div>
+
+              {/* Benefits Reframed */}
+              <div className="space-y-5 pt-4">
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 rounded-lg bg-energy/10 flex items-center justify-center flex-shrink-0 mt-1">
+                    <Home className="w-5 h-5 text-energy" />
+                  </div>
+                  <div>
+                    <div className="text-foreground font-medium mb-1">Runs your whole home for 24+ hours</div>
+                    <div className="text-sm text-muted-foreground">No compromises. No backup mode. Full power, always.</div>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-energy flex-shrink-0" />
-                  <span className="text-foreground">24+ hour backup</span>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 rounded-lg bg-energy/10 flex items-center justify-center flex-shrink-0 mt-1">
+                    <Shield className="w-5 h-5 text-energy" />
+                  </div>
+                  <div>
+                    <div className="text-foreground font-medium mb-1">Absolute silence. Zero emissions.</div>
+                    <div className="text-sm text-muted-foreground">No diesel fumes at 2 AM. No waking the neighborhood. Just quiet, clean power.</div>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-energy flex-shrink-0" />
-                  <span className="text-foreground">Solar-ready</span>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 rounded-lg bg-energy/10 flex items-center justify-center flex-shrink-0 mt-1">
+                    <Zap className="w-5 h-5 text-energy" />
+                  </div>
+                  <div>
+                    <div className="text-foreground font-medium mb-1">Solar-ready, future-proof</div>
+                    <div className="text-sm text-muted-foreground">Add solar panels later with zero reinstallation. Your home, your timeline.</div>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-energy flex-shrink-0" />
-                  <span className="text-foreground">App-connected</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-energy flex-shrink-0" />
-                  <span className="text-foreground">Zero noise</span>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 rounded-lg bg-energy/10 flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-5 h-5 text-energy" />
+                  </div>
+                  <div>
+                    <div className="text-foreground font-medium mb-1">Monitor from anywhere</div>
+                    <div className="text-sm text-muted-foreground">Know your backup status from your phone. Peace of mind, always.</div>
+                  </div>
                 </div>
               </div>
 
-              <Link to="/residential">
-                <Button size="lg" className="bg-energy hover:bg-energy-dark text-primary-foreground px-10 py-5 text-lg font-medium rounded-xl mt-4">
-                  Explore Home Systems
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </Link>
+              <div className="pt-6">
+                <Link to="/residential">
+                  <Button size="lg" className="bg-energy hover:bg-energy-dark text-primary-foreground px-10 py-5 text-lg font-medium rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    See Which System Fits Your Home
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
