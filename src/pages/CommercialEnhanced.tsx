@@ -179,14 +179,6 @@ const CommercialEnhanced = () => {
                   {/* Glow effect behind product */}
                   <div className="absolute inset-0 bg-energy/20 blur-[120px] scale-75" />
                   
-                  {/* Product Image - Cinematic */}
-                  <div className="relative">
-                    <img 
-                      src={nessProProduct}
-                      alt="NESS PRO Industrial Battery System"
-                      className="w-full h-auto object-contain drop-shadow-[0_0_80px_rgba(var(--energy),0.3)] transform hover:scale-105 transition-transform duration-700"
-                    />
-                  </div>
 
                   {/* Floating specs */}
                   <div className="absolute -bottom-8 -left-8 bg-pearl/10 backdrop-blur-xl border border-pearl/20 rounded-2xl p-6 shadow-2xl">
