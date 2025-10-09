@@ -123,10 +123,13 @@ const ResidentialEnhanced = () => {
       <section id="products" className="py-24 bg-pearl">
         <div className="max-w-7xl mx-auto px-8">
           
-          <div className="text-center mb-20">
+          <div className="text-center mb-20 space-y-6">
             <h2 className="text-5xl md:text-6xl leading-tight tracking-tight text-foreground mb-6 font-light">
-              Choose your system
+              Which life do you want?
             </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              The new luxury isn't what you own. It's what you never worry about.
+            </p>
           </div>
 
           {/* Products - Clean grid, no decoration */}
@@ -134,43 +137,80 @@ const ResidentialEnhanced = () => {
             
             {/* NESS UPS - Essential */}
             <div className="group">
-              <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-12 h-full flex flex-col border border-platinum/30 hover:shadow-[0_32px_64px_-16px_rgba(20,20,20,0.1)] transition-all duration-500">
+              <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-10 h-full flex flex-col border border-border/50 hover:shadow-2xl transition-all duration-500">
                 
-                <div className="text-center mb-12">
-                  <WebPImage 
-                    src="/src/assets/ness-cube-product.png" 
-                    alt="NESS UPS" 
-                    className="w-full h-40 object-contain mx-auto mb-8"
-                    loading="lazy"
-                  />
-                  <h3 className="text-title text-charcoal font-light mb-4">NESS UPS</h3>
-                  <p className="text-caption text-silver uppercase tracking-[0.1em]">Essential</p>
+                {/* Product Image */}
+                <div className="aspect-[4/3] bg-gradient-to-br from-muted/30 to-muted/50 rounded-2xl overflow-hidden mb-8">
+                  <div className="flex items-center justify-center h-full p-8">
+                    <WebPImage 
+                      src="/src/assets/ness-cube-product.png" 
+                      alt="NESS UPS - Premium Home Battery" 
+                      className="w-full h-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
                 
-                <div className="flex-1 space-y-8">
-                  <div className="grid grid-cols-3 gap-4 text-center">
-                    <div>
-                      <div className="text-title text-charcoal font-light">12h</div>
-                      <div className="text-caption text-silver">Backup time</div>
-                    </div>
-                    <div>
-                      <div className="text-title text-charcoal font-light">No flicker</div>
-                      <div className="text-caption text-silver">Switchover</div>
-                    </div>
-                    <div>
-                      <div className="text-title text-charcoal font-light">5yr</div>
-                      <div className="text-caption text-silver">Coverage</div>
-                    </div>
-                  </div>
-                  
-                  <p className="text-body text-silver leading-relaxed">
-                    Essential backup for apartments and smaller homes. Reliable, quiet, intelligent.
+                {/* Product Header */}
+                <div className="space-y-2 mb-6">
+                  <h3 className="text-2xl font-semibold text-foreground">NESS UPS</h3>
+                  <p className="text-sm text-muted-foreground uppercase tracking-wider">ESSENTIAL</p>
+                </div>
+
+                {/* Life Benefit */}
+                <div className="space-y-3 py-6 border-y border-border/50 mb-6">
+                  <p className="text-lg font-medium leading-relaxed text-foreground">
+                    Your life doesn't stop for a 4-hour power cut.
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Essentials stay on. Work continues. Life stays normal.
                   </p>
                 </div>
                 
-                <div className="mt-12 pt-8 border-t border-platinum/30">
-                  <p className="text-caption text-silver mb-6 text-center">From ₹2.5L</p>
-                  <Button className="w-full bg-charcoal text-pearl hover:bg-graphite rounded-full py-3 font-medium">
+                {/* Specs Grid */}
+                <div className="grid grid-cols-3 gap-4 text-center mb-6">
+                  <div>
+                    <div className="text-2xl font-light mb-1">12h</div>
+                    <div className="text-xs text-muted-foreground uppercase tracking-wide">Backup</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-light mb-1">10ms</div>
+                    <div className="text-xs text-muted-foreground uppercase tracking-wide">Switch</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-light mb-1">5yr</div>
+                    <div className="text-xs text-muted-foreground uppercase tracking-wide">Coverage</div>
+                  </div>
+                </div>
+
+                {/* Scenarios */}
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <p className="text-sm text-muted-foreground">Your Zoom call doesn't drop</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <p className="text-sm text-muted-foreground">Your child's online class continues</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <p className="text-sm text-muted-foreground">The Wi-Fi never goes down</p>
+                  </div>
+                </div>
+
+                {/* Target Audience */}
+                <p className="text-xs text-muted-foreground italic mb-6">
+                  Apartments and smaller homes
+                </p>
+                
+                {/* Price & CTA */}
+                <div className="mt-auto pt-6 space-y-4">
+                  <div className="flex items-baseline justify-between">
+                    <span className="text-xs text-muted-foreground uppercase tracking-wider">Investment</span>
+                    <span className="text-3xl font-light">₹2.5L</span>
+                  </div>
+                  <Button variant="outline" className="w-full rounded-full py-3 font-medium">
                     Configure UPS
                   </Button>
                 </div>
@@ -179,43 +219,80 @@ const ResidentialEnhanced = () => {
 
             {/* NESS AIO - Complete */}
             <div className="group">
-              <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-12 h-full flex flex-col border border-platinum/30 hover:shadow-[0_32px_64px_-16px_rgba(20,20,20,0.1)] transition-all duration-500">
+              <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-10 h-full flex flex-col border border-border/50 hover:shadow-2xl transition-all duration-500">
                 
-                <div className="text-center mb-12">
-                  <WebPImage 
-                    src="/src/assets/ness-pod-product.png" 
-                    alt="NESS AIO" 
-                    className="w-full h-40 object-contain mx-auto mb-8"
-                    loading="lazy"
-                  />
-                  <h3 className="text-title text-charcoal font-light mb-4">NESS AIO</h3>
-                  <p className="text-caption text-silver uppercase tracking-[0.1em]">Complete</p>
+                {/* Product Image */}
+                <div className="aspect-[4/3] bg-gradient-to-br from-muted/30 to-muted/50 rounded-2xl overflow-hidden mb-8">
+                  <div className="flex items-center justify-center h-full p-8">
+                    <WebPImage 
+                      src="/src/assets/ness-pod-product.png" 
+                      alt="NESS AIO - Premium Home Battery" 
+                      className="w-full h-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
                 
-                <div className="flex-1 space-y-8">
-                  <div className="grid grid-cols-3 gap-4 text-center">
-                    <div>
-                      <div className="text-title text-charcoal font-light">24h</div>
-                      <div className="text-caption text-silver">Backup time</div>
-                    </div>
-                    <div>
-                      <div className="text-title text-charcoal font-light">Instant</div>
-                      <div className="text-caption text-silver">Switchover</div>
-                    </div>
-                    <div>
-                      <div className="text-title text-charcoal font-light">7yr</div>
-                      <div className="text-caption text-silver">Coverage</div>
-                    </div>
-                  </div>
-                  
-                  <p className="text-body text-silver leading-relaxed">
-                    Solar and battery combined. Perfect for medium homes seeking energy independence.
+                {/* Product Header */}
+                <div className="space-y-2 mb-6">
+                  <h3 className="text-2xl font-semibold text-foreground">NESS AIO</h3>
+                  <p className="text-sm text-muted-foreground uppercase tracking-wider">COMPLETE</p>
+                </div>
+
+                {/* Life Benefit */}
+                <div className="space-y-3 py-6 border-y border-border/50 mb-6">
+                  <p className="text-lg font-medium leading-relaxed text-foreground">
+                    Never think about power. Ever.
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Solar + battery combined. Energy independence for medium homes.
                   </p>
                 </div>
                 
-                <div className="mt-12 pt-8 border-t border-platinum/30">
-                  <p className="text-caption text-silver mb-6 text-center">From ₹4.2L</p>
-                  <Button className="w-full bg-charcoal text-pearl hover:bg-graphite rounded-full py-3 font-medium">
+                {/* Specs Grid */}
+                <div className="grid grid-cols-3 gap-4 text-center mb-6">
+                  <div>
+                    <div className="text-2xl font-light mb-1">24h</div>
+                    <div className="text-xs text-muted-foreground uppercase tracking-wide">Backup</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-light mb-1">Instant</div>
+                    <div className="text-xs text-muted-foreground uppercase tracking-wide">Switch</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-light mb-1">7yr</div>
+                    <div className="text-xs text-muted-foreground uppercase tracking-wide">Coverage</div>
+                  </div>
+                </div>
+
+                {/* Scenarios */}
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <p className="text-sm text-muted-foreground">Your AC runs all night</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <p className="text-sm text-muted-foreground">The refrigerator never stops</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <p className="text-sm text-muted-foreground">You forget power cuts exist</p>
+                  </div>
+                </div>
+
+                {/* Target Audience */}
+                <p className="text-xs text-muted-foreground italic mb-6">
+                  Medium homes seeking energy independence
+                </p>
+                
+                {/* Price & CTA */}
+                <div className="mt-auto pt-6 space-y-4">
+                  <div className="flex items-baseline justify-between">
+                    <span className="text-xs text-muted-foreground uppercase tracking-wider">Investment</span>
+                    <span className="text-3xl font-light">₹4.2L</span>
+                  </div>
+                  <Button variant="outline" className="w-full rounded-full py-3 font-medium">
                     Configure AIO
                   </Button>
                 </div>
@@ -224,48 +301,85 @@ const ResidentialEnhanced = () => {
 
             {/* NESS PRO - Ultimate */}
             <div className="group">
-              <div className="bg-gradient-to-br from-white/80 to-energy-light/20 backdrop-blur-sm rounded-3xl p-12 h-full flex flex-col border border-energy/20 hover:shadow-[0_32px_64px_-16px_rgba(22,163,74,0.15)] transition-all duration-500 relative">
+              <div className="bg-gradient-to-br from-white/80 to-primary/5 backdrop-blur-sm rounded-3xl p-10 h-full flex flex-col border border-primary/30 hover:shadow-2xl transition-all duration-500 relative ring-2 ring-primary/20">
                 
-                {/* Subtle premium indicator */}
-                <div className="absolute top-6 right-6 bg-energy text-white text-xs px-3 py-1 rounded-full font-medium">
+                {/* Premium Badge */}
+                <div className="absolute top-6 right-6 bg-primary text-primary-foreground text-xs px-4 py-1 rounded-full font-medium">
                   Ultimate
                 </div>
 
-                <div className="text-center mb-12">
-                  <WebPImage 
-                    src="/src/assets/ness-pro-product.png" 
-                    alt="NESS PRO" 
-                    className="w-full h-40 object-contain mx-auto mb-8"
-                    priority={true}
-                  />
-                  <h3 className="text-title text-charcoal font-light mb-4">NESS PRO</h3>
-                  <p className="text-caption text-energy uppercase tracking-[0.1em] font-medium">Ultimate</p>
+                {/* Product Image */}
+                <div className="aspect-[4/3] bg-gradient-to-br from-muted/30 to-muted/50 rounded-2xl overflow-hidden mb-8">
+                  <div className="flex items-center justify-center h-full p-8">
+                    <WebPImage 
+                      src="/src/assets/ness-pro-product.png" 
+                      alt="NESS PRO - Ultimate Home Battery" 
+                      className="w-full h-full object-contain"
+                      priority={true}
+                    />
+                  </div>
                 </div>
                 
-                <div className="flex-1 space-y-8">
-                  <div className="grid grid-cols-3 gap-4 text-center">
-                    <div>
-                      <div className="text-title text-charcoal font-light">48h</div>
-                      <div className="text-caption text-silver">Backup time</div>
-                    </div>
-                    <div>
-                      <div className="text-title text-charcoal font-light">Seamless</div>
-                      <div className="text-caption text-silver">Switchover</div>
-                    </div>
-                    <div>
-                      <div className="text-title text-charcoal font-light">10yr</div>
-                      <div className="text-caption text-silver">Coverage</div>
-                    </div>
-                  </div>
-                  
-                  <p className="text-body text-silver leading-relaxed">
-                    Complete energy ecosystem. Ultimate backup, intelligence, and luxury for larger homes.
+                {/* Product Header */}
+                <div className="space-y-2 mb-6">
+                  <h3 className="text-2xl font-semibold text-foreground">NESS PRO</h3>
+                  <p className="text-sm text-primary uppercase tracking-wider font-medium">ULTIMATE</p>
+                </div>
+
+                {/* Life Benefit */}
+                <div className="space-y-3 py-6 border-y border-border/50 mb-6">
+                  <p className="text-lg font-medium leading-relaxed text-foreground">
+                    Complete luxury. Complete silence.
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Your entire home ecosystem. Backup, intelligence, and luxury for larger homes.
                   </p>
                 </div>
                 
-                <div className="mt-12 pt-8 border-t border-energy/20">
-                  <p className="text-caption text-silver mb-6 text-center">From ₹7.8L</p>
-                  <Button className="w-full bg-energy text-white hover:bg-energy-dark rounded-full py-3 font-medium">
+                {/* Specs Grid */}
+                <div className="grid grid-cols-3 gap-4 text-center mb-6">
+                  <div>
+                    <div className="text-2xl font-light mb-1">48h</div>
+                    <div className="text-xs text-muted-foreground uppercase tracking-wide">Backup</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-light mb-1">Seamless</div>
+                    <div className="text-xs text-muted-foreground uppercase tracking-wide">Switch</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-light mb-1">10yr</div>
+                    <div className="text-xs text-muted-foreground uppercase tracking-wide">Coverage</div>
+                  </div>
+                </div>
+
+                {/* Scenarios */}
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <p className="text-sm text-muted-foreground">Run everything—for 48 hours</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <p className="text-sm text-muted-foreground">Your neighbors won't know the grid failed</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <p className="text-sm text-muted-foreground">Absolute silence. Zero emissions.</p>
+                  </div>
+                </div>
+
+                {/* Target Audience */}
+                <p className="text-xs text-muted-foreground italic mb-6">
+                  Larger homes demanding ultimate peace
+                </p>
+                
+                {/* Price & CTA */}
+                <div className="mt-auto pt-6 space-y-4">
+                  <div className="flex items-baseline justify-between">
+                    <span className="text-xs text-muted-foreground uppercase tracking-wider">Investment</span>
+                    <span className="text-3xl font-light">₹7.8L</span>
+                  </div>
+                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-full py-3 font-medium">
                     Configure PRO
                   </Button>
                 </div>
