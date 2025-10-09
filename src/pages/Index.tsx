@@ -318,7 +318,7 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground">LFP Chemistry</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Unlike cheaper lithium batteries, LiFePO₄ doesn't catch fire. Even at 50°C.
+                  Safe and long-lasting. LiFePO₄ technology means reliable power you can trust.
                 </p>
               </div>
 
@@ -326,9 +326,9 @@ const Index = () => {
                 <div className="w-12 h-12 rounded-xl bg-energy/10 flex items-center justify-center mx-auto">
                   <Zap className="w-6 h-6 text-energy" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground">Voltage Protection</h3>
+                <h3 className="text-xl font-semibold text-foreground">NESS Cell Grading Technology</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  160V to 270V swings don't phase it. Most batteries fail at this range.
+                  Improves battery life by up to 40% through precision cell matching.
                 </p>
               </div>
 
@@ -336,7 +336,7 @@ const Index = () => {
                 <div className="w-12 h-12 rounded-xl bg-energy/10 flex items-center justify-center mx-auto">
                   <Award className="w-6 h-6 text-energy" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground">Real Testing</h3>
+                <h3 className="text-xl font-semibold text-foreground">Real World Tested</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   3 years in Jharkhand's heat. Real conditions, real proof.
                 </p>
