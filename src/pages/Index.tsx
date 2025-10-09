@@ -126,7 +126,7 @@ const Index = () => {
             </div>
             <div className="space-y-2">
               <div className="text-sm font-medium text-gray-900 uppercase tracking-wider">Made for India</div>
-              <div className="text-xs text-gray-500">160V-270V Stable</div>
+              <div className="text-xs text-gray-500">48V to 400V</div>
             </div>
           </div>
         </div>
