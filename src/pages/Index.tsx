@@ -81,7 +81,7 @@ const Index = () => {
             </h1>
             
             <p className="text-2xl md:text-3xl font-light text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Trusted by 2,000+ homes and 150+ businesses. ₹45 Crore in energy costs saved.
+              Trusted by 1,000+ homes and 10+ businesses.
             </p>
 
             {/* Dual CTA buttons */}
