@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/Layout";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import nessCubeResort from "@/assets/ness-cube-resort.webp";
-import nessPodProduct from "@/assets/ness-pod-product.png";
+import nessPodInstallation from "@/assets/ness-pod-installation.webp";
 
 // Form validation schema
 const contactSchema = z.object({
@@ -125,11 +125,11 @@ const CommercialEnhanced = () => {
 
               {/* NESS POD */}
               <div className="space-y-8 animate-fade-in">
-                <div className="aspect-[4/3] bg-card rounded-3xl overflow-hidden border border-border shadow-xl flex items-center justify-center p-12">
+                <div className="aspect-[4/3] bg-card rounded-3xl overflow-hidden border border-border shadow-xl">
                   <img 
-                    src={nessPodProduct} 
-                    alt="NESS POD rack-based battery system"
-                    className="w-full h-full object-contain"
+                    src={nessPodInstallation} 
+                    alt="NESS POD indoor battery installation"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="space-y-6">
