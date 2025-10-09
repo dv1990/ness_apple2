@@ -396,29 +396,36 @@ const Index = () => {
       {/* 8️⃣ Unified CTA Section */}
       <section className="py-32 bg-white">
         <div className="max-w-4xl mx-auto px-8 text-center">
-          <h2 className="text-5xl md:text-6xl font-light text-foreground mb-6">
+          <h2 className="text-5xl md:text-6xl font-light text-foreground mb-6 leading-tight">
             Ready to <span className="text-energy font-semibold">cut your energy bills?</span>
           </h2>
-          <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
             Calculate your savings or speak with our energy experts.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
             <Link to="/contact">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-6 text-xl font-medium rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+              <Button 
+                size="lg" 
+                className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-6 text-lg font-medium rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              >
                 Calculate Your Savings
-                <ArrowRight className="w-6 h-6 ml-3" />
+                <ArrowRight className="w-5 h-5 ml-3" />
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-gray-300 hover:bg-gray-50 px-12 py-6 text-xl font-medium rounded-full transition-all duration-300 hover:scale-105">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-foreground/20 bg-white hover:bg-muted/50 text-foreground px-12 py-6 text-lg font-medium rounded-full transition-all duration-300 hover:border-foreground/30"
+              >
                 Talk to an Expert
               </Button>
             </Link>
           </div>
 
           <div className="pt-8">
-            <p className="text-sm text-gray-500 mb-2">
+            <p className="text-sm text-muted-foreground">
               No hidden costs. 10-year warranty. 4-hour installation.
             </p>
           </div>
