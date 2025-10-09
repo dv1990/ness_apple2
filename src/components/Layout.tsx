@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import NavigationEnhanced from "./NavigationEnhanced";
+import Footer from "./Footer";
 
 interface LayoutProps {
   children: ReactNode;
@@ -8,11 +9,12 @@ interface LayoutProps {
 
 const Layout = ({ children, className = "" }: LayoutProps) => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       <NavigationEnhanced />
-      <main className={`pt-20 ${className}`}>
+      <main className={`flex-1 pt-20 ${className}`}>
         {children}
       </main>
+      <Footer />
     </div>
   );
 };

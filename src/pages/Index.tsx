@@ -393,7 +393,7 @@ const Index = () => {
       {/* Why NESS Component - Manufacturing */}
       <WhyNess />
 
-      {/* 8️⃣ Unified CTA / Footer */}
+      {/* 8️⃣ Unified CTA Section */}
       <section className="py-32 bg-white">
         <div className="max-w-4xl mx-auto px-8 text-center">
           <h2 className="text-5xl md:text-6xl font-light text-foreground mb-6">
@@ -420,12 +420,6 @@ const Index = () => {
           <div className="pt-8">
             <p className="text-sm text-gray-500 mb-2">
               No hidden costs. 10-year warranty. 4-hour installation.
-            </p>
-          </div>
-
-          <div className="pt-12 border-t border-gray-200/50 mt-12">
-            <p className="text-xs text-gray-500">
-              NESS — powered by Nunam
             </p>
           </div>
         </div>
