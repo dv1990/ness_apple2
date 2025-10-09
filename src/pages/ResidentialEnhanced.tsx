@@ -8,32 +8,70 @@ const ResidentialEnhanced = () => {
 
   return (
     <Layout>
-      {/* Hero - Direct and Clear */}
-      <section className="py-20 bg-background px-6 sm:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background"></div>
+      {/* Hero - Empowered Living */}
+      <section className="min-h-[90vh] bg-background px-6 sm:px-8 relative overflow-hidden flex items-center">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-background"></div>
         
-        <div className="max-w-7xl mx-auto relative z-10">
+        {/* Subtle animated background elements */}
+        <div className="absolute inset-0 overflow-hidden opacity-20">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto relative z-10 py-20">
           
-          <div className="text-center mb-16 space-y-8 animate-fade-in">
-            <h1 className="text-5xl sm:text-7xl md:text-8xl leading-[1] tracking-tight text-foreground font-light">
-              Power for your home.
+          {/* Main Hero Content */}
+          <div className="text-center mb-20 space-y-10 animate-fade-in">
+            {/* Empowerment Badge */}
+            <div className="inline-flex items-center gap-3 bg-primary/10 px-6 py-3 rounded-full border border-primary/20">
+              <Sparkles className="w-5 h-5 text-primary" />
+              <span className="text-sm font-medium text-primary uppercase tracking-wider">Empowered Living</span>
+            </div>
+
+            {/* Bold Headline - Ownership */}
+            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.95] tracking-tight font-light">
+              <span className="text-foreground">Own your</span>
               <br />
-              <span className="text-primary font-normal">Always on.</span>
+              <span className="text-primary font-normal">energy.</span>
             </h1>
             
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              It's 3 AM. Your baby's AC is running. The street goes dark.
+            {/* Aspirational Subhead */}
+            <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
+              While others wait for the grid, you live off the sun.
               <br />
-              <span className="text-foreground font-medium">Your home doesn't.</span>
+              <span className="text-foreground font-medium">Independent. Uninterrupted. Uncompromised.</span>
             </p>
+
+            {/* Visual Empowerment Metrics */}
+            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 pt-8">
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-light text-primary mb-2">100%</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider">Your Power</div>
+              </div>
+              <div className="w-px h-12 bg-border"></div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-light text-primary mb-2">0%</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider">Grid Dependence</div>
+              </div>
+              <div className="w-px h-12 bg-border"></div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-light text-primary mb-2">∞</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider">Calm & Control</div>
+              </div>
+            </div>
           </div>
 
-          {/* 6-Step Journey - Visual and Clear */}
-          <div className="max-w-6xl mx-auto mb-24">
-            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-border/50">
-              <h2 className="text-2xl md:text-3xl font-light text-center mb-12 text-foreground">
-                6 Steps to Get Your NESS
-              </h2>
+          {/* 6-Step Journey - Empowerment Path */}
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-gradient-to-br from-card/60 to-card/40 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-border/50 shadow-xl">
+              <div className="text-center mb-12 space-y-4">
+                <h2 className="text-2xl md:text-3xl font-light text-foreground">
+                  Your Path to Energy Independence
+                </h2>
+                <p className="text-muted-foreground">
+                  Take control in 6 simple steps
+                </p>
+              </div>
               
               <div className="grid md:grid-cols-3 gap-8 md:gap-6">
                 {/* Step 1 */}
