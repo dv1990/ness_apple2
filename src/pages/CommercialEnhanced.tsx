@@ -55,7 +55,7 @@ const CommercialEnhanced = () => {
           <div className="max-w-5xl mx-auto px-8 text-center space-y-12">
             <div className="space-y-6 animate-fade-in">
               <h1 className="text-7xl md:text-9xl font-light text-foreground leading-[0.95] tracking-tight">
-                Stop paying for electricity.
+                Stop paying peak charges.
               </h1>
             </div>
             <Button 
