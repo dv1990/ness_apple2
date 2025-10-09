@@ -124,7 +124,7 @@ const CommercialEnhanced = () => {
                   <img 
                     src={nessPodInstallation} 
                     alt="NESS POD indoor battery installation"
-                    className="w-full h-full object-cover scale-[0.8]"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="space-y-6">
