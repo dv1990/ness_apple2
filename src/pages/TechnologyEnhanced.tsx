@@ -27,9 +27,9 @@ const TechnologyEnhanced = () => {
             
             {/* Headline */}
             <h1 className="text-display-large md:text-[8rem] font-light text-foreground leading-[0.9] tracking-[-0.04em]">
-              Engineered
+              Your family
               <br />
-              for reality.
+              deserves better.
             </h1>
 
             {/* Core Stats - Honest Numbers */}
@@ -75,15 +75,16 @@ const TechnologyEnhanced = () => {
 
             {/* Direct statement */}
             <p className="text-body-large text-muted-foreground max-w-3xl mx-auto leading-relaxed font-normal">
-              LiFePO₄ cells. Precision matching. AI monitoring. 
-              Tested in Indian conditions. Backed by data.
+              While your family sleeps, our battery stays awake.
+              Watching. Protecting. Never compromising on safety.
+              Because some things matter more than specs.
             </p>
 
             {/* CTA */}
             <div className="pt-4">
               <Link to="/contact">
                 <MagneticButton variant="primary" size="lg" className="text-base font-medium px-10 py-5">
-                  Request Specifications
+                  See How We Keep You Safe
                 </MagneticButton>
               </Link>
             </div>
@@ -97,10 +98,10 @@ const TechnologyEnhanced = () => {
           
           <div className="text-center mb-24 space-y-6">
             <h2 className="text-display font-light text-foreground leading-tight tracking-[-0.03em]">
-              Three technical decisions.
+              Three promises we keep.
             </h2>
             <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
-              Each one critical to performance and longevity.
+              To every homeowner. Every installer. Every night.
             </p>
           </div>
 
@@ -108,14 +109,16 @@ const TechnologyEnhanced = () => {
           <div className="grid lg:grid-cols-2 gap-20 items-center mb-32">
             <div className="space-y-8">
               <div className="inline-block px-5 py-1.5 bg-primary/10 rounded-full">
-                <span className="text-caption text-primary uppercase tracking-[0.08em]">Chemistry</span>
+                <span className="text-caption text-primary uppercase tracking-[0.08em]">Safety First</span>
               </div>
               <h3 className="text-display-medium font-light text-foreground leading-tight tracking-[-0.02em]">
-                LiFePO₄
+                It won't catch fire.
               </h3>
               <p className="text-body-large text-muted-foreground leading-relaxed">
-                Not the highest density. Not the lowest cost. 
-                But thermally stable to 600°C. No thermal runaway under any normal use condition.
+                We use LiFePO₄ chemistry. Not because it's cheap (it isn't). 
+                Not because it stores the most energy (it doesn't). 
+                But because it won't burn your house down. Ever.
+                Thermally stable to 600°C. Zero fire events. That's the only spec that matters to a parent.
               </p>
               <div className="pt-6 space-y-3 border-t border-border">
                 <div className="flex items-baseline gap-3">
@@ -150,14 +153,16 @@ const TechnologyEnhanced = () => {
 
             <div className="space-y-8 order-1 lg:order-2">
               <div className="inline-block px-5 py-1.5 bg-primary/10 rounded-full">
-                <span className="text-caption text-primary uppercase tracking-[0.08em]">Manufacturing</span>
+                <span className="text-caption text-primary uppercase tracking-[0.08em]">Obsessive Matching</span>
               </div>
               <h3 className="text-display-medium font-light text-foreground leading-tight tracking-[-0.02em]">
-                Seven quality gates
+                Every cell knows its partner.
               </h3>
               <p className="text-body-large text-muted-foreground leading-relaxed">
-                Measure voltage. Grade by capacity. Match cells within ±2mV. 
-                Assemble at controlled temperature. Validate full system. Apply firmware protection. Ship.
+                A battery pack is only as strong as its weakest cell.
+                So we match them within 2 millivolts. That's like matching twins' heartbeats.
+                Seven quality checks. Every single unit. Because one bad cell can ruin everything.
+                Yes, it takes longer. Yes, it costs more. But your battery will thank you in year 10.
               </p>
               <div className="pt-6 space-y-3 border-t border-border">
                 <div className="flex items-baseline gap-3">
@@ -176,19 +181,21 @@ const TechnologyEnhanced = () => {
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-8">
               <div className="inline-block px-5 py-1.5 bg-primary/10 rounded-full">
-                <span className="text-caption text-primary uppercase tracking-[0.08em]">Software</span>
+                <span className="text-caption text-primary uppercase tracking-[0.08em]">Always Watching</span>
               </div>
               <h3 className="text-display-medium font-light text-foreground leading-tight tracking-[-0.02em]">
-                Continuous monitoring
+                We check your battery 17,280 times a day.
               </h3>
               <p className="text-body-large text-muted-foreground leading-relaxed">
-                Cell voltage sampled every millisecond. Time-of-day optimization. 
-                Grid export control. Cloud logging. OTA firmware updates.
+                Every 5 seconds, we measure every cell. Looking for problems before they become failures.
+                A voltage drops? We balance it. Temperature rises? We slow down. 
+                Grid goes unstable? We protect you. All automatically. All invisibly.
+                You sleep. We watch.
               </p>
               <div className="pt-6 space-y-3 border-t border-border">
                 <div className="flex items-baseline gap-3">
-                  <div className="text-5xl font-light text-primary tabular-nums">1000</div>
-                  <div className="text-body text-muted-foreground">samples per second</div>
+                  <div className="text-5xl font-light text-primary tabular-nums">17,280</div>
+                  <div className="text-body text-muted-foreground">health checks per day</div>
                 </div>
                 <div className="flex items-baseline gap-3">
                   <div className="text-5xl font-light text-foreground tabular-nums">24/7</div>
@@ -219,10 +226,10 @@ const TechnologyEnhanced = () => {
           
           <div className="text-center mb-24 space-y-6">
             <h2 className="text-display font-light text-foreground leading-tight tracking-[-0.03em]">
-              For certified installers
+              For installers who care about sleep.
             </h2>
             <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
-              Systems designed for efficient installation and zero callbacks.
+              Install it once. Forget about it. No 2am callbacks. Ever.
             </p>
           </div>
 
@@ -235,7 +242,7 @@ const TechnologyEnhanced = () => {
                 Install Time
               </div>
               <p className="text-body text-muted-foreground pt-2 leading-relaxed">
-                Standard mounting. MC4 connectors. No programming required.
+                Plug and play. Like it should be.
               </p>
             </div>
 
@@ -247,7 +254,7 @@ const TechnologyEnhanced = () => {
                 First-Time Success
               </div>
               <p className="text-body text-muted-foreground pt-2 leading-relaxed">
-                Clear documentation. Video guides. Technical support available.
+                Because we actually test our products.
               </p>
             </div>
 
@@ -259,7 +266,7 @@ const TechnologyEnhanced = () => {
                 Callback Rate
               </div>
               <p className="text-body text-muted-foreground pt-2 leading-relaxed">
-                Factory tested. Quality assured. Remote diagnostics enabled.
+                Your phone won't ring at midnight.
               </p>
             </div>
           </div>
@@ -267,7 +274,7 @@ const TechnologyEnhanced = () => {
           <div className="text-center pt-8">
             <Link to="/installers">
               <MagneticButton variant="secondary" size="lg" className="text-base font-medium px-10 py-5">
-                Become Certified
+                Join Our Network
               </MagneticButton>
             </Link>
           </div>
@@ -281,17 +288,17 @@ const TechnologyEnhanced = () => {
             
             <div className="space-y-8">
               <h2 className="text-display font-light text-foreground leading-tight tracking-[-0.03em]">
-                See it yourself
+                Want to know more?
               </h2>
               
               <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
-                Request technical specifications or schedule a product demonstration.
+                Let's talk. Real people. Real answers. No jargon.
               </p>
             </div>
 
             <Link to="/contact">
               <MagneticButton variant="primary" size="lg" className="text-base font-medium px-10 py-5">
-                Contact Us
+                Talk to Us
                 <ArrowRight className="ml-2 w-4 h-4" />
               </MagneticButton>
             </Link>
