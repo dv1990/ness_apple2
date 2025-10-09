@@ -5,6 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/Layout";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import nessCubeResort from "@/assets/ness-cube-resort.webp";
+import nessPodProduct from "@/assets/ness-pod-product.png";
 
 // Form validation schema
 const contactSchema = z.object({
@@ -48,72 +50,144 @@ const CommercialEnhanced = () => {
     <Layout>
       <div className="min-h-screen bg-background">
         
-        {/* Hero Section - Apex Story First */}
-        <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
-          <div className="max-w-7xl mx-auto px-8 py-32">
-            <div className="grid lg:grid-cols-2 gap-20 items-center">
+        {/* Hero Section - Simple Truth */}
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+          <div className="max-w-5xl mx-auto px-8 text-center space-y-12">
+            <div className="space-y-6 animate-fade-in">
+              <h1 className="text-6xl md:text-8xl font-light text-foreground leading-[1.05] tracking-tight">
+                Your factory pays for electricity.
+                <br />
+                <span className="text-energy">Or it doesn't.</span>
+              </h1>
+              <p className="text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Two options. One decision.
+              </p>
+            </div>
+            <Button 
+              size="lg"
+              onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-energy hover:bg-energy-dark text-primary-foreground px-12 py-6 rounded-2xl text-lg group"
+            >
+              See How
+              <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
+            </Button>
+          </div>
+        </section>
+
+        {/* Products Section - The Hardware */}
+        <section id="products" className="py-32 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-8">
+            <div className="text-center mb-20 space-y-4">
+              <h2 className="text-5xl md:text-6xl font-light text-foreground leading-tight tracking-tight">
+                Two systems.
+                <br />
+                <span className="text-muted-foreground">Every industrial need.</span>
+              </h2>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-16">
               
-              {/* Left: The Story */}
+              {/* NESS CUBE */}
               <div className="space-y-8 animate-fade-in">
-                {/* Kicker */}
-                <div className="text-energy text-sm uppercase tracking-wider font-medium">
-                  Apex Auto Components, Chennai
+                <div className="aspect-[4/3] bg-card rounded-3xl overflow-hidden border border-border shadow-xl">
+                  <img 
+                    src={nessCubeResort} 
+                    alt="NESS CUBE outdoor installation at resort"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                
-                {/* Headline */}
-                <h1 className="text-5xl md:text-7xl font-light text-foreground leading-[1.1] tracking-tight">
-                  This factory stopped paying for diesel.
-                  <br />
-                  <span className="text-muted-foreground">18 months later,</span>
-                  <br />
-                  <span className="text-energy">the system paid for itself.</span>
-                </h1>
-                
-                {/* Subhead */}
-                <p className="text-xl text-muted-foreground leading-relaxed">
-                  2 MW manufacturing facility. Peak demand charges: ₹96L annually. 
-                  Diesel generator running 12 hours daily.
-                </p>
-              </div>
-
-              {/* Right: The Numbers */}
-              <div className="space-y-6">
-                <div className="bg-card border border-border rounded-3xl p-10 shadow-lg">
-                  <div className="space-y-8">
-                    {/* Investment */}
-                    <div className="text-center pb-8 border-b border-border">
-                      <div className="text-sm text-muted-foreground mb-3 uppercase tracking-wide">System Cost</div>
-                      <div className="text-6xl font-light text-foreground">₹1.8Cr</div>
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-4xl font-light text-foreground mb-3">NESS CUBE</h3>
+                    <p className="text-xl text-energy font-medium">500 kWh and above</p>
+                  </div>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Outdoor. Weatherproof. Scalable.
+                    <br />
+                    For factories that need serious capacity.
+                  </p>
+                  <div className="pt-4 space-y-3">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-energy mt-1 flex-shrink-0" />
+                      <span className="text-base text-muted-foreground">IP55 rated containerized design</span>
                     </div>
-
-                    {/* Savings Breakdown */}
-                    <div className="space-y-6">
-                      <div className="flex justify-between items-baseline py-3 border-b border-border/50">
-                        <div className="text-base text-muted-foreground">Demand charges eliminated</div>
-                        <div className="text-2xl font-medium text-energy">₹96L/yr</div>
-                      </div>
-
-                      <div className="flex justify-between items-baseline py-3 border-b border-border/50">
-                        <div className="text-base text-muted-foreground">Diesel costs eliminated</div>
-                        <div className="text-2xl font-medium text-energy">₹18L/yr</div>
-                      </div>
-
-                      <div className="flex justify-between items-baseline pt-6">
-                        <div className="text-lg font-medium text-foreground">Total annual savings</div>
-                        <div className="text-4xl font-semibold text-energy">₹1.18Cr</div>
-                      </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-energy mt-1 flex-shrink-0" />
+                      <span className="text-base text-muted-foreground">Modular architecture to multi-MWh</span>
                     </div>
-
-                    {/* Payback */}
-                    <div className="bg-energy/10 rounded-2xl p-6 text-center">
-                      <div className="text-sm text-muted-foreground mb-2 uppercase tracking-wide">System paid back in</div>
-                      <div className="text-5xl font-bold text-foreground">18 months</div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-energy mt-1 flex-shrink-0" />
+                      <span className="text-base text-muted-foreground">Built for harsh industrial environments</span>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                {/* What Happened */}
-                <div className="space-y-4 px-2">
+              {/* NESS POD */}
+              <div className="space-y-8 animate-fade-in">
+                <div className="aspect-[4/3] bg-card rounded-3xl overflow-hidden border border-border shadow-xl flex items-center justify-center p-12">
+                  <img 
+                    src={nessPodProduct} 
+                    alt="NESS POD rack-based battery system"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-4xl font-light text-foreground mb-3">NESS POD</h3>
+                    <p className="text-xl text-energy font-medium">Rack-based battery packs</p>
+                  </div>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Indoor. Compact. Elegant.
+                    <br />
+                    For facilities with space constraints.
+                  </p>
+                  <div className="pt-4 space-y-3">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-energy mt-1 flex-shrink-0" />
+                      <span className="text-base text-muted-foreground">Standard server rack format</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-energy mt-1 flex-shrink-0" />
+                      <span className="text-base text-muted-foreground">Fits existing electrical rooms</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-energy mt-1 flex-shrink-0" />
+                      <span className="text-base text-muted-foreground">Silent operation, climate controlled</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* Case Study - Proof */}
+        <section className="py-32 bg-background">
+          <div className="max-w-7xl mx-auto px-8">
+            <div className="text-center mb-20 space-y-4">
+              <div className="text-energy text-sm uppercase tracking-wider font-medium">
+                Apex Auto Components, Chennai
+              </div>
+              <h2 className="text-5xl md:text-6xl font-light text-foreground leading-tight tracking-tight">
+                This factory stopped paying for diesel.
+              </h2>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
+              
+              {/* The Story */}
+              <div className="space-y-8">
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  2 MW manufacturing facility.
+                  <br />
+                  Peak demand charges: ₹96L annually.
+                  <br />
+                  Diesel generator: 12 hours daily.
+                </p>
+                
+                <div className="space-y-4 pt-6">
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-energy mt-0.5 flex-shrink-0" />
                     <div className="text-base text-muted-foreground">
@@ -129,25 +203,50 @@ const CommercialEnhanced = () => {
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-energy mt-0.5 flex-shrink-0" />
                     <div className="text-base text-muted-foreground">
-                      Microgrid activated 47 times in Year 1
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-energy mt-0.5 flex-shrink-0" />
-                    <div className="text-base text-muted-foreground">
                       Zero production downtime
                     </div>
                   </div>
                 </div>
 
-                {/* Quote */}
-                <div className="bg-muted/30 border-l-4 border-energy rounded-r-xl p-6">
+                <div className="bg-muted/30 border-l-4 border-energy rounded-r-xl p-6 mt-8">
                   <p className="text-lg text-foreground italic leading-relaxed mb-3">
                     "System paid for itself faster than we financed it."
                   </p>
                   <p className="text-sm text-muted-foreground font-medium">
-                    — Rajesh Kumar, CFO, Apex Auto Components
+                    — Rajesh Kumar, CFO
                   </p>
+                </div>
+              </div>
+
+              {/* The Numbers */}
+              <div className="bg-card border border-border rounded-3xl p-10 shadow-xl">
+                <div className="space-y-8">
+                  <div className="text-center pb-8 border-b border-border">
+                    <div className="text-sm text-muted-foreground mb-3 uppercase tracking-wide">Investment</div>
+                    <div className="text-6xl font-light text-foreground">₹1.8Cr</div>
+                  </div>
+
+                  <div className="space-y-6">
+                    <div className="flex justify-between items-baseline py-3 border-b border-border/50">
+                      <div className="text-base text-muted-foreground">Demand charges saved</div>
+                      <div className="text-2xl font-medium text-energy">₹96L/yr</div>
+                    </div>
+
+                    <div className="flex justify-between items-baseline py-3 border-b border-border/50">
+                      <div className="text-base text-muted-foreground">Diesel costs saved</div>
+                      <div className="text-2xl font-medium text-energy">₹18L/yr</div>
+                    </div>
+
+                    <div className="flex justify-between items-baseline pt-6">
+                      <div className="text-lg font-medium text-foreground">Total savings</div>
+                      <div className="text-4xl font-semibold text-energy">₹1.18Cr/yr</div>
+                    </div>
+                  </div>
+
+                  <div className="bg-energy/10 rounded-2xl p-6 text-center">
+                    <div className="text-sm text-muted-foreground mb-2 uppercase tracking-wide">Payback</div>
+                    <div className="text-5xl font-bold text-foreground">18 months</div>
+                  </div>
                 </div>
               </div>
 
@@ -155,15 +254,15 @@ const CommercialEnhanced = () => {
           </div>
         </section>
 
-        {/* ROI Calculator Section - Your Numbers */}
+        {/* ROI Calculator Section */}
         <section className="py-32 bg-muted/30">
           <div className="max-w-4xl mx-auto px-8">
             <div className="text-center mb-16 space-y-4">
               <h2 className="text-5xl md:text-6xl font-light text-foreground leading-tight tracking-tight">
-                What would your factory save?
+                Your numbers.
               </h2>
               <p className="text-xl text-muted-foreground">
-                Enter your monthly electricity spend. See your exact payback.
+                Monthly electricity spend. Exact payback.
               </p>
             </div>
 
@@ -233,17 +332,20 @@ const CommercialEnhanced = () => {
           </div>
         </section>
 
-        {/* Final CTA Section - One Path Forward */}
+        {/* Final CTA */}
         <section className="py-32 bg-background">
           <div id="contact-form" className="max-w-3xl mx-auto px-8">
             <div className="text-center space-y-16">
               <div className="space-y-6">
                 <h2 className="text-5xl md:text-6xl font-light text-foreground leading-tight tracking-tight">
-                  Request a site audit.
+                  Site audit.
+                  <br />
+                  <span className="text-muted-foreground">No surprises.</span>
                 </h2>
                 <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-                  We'll show you the exact system, exact savings, exact payback. 
-                  If it doesn't work on paper, we don't waste your time.
+                  Exact system. Exact savings. Exact payback.
+                  <br />
+                  If it doesn't work on paper, we don't proceed.
                 </p>
               </div>
               
