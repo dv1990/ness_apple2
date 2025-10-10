@@ -69,15 +69,15 @@ const Index = () => {
           <div className="space-y-16 animate-fade-in">
             <div className="space-y-8">
               <h1 className="text-5xl md:text-7xl font-light text-foreground leading-tight tracking-tight">
-                Remember last Tuesday's
+                Energy independence.
                 <br />
-                6-hour power cut?
+                The one luxury
+                <br />
+                <span className="text-energy font-medium">money couldn't buy.</span>
               </h1>
               
               <p className="text-3xl md:text-4xl font-light text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Your neighbor's kid missed the online exam.
-                <br />
-                <span className="text-energy font-medium">Your family didn't even notice.</span>
+                Until now.
               </p>
             </div>
 
@@ -93,7 +93,7 @@ const Index = () => {
               </div>
               <div className="space-y-2">
                 <div className="text-6xl md:text-7xl font-light text-energy">1,000</div>
-                <div className="text-sm text-muted-foreground uppercase tracking-wider">Families Trust NESS</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider">Own Their Power</div>
               </div>
             </div>
 
@@ -101,7 +101,7 @@ const Index = () => {
             <div className="pt-4">
               <Link to="/residential">
                 <Button size="lg" className="bg-energy hover:bg-energy-dark text-primary-foreground px-12 py-6 text-xl font-medium rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
-                  See How It Works
+                  Own Your Power
                   <ArrowRight className="w-6 h-6 ml-3" />
                 </Button>
               </Link>
@@ -110,15 +110,15 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 2️⃣ Real Stories - Proof Before Product */}
+      {/* 2️⃣ Real Stories - Aspiration & Independence */}
       <section className="py-40 bg-muted/20">
         <div className="max-w-6xl mx-auto px-8">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-light text-foreground mb-8">
-              Real families. <span className="text-energy font-semibold">Real numbers.</span>
+              They own their power. <span className="text-energy font-semibold">You can too.</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Not marketing promises. Actual bills.
+              Energy independence isn't just efficient. It's liberating.
             </p>
           </div>
 
@@ -132,21 +132,21 @@ const Index = () => {
                 </div>
                 
                 <blockquote className="text-2xl font-light text-foreground leading-tight italic">
-                  "The lights stayed on during the 12-hour outage. My kids didn't even know it happened."
+                  "I don't wait for the grid anymore. The sun powers my home. That's luxury."
                 </blockquote>
                 
                 <p className="text-muted-foreground leading-relaxed">
-                  Rajesh Kumar, 15 kWh system, 18 months
+                  Rajesh Kumar, 15 kWh solar + storage system
                 </p>
 
                 <div className="grid grid-cols-2 gap-6 pt-4 border-t border-border">
                   <div className="space-y-2 pt-4">
                     <div className="text-4xl font-light text-energy">₹18K</div>
-                    <div className="text-sm text-muted-foreground">Saved monthly</div>
+                    <div className="text-sm text-muted-foreground">Monthly savings</div>
                   </div>
                   <div className="space-y-2 pt-4">
                     <div className="text-4xl font-light text-energy">100%</div>
-                    <div className="text-sm text-muted-foreground">Off-grid</div>
+                    <div className="text-sm text-muted-foreground">Energy independent</div>
                   </div>
                 </div>
               </div>
@@ -161,21 +161,21 @@ const Index = () => {
                 </div>
                 
                 <blockquote className="text-2xl font-light text-foreground leading-tight italic">
-                  "Peak hours used to cost us a fortune. Not anymore."
+                  "We control our energy. Not the other way around."
                 </blockquote>
                 
                 <p className="text-muted-foreground leading-relaxed">
-                  500 kWh system, Smart load management
+                  500 kWh system, Complete energy autonomy
                 </p>
 
                 <div className="grid grid-cols-2 gap-6 pt-4 border-t border-border">
                   <div className="space-y-2 pt-4">
                     <div className="text-4xl font-light text-energy">₹2.5L</div>
-                    <div className="text-sm text-muted-foreground">Saved monthly</div>
+                    <div className="text-sm text-muted-foreground">Monthly savings</div>
                   </div>
                   <div className="space-y-2 pt-4">
                     <div className="text-4xl font-light text-energy">30%</div>
-                    <div className="text-sm text-muted-foreground">Peak reduction</div>
+                    <div className="text-sm text-muted-foreground">Peak independence</div>
                   </div>
                 </div>
               </div>
@@ -188,20 +188,20 @@ const Index = () => {
       <section className="py-20 bg-foreground text-background">
         <div className="max-w-5xl mx-auto px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-6 leading-tight">
-            Built for India. <span className="text-energy font-semibold">Proven in Jharkhand.</span>
+            Engineered for excellence. <span className="text-energy font-semibold">Proven in India.</span>
           </h2>
           <div className="grid md:grid-cols-3 gap-8 mt-12 text-center">
             <div className="space-y-2">
               <div className="text-3xl font-light text-energy">50°C</div>
-              <div className="text-sm text-background/70">Extreme summer heat</div>
+              <div className="text-sm text-background/70">Uncompromising performance</div>
             </div>
             <div className="space-y-2">
               <div className="text-3xl font-light text-energy">160-270V</div>
-              <div className="text-sm text-background/70">Voltage chaos handled</div>
+              <div className="text-sm text-background/70">Total voltage mastery</div>
             </div>
             <div className="space-y-2">
               <div className="text-3xl font-light text-energy">3 Years</div>
-              <div className="text-sm text-background/70">Zero failures</div>
+              <div className="text-sm text-background/70">Flawless operation</div>
             </div>
           </div>
         </div>
@@ -228,37 +228,37 @@ const Index = () => {
             {/* Content */}
             <div className="space-y-8 order-1 lg:order-2">
               <h2 className="text-5xl md:text-6xl font-light text-foreground leading-tight tracking-tight">
-                Your child's exam.
+                Your home.
                 <br />
-                Your work deadline.
+                Your rules.
                 <br />
-                <span className="text-energy font-medium">None of it stops.</span>
+                <span className="text-energy font-medium">Your power.</span>
               </h2>
 
               <p className="text-xl text-muted-foreground font-light leading-relaxed">
-                The new luxury isn't noise. It's silence. Clean energy that works invisibly.
+                The sun works for you now. Not the power company. That's the luxury of energy independence.
               </p>
 
               {/* Key Benefits */}
               <div className="space-y-4 pt-4">
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-energy flex-shrink-0 mt-1" />
-                  <div className="text-foreground">24+ hours backup. Full home power.</div>
+                  <div className="text-foreground">Complete energy autonomy. No compromises.</div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-energy flex-shrink-0 mt-1" />
-                  <div className="text-foreground">Absolute silence. Zero emissions.</div>
+                  <div className="text-foreground">Silent, clean, effortless. Pure luxury.</div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-energy flex-shrink-0 mt-1" />
-                  <div className="text-foreground">Solar-ready. Future-proof.</div>
+                  <div className="text-foreground">Control your energy from anywhere.</div>
                 </div>
               </div>
 
               <div className="pt-6">
                 <Link to="/residential">
                   <Button size="lg" className="bg-energy hover:bg-energy-dark text-primary-foreground px-10 py-5 text-lg font-medium rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                    See Home Solutions
+                    Own Your Home's Power
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
                 </Link>
@@ -283,13 +283,13 @@ const Index = () => {
               </div>
 
               <h2 className="text-5xl md:text-6xl font-light text-foreground leading-tight tracking-tight">
-                Scale power like you
+                Energy independence
                 <br />
-                <span className="text-primary font-medium">scale your business.</span>
+                <span className="text-primary font-medium">scales with ambition.</span>
               </h2>
 
               <p className="text-xl text-muted-foreground font-light leading-relaxed">
-                From factories to resorts, NESS storage reduces peaks, optimizes tariffs, and keeps you running 24×7.
+                From factories to resorts. You control your energy. Your tariffs. Your future.
               </p>
 
               {/* Highlights */}
@@ -345,12 +345,12 @@ const Index = () => {
           <div className="space-y-16">
             <div>
               <h2 className="text-5xl md:text-6xl font-light text-foreground leading-tight mb-6">
-                Why NESS lasts <span className="text-energy font-semibold">10+ years</span>
+                Why NESS lasts <span className="text-energy font-semibold">10+ years.</span>
                 <br />
-                <span className="text-muted-foreground">when others fail in 3.</span>
+                <span className="text-muted-foreground">Engineering that respects your investment.</span>
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Purpose-built for India. Not adapted for it.
+                Luxury isn't just aesthetics. It's quality that endures.
               </p>
             </div>
 
@@ -397,12 +397,10 @@ const Index = () => {
       <section className="py-32 bg-background">
         <div className="max-w-4xl mx-auto px-8 text-center">
           <h2 className="text-5xl md:text-6xl font-light text-foreground mb-6 leading-tight">
-            Tell us your address.
-            <br />
-            <span className="text-energy font-semibold">We'll tell you what works.</span>
+            Ready to own your power?
           </h2>
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            No jargon. No pressure. Just honest answers.
+            Energy independence starts with one conversation.
           </p>
           
           <div className="pt-4">
@@ -411,7 +409,7 @@ const Index = () => {
                 size="lg" 
                 className="bg-energy hover:bg-energy-dark text-primary-foreground px-12 py-6 text-xl font-medium rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
               >
-                Get Started
+                Begin Your Journey
                 <ArrowRight className="w-6 h-6 ml-3" />
               </Button>
             </Link>
