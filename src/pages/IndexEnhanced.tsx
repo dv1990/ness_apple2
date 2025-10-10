@@ -85,6 +85,61 @@ const IndexEnhanced = () => {
         </div>
       </section>
 
+      {/* Trusted Partners Banner */}
+      <section className="py-12 bg-charcoal/[0.02] border-y border-platinum/50">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="text-center space-y-10">
+            <p className="text-sm md:text-base text-charcoal/40 font-light tracking-wide">
+              Trusted by those who don't compromise.
+            </p>
+            
+            {/* Partner Logos */}
+            <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16 opacity-40">
+              {/* EDF Energy */}
+              <div className="h-12 flex items-center">
+                <div className="text-charcoal/60 font-light text-lg tracking-wider uppercase">
+                  EDF Energy
+                </div>
+              </div>
+              
+              {/* Total Energies */}
+              <div className="h-12 flex items-center">
+                <div className="text-charcoal/60 font-light text-lg tracking-wider uppercase">
+                  TotalEnergies
+                </div>
+              </div>
+              
+              {/* Cisco */}
+              <div className="h-12 flex items-center">
+                <div className="text-charcoal/60 font-light text-lg tracking-wider uppercase">
+                  Cisco
+                </div>
+              </div>
+              
+              {/* Government of Karnataka */}
+              <div className="h-12 flex items-center">
+                <div className="text-charcoal/60 font-light text-xs md:text-sm tracking-wider">
+                  Government of Karnataka
+                </div>
+              </div>
+              
+              {/* Ministry of Telecommunications */}
+              <div className="h-12 flex items-center">
+                <div className="text-charcoal/60 font-light text-xs md:text-sm tracking-wider">
+                  Ministry of Telecommunications
+                </div>
+              </div>
+            </div>
+            
+            {/* Disclaimer */}
+            <p className="text-[10px] text-charcoal/20 font-light max-w-4xl mx-auto leading-relaxed">
+              Partner organizations shown have deployed NESS battery systems or solutions in pilot programs, commercial projects, or government initiatives. 
+              Logos displayed for reference purposes only and do not constitute endorsement.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Why NESS */}
       <section className="py-48 bg-pearl">
         <div className="max-w-6xl mx-auto px-8">
