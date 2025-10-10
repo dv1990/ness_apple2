@@ -265,45 +265,49 @@ const Index = () => {
               </div>
 
               <h2 className="text-5xl md:text-6xl font-light text-foreground leading-tight tracking-tight">
-                Energy independence
+                Your business.
                 <br />
-                <span className="text-primary font-medium">scales with ambition.</span>
+                Your energy.
+                <br />
+                <span className="text-primary font-medium">Your future.</span>
               </h2>
 
               <p className="text-xl text-muted-foreground font-light leading-relaxed">
-                From factories to resorts. You control your energy. Your tariffs. Your future.
+                From factories to resorts. You control your energy. Your tariffs. Your independence.
               </p>
 
-              {/* Highlights */}
+              {/* Key Benefits */}
               <div className="space-y-4 pt-4">
-                <div className="flex items-center space-x-3">
-                  <TrendingUp className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-foreground">50 kWh–2 MWh modular systems</span>
+                <div className="flex items-start space-x-4">
+                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <div className="text-foreground">Modular systems from 50 kWh to 2 MWh.</div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <TrendingUp className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-foreground">Peak shaving up to 30%</span>
+                <div className="flex items-start space-x-4">
+                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <div className="text-foreground">Peak shaving up to 30%. Lower your tariffs.</div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <Clock className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-foreground">20 ms transfer for critical loads</span>
+                <div className="flex items-start space-x-4">
+                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <div className="text-foreground">20 ms transfer for uninterrupted operations.</div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <Shield className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-foreground">Remote diagnostics</span>
+                <div className="flex items-start space-x-4">
+                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <div className="text-foreground">Remote monitoring and diagnostics.</div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <Award className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-foreground">10-year extendable warranty</span>
+                <div className="flex items-start space-x-4">
+                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <div className="text-foreground">10-year extendable warranty.</div>
                 </div>
               </div>
 
-              <Link to="/commercial">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-5 text-lg font-medium rounded-xl mt-4">
-                  Explore Commercial Solutions
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </Link>
+              <div className="pt-6">
+                <Link to="/commercial">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-5 text-lg font-medium rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    Own Your Business's Power
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                </Link>
+              </div>
             </div>
 
             {/* Visual */}
