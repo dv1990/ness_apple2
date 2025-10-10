@@ -221,19 +221,6 @@ const Index = () => {
                 Imagine waking up knowing the sun works for you. Your roof, your power, your freedom. That's not just luxury—that's joy.
               </p>
 
-              {/* Nunam Intelligence Highlight */}
-              <div className="p-6 rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                    <span className="text-2xl">🧠</span>
-                  </div>
-                  <h3 className="text-xl font-medium text-foreground">Powered by Nunam Intelligence</h3>
-                </div>
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  Your battery doesn't just store power—it thinks. Nunam Intelligence is our predictive analytics engine that watches over your system 24x7, learning your patterns, anticipating your needs, and ensuring seamless operation for a decade and beyond.
-                </p>
-              </div>
-
               {/* Key Benefits */}
               <div className="space-y-4 pt-4">
                 <div className="flex items-start space-x-4">
