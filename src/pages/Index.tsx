@@ -88,6 +88,67 @@ const Index = () => {
         </div>
       </section>
 
+      {/* WHY NOW? - Urgency Section */}
+      <section className="py-32 bg-gradient-to-b from-background to-muted/30 border-y border-border">
+        <div className="max-w-4xl mx-auto px-8">
+          <div className="space-y-16 text-center">
+            {/* The Truth */}
+            <div className="space-y-8">
+              <h2 className="text-4xl md:text-5xl font-light text-foreground leading-tight">
+                Every summer gets hotter.
+                <br />
+                Every power bill gets higher.
+                <br />
+                Every load-shedding gets longer.
+              </h2>
+            </div>
+
+            {/* The Divide */}
+            <div className="py-8">
+              <div className="inline-block px-8 py-4 border-y border-border/50">
+                <p className="text-2xl md:text-3xl font-light text-muted-foreground">
+                  Some wait. <span className="text-energy font-medium">Some act.</span>
+                </p>
+              </div>
+            </div>
+
+            {/* The Reality Grid */}
+            <div className="grid md:grid-cols-3 gap-8 pt-8">
+              <div className="space-y-4">
+                <div className="text-5xl text-destructive/80">↗</div>
+                <div className="text-lg text-foreground font-light">Grid tariffs up 40% in 3 years</div>
+              </div>
+              <div className="space-y-4">
+                <div className="text-5xl text-destructive/80">🔥</div>
+                <div className="text-lg text-foreground font-light">48°C summers are the new normal</div>
+              </div>
+              <div className="space-y-4">
+                <div className="text-5xl text-destructive/80">⏱</div>
+                <div className="text-lg text-foreground font-light">Outages doubled since 2021</div>
+              </div>
+            </div>
+
+            {/* The Choice */}
+            <div className="pt-8 space-y-6">
+              <p className="text-2xl md:text-3xl font-light text-foreground">
+                Take control of your energy source.
+                <br />
+                <span className="text-energy font-medium">Before your energy source controls you.</span>
+              </p>
+              
+              <div className="pt-4">
+                <Link to="/residential">
+                  <Button size="lg" className="bg-energy hover:bg-energy-dark text-primary-foreground px-12 py-6 text-xl font-medium rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+                    Start Your Independence
+                    <ArrowRight className="w-6 h-6 ml-3" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 2️⃣ Real Stories - Aspiration & Independence */}
       <section className="py-40 bg-muted/20">
         <div className="max-w-6xl mx-auto px-8">
