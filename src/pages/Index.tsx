@@ -410,45 +410,58 @@ const Index = () => {
       <section className="py-40 bg-muted/30">
         <div className="max-w-5xl mx-auto px-8 text-center">
           <div className="space-y-16">
-            <div>
-              <h2 className="text-5xl md:text-6xl font-light text-foreground leading-tight mb-6">
-                Why NESS lasts <span className="text-energy font-semibold">10+ years.</span>
+            <div className="space-y-6">
+              <h2 className="text-5xl md:text-6xl font-light text-foreground leading-tight">
+                A battery that outlasts your car loan.
                 <br />
-                <span className="text-muted-foreground">Engineering that respects your investment.</span>
+                <span className="text-energy font-semibold">10+ years of power that simply works.</span>
               </h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Luxury isn't just aesthetics. It's quality that endures.
+              <p className="text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light italic">
+                10 years of mornings without worry.
+                <br />
+                10 years of nights without disruption.
+                <br />
+                <span className="text-foreground not-italic">Peace of mind that compounds.</span>
+              </p>
+            </div>
+
+            {/* The Reality of Longevity */}
+            <div className="max-w-3xl mx-auto space-y-4 pt-4">
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                While others replace batteries every 3 years, you'll be sipping coffee on your terrace.
+                <br />
+                <span className="text-foreground font-medium">Unbothered.</span>
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 pt-8">
-              <div className="space-y-4 p-8 bg-card rounded-2xl border border-border">
+              <div className="space-y-4 p-8 bg-card rounded-2xl border border-border hover:shadow-lg transition-all duration-300">
                 <div className="w-12 h-12 rounded-xl bg-energy/10 flex items-center justify-center mx-auto">
                   <Shield className="w-6 h-6 text-energy" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground">LFP Chemistry</h3>
+                <h3 className="text-xl font-semibold text-foreground">Safer Chemistry</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Safe and long-lasting. LiFePO₄ technology means reliable power you can trust.
+                  While lithium-ion batteries degrade, yours stays strong. <span className="text-foreground">A decade later.</span>
                 </p>
               </div>
 
-              <div className="space-y-4 p-8 bg-card rounded-2xl border border-border">
+              <div className="space-y-4 p-8 bg-card rounded-2xl border border-border hover:shadow-lg transition-all duration-300">
                 <div className="w-12 h-12 rounded-xl bg-energy/10 flex items-center justify-center mx-auto">
                   <Zap className="w-6 h-6 text-energy" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground">NESS Cell Grading Technology</h3>
+                <h3 className="text-xl font-semibold text-foreground">Precision Engineering</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Improves battery life by up to 40% through precision cell matching.
+                  Every cell matched perfectly. <span className="text-foreground">40% longer life.</span> Zero compromises.
                 </p>
               </div>
 
-              <div className="space-y-4 p-8 bg-card rounded-2xl border border-border">
+              <div className="space-y-4 p-8 bg-card rounded-2xl border border-border hover:shadow-lg transition-all duration-300">
                 <div className="w-12 h-12 rounded-xl bg-energy/10 flex items-center justify-center mx-auto">
                   <Award className="w-6 h-6 text-energy" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground">Real World Tested</h3>
+                <h3 className="text-xl font-semibold text-foreground">India Proven</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  3 years in Jharkhand's heat. Real conditions, real proof.
+                  50°C summers. 3 years. <span className="text-foreground">Zero failures.</span> Real conditions, real proof.
                 </p>
               </div>
             </div>
