@@ -8,7 +8,6 @@ import React, { Suspense, lazy } from 'react';
 
 // Critical pages - Eager loaded for instant navigation
 import Index from "./pages/Index";
-import IndexEnhanced from "./pages/IndexEnhanced";
 import ResidentialEnhanced from "./pages/ResidentialEnhanced";
 import InstallersEnhanced from "./pages/InstallersEnhanced";
 import CommercialEnhanced from "./pages/CommercialEnhanced";
@@ -58,7 +57,7 @@ const App = () => {
           <Suspense fallback={<PageLoadingFallback />}>
             <Routes>
           {/* Overview (Landing) */}
-          <Route path="/" element={<IndexEnhanced />} />
+          <Route path="/" element={<Index />} />
           
           {/* Enhanced Product Routes */}
           <Route path="/residential-enhanced" element={<ResidentialEnhanced />} />
