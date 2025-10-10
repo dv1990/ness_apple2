@@ -110,7 +110,7 @@ const Index = () => {
                 </div>
                 
                 <blockquote className="text-2xl font-light text-foreground leading-tight italic">
-                  "I check our energy dashboard every morning with my chai. We're producing more than we use. That feeling? Priceless."
+                  "It's been over two years since I switched to Nunam batteries — no resets, no shutdowns, just flawless reliability. From home security to consistent power for all household equipment, Nunam has given me complete peace of mind."
                 </blockquote>
                 
                 <p className="text-muted-foreground leading-relaxed">
