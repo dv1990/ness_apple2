@@ -78,7 +78,7 @@ const TrueWarranty = () => {
             {/* Proof */}
             <div className="grid sm:grid-cols-3 gap-8 pt-8">
               <div className="text-center space-y-2">
-                <div className="text-5xl font-light text-foreground">847</div>
+                <div className="text-5xl font-light text-foreground">2</div>
                 <div className="text-sm text-muted-foreground">Batteries replaced.<br />No questions asked.</div>
               </div>
               <div className="text-center space-y-2">
