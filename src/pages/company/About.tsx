@@ -58,37 +58,21 @@ const About = () => {
             </div>
 
             {/* Engineering stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto pt-8">
+            <div className="grid grid-cols-2 gap-12 max-w-2xl mx-auto pt-8">
               <div className="space-y-2">
                 <div className="text-5xl font-light text-charcoal tabular-nums">
-                  <AnimatedCounter value={127} duration={2000} />
+                  <AnimatedCounter value={4} duration={1800} />
                 </div>
                 <div className="text-xs uppercase tracking-wider text-charcoal/40">
-                  Patents Filed
+                  Years of R&D
                 </div>
               </div>
               <div className="space-y-2">
                 <div className="text-5xl font-light text-charcoal tabular-nums">
-                  <AnimatedCounter value={18} duration={1800} />%
-                </div>
-                <div className="text-xs uppercase tracking-wider text-charcoal/40">
-                  R&D Investment
-                </div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-5xl font-light text-charcoal tabular-nums">
-                  <AnimatedCounter value={2847} duration={2500} />
+                  <AnimatedCounter value={12} duration={1500} />
                 </div>
                 <div className="text-xs uppercase tracking-wider text-charcoal/40">
                   Quality Checks
-                </div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-5xl font-light text-charcoal tabular-nums">
-                  0
-                </div>
-                <div className="text-xs uppercase tracking-wider text-charcoal/40">
-                  Compromises
                 </div>
               </div>
             </div>
