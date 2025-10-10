@@ -114,7 +114,7 @@ const Index = () => {
                 </blockquote>
                 
                 <p className="text-muted-foreground leading-relaxed">
-                  Priya Mehta, Architect & Mother — 20 kWh solar + storage system
+                  Dr Mohan Krishna Ranganath, Transformed his house to off-grid living. Sarjapura, Bengaluru
                 </p>
 
                 <div className="grid grid-cols-2 gap-6 pt-4 border-t border-border">
