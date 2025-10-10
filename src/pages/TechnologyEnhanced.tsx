@@ -95,9 +95,7 @@ const TechnologyEnhanced = () => {
 
             {/* Direct statement */}
             <p className="text-body-large text-muted-foreground max-w-3xl mx-auto leading-relaxed font-normal">
-              While your family sleeps, our battery stays awake.
-              Watching. Protecting. Never compromising on safety.
-              Because some things matter more than specs.
+              It just works. Safely. Silently. Always.
             </p>
 
             {/* CTA */}
@@ -135,10 +133,9 @@ const TechnologyEnhanced = () => {
                 It won't catch fire.
               </h3>
               <p className="text-body-large text-muted-foreground leading-relaxed">
-                We use LiFePO₄ chemistry. Not because it's cheap (it isn't). 
-                Not because it stores the most energy (it doesn't). 
-                But because it won't burn your house down. Ever.
-                Thermally stable to 600°C. Zero fire events. That's the only spec that matters to a parent.
+                LiFePO₄ chemistry. Thermally stable to 600°C.
+                <br />
+                Zero fire events. Ever.
               </p>
               <div className="pt-6 space-y-3 border-t border-border">
                 <div className="flex items-baseline gap-3">
@@ -181,10 +178,11 @@ const TechnologyEnhanced = () => {
                 Every cell knows its partner.
               </h3>
               <p className="text-body-large text-muted-foreground leading-relaxed">
-                A battery pack is only as strong as its weakest cell.
-                So we match them within 2 millivolts. That's like matching twins' heartbeats.
-                Seven quality checks. Every single unit. Because one bad cell can ruin everything.
-                Yes, it takes longer. Yes, it costs more. But your battery will thank you in year 10.
+                Cells matched within 2 millivolts.
+                <br />
+                Seven quality checks. Every unit.
+                <br />
+                Your battery will thank you in year 10.
               </p>
               <div className="pt-6 space-y-3 border-t border-border">
                 <div className="flex items-baseline gap-3">
@@ -213,12 +211,11 @@ const TechnologyEnhanced = () => {
                 The brain that never sleeps.
               </h3>
               <p className="text-body-large text-muted-foreground leading-relaxed">
-                Nunam Intelligence is our predictive analytics engine—the guardian angel inside every NESS battery.
-                It checks your battery 17,280 times a day. Every 5 seconds, measuring every cell. 
-                Looking for patterns. Predicting problems before they become failures. 
-                A voltage drops? We balance it. Temperature rises? We slow down. 
-                Grid goes unstable? We protect you. All automatically. All invisibly.
-                You sleep. Nunam watches. 24x7 seamless operation. A decade of reliability guaranteed.
+                17,280 checks per day. Every cell. Every 5 seconds.
+                <br />
+                Predicting problems before they happen.
+                <br />
+                You sleep. Nunam watches.
               </p>
               <div className="pt-6 space-y-3 border-t border-border">
                 <div className="flex items-baseline gap-3">
@@ -261,8 +258,7 @@ const TechnologyEnhanced = () => {
               While you read this...
             </h2>
             <p className="text-body-large text-pearl/60 max-w-2xl mx-auto leading-relaxed">
-              Thousands of NESS batteries are working. Learning. Protecting.
-              Every second, they whisper to the cloud. We listen.
+              Thousands of batteries. Working. Learning. Protecting.
             </p>
           </div>
 
@@ -303,12 +299,10 @@ const TechnologyEnhanced = () => {
           <div className="max-w-3xl mx-auto text-center pt-12 space-y-8">
             <div className="h-px bg-pearl/10"></div>
             <p className="text-xl md:text-2xl text-pearl/70 font-light leading-relaxed italic">
-              "Our cloud doesn't just store data.
-              <br />
-              It remembers every time we kept you safe.
+              "Every battery tells a story.
               <br />
               <span className="text-pearl/50 text-lg not-italic">
-                And we never forget.
+                We remember them all.
               </span>
             </p>
           </div>
