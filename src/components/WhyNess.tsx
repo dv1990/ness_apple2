@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { 
   Shield, 
   Zap, 
@@ -6,7 +6,6 @@ import {
   Sparkles, 
   ArrowRight 
 } from "lucide-react";
-import React from "react"
 
 const features = [
   {
@@ -229,7 +228,7 @@ function LuxuryManufacturingShowcase() {
   const [activeStep, setActiveStep] = useState(0)
   const [isPlaying, setIsPlaying] = useState(true)
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!isPlaying) return
 
     const interval = setInterval(() => {
