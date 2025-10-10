@@ -7,6 +7,7 @@ import { WhyNess } from "@/components/WhyNess";
 import { AnimatedCounter } from "@/components/ui/animated-counter";
 import { Battery3D } from "@/components/ui/battery-3d";
 import { AnimatedCard } from "@/components/ui/animated-card";
+import { LiveTicker } from "@/components/ui/live-ticker";
 
 // Import images
 import batteryTechnology from "@/assets/battery-technology.jpg";
@@ -238,6 +239,72 @@ const TechnologyEnhanced = () => {
                 className="w-full h-auto"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Live Intelligence - Human Comfort */}
+      <section className="py-32 bg-charcoal text-pearl">
+        <div className="max-w-[1280px] mx-auto px-8">
+          
+          <div className="text-center mb-20 space-y-6">
+            <div className="inline-block px-5 py-1.5 bg-primary/20 rounded-full mb-4">
+              <span className="text-caption text-primary uppercase tracking-[0.08em]">Right Now</span>
+            </div>
+            <h2 className="text-display font-light leading-tight tracking-[-0.03em]">
+              While you read this...
+            </h2>
+            <p className="text-body-large text-pearl/60 max-w-2xl mx-auto leading-relaxed">
+              Thousands of NESS batteries are working. Learning. Protecting.
+              Every second, they whisper to the cloud. We listen.
+            </p>
+          </div>
+
+          {/* Live Ticker Stats */}
+          <div className="grid md:grid-cols-3 gap-12 mb-16">
+            <LiveTicker
+              label="Data Points Collected"
+              startValue={847250000}
+              incrementRate={2850} // ~2850 data points per second across fleet
+              suffix="M"
+              decimals={2}
+              humanMessage="Every heartbeat of every battery. Every cell. Every moment. Stored forever."
+              className="text-center"
+            />
+
+            <LiveTicker
+              label="Energy Delivered"
+              startValue={100.45}
+              incrementRate={0.00125} // ~4.5 MWh per hour = 0.00125 per second
+              suffix=" MWh"
+              decimals={2}
+              humanMessage="That's enough to power 8,400 homes right now. Including yours."
+              className="text-center"
+            />
+
+            <LiveTicker
+              label="Cycles Proven"
+              startValue={25847}
+              incrementRate={0.042} // growing with each new installation
+              suffix="+"
+              decimals={0}
+              humanMessage="Each one a promise kept. A light that stayed on. A fridge that kept running."
+              className="text-center"
+            />
+          </div>
+
+          {/* Human Context */}
+          <div className="max-w-3xl mx-auto text-center pt-12 space-y-8">
+            <div className="h-px bg-pearl/10"></div>
+            <p className="text-xl md:text-2xl text-pearl/70 font-light leading-relaxed italic">
+              "Our cloud doesn't just store data.
+              <br />
+              It remembers every time we kept you safe.
+              <br />
+              <span className="text-pearl/50 text-lg not-italic">
+                And we never forget.
+              </span>
+            </p>
           </div>
         </div>
       </section>
