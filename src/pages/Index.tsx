@@ -62,7 +62,7 @@ const Index = () => {
             {/* Proof Numbers - Big and Bold */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto py-8">
               <div className="space-y-2">
-                <div className="text-6xl md:text-7xl font-light text-energy">10,000+</div>
+                <div className="text-6xl md:text-7xl font-light text-energy">100+</div>
                 <div className="text-sm text-muted-foreground uppercase tracking-wider">MWh Delivered</div>
               </div>
               <div className="space-y-2">
