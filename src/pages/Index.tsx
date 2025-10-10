@@ -156,7 +156,9 @@ const Index = () => {
             {/* The Cost of Waiting */}
             <div className="pt-8 space-y-6 border-t border-border max-w-3xl mx-auto">
               <p className="text-2xl md:text-3xl font-light text-foreground leading-relaxed">
-                Every month you wait costs ₹15,000 you'll never get back.
+                Every month you wait, another ₹15,000 goes to the grid.
+                <br />
+                <span className="text-muted-foreground text-xl">Money that could have secured your family's future.</span>
               </p>
               <p className="text-xl font-light text-energy">
                 Own your power. Before the grid owns you.
