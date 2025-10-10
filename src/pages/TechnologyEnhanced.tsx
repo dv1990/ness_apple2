@@ -37,7 +37,7 @@ const TechnologyEnhanced = () => {
 
             {/* Core Stats - Animated Numbers */}
             <div className="max-w-5xl mx-auto pt-16 pb-8">
-              <div className="grid grid-cols-4 gap-12">
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12">
                 <div className="space-y-2">
                   <div className="text-6xl font-light text-primary tabular-nums">
                     <AnimatedCounter value={6000} duration={2500} />
@@ -71,6 +71,15 @@ const TechnologyEnhanced = () => {
                   </div>
                   <div className="text-caption text-muted-foreground uppercase tracking-[0.08em]">
                     Fire Events
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <div className="text-5xl md:text-6xl font-light text-primary tabular-nums">
+                    <AnimatedCounter value={25000} duration={2500} suffix="+" />
+                  </div>
+                  <div className="text-caption text-muted-foreground uppercase tracking-[0.08em]">
+                    Cycles Proven
                   </div>
                 </div>
               </div>

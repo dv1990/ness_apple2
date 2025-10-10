@@ -174,18 +174,33 @@ const IndexEnhanced = () => {
 
             {/* Proven Trust */}
             <div className="space-y-20">
-              <div className="space-y-12">
-                <div className="text-7xl md:text-9xl font-extralight text-charcoal tracking-tight">
-                  10,000+
+              <div className="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto">
+                {/* Families Trust */}
+                <div className="space-y-8">
+                  <div className="text-7xl md:text-8xl font-extralight text-charcoal tracking-tight">
+                    10,000+
+                  </div>
+                  <p className="text-xl md:text-2xl text-charcoal/50 font-light leading-relaxed">
+                    families trust NESS.
+                  </p>
                 </div>
-                <p className="text-xl md:text-2xl text-charcoal/50 font-light leading-relaxed max-w-2xl mx-auto">
-                  families trust NESS.
-                </p>
+
+                {/* Clean Energy Delivered */}
+                <div className="space-y-8">
+                  <div className="text-7xl md:text-8xl font-extralight text-charcoal tracking-tight">
+                    100MWh+
+                  </div>
+                  <p className="text-xl md:text-2xl text-charcoal/50 font-light leading-relaxed">
+                    clean energy delivered.<br />
+                    <span className="text-base text-silver/40">Trust enabler.</span>
+                  </p>
+                </div>
               </div>
 
-              <p className="text-lg md:text-xl text-silver/60 font-light max-w-2xl mx-auto leading-relaxed">
+              <p className="text-lg md:text-xl text-silver/60 font-light max-w-2xl mx-auto leading-relaxed pt-8">
                 From desert heat to coastal storms.<br />
-                Day after day. Year after year.
+                Day after day. Year after year.<br />
+                <span className="text-charcoal/40 italic">32 months of keeping promises.</span>
               </p>
             </div>
 
