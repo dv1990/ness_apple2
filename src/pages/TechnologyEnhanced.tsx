@@ -203,20 +203,22 @@ const TechnologyEnhanced = () => {
             </div>
           </div>
 
-          {/* Decision 3: Software */}
+          {/* Decision 3: Nunam Intelligence */}
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-8">
               <div className="inline-block px-5 py-1.5 bg-primary/10 rounded-full">
-                <span className="text-caption text-primary uppercase tracking-[0.08em]">Always Watching</span>
+                <span className="text-caption text-primary uppercase tracking-[0.08em]">Nunam Intelligence</span>
               </div>
               <h3 className="text-display-medium font-light text-foreground leading-tight tracking-[-0.02em]">
-                We check your battery 17,280 times a day.
+                The brain that never sleeps.
               </h3>
               <p className="text-body-large text-muted-foreground leading-relaxed">
-                Every 5 seconds, we measure every cell. Looking for problems before they become failures.
+                Nunam Intelligence is our predictive analytics engine—the guardian angel inside every NESS battery.
+                It checks your battery 17,280 times a day. Every 5 seconds, measuring every cell. 
+                Looking for patterns. Predicting problems before they become failures. 
                 A voltage drops? We balance it. Temperature rises? We slow down. 
                 Grid goes unstable? We protect you. All automatically. All invisibly.
-                You sleep. We watch.
+                You sleep. Nunam watches. 24x7 seamless operation. A decade of reliability guaranteed.
               </p>
               <div className="pt-6 space-y-3 border-t border-border">
                 <div className="flex items-baseline gap-3">
@@ -227,7 +229,11 @@ const TechnologyEnhanced = () => {
                 </div>
                 <div className="flex items-baseline gap-3">
                   <div className="text-5xl font-light text-foreground tabular-nums">24/7</div>
-                  <div className="text-body text-muted-foreground">cloud connectivity</div>
+                  <div className="text-body text-muted-foreground">seamless operation</div>
+                </div>
+                <div className="flex items-baseline gap-3">
+                  <div className="text-5xl font-light text-primary tabular-nums">10+</div>
+                  <div className="text-body text-muted-foreground">years of reliability</div>
                 </div>
               </div>
             </div>

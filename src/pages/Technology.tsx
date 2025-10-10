@@ -147,16 +147,23 @@ const Technology = () => {
               </div>
               
               <div className="space-y-6">
-                <h3 className="text-3xl font-light text-gray-900">Intelligence</h3>
+                <h3 className="text-3xl font-light text-gray-900">Nunam Intelligence</h3>
                 <p className="text-lg text-gray-600 font-light leading-relaxed">
-                  AI that predicts the future. Every cell monitored 1,000 times per second. 
-                  It knows what you need before you do.
+                  Our predictive analytics engine. Every cell monitored 1,000 times per second. 
+                  Learning your patterns. Anticipating failures. Optimizing performance. 
+                  It doesn't just react—it predicts the future.
                 </p>
               </div>
               
-              <div className="pt-6 border-t border-gray-200">
-                <div className="text-4xl font-ultralight text-blue-500 mb-2">98.7%</div>
-                <div className="text-sm text-gray-500 uppercase tracking-wide">Prediction Accuracy</div>
+              <div className="pt-6 border-t border-gray-200 space-y-3">
+                <div>
+                  <div className="text-4xl font-ultralight text-blue-500 mb-2">24/7</div>
+                  <div className="text-sm text-gray-500 uppercase tracking-wide">Seamless Operation</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-ultralight text-blue-500 mb-2">10+</div>
+                  <div className="text-sm text-gray-500 uppercase tracking-wide">Years Reliability</div>
+                </div>
               </div>
             </div>
 
@@ -240,6 +247,10 @@ const Technology = () => {
             {/* Technology Story */}
             <div className="space-y-12">
               <div className="space-y-8">
+                <div className="inline-block px-4 py-2 bg-cyan-500/20 rounded-full mb-4">
+                  <span className="text-sm text-cyan-400 uppercase tracking-widest">Nunam Intelligence</span>
+                </div>
+                
                 <h3 className="text-4xl font-light">
                   "Every cell has a story.
                   <br />
@@ -247,21 +258,22 @@ const Technology = () => {
                 </h3>
                 
                 <p className="text-xl text-gray-300 font-light leading-relaxed">
-                  Our AI doesn't just monitor your system. It understands it. 
-                  It learns from millions of data points, predicts problems before they happen, 
-                  and optimizes performance in real-time.
+                  Nunam Intelligence is our predictive analytics engine—the brain behind every NESS battery. 
+                  It doesn't just monitor your system. It learns from millions of data points, 
+                  predicts problems before they happen, and optimizes performance in real-time. 
+                  24x7 seamless operation. A decade of reliability. That's the Nunam promise.
                 </p>
               </div>
 
               <div className="space-y-6 p-8 rounded-2xl border border-gray-800 bg-gray-900/50">
                 <div className="text-sm text-gray-400 uppercase tracking-widest">
-                  Revolutionary Features
+                  Nunam Intelligence Features
                 </div>
                 
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-cyan-400" />
-                    <span className="text-gray-300">Predictive cell balancing</span>
+                    <span className="text-gray-300">Predictive failure detection</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-cyan-400" />
@@ -269,7 +281,11 @@ const Technology = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-cyan-400" />
-                    <span className="text-gray-300">Automatic load optimization</span>
+                    <span className="text-gray-300">Pattern learning & optimization</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-cyan-400" />
+                    <span className="text-gray-300">Automatic load balancing</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-cyan-400" />
