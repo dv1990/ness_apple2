@@ -264,19 +264,19 @@ const TechnologyEnhanced = () => {
           <div className="grid md:grid-cols-3 gap-12 mb-16">
             <LiveTicker
               label="Data Points Collected"
-              startValue={847250000}
-              incrementRate={2850} // ~2850 data points per second across fleet
+              startValue={10}
+              incrementRate={0.00285} // ~10M data points growing steadily
               suffix="M"
-              decimals={2}
+              decimals={3}
               humanMessage="Every heartbeat of every battery. Every cell. Every moment. Stored forever."
               className="text-center"
             />
 
             <LiveTicker
               label="Energy Delivered"
-              startValue={100.45}
+              startValue={100}
               incrementRate={0.00125} // ~4.5 MWh per hour = 0.00125 per second
-              suffix=" MWh"
+              suffix="+ MWh"
               decimals={2}
               humanMessage="That's enough to power 8,400 homes right now. Including yours."
               className="text-center"
@@ -284,7 +284,7 @@ const TechnologyEnhanced = () => {
 
             <LiveTicker
               label="Cycles Proven"
-              startValue={25847}
+              startValue={25000}
               incrementRate={0.042} // growing with each new installation
               suffix="+"
               decimals={0}
