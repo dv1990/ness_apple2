@@ -1,9 +1,12 @@
 import Layout from "@/components/Layout";
 import { MagneticButton } from "@/components/EnhancedInteractions";
-import { Shield, Clock, Heart, ArrowRight } from "lucide-react";
+import { Shield, Clock, Heart, ArrowRight, Award, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { WebPImage } from "@/components/ui/webp-image";
 import { WhyNess } from "@/components/WhyNess";
+import { AnimatedCounter } from "@/components/ui/animated-counter";
+import { Battery3D } from "@/components/ui/battery-3d";
+import { AnimatedCard } from "@/components/ui/animated-card";
 
 // Import images
 import batteryTechnology from "@/assets/battery-technology.jpg";
@@ -32,12 +35,12 @@ const TechnologyEnhanced = () => {
               deserves better.
             </h1>
 
-            {/* Core Stats - Honest Numbers */}
+            {/* Core Stats - Animated Numbers */}
             <div className="max-w-5xl mx-auto pt-16 pb-8">
               <div className="grid grid-cols-4 gap-12">
                 <div className="space-y-2">
                   <div className="text-6xl font-light text-primary tabular-nums">
-                    6000
+                    <AnimatedCounter value={6000} duration={2500} />
                   </div>
                   <div className="text-caption text-muted-foreground uppercase tracking-[0.08em]">
                     Cycle Life
@@ -46,7 +49,7 @@ const TechnologyEnhanced = () => {
                 
                 <div className="space-y-2">
                   <div className="text-6xl font-light text-foreground tabular-nums">
-                    15
+                    <AnimatedCounter value={15} duration={2000} />
                   </div>
                   <div className="text-caption text-muted-foreground uppercase tracking-[0.08em]">
                     Year Warranty
@@ -55,7 +58,7 @@ const TechnologyEnhanced = () => {
                 
                 <div className="space-y-2">
                   <div className="text-6xl font-light text-foreground tabular-nums">
-                    {"<35"}
+                    {"<"}<AnimatedCounter value={35} duration={1500} />
                   </div>
                   <div className="text-caption text-muted-foreground uppercase tracking-[0.08em]">
                     dB Noise
@@ -70,6 +73,13 @@ const TechnologyEnhanced = () => {
                     Fire Events
                   </div>
                 </div>
+              </div>
+            </div>
+            
+            {/* 3D Battery Visualization */}
+            <div className="max-w-4xl mx-auto pt-16">
+              <div className="rounded-2xl overflow-hidden bg-muted/5 border border-border/50">
+                <Battery3D view="pack" className="h-[400px]" />
               </div>
             </div>
 
@@ -122,7 +132,9 @@ const TechnologyEnhanced = () => {
               </p>
               <div className="pt-6 space-y-3 border-t border-border">
                 <div className="flex items-baseline gap-3">
-                  <div className="text-5xl font-light text-foreground tabular-nums">6000</div>
+                  <div className="text-5xl font-light text-foreground tabular-nums">
+                    <AnimatedCounter value={6000} duration={2500} />
+                  </div>
                   <div className="text-body text-muted-foreground">cycles at 80% DoD</div>
                 </div>
                 <div className="flex items-baseline gap-3">
@@ -166,11 +178,15 @@ const TechnologyEnhanced = () => {
               </p>
               <div className="pt-6 space-y-3 border-t border-border">
                 <div className="flex items-baseline gap-3">
-                  <div className="text-5xl font-light text-primary tabular-nums">±2mV</div>
+                  <div className="text-5xl font-light text-primary tabular-nums">
+                    ±<AnimatedCounter value={2} duration={1500} />mV
+                  </div>
                   <div className="text-body text-muted-foreground">matching precision</div>
                 </div>
                 <div className="flex items-baseline gap-3">
-                  <div className="text-5xl font-light text-foreground tabular-nums">100%</div>
+                  <div className="text-5xl font-light text-foreground tabular-nums">
+                    <AnimatedCounter value={100} duration={2000} />%
+                  </div>
                   <div className="text-body text-muted-foreground">functional test rate</div>
                 </div>
               </div>
@@ -194,7 +210,9 @@ const TechnologyEnhanced = () => {
               </p>
               <div className="pt-6 space-y-3 border-t border-border">
                 <div className="flex items-baseline gap-3">
-                  <div className="text-5xl font-light text-primary tabular-nums">17,280</div>
+                  <div className="text-5xl font-light text-primary tabular-nums">
+                    <AnimatedCounter value={17280} duration={2500} />
+                  </div>
                   <div className="text-body text-muted-foreground">health checks per day</div>
                 </div>
                 <div className="flex items-baseline gap-3">
@@ -215,8 +233,86 @@ const TechnologyEnhanced = () => {
         </div>
       </section>
 
-      {/* The Secret Recipe - Manufacturing Process */}
+      {/* Trust & Certifications */}
       <section className="py-32 bg-muted/10">
+        <div className="max-w-[1280px] mx-auto px-8">
+          <div className="text-center mb-24 space-y-6">
+            <h2 className="text-display font-light text-foreground leading-tight tracking-[-0.03em]">
+              Trusted. Tested. Certified.
+            </h2>
+            <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
+              Don't just take our word for it.
+            </p>
+          </div>
+
+          {/* Certifications */}
+          <div className="grid md:grid-cols-3 gap-8 mb-24">
+            <AnimatedCard hover="glow" className="p-8 text-center">
+              <Award className="w-16 h-16 mx-auto mb-6 text-primary" />
+              <h3 className="text-body-large font-medium text-foreground mb-2">
+                IEC 62619 Certified
+              </h3>
+              <p className="text-body text-muted-foreground">
+                International safety standards for lithium-ion batteries
+              </p>
+            </AnimatedCard>
+
+            <AnimatedCard hover="glow" delay={100} className="p-8 text-center">
+              <Award className="w-16 h-16 mx-auto mb-6 text-primary" />
+              <h3 className="text-body-large font-medium text-foreground mb-2">
+                CE Marked
+              </h3>
+              <p className="text-body text-muted-foreground">
+                European conformity for electrical safety
+              </p>
+            </AnimatedCard>
+
+            <AnimatedCard hover="glow" delay={200} className="p-8 text-center">
+              <Award className="w-16 h-16 mx-auto mb-6 text-primary" />
+              <h3 className="text-body-large font-medium text-foreground mb-2">
+                ISO 9001 Factory
+              </h3>
+              <p className="text-body text-muted-foreground">
+                Quality management system certification
+              </p>
+            </AnimatedCard>
+          </div>
+
+          {/* Customer Testimonials */}
+          <div className="grid md:grid-cols-2 gap-8">
+            <AnimatedCard hover="lift" className="p-10 space-y-6">
+              <div className="flex gap-2 text-primary">
+                {[...Array(5)].map((_, i) => (
+                  <CheckCircle2 key={i} className="w-5 h-5" />
+                ))}
+              </div>
+              <p className="text-body-large text-foreground leading-relaxed italic">
+                "Installed 50+ NESS systems. Zero callbacks. My customers sleep better, and so do I."
+              </p>
+              <div className="text-body text-muted-foreground">
+                — Rajesh Kumar, Solar Installer, Mumbai
+              </div>
+            </AnimatedCard>
+
+            <AnimatedCard hover="lift" delay={100} className="p-10 space-y-6">
+              <div className="flex gap-2 text-primary">
+                {[...Array(5)].map((_, i) => (
+                  <CheckCircle2 key={i} className="w-5 h-5" />
+                ))}
+              </div>
+              <p className="text-body-large text-foreground leading-relaxed italic">
+                "Been running for 3 years. Still performs like day one. Worth every rupee."
+              </p>
+              <div className="text-body text-muted-foreground">
+                — Priya Sharma, Homeowner, Bangalore
+              </div>
+            </AnimatedCard>
+          </div>
+        </div>
+      </section>
+
+      {/* The Secret Recipe - Manufacturing Process */}
+      <section className="py-32 bg-background">
         <WhyNess />
       </section>
 
@@ -236,7 +332,7 @@ const TechnologyEnhanced = () => {
           <div className="grid md:grid-cols-3 gap-12 mb-16">
             <div className="space-y-4 text-center">
               <div className="text-7xl font-light text-foreground tabular-nums">
-                2-4h
+                <AnimatedCounter value={2} duration={1500} />-<AnimatedCounter value={4} duration={1500} />h
               </div>
               <div className="text-caption text-muted-foreground uppercase tracking-[0.08em]">
                 Install Time
@@ -248,7 +344,7 @@ const TechnologyEnhanced = () => {
 
             <div className="space-y-4 text-center">
               <div className="text-7xl font-light text-primary tabular-nums">
-                99%
+                <AnimatedCounter value={99} duration={2000} />%
               </div>
               <div className="text-caption text-muted-foreground uppercase tracking-[0.08em]">
                 First-Time Success
@@ -260,7 +356,7 @@ const TechnologyEnhanced = () => {
 
             <div className="space-y-4 text-center">
               <div className="text-7xl font-light text-foreground tabular-nums">
-                {"<1%"}
+                {"<"}<AnimatedCounter value={1} duration={1500} />%
               </div>
               <div className="text-caption text-muted-foreground uppercase tracking-[0.08em]">
                 Callback Rate
