@@ -11,6 +11,7 @@ import industrialHero from "@/assets/industrial-complex-hero.jpg";
 import nessPodProduct from "@/assets/ness-pod-product.png";
 import nessProProduct from "@/assets/ness-pro-product.png";
 import nessCubeProduct from "@/assets/ness-cube-resort.webp";
+import familyLifestyle from "@/assets/family-energy-lifestyle.jpg";
 const Index = () => {
   return <Layout>
       {/* 1️⃣ Hero: Emotional Opening */}
@@ -193,8 +194,9 @@ const Index = () => {
             
             {/* Visual */}
             <div className="relative order-2 lg:order-1">
-              <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-card/80 to-card/40 p-16 border border-border/50">
-                <img src={nessProProduct} alt="NESS Home Battery System" className="w-full h-auto object-contain drop-shadow-2xl" />
+              <div className="relative rounded-3xl overflow-hidden border border-border/50 shadow-2xl">
+                <img src={familyLifestyle} alt="Modern Indian family enjoying energy independence with NESS solar system" className="w-full h-auto object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent"></div>
               </div>
             </div>
 
