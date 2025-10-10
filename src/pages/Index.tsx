@@ -11,6 +11,7 @@ import industrialHero from "@/assets/industrial-complex-hero.jpg";
 import nessPodProduct from "@/assets/ness-pod-product.png";
 import nessProProduct from "@/assets/ness-pro-product.png";
 import nessCubeProduct from "@/assets/ness-cube-resort.webp";
+import familyLifestyle from "@/assets/family-energy-lifestyle.jpg";
 const Index = () => {
   return <Layout>
       {/* 1️⃣ Hero: Emotional Opening */}
@@ -62,15 +63,15 @@ const Index = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto py-8">
               <div className="space-y-2">
                 <div className="text-6xl md:text-7xl font-light text-energy">10,000+</div>
-                <div className="text-sm text-muted-foreground uppercase tracking-wider">100+</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider">MWh Delivered</div>
               </div>
               <div className="space-y-2">
                 <div className="text-6xl md:text-7xl font-light text-energy">2</div>
-                <div className="text-sm text-muted-foreground uppercase tracking-wider">1</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider">Warranty Claims in 3 Years</div>
               </div>
               <div className="space-y-2">
                 <div className="text-6xl md:text-7xl font-light text-energy">1,000</div>
-                <div className="text-sm text-muted-foreground uppercase tracking-wider">1,000+</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider">Own Their Power</div>
               </div>
             </div>
 
@@ -109,11 +110,11 @@ const Index = () => {
                 </div>
                 
                 <blockquote className="text-2xl font-light text-foreground leading-tight italic">
-                  "I check our energy dashboard every morning with my chai. We're producing more than we use. That feeling? Priceless."
+                  "It's been over two years since I switched to Nunam batteries — no resets, no shutdowns, just flawless reliability. From home security to consistent power for all household equipment, Nunam has given me complete peace of mind."
                 </blockquote>
                 
                 <p className="text-muted-foreground leading-relaxed">
-                  Priya Mehta, Architect & Mother — 20 kWh solar + storage system
+                  Dr Mohan Krishna Ranganath, Transformed his house to off-grid living. Sarjapura, Bengaluru
                 </p>
 
                 <div className="grid grid-cols-2 gap-6 pt-4 border-t border-border">
@@ -193,8 +194,9 @@ const Index = () => {
             
             {/* Visual */}
             <div className="relative order-2 lg:order-1">
-              <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-card/80 to-card/40 p-16 border border-border/50">
-                <img src={nessProProduct} alt="NESS Home Battery System" className="w-full h-auto object-contain drop-shadow-2xl" />
+              <div className="relative rounded-3xl overflow-hidden border border-border/50 shadow-2xl">
+                <img src={familyLifestyle} alt="Modern Indian family enjoying energy independence with NESS solar system" className="w-full h-auto object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent"></div>
               </div>
             </div>
 
@@ -211,6 +213,19 @@ const Index = () => {
               <p className="text-xl text-muted-foreground font-light leading-relaxed">
                 Imagine waking up knowing the sun works for you. Your roof, your power, your freedom. That's not just luxury—that's joy.
               </p>
+
+              {/* Nunam Intelligence Highlight */}
+              <div className="p-6 rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                    <span className="text-2xl">🧠</span>
+                  </div>
+                  <h3 className="text-xl font-medium text-foreground">Powered by Nunam Intelligence</h3>
+                </div>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  Your battery doesn't just store power—it thinks. Nunam Intelligence is our predictive analytics engine that watches over your system 24x7, learning your patterns, anticipating your needs, and ensuring seamless operation for a decade and beyond.
+                </p>
+              </div>
 
               {/* Key Benefits */}
               <div className="space-y-4 pt-4">
