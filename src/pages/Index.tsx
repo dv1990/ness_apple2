@@ -46,15 +46,15 @@ const Index = () => {
           <div className="space-y-16 animate-fade-in">
             <div className="space-y-8">
               <h1 className="text-5xl md:text-7xl font-light text-foreground leading-tight tracking-tight">
-                Energy independence.
+                Power. On your terms.
                 <br />
-                The one luxury
+                On your roof.
                 <br />
-                <span className="text-energy font-medium">money couldn't buy.</span>
+                <span className="text-energy font-medium">In your hands.</span>
               </h1>
               
               <p className="text-3xl md:text-4xl font-light text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Until now.
+                Welcome to energy independence.
               </p>
             </div>
 
@@ -95,30 +95,30 @@ const Index = () => {
               They own their power. <span className="text-energy font-semibold">You can too.</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Energy independence isn't just efficient. It's liberating.
+              Energy independence isn't just efficient. It's thrilling. It's liberating. It's joy.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Residential Case Study */}
+            {/* Residential Case Study - Woman's Perspective */}
             <div className="bg-card border border-border rounded-3xl p-12 hover:shadow-lg transition-all duration-500">
               <div className="space-y-6">
                 <div className="flex items-center gap-3">
                   <Home className="w-5 h-5 text-energy" />
-                  <span className="text-sm text-muted-foreground font-medium uppercase tracking-wider">Villa, Gurgaon</span>
+                  <span className="text-sm text-muted-foreground font-medium uppercase tracking-wider">Modern Villa, Gurgaon</span>
                 </div>
                 
                 <blockquote className="text-2xl font-light text-foreground leading-tight italic">
-                  "I don't wait for the grid anymore. The sun powers my home. That's luxury."
+                  "I check our energy dashboard every morning with my chai. We're producing more than we use. That feeling? Priceless."
                 </blockquote>
                 
                 <p className="text-muted-foreground leading-relaxed">
-                  Rajesh Kumar, 15 kWh solar + storage system
+                  Priya Mehta, Architect & Mother — 20 kWh solar + storage system
                 </p>
 
                 <div className="grid grid-cols-2 gap-6 pt-4 border-t border-border">
                   <div className="space-y-2 pt-4">
-                    <div className="text-4xl font-light text-energy">₹18K</div>
+                    <div className="text-4xl font-light text-energy">₹22K</div>
                     <div className="text-sm text-muted-foreground">Monthly savings</div>
                   </div>
                   <div className="space-y-2 pt-4">
@@ -209,7 +209,7 @@ const Index = () => {
               </h2>
 
               <p className="text-xl text-muted-foreground font-light leading-relaxed">
-                The sun works for you now. Not the power company. That's the luxury of energy independence.
+                Imagine waking up knowing the sun works for you. Your roof, your power, your freedom. That's not just luxury—that's joy.
               </p>
 
               {/* Key Benefits */}
@@ -366,10 +366,10 @@ const Index = () => {
       <section className="py-32 bg-background">
         <div className="max-w-4xl mx-auto px-8 text-center">
           <h2 className="text-5xl md:text-6xl font-light text-foreground mb-6 leading-tight">
-            Ready to own your power?
+            Ready to feel the thrill of true independence?
           </h2>
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Energy independence starts with one conversation.
+            Your journey to energy freedom starts with one conversation.
           </p>
           
           <div className="pt-4">
