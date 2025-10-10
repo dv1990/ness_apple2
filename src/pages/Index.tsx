@@ -3,18 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { 
-  ArrowRight, 
-  Shield, 
-  Home, 
-  Building2, 
-  Zap, 
-  Award,
-  CheckCircle,
-  Clock,
-  TrendingUp,
-  Factory
-} from "lucide-react";
+import { ArrowRight, Shield, Home, Building2, Zap, Award, CheckCircle, Clock, TrendingUp, Factory } from "lucide-react";
 import { Link } from "react-router-dom";
 import { WhyNess } from "@/components/WhyNess";
 import heroHome from "@/assets/hero-homeowners.jpg";
@@ -22,41 +11,29 @@ import industrialHero from "@/assets/industrial-complex-hero.jpg";
 import nessPodProduct from "@/assets/ness-pod-product.png";
 import nessProProduct from "@/assets/ness-pro-product.png";
 import nessCubeProduct from "@/assets/ness-cube-resort.webp";
-
 const Index = () => {
-  return (
-    <Layout>
+  return <Layout>
       {/* 1️⃣ Hero: Emotional Opening */}
       <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden">
         
         {/* Carousel Background */}
         <div className="absolute inset-0">
-          <Carousel
-            opts={{ loop: true }}
-            plugins={[Autoplay({ delay: 5000 })]}
-            className="w-full h-full"
-          >
+          <Carousel opts={{
+          loop: true
+        }} plugins={[Autoplay({
+          delay: 5000
+        })]} className="w-full h-full">
             <CarouselContent className="h-screen -ml-0">
               <CarouselItem className="pl-0">
                 <div className="relative w-full h-screen overflow-hidden">
-                  <img 
-                    src={heroHome}
-                    alt="Modern home with NESS battery system"
-                    className="w-full h-full object-cover opacity-40"
-                    loading="eager"
-                  />
+                  <img src={heroHome} alt="Modern home with NESS battery system" className="w-full h-full object-cover opacity-40" loading="eager" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/60"></div>
                 </div>
               </CarouselItem>
               
               <CarouselItem className="pl-0">
                 <div className="relative w-full h-screen overflow-hidden">
-                  <img 
-                    src={industrialHero}
-                    alt="Industrial facility with NESS energy storage"
-                    className="w-full h-full object-cover opacity-40"
-                    loading="eager"
-                  />
+                  <img src={industrialHero} alt="Industrial facility with NESS energy storage" className="w-full h-full object-cover opacity-40" loading="eager" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/60"></div>
                 </div>
               </CarouselItem>
@@ -197,7 +174,7 @@ const Index = () => {
             </div>
             <div className="space-y-2">
               <div className="text-3xl font-light text-energy">160-270V</div>
-              <div className="text-sm text-background/70">Total voltage mastery</div>
+              <div className="text-sm text-background/70">Voltage fluctuations are handled </div>
             </div>
             <div className="space-y-2">
               <div className="text-3xl font-light text-energy">3 Years</div>
@@ -217,11 +194,7 @@ const Index = () => {
             {/* Visual */}
             <div className="relative order-2 lg:order-1">
               <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-card/80 to-card/40 p-16 border border-border/50">
-                <img 
-                  src={nessProProduct}
-                  alt="NESS Home Battery System"
-                  className="w-full h-auto object-contain drop-shadow-2xl"
-                />
+                <img src={nessProProduct} alt="NESS Home Battery System" className="w-full h-auto object-contain drop-shadow-2xl" />
               </div>
             </div>
 
@@ -327,11 +300,7 @@ const Index = () => {
             {/* Visual */}
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden bg-card/50 p-12">
-                <img 
-                  src={nessCubeProduct}
-                  alt="NESS CUBE Commercial Battery System - Resort Installation"
-                  className="w-full h-auto object-cover rounded-2xl drop-shadow-2xl"
-                />
+                <img src={nessCubeProduct} alt="NESS CUBE Commercial Battery System - Resort Installation" className="w-full h-auto object-cover rounded-2xl drop-shadow-2xl" />
               </div>
             </div>
           </div>
@@ -405,10 +374,7 @@ const Index = () => {
           
           <div className="pt-4">
             <Link to="/contact">
-              <Button 
-                size="lg" 
-                className="bg-energy hover:bg-energy-dark text-primary-foreground px-12 py-6 text-xl font-medium rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
-              >
+              <Button size="lg" className="bg-energy hover:bg-energy-dark text-primary-foreground px-12 py-6 text-xl font-medium rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
                 Begin Your Journey
                 <ArrowRight className="w-6 h-6 ml-3" />
               </Button>
@@ -416,8 +382,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Index;
