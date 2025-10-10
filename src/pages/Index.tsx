@@ -202,6 +202,13 @@ const Index = () => {
 
             {/* Content */}
             <div className="space-y-8 order-1 lg:order-2">
+              <div className="inline-flex items-center space-x-2">
+                <div className="w-1 h-1 rounded-full bg-energy"></div>
+                <span className="text-sm font-mono text-energy uppercase tracking-[0.2em]">
+                  For Homes
+                </span>
+              </div>
+
               <h2 className="text-5xl md:text-6xl font-light text-foreground leading-tight tracking-tight">
                 Your home.
                 <br />
