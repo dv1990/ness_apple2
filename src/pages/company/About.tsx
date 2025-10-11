@@ -41,19 +41,19 @@ const About = () => {
           <div className="space-y-16 text-center">
             <div className="space-y-8">
               <div className="inline-block px-4 py-1.5 bg-charcoal/5 rounded-full">
-                <span className="text-xs uppercase tracking-[0.12em] text-charcoal/60">Deep Tech • Made in India</span>
+                <span className="text-xs uppercase tracking-[0.12em] text-charcoal/60">Made in India • Made with Care</span>
               </div>
               
               <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight text-charcoal leading-[0.95] tracking-tight">
-                We engineer
+                The Energy
                 <br />
-                peace of mind.
+                That Cares.
               </h1>
               
               <p className="text-2xl md:text-3xl text-charcoal/50 font-light leading-relaxed max-w-3xl mx-auto">
-                Battery technology so advanced, you'll never think about it.
+                NESS isn't just about electricity — it's about empathy, reliability, and belonging.
                 <br />
-                <span className="text-xl text-charcoal/30 italic">That's the engineering challenge we live for.</span>
+                <span className="text-xl text-charcoal/30 italic">Energy that feels human: calm when you need it, strong when you rely on it.</span>
               </p>
             </div>
 
@@ -86,57 +86,59 @@ const About = () => {
           
           <div className="text-center mb-24 space-y-6">
             <h2 className="text-5xl md:text-7xl font-extralight text-charcoal leading-tight tracking-tight">
-              Obsessed with the invisible.
+              We don't just store energy.
+              <br />
+              We nurture it.
             </h2>
             <p className="text-xl text-charcoal/50 font-light max-w-3xl mx-auto leading-relaxed">
-              The best technology is the technology you never notice. That takes 10,000 hours of engineering.
+              Behind every NESS battery is a team that cares — engineers who see energy as a responsibility, not a commodity.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             
-            {/* Cell-Level Precision */}
+            {/* Care for Your Peace of Mind */}
             <AnimatedCard hover="lift" className="bg-pearl border border-platinum/50 p-10 space-y-6">
               <div className="w-14 h-14 rounded-full bg-whisper flex items-center justify-center">
-                <Microscope className="w-7 h-7 text-charcoal" />
+                <Heart className="w-7 h-7 text-charcoal" />
               </div>
-              <h3 className="text-2xl font-light text-charcoal">Cell-Level Obsession</h3>
+              <h3 className="text-2xl font-light text-charcoal">Care for Homes</h3>
               <p className="text-charcoal/60 leading-relaxed">
-                We match cells within ±2 millivolts. Most companies stop at ±10mV. 
-                That 8mV difference? It's 5 extra years of life.
+                From your mother's prayers to your child's online class, NESS quietly keeps life moving. 
+                Every home deserves uninterrupted comfort.
               </p>
               <div className="text-sm text-charcoal/30 pt-2 border-t border-platinum/30">
-                147 engineers. One obsession.
+                10+ years. Every morning. No worry.
               </div>
             </AnimatedCard>
 
-            {/* Thermal Intelligence */}
+            {/* Care for Partners */}
             <AnimatedCard hover="lift" delay={100} className="bg-pearl border border-platinum/50 p-10 space-y-6">
               <div className="w-14 h-14 rounded-full bg-whisper flex items-center justify-center">
-                <Zap className="w-7 h-7 text-charcoal" />
+                <Users className="w-7 h-7 text-charcoal" />
               </div>
-              <h3 className="text-2xl font-light text-charcoal">Thermal Intelligence</h3>
+              <h3 className="text-2xl font-light text-charcoal">Care for People Who Power Others</h3>
               <p className="text-charcoal/60 leading-relaxed">
-                Every 5 seconds, we measure 64 thermal points per battery. 
-                Predictive algorithms detect failures 72 hours before they happen.
+                For every EPC partner and installer, NESS means simplicity, reliability, and zero-headache service — 
+                so they can build reputations on trust, not troubleshooting.
               </p>
               <div className="text-sm text-charcoal/30 pt-2 border-t border-platinum/30">
-                17,280 health checks per day.
+                Systems that work the first time, every time.
               </div>
             </AnimatedCard>
 
-            {/* Safety Architecture */}
+            {/* Care for Planet */}
             <AnimatedCard hover="lift" delay={200} className="bg-pearl border border-platinum/50 p-10 space-y-6">
               <div className="w-14 h-14 rounded-full bg-whisper flex items-center justify-center">
-                <Shield className="w-7 h-7 text-charcoal" />
+                <Globe className="w-7 h-7 text-charcoal" />
               </div>
-              <h3 className="text-2xl font-light text-charcoal">Seven Safety Layers</h3>
+              <h3 className="text-2xl font-light text-charcoal">Care for the Planet</h3>
               <p className="text-charcoal/60 leading-relaxed">
-                Overvoltage. Undervoltage. Overcurrent. Temperature. Short circuit. 
-                EMI protection. Software watchdog. Seven ways we keep you safe.
+                Circular by intent, efficient by design — NESS is built for a cleaner, more conscious energy future. 
+                Every installation leaves the world slightly better.
               </p>
               <div className="text-sm text-charcoal/30 pt-2 border-t border-platinum/30">
-                Zero thermal events. Ever.
+                Clean energy. Sustainable choice.
               </div>
             </AnimatedCard>
           </div>
@@ -156,15 +158,15 @@ const About = () => {
                 </div>
                 
                 <h2 className="text-5xl md:text-6xl font-extralight leading-tight tracking-tight">
-                  Where impossible
+                  Behind every NESS
                   <br />
-                  becomes routine.
+                  is a promise.
                 </h2>
                 
                 <p className="text-xl text-pearl/60 font-light leading-relaxed">
-                  Our R&D facility isn't just a lab. It's where PhD electrochemists argue with 
-                  mechanical engineers at 2 AM. Where we test batteries in conditions they'll never see. 
-                  Where "good enough" is a phrase nobody dares speak.
+                  Our Bangalore R&D center isn't just about technology — it's where caring meets precision. 
+                  Where engineers obsess over reliability so you never have to. 
+                  Where we test for 10 years of peace, not just performance specs.
                 </p>
               </div>
 
@@ -255,10 +257,10 @@ const About = () => {
           
           <div className="text-center mb-20 space-y-6">
             <h2 className="text-5xl md:text-7xl font-extralight text-charcoal leading-tight tracking-tight">
-              Engineering that matters.
+              Real homes. Real comfort.
             </h2>
             <p className="text-xl text-charcoal/50 font-light max-w-3xl mx-auto leading-relaxed">
-              32 months of real-world data. From Rajasthan's 50°C summers to Kerala's monsoons.
+              10,000+ families trust NESS to quietly care for their energy. From sunrise to sunset, we're there — invisibly, reliably.
             </p>
           </div>
           
@@ -306,9 +308,9 @@ const About = () => {
 
           <div className="mt-20 pt-16 border-t border-platinum/30 text-center">
             <p className="text-2xl md:text-3xl text-charcoal/40 font-light italic leading-relaxed max-w-3xl mx-auto">
-              "In 10 years, we've never had to explain what peace of mind means
+              "Power cuts don't just disrupt electricity — they interrupt life.
               <br />
-              to a family who has it."
+              NESS gives families their comfort back."
             </p>
           </div>
         </div>
@@ -320,8 +322,11 @@ const About = () => {
           
           <div className="text-center mb-24 space-y-6">
             <h2 className="text-5xl md:text-7xl font-extralight text-charcoal leading-tight tracking-tight">
-              Why we do this.
+              Why NESS exists.
             </h2>
+            <p className="text-xl text-charcoal/50 font-light max-w-3xl mx-auto leading-relaxed">
+              NESS was born from a simple idea — that power should never be cold or complicated. It should care.
+            </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-16 mb-20">
@@ -329,61 +334,74 @@ const About = () => {
             {/* Mission */}
             <div className="bg-pearl border border-platinum/50 rounded-2xl p-12 space-y-6">
               <div className="w-14 h-14 rounded-full bg-whisper flex items-center justify-center">
-                <Target className="w-7 h-7 text-charcoal" />
+                <Heart className="w-7 h-7 text-charcoal" />
               </div>
-              <h3 className="text-3xl font-light text-charcoal">Mission</h3>
-              <p className="text-lg text-charcoal/60 leading-relaxed">
-                Eliminate energy anxiety from every Indian home and business through battery technology 
-                so safe, so reliable, so intelligent that it becomes invisible.
-              </p>
+              <h3 className="text-3xl font-light text-charcoal">Our Promise</h3>
+              <div className="space-y-4 text-charcoal/60 leading-relaxed">
+                <p className="text-lg">
+                  <strong className="text-charcoal">To Customers:</strong><br />
+                  Peace of mind, powered effortlessly.
+                </p>
+                <p className="text-lg">
+                  <strong className="text-charcoal">To Partners:</strong><br />
+                  Systems that work the first time, and every time after.
+                </p>
+                <p className="text-lg">
+                  <strong className="text-charcoal">To the Planet:</strong><br />
+                  Every installation leaves the world slightly better.
+                </p>
+              </div>
             </div>
 
-            {/* Vision */}
+            {/* Mission Statement */}
             <div className="bg-pearl border border-platinum/50 rounded-2xl p-12 space-y-6">
               <div className="w-14 h-14 rounded-full bg-whisper flex items-center justify-center">
-                <Lightbulb className="w-7 h-7 text-charcoal" />
+                <Target className="w-7 h-7 text-charcoal" />
               </div>
-              <h3 className="text-3xl font-light text-charcoal">Vision</h3>
+              <h3 className="text-3xl font-light text-charcoal">Our Mission</h3>
               <p className="text-lg text-charcoal/60 leading-relaxed">
-                An India where power cuts are history. Where every rooftop generates energy. 
-                Where technology serves humanity's deepest need—not to be afraid of the dark.
+                To make clean, uninterrupted power simple and accessible — so you can focus on what matters most: 
+                living, creating, connecting.
+              </p>
+              <p className="text-base text-charcoal/50 italic pt-4 border-t border-platinum/30">
+                We don't just store energy — we nurture it.
               </p>
             </div>
           </div>
 
-          {/* Core Principles */}
+          {/* Our Voice & Values */}
           <div className="grid md:grid-cols-3 gap-8">
             
             <div className="text-center space-y-4">
               <div className="w-16 h-16 rounded-full bg-pearl border border-platinum/50 flex items-center justify-center mx-auto">
-                <Shield className="w-8 h-8 text-charcoal" />
-              </div>
-              <h3 className="text-xl font-light text-charcoal">Safety. Always.</h3>
-              <p className="text-charcoal/50 leading-relaxed text-sm">
-                Every design decision asks one question: "Will this keep a family safe?"
-                If the answer isn't yes, we start over.
-              </p>
-            </div>
-
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 rounded-full bg-pearl border border-platinum/50 flex items-center justify-center mx-auto">
-                <Microscope className="w-8 h-8 text-charcoal" />
-              </div>
-              <h3 className="text-xl font-light text-charcoal">Details matter.</h3>
-              <p className="text-charcoal/50 leading-relaxed text-sm">
-                The difference between good and great is 2 millivolts. Between safe and sorry, 
-                one thermal sensor. We obsess over the invisible.
-              </p>
-            </div>
-
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 rounded-full bg-pearl border border-platinum/50 flex items-center justify-center mx-auto">
                 <Heart className="w-8 h-8 text-charcoal" />
               </div>
-              <h3 className="text-xl font-light text-charcoal">Human first.</h3>
+              <h3 className="text-xl font-light text-charcoal">Warm, not technical</h3>
               <p className="text-charcoal/50 leading-relaxed text-sm">
-                Technology exists to serve people, not impress them. The best tech is the tech 
-                you never think about. That's our north star.
+                We speak like humans, not manuals. Because energy should feel human: 
+                calm when you need it, strong when you rely on it.
+              </p>
+            </div>
+
+            <div className="text-center space-y-4">
+              <div className="w-16 h-16 rounded-full bg-pearl border border-platinum/50 flex items-center justify-center mx-auto">
+                <Shield className="w-8 h-8 text-charcoal" />
+              </div>
+              <h3 className="text-xl font-light text-charcoal">Confident, not loud</h3>
+              <p className="text-charcoal/50 leading-relaxed text-sm">
+                Our silence is our strength. The best power is the one that quietly cares — 
+                invisible when life flows as it should.
+              </p>
+            </div>
+
+            <div className="text-center space-y-4">
+              <div className="w-16 h-16 rounded-full bg-pearl border border-platinum/50 flex items-center justify-center mx-auto">
+                <Users className="w-8 h-8 text-charcoal" />
+              </div>
+              <h3 className="text-xl font-light text-charcoal">Inclusive, not corporate</h3>
+              <p className="text-charcoal/50 leading-relaxed text-sm">
+                We celebrate the community of people who care about energy — 
+                the Energy Warriors building a cleaner future together.
               </p>
             </div>
           </div>
@@ -397,12 +415,14 @@ const About = () => {
           <div className="space-y-16">
             <div className="space-y-8">
               <h2 className="text-5xl md:text-7xl font-extralight leading-tight tracking-tight">
-                Join the movement.
+                Join the community
+                <br />
+                that cares.
               </h2>
               
               <p className="text-xl md:text-2xl text-pearl/60 font-light max-w-2xl mx-auto leading-relaxed">
-                For homeowners who refuse to compromise. For installers who take pride in their work. 
-                For a future where power is a right, not a privilege.
+                We call them Energy Warriors — people who choose sustainable living, who install with care, 
+                who power homes and hearts with clean energy. Together, we're creating a movement where caring is the most powerful energy of all.
               </p>
             </div>
 
@@ -424,7 +444,7 @@ const About = () => {
             </div>
 
             <div className="pt-12 text-sm text-pearl/30 italic">
-              Built in Bangalore. Trusted across India. Engineering tomorrow's energy, today.
+              NESS — because the best power is the one that quietly cares.
             </div>
           </div>
         </div>

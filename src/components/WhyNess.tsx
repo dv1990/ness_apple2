@@ -259,6 +259,6 @@ export function WhyNess() {
           </div>)}
       </div>
 
-      <LuxuryManufacturingShowcase />
+      {/* <LuxuryManufacturingShowcase /> */}
     </div>;
 }
