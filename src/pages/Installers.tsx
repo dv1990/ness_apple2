@@ -26,43 +26,64 @@ const Installers = () => {
   const { endTracking } = usePerformanceTracking('Installers');
   React.useEffect(() => endTracking, [endTracking]);
 
+  const challenges = [
+    {
+      challenge: "Complex Installations",
+      icon: Wrench,
+      solution: "Every home is different. Every customer has unique needs.",
+      benefit: "Our configurator simplifies complexity—auto-sizing, smart recommendations, zero guesswork. Install with confidence, every time."
+    },
+    {
+      challenge: "Team Attrition",
+      icon: Users,
+      solution: "Good people leave. New hires need training. Time is money.",
+      benefit: "Our certification programs make reskilling fast and simple. Turn beginners into experts in weeks, not years."
+    },
+    {
+      challenge: "Product Reliability",
+      icon: Award,
+      solution: "Callbacks kill your reputation and margins.",
+      benefit: "NESS batteries work flawlessly for 10+ years. Robust, tested, reliable. Install once, earn trust forever."
+    }
+  ];
+
   const partnerTiers = [
     {
       tier: "Registered",
       icon: Users,
-      description: "Entry-level partnership with essential tools and resources",
+      description: "Start earning better margins immediately",
       features: [
-        "Product catalog access",
-        "Basic installation guides", 
-        "Email support",
-        "Standard pricing"
+        "20% higher margins than competitors",
+        "Zero-complexity product catalog",
+        "Installation guides that actually work", 
+        "Email support within 4 hours"
       ],
       highlight: false
     },
     {
       tier: "Certified",
       icon: Award,
-      description: "Advanced partnership with enhanced benefits and priority support",
+      description: "Build a profitable, scalable business",
       features: [
-        "Advanced configurator tools",
-        "Technical training access",
-        "Phone & chat support",
-        "Volume pricing tiers",
-        "Marketing co-op funds"
+        "30% higher margins with volume pricing",
+        "AI configurator saves 2 hours per quote",
+        "Fast-track training for new hires",
+        "Priority support—phone, chat, WhatsApp",
+        "Marketing support to grow your brand"
       ],
       highlight: true
     },
     {
       tier: "Elite",
       icon: Target,
-      description: "Premium partnership for top-performing installers with exclusive benefits",
+      description: "Maximum profitability with exclusive benefits",
       features: [
-        "Dedicated account manager",
-        "On-site training programs", 
-        "Priority technical support",
-        "Best pricing tiers",
-        "Lead generation support",
-        "Certification programs"
+        "40% margins—industry-leading pricing",
+        "Dedicated account manager who knows your business", 
+        "On-site training at your location",
+        "VIP technical support",
+        "Lead generation—we send customers to you",
+        "Advanced certification programs"
       ],
       highlight: false
     }
@@ -124,15 +145,13 @@ const Installers = () => {
             {/* Headline */}
             <div className="space-y-8">
               <h1 className="text-7xl md:text-8xl font-extralight text-primary-foreground leading-[0.85] tracking-tight">
-                Make your customers
+                You power homes.
                 <br />
-                <span className="text-primary font-light">never worry</span>
-                <br />
-                about power again
+                <span className="text-primary font-light">We power your success.</span>
               </h1>
 
               <p className="text-xl font-light text-primary-foreground/90 leading-relaxed max-w-2xl">
-                Install NESS. Your customers get 48-hour backup with zero fire risk. You get zero callbacks and happy customers for life.
+                Higher margins. Lower costs. Zero callbacks. NESS batteries that work flawlessly for 10+ years—so you can build a business on trust, not troubleshooting.
               </p>
             </div>
 
@@ -162,6 +181,63 @@ const Installers = () => {
         </div>
       </section>
 
+      {/* Challenges We Understand */}
+      <LazySection sectionName="challenges" className="py-32 bg-muted/30">
+        <div className="max-w-[1600px] mx-auto px-8">
+          
+          {/* Section Header */}
+          <div className="max-w-4xl mb-20 space-y-8">
+            <div className="inline-flex items-center space-x-2">
+              <div className="w-1 h-1 rounded-full bg-primary"></div>
+              <span className="text-sm font-mono text-muted-foreground uppercase tracking-[0.2em]">
+                Your Challenges
+              </span>
+            </div>
+            
+            <h2 className="text-6xl md:text-7xl font-extralight tracking-tight text-foreground leading-[0.9]">
+              We understand your world.
+              <br />
+              <span className="text-muted-foreground/60">Because we live in it.</span>
+            </h2>
+            
+            <p className="text-xl font-light text-muted-foreground leading-[1.7] max-w-3xl">
+              Every installation is different. Teams change. Customers expect perfection. We built NESS to solve the real problems installers face every day.
+            </p>
+          </div>
+
+          {/* Challenge Cards */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {challenges.map((item, index) => (
+              <div 
+                key={item.challenge}
+                className="group relative p-10 rounded-3xl bg-background border border-border/50 hover:border-primary/30 transition-all duration-500 hover:-translate-y-2"
+              >
+                <div className="space-y-6">
+                  
+                  {/* Icon */}
+                  <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                    <item.icon className="w-7 h-7 text-primary" />
+                  </div>
+
+                  {/* Content */}
+                  <div className="space-y-4">
+                    <h3 className="text-2xl font-light text-foreground">
+                      {item.challenge}
+                    </h3>
+                    <p className="text-sm text-muted-foreground/70 leading-relaxed italic">
+                      {item.solution}
+                    </p>
+                    <p className="text-base text-foreground leading-[1.7] pt-2">
+                      {item.benefit}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </LazySection>
+
       {/* Partnership Excellence */}
       <LazySection sectionName="partnerships" className="py-40">
         <div className="max-w-[1600px] mx-auto px-8">
@@ -176,13 +252,13 @@ const Installers = () => {
             </div>
             
             <h2 className="text-7xl md:text-8xl font-extralight tracking-tight text-foreground leading-[0.8]">
-              Grow your business
+              Higher margins.
               <br />
-              <span className="text-muted-foreground/60">with confidence</span>
+              <span className="text-muted-foreground/60">Lower costs.</span>
             </h2>
             
-            <p className="text-xl font-light text-muted-foreground leading-relaxed max-w-2xl">
-              Join thousands of installers who've transformed their business with NESS. Zero callbacks. Happy customers. Profitable growth.
+            <p className="text-xl font-light text-muted-foreground leading-[1.7] max-w-2xl">
+              Join installers who earn 20-40% more per project with NESS. Better products. Better support. Better business.
             </p>
           </div>
 
@@ -273,13 +349,13 @@ const Installers = () => {
                 </div>
 
                 <h2 className="text-6xl font-extralight text-foreground leading-[0.85] tracking-tight">
-                  Perfect sizing
+                  Complex installations,
                   <br />
-                  every time
+                  made simple
                 </h2>
 
-                <p className="text-lg font-light text-muted-foreground leading-relaxed">
-                  Our AI configurator ensures every customer gets exactly what they need. Right-sized systems mean happy customers and no callbacks.
+                <p className="text-lg font-light text-muted-foreground leading-[1.7]">
+                  Every home is different. Our AI configurator handles the complexity for you—auto-sizing, smart recommendations, professional documentation. Save 2 hours per quote. Close deals faster.
                 </p>
               </div>
 
@@ -338,8 +414,14 @@ const Installers = () => {
             </div>
             
             <h2 className="text-6xl font-extralight text-foreground leading-tight tracking-tight">
-              Support that works
+              Everything you need.
+              <br />
+              <span className="text-muted-foreground/60">Nothing you don't.</span>
             </h2>
+            
+            <p className="text-lg font-light text-muted-foreground leading-[1.7] max-w-2xl">
+              No jargon. No complexity. Just tools and support that help you install faster, earn more, and build a reputation for reliability.
+            </p>
           </div>
 
           {/* Resources Grid */}
@@ -400,13 +482,13 @@ const Installers = () => {
                 </div>
 
                 <h2 className="text-6xl font-extralight text-foreground leading-[0.85] tracking-tight">
-                  Training &
+                  Turn beginners
                   <br />
-                  certification
+                  into experts
                 </h2>
 
-                <p className="text-lg font-light text-muted-foreground leading-relaxed">
-                  Develop expertise and differentiate your business with our comprehensive training programs and industry certifications.
+                <p className="text-lg font-light text-muted-foreground leading-[1.7]">
+                  Team attrition doesn't have to slow you down. Our fast-track certification programs get new hires productive in weeks, not years. Keep growing, even when people change.
                 </p>
               </div>
 
@@ -414,15 +496,15 @@ const Installers = () => {
               <div className="space-y-8">
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-foreground">Online Learning</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Self-paced courses covering installation, commissioning, and maintenance procedures with certification upon completion.
+                  <p className="text-sm text-muted-foreground leading-[1.7]">
+                    Self-paced courses that make complex systems simple. Your new hires can learn anytime, anywhere—and you stay productive.
                   </p>
                 </div>
 
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-foreground">Hands-on Workshops</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Practical training sessions at our facilities or your location for real-world skill development and certification.
+                  <p className="text-sm text-muted-foreground leading-[1.7]">
+                    Real-world training at our facilities or yours. Build confidence through practice. Certification that means something.
                   </p>
                 </div>
               </div>
@@ -443,27 +525,59 @@ const Installers = () => {
        </LazySection>
 
       {/* Premium CTA */}
-      <section className="py-32">
-        <div className="max-w-[1600px] mx-auto px-8 text-center space-y-16">
+      <section className="relative py-40 overflow-hidden">
+        {/* Background placeholder for image */}
+        <div className="absolute inset-0 bg-muted/20">
+          {/* IMAGE PLACEHOLDER: Diverse installer community - mix of installers, engineers, and families they've helped, working together on solar projects, warm and inspiring atmosphere, Indian context */}
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+        </div>
+
+        <div className="relative z-10 max-w-[1600px] mx-auto px-8 text-center space-y-16">
           
           <div className="max-w-4xl mx-auto space-y-8">
-            <h2 className="text-5xl md:text-6xl font-extralight text-foreground leading-tight tracking-tight">
-              Ready to accelerate your business?
+            <div className="inline-flex items-center space-x-2 justify-center mb-8">
+              <div className="w-1 h-1 rounded-full bg-primary"></div>
+              <span className="text-sm font-mono text-muted-foreground uppercase tracking-[0.2em]">
+                Join the Movement
+              </span>
+            </div>
+
+            <h2 className="text-6xl md:text-7xl font-extralight text-foreground leading-[0.9] tracking-tight">
+              Build more than systems.
+              <br />
+              <span className="text-primary font-light">Build a legacy.</span>
             </h2>
-            <p className="text-xl font-light text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Join thousands of successful installers building the future of energy infrastructure
+            
+            <p className="text-xl font-light text-muted-foreground leading-[1.7] max-w-3xl mx-auto">
+              Join thousands of installers who don't just install batteries—they power homes, create comfort, and build reputations on trust. Because at NESS, we believe the best installers deserve the best partners.
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
-            <Button className="bg-foreground text-background hover:bg-foreground/90 px-12 py-4 rounded-full font-medium text-lg">
-              Start partnership application
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
+            <Button className="bg-foreground text-background hover:bg-foreground/90 px-12 py-4 rounded-full font-medium text-lg transition-all duration-500 hover:scale-105">
+              Start your partnership
             </Button>
             
             <button className="group inline-flex items-center space-x-3 text-muted-foreground hover:text-foreground transition-colors duration-300">
-              <span className="font-light">Schedule consultation</span>
+              <span className="font-light text-lg">Talk to our team</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
+          </div>
+
+          {/* Trust indicators */}
+          <div className="pt-16 grid grid-cols-3 gap-12 max-w-3xl mx-auto border-t border-border/30">
+            <div className="space-y-2">
+              <div className="text-4xl font-extralight text-foreground">5000+</div>
+              <div className="text-sm text-muted-foreground">Certified Installers</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-4xl font-extralight text-foreground">40%</div>
+              <div className="text-sm text-muted-foreground">Average Margin Increase</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-4xl font-extralight text-foreground">98%</div>
+              <div className="text-sm text-muted-foreground">Partner Satisfaction</div>
+            </div>
           </div>
         </div>
        </section>
