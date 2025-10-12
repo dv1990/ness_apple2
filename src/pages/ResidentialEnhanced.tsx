@@ -37,107 +37,146 @@ const ResidentialEnhanced = () => {
         </div>
       </section>
 
-      {/* Find Your Way Section */}
-      <section className="py-20 md:py-32 bg-background">
-        <div className="container mx-auto max-w-7xl px-6">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-light mb-4 tracking-tight">
-              Find your way to effortless power.
+      {/* Find Your Way Section - Premium */}
+      <section className="py-32 md:py-40 bg-gradient-to-b from-background via-muted/20 to-background relative overflow-hidden">
+        {/* Subtle background elements */}
+        <div className="absolute inset-0 bg-grid-white/[0.02] pointer-events-none"></div>
+        
+        <div className="container mx-auto max-w-[1400px] px-8">
+          <div className="text-center mb-24">
+            <h2 className="text-5xl md:text-6xl font-light mb-6 tracking-tight leading-tight">
+              Find your way to<br />effortless power.
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Every home's journey is unique — choose the path that feels like yours.
+            <p className="text-xl text-muted-foreground/80 max-w-2xl mx-auto font-light">
+              Every home's journey is unique. Choose yours.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Card 1 - Solar Owner */}
-            <div className="group relative bg-card rounded-3xl p-10 border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-xl">
-              <div className="mb-8 w-16 h-16 rounded-2xl bg-amber-500/10 flex items-center justify-center">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-20">
+            {/* Card 1 - Solar + Storage */}
+            <div className="group relative overflow-hidden rounded-[2rem] bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-950 border border-border/40 hover:border-border/60 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative p-10 lg:p-12 flex flex-col h-full">
+                {/* Icon */}
+                <div className="mb-8 relative">
+                  <div className="w-20 h-20 rounded-[1.25rem] bg-gradient-to-br from-amber-400/10 via-amber-500/10 to-amber-600/10 flex items-center justify-center backdrop-blur-sm border border-amber-500/20 group-hover:scale-110 transition-transform duration-500">
+                    <svg className="w-10 h-10 text-amber-600 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                  </div>
                 </div>
+                
+                <div className="flex-1 space-y-6">
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-medium mb-3 leading-tight tracking-tight">
+                      Already have solar?<br />Add storage.
+                    </h3>
+                    
+                    <p className="text-base text-muted-foreground/70 leading-relaxed font-light">
+                      Store your solar power. Use it day and night.<br />Own your energy completely.
+                    </p>
+                  </div>
+                </div>
+                
+                <Button 
+                  className="w-full mt-8 h-14 text-base font-medium rounded-2xl bg-foreground text-background hover:bg-foreground/90 group-hover:shadow-lg transition-all duration-300"
+                  size="lg"
+                >
+                  <span>Add Battery Storage</span>
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
               </div>
-              
-              <h3 className="text-2xl font-semibold mb-4 leading-tight">
-                Already have solar? Add battery storage.
-              </h3>
-              
-              <p className="text-muted-foreground mb-8 leading-relaxed">
-                Store your solar power. Use it when you need it. Own your energy 24/7.
-              </p>
-              
-              <Button 
-                className="w-full text-base font-medium"
-                size="lg"
-                variant="default"
-              >
-                Add Battery Storage
-              </Button>
             </div>
 
-            {/* Card 2 - Hybrid Home (Featured) */}
-            <div className="group relative bg-card rounded-3xl p-10 border-2 border-primary/40 hover:border-primary/60 transition-all duration-300 shadow-lg hover:shadow-2xl scale-[1.02] md:scale-105">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-6 py-1.5 rounded-full text-sm font-medium">
-                Most Popular
-              </div>
+            {/* Card 2 - Complete System (Featured) */}
+            <div className="group relative overflow-hidden rounded-[2rem] bg-gradient-to-b from-primary/5 to-primary/[0.02] dark:from-primary/10 dark:to-primary/5 border-2 border-primary/30 hover:border-primary/50 transition-all duration-500 shadow-xl shadow-primary/10 hover:shadow-2xl hover:shadow-primary/20 md:-translate-y-4 hover:-translate-y-5">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.08] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
-              <div className="mb-8 w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                  </svg>
+              {/* Premium badge */}
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
+                <div className="bg-primary text-primary-foreground px-8 py-2 rounded-full text-sm font-medium shadow-lg shadow-primary/30 backdrop-blur-sm">
+                  Most Popular
                 </div>
               </div>
               
-              <h3 className="text-2xl font-semibold mb-4 leading-tight">
-                Start fresh with solar + battery.
-              </h3>
-              
-              <p className="text-muted-foreground mb-8 leading-relaxed">
-                Complete energy independence. Generate, store, use. Simple as that.
-              </p>
-              
-              <Button 
-                className="w-full text-base font-medium"
-                size="lg"
-              >
-                Build Complete System
-              </Button>
+              <div className="relative p-10 lg:p-12 pt-14 flex flex-col h-full">
+                {/* Icon */}
+                <div className="mb-8 relative">
+                  <div className="w-20 h-20 rounded-[1.25rem] bg-gradient-to-br from-primary/20 via-primary/15 to-primary/10 flex items-center justify-center backdrop-blur-sm border border-primary/30 group-hover:scale-110 transition-transform duration-500">
+                    <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                  </div>
+                </div>
+                
+                <div className="flex-1 space-y-6">
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-medium mb-3 leading-tight tracking-tight">
+                      Start fresh with<br />solar + battery.
+                    </h3>
+                    
+                    <p className="text-base text-muted-foreground/70 leading-relaxed font-light">
+                      Complete energy independence from day one.<br />Generate. Store. Use. Repeat.
+                    </p>
+                  </div>
+                </div>
+                
+                <Button 
+                  className="w-full mt-8 h-14 text-base font-medium rounded-2xl shadow-lg shadow-primary/30 group-hover:shadow-xl group-hover:shadow-primary/40 transition-all duration-300"
+                  size="lg"
+                >
+                  <span>Build Complete System</span>
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </div>
             </div>
 
-            {/* Card 3 - Backup */}
-            <div className="group relative bg-card rounded-3xl p-10 border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-xl">
-              <div className="mb-8 w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
+            {/* Card 3 - Backup Only */}
+            <div className="group relative overflow-hidden rounded-[2rem] bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-950 border border-border/40 hover:border-border/60 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative p-10 lg:p-12 flex flex-col h-full">
+                {/* Icon */}
+                <div className="mb-8 relative">
+                  <div className="w-20 h-20 rounded-[1.25rem] bg-gradient-to-br from-blue-400/10 via-blue-500/10 to-blue-600/10 flex items-center justify-center backdrop-blur-sm border border-blue-500/20 group-hover:scale-110 transition-transform duration-500">
+                    <svg className="w-10 h-10 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
                 </div>
+                
+                <div className="flex-1 space-y-6">
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-medium mb-3 leading-tight tracking-tight">
+                      Just need<br />backup power?
+                    </h3>
+                    
+                    <p className="text-base text-muted-foreground/70 leading-relaxed font-light">
+                      Silent backup. 10ms switch time.<br />Your first step to energy freedom.
+                    </p>
+                  </div>
+                </div>
+                
+                <Button 
+                  variant="outline"
+                  className="w-full mt-8 h-14 text-base font-medium rounded-2xl border-2 hover:bg-accent group-hover:shadow-lg transition-all duration-300"
+                  size="lg"
+                >
+                  <span>Get Backup System</span>
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
               </div>
-              
-              <h3 className="text-2xl font-semibold mb-4 leading-tight">
-                Just need backup power?
-              </h3>
-              
-              <p className="text-muted-foreground mb-8 leading-relaxed">
-                Silent backup that switches in 10ms. Your first step toward energy freedom.
-              </p>
-              
-              <Button 
-                className="w-full text-base font-medium"
-                size="lg"
-                variant="outline"
-              >
-                Get Backup System
-              </Button>
             </div>
           </div>
 
-          <p className="text-center text-base text-muted-foreground mt-16 max-w-2xl mx-auto">
-            Whichever path you choose, you're not just powering your home — you're creating a cleaner tomorrow.
-          </p>
+          {/* Bottom message */}
+          <div className="text-center">
+            <p className="text-base text-muted-foreground/60 max-w-2xl mx-auto font-light leading-relaxed">
+              Whichever path you choose, you're not just powering your home.<br />
+              You're creating a cleaner tomorrow for those who matter most.
+            </p>
+          </div>
         </div>
       </section>
 
