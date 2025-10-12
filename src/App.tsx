@@ -16,6 +16,7 @@ import ContactEnhanced from "./pages/ContactEnhanced";
 
 // Product pages - Lazy loaded
 const NessAcSync = lazy(() => import("./pages/products/NessAcSync"));
+const EVChargingMicrogrid = lazy(() => import("./pages/EVChargingMicrogrid"));
 
 // Secondary pages - Lazy loaded
 const TrueWarranty = lazy(() => import("./pages/TrueWarranty"));
@@ -76,6 +77,7 @@ const App = () => {
           <Route path="/warranty" element={<TrueWarranty />} />
           <Route path="/find-installer" element={<FindInstaller />} />
           <Route path="/products/ness-ac-sync" element={<NessAcSync />} />
+          <Route path="/ev-charging-microgrid" element={<EVChargingMicrogrid />} />
           
           {/* Company Routes */}
           <Route path="/company/about" element={<About />} />
