@@ -38,100 +38,105 @@ const ResidentialEnhanced = () => {
       </section>
 
       {/* Find Your Way Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-b from-background via-[hsl(var(--muted)/0.2)] to-background">
+      <section className="py-20 md:py-32 bg-background">
         <div className="container mx-auto max-w-7xl px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-light mb-4 tracking-tight">
               Find your way to effortless power.
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Every home's journey is unique — choose the path that feels like yours.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="grid md:grid-cols-3 gap-8">
             {/* Card 1 - Solar Owner */}
-            <div className="group relative bg-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border/50 hover:border-primary/20 hover:shadow-primary/10">
-              <div className="mb-6 h-48 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl flex items-center justify-center">
-                <span className="text-6xl">☀️</span>
+            <div className="group relative bg-card rounded-3xl p-10 border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-xl">
+              <div className="mb-8 w-16 h-16 rounded-2xl bg-amber-500/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                  </svg>
+                </div>
               </div>
               
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">
+              <h3 className="text-2xl font-semibold mb-4 leading-tight">
                 Already have solar? Add battery storage.
               </h3>
               
-              <p className="text-muted-foreground mb-4 leading-relaxed">
-                You already create clean power. Add NESS to store it — and let every ray light your nights.
-              </p>
-              
-              <p className="text-sm text-muted-foreground/80 mb-6 italic">
-                Store what you generate. Use what you store.
+              <p className="text-muted-foreground mb-8 leading-relaxed">
+                Store your solar power. Use it when you need it. Own your energy 24/7.
               </p>
               
               <Button 
-                className="w-full group-hover:shadow-glow transition-all duration-300"
+                className="w-full text-base font-medium"
                 size="lg"
+                variant="default"
               >
-                Keep My Sunlight Home →
+                Add Battery Storage
               </Button>
             </div>
 
-            {/* Card 2 - Hybrid Home */}
-            <div className="group relative bg-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border/50 hover:border-primary/20 hover:shadow-primary/10">
-              <div className="mb-6 h-48 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl flex items-center justify-center">
-                <span className="text-6xl">🏠</span>
+            {/* Card 2 - Hybrid Home (Featured) */}
+            <div className="group relative bg-card rounded-3xl p-10 border-2 border-primary/40 hover:border-primary/60 transition-all duration-300 shadow-lg hover:shadow-2xl scale-[1.02] md:scale-105">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-6 py-1.5 rounded-full text-sm font-medium">
+                Most Popular
               </div>
               
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">
-                Begin your home's solar story.
+              <div className="mb-8 w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                </div>
+              </div>
+              
+              <h3 className="text-2xl font-semibold mb-4 leading-tight">
+                Start fresh with solar + battery.
               </h3>
               
-              <p className="text-muted-foreground mb-4 leading-relaxed">
-                Go fully hybrid with solar + NESS. Generate, store, and use clean energy the way nature intended.
-              </p>
-              
-              <p className="text-sm text-muted-foreground/80 mb-6 italic">
-                Complete energy independence starts here.
+              <p className="text-muted-foreground mb-8 leading-relaxed">
+                Complete energy independence. Generate, store, use. Simple as that.
               </p>
               
               <Button 
-                className="w-full group-hover:shadow-glow transition-all duration-300"
+                className="w-full text-base font-medium"
                 size="lg"
               >
-                Build My Self-Powered Home →
+                Build Complete System
               </Button>
             </div>
 
             {/* Card 3 - Backup */}
-            <div className="group relative bg-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border/50 hover:border-primary/20 hover:shadow-primary/10">
-              <div className="mb-6 h-48 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl flex items-center justify-center">
-                <span className="text-6xl">⚡</span>
+            <div className="group relative bg-card rounded-3xl p-10 border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-xl">
+              <div className="mb-8 w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
               </div>
               
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">
-                Stay calm when the grid isn't.
+              <h3 className="text-2xl font-semibold mb-4 leading-tight">
+                Just need backup power?
               </h3>
               
-              <p className="text-muted-foreground mb-4 leading-relaxed">
-                Start simple with a quiet NESS backup. Reliable, ready, and the first step toward independence.
-              </p>
-              
-              <p className="text-sm text-muted-foreground/80 mb-6 italic">
-                Peace of mind in 10 milliseconds.
+              <p className="text-muted-foreground mb-8 leading-relaxed">
+                Silent backup that switches in 10ms. Your first step toward energy freedom.
               </p>
               
               <Button 
-                className="w-full group-hover:shadow-glow transition-all duration-300"
+                className="w-full text-base font-medium"
                 size="lg"
+                variant="outline"
               >
-                Secure My Home Backup →
+                Get Backup System
               </Button>
             </div>
           </div>
 
-          <p className="text-center text-lg text-muted-foreground/80 italic max-w-3xl mx-auto leading-relaxed">
-            Whichever path you choose, you're not just powering your home —<br />
-            you're gifting your children a cleaner, brighter tomorrow.
+          <p className="text-center text-base text-muted-foreground mt-16 max-w-2xl mx-auto">
+            Whichever path you choose, you're not just powering your home — you're creating a cleaner tomorrow.
           </p>
         </div>
       </section>
