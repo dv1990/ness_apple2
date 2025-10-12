@@ -17,6 +17,9 @@ export default {
         sans: ['-apple-system', 'BlinkMacSystemFont', 'SF Pro Text', 'Inter', 'system-ui', 'sans-serif'],
         display: ['-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'Inter', 'system-ui', 'sans-serif'],
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       fontSize: {
         'display-large': ['7rem', { lineHeight: '0.9', letterSpacing: '-0.04em', fontWeight: '400' }],
         'display': ['5.5rem', { lineHeight: '0.95', letterSpacing: '-0.03em', fontWeight: '400' }],
@@ -166,6 +169,7 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.5s ease-out",
         "fade-in-up": "fade-in-up 0.8s ease-out forwards",
+        "fade-up": "fade-in-up 0.8s ease-out forwards",
         "slide-up": "slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
         "premium-float": "premium-float 6s ease-in-out infinite",
         "slide-down": "slide-down 2s ease-in-out infinite",

@@ -14,28 +14,38 @@ import nessCubeProduct from "@/assets/ness-cube-resort.webp";
 import familyLifestyle from "@/assets/family-energy-lifestyle.jpg";
 const Index = () => {
   return <Layout>
-      {/* 1️⃣ Hero: Emotional Opening */}
-      <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden">
+      {/* HERO - Premium Opening */}
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-whisper via-pearl to-background overflow-hidden">
         
-        {/* Carousel Background */}
+        {/* Ambient Background */}
         <div className="absolute inset-0">
-          <Carousel opts={{
-          loop: true
-        }} plugins={[Autoplay({
-          delay: 5000
-        })]} className="w-full h-full">
+          <Carousel 
+            opts={{ loop: true }} 
+            plugins={[Autoplay({ delay: 7000 })]} 
+            className="w-full h-full"
+          >
             <CarouselContent className="h-screen -ml-0">
               <CarouselItem className="pl-0">
                 <div className="relative w-full h-screen overflow-hidden">
-                  <img src={heroHome} alt="Modern home with NESS battery system" className="w-full h-full object-cover opacity-40" loading="eager" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/60"></div>
+                  <img 
+                    src={heroHome} 
+                    alt="Modern home with NESS battery system" 
+                    className="w-full h-full object-cover opacity-[0.08] scale-105" 
+                    loading="eager" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-pearl/60 to-whisper/80"></div>
                 </div>
               </CarouselItem>
               
               <CarouselItem className="pl-0">
                 <div className="relative w-full h-screen overflow-hidden">
-                  <img src={industrialHero} alt="Industrial facility with NESS energy storage" className="w-full h-full object-cover opacity-40" loading="eager" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/60"></div>
+                  <img 
+                    src={industrialHero} 
+                    alt="Industrial facility with NESS energy storage" 
+                    className="w-full h-full object-cover opacity-[0.08] scale-105" 
+                    loading="eager" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-pearl/60 to-whisper/80"></div>
                 </div>
               </CarouselItem>
             </CarouselContent>
@@ -43,120 +53,185 @@ const Index = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-6xl mx-auto px-8 text-center">
-          <div className="space-y-16 sm:space-y-24 animate-fade-in">
+        <div className="relative z-10 max-w-7xl mx-auto px-8 text-center">
+          <div className="space-y-20 sm:space-y-32">
             
-            {/* The Opening - Bold Truth */}
-            <div className="space-y-12">
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extralight text-foreground leading-[1.1] tracking-tight">
-                The grid is a lie<br />you pay for<br />every month.
-              </h1>
-              
-              <p className="text-2xl sm:text-3xl md:text-4xl font-extralight text-muted-foreground/80 max-w-4xl mx-auto leading-relaxed">
-                Time to own the truth.
-              </p>
-            </div>
-
-            {/* The Proof - Whispered, Not Shouted */}
-            <div className="max-w-4xl mx-auto">
-              <div className="inline-flex flex-col sm:flex-row items-center gap-6 sm:gap-12 text-muted-foreground/60 text-sm font-light">
-                <span className="flex items-center gap-2">
-                  <span className="text-3xl font-extralight text-energy">100+</span>
-                  <span className="text-xs uppercase tracking-wider">MWh delivered</span>
-                </span>
-                <span className="hidden sm:block text-muted-foreground/20">·</span>
-                <span className="flex items-center gap-2">
-                  <span className="text-3xl font-extralight text-energy">2</span>
-                  <span className="text-xs uppercase tracking-wider">warranty claims, 3 years</span>
-                </span>
-                <span className="hidden sm:block text-muted-foreground/20">·</span>
-                <span className="flex items-center gap-2">
-                  <span className="text-3xl font-extralight text-energy">1,000</span>
-                  <span className="text-xs uppercase tracking-wider">people free</span>
-                </span>
+            {/* The Opening */}
+            <div className="space-y-16 animate-fade-up">
+              <div className="space-y-8">
+                <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extralight text-charcoal leading-[0.95] tracking-[-0.02em]">
+                  The grid is a lie<br />
+                  <span className="text-charcoal/40">you pay for</span><br />
+                  every month.
+                </h1>
+                
+                <div className="h-px w-32 bg-gradient-to-r from-transparent via-silver/30 to-transparent mx-auto"></div>
+                
+                <p className="text-2xl sm:text-3xl md:text-4xl font-extralight text-charcoal/50 max-w-4xl mx-auto leading-[1.5] tracking-[-0.01em]">
+                  Time to own the truth.
+                </p>
               </div>
             </div>
 
-            {/* The Invitation - Impossible to Refuse */}
-            <div className="pt-8">
+            {/* The Proof - Whispered */}
+            <div className="max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '300ms' }}>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 py-8 px-6 rounded-full border border-platinum/50 bg-pearl/30 backdrop-blur-sm">
+                <div className="flex flex-col items-center gap-2">
+                  <span className="text-4xl sm:text-5xl font-extralight text-energy tracking-tight">100+</span>
+                  <span className="text-xs text-charcoal/40 uppercase tracking-[0.15em] font-light">MWh delivered</span>
+                </div>
+                <div className="hidden sm:block h-12 w-px bg-platinum/30"></div>
+                <div className="flex flex-col items-center gap-2">
+                  <span className="text-4xl sm:text-5xl font-extralight text-energy tracking-tight">2</span>
+                  <span className="text-xs text-charcoal/40 uppercase tracking-[0.15em] font-light">warranty claims, 3 years</span>
+                </div>
+                <div className="hidden sm:block h-12 w-px bg-platinum/30"></div>
+                <div className="flex flex-col items-center gap-2">
+                  <span className="text-4xl sm:text-5xl font-extralight text-energy tracking-tight">1,000</span>
+                  <span className="text-xs text-charcoal/40 uppercase tracking-[0.15em] font-light">people free</span>
+                </div>
+              </div>
+            </div>
+
+            {/* The Invitation */}
+            <div className="pt-4 animate-fade-in" style={{ animationDelay: '600ms' }}>
               <Link to="/residential">
-                <Button size="lg" className="bg-energy hover:bg-energy-dark text-primary-foreground px-16 py-7 text-xl font-light rounded-full shadow-2xl hover:shadow-energy/20 transform hover:scale-105 transition-all duration-500">
-                  Join them
+                <Button 
+                  size="lg" 
+                  className="group bg-charcoal hover:bg-graphite text-pearl px-20 py-8 text-xl font-light rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.16)] transition-all duration-700 ease-out"
+                >
+                  <span className="relative">
+                    Join them
+                    <span className="absolute -bottom-1 left-0 w-0 h-px bg-pearl/40 group-hover:w-full transition-all duration-500"></span>
+                  </span>
                 </Button>
               </Link>
             </div>
           </div>
         </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-16 left-1/2 -translate-x-1/2 z-20 animate-bounce" style={{ animationDuration: '3s' }}>
+          <div className="flex flex-col items-center gap-3 opacity-20 hover:opacity-40 transition-opacity duration-500">
+            <div className="w-6 h-10 rounded-full border border-charcoal/20 flex items-start justify-center p-2">
+              <div className="w-1 h-3 bg-charcoal/40 rounded-full"></div>
+            </div>
+            <span className="text-[10px] uppercase tracking-[0.2em] text-charcoal/30 font-light">Scroll</span>
+          </div>
+        </div>
       </section>
 
-      {/* THE SCENE - Visceral Truth */}
-      <section className="py-32 md:py-48 bg-gradient-to-b from-background via-muted/10 to-background">
-        <div className="max-w-4xl mx-auto px-8">
-          <div className="space-y-32 text-center">
+      {/* THE SCENE - Premium Visceral Truth */}
+      <section className="relative py-40 md:py-56 bg-gradient-to-b from-background via-whisper/30 to-pearl/20 overflow-hidden">
+        
+        {/* Subtle Background Element */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-radial from-energy/[0.03] to-transparent rounded-full blur-3xl"></div>
+        
+        <div className="max-w-6xl mx-auto px-8 relative z-10">
+          <div className="space-y-40 text-center">
             
             {/* The Moment */}
-            <div className="space-y-12">
-              <p className="text-3xl sm:text-4xl md:text-5xl font-extralight text-foreground leading-tight italic">
-                2:47 AM.
-              </p>
-              <div className="space-y-8 max-w-2xl mx-auto">
-                <p className="text-xl sm:text-2xl font-light text-muted-foreground leading-relaxed">
-                  The AC dies. You wake up drenched.
-                  <br />
-                  Your cameras: dark. Your router: dead.
-                  <br />
-                  The baby's monitor: silent.
+            <div className="space-y-16">
+              <div className="inline-block">
+                <p className="text-5xl sm:text-6xl md:text-7xl font-extralight text-charcoal leading-none tracking-[-0.02em] mb-3">
+                  2:47 AM.
                 </p>
-                <p className="text-2xl sm:text-3xl font-extralight text-foreground/90 leading-tight pt-8">
-                  At 6 AM, everything hums back.<br />
-                  <span className="text-muted-foreground">Like nothing happened.</span>
+                <div className="h-px w-full bg-gradient-to-r from-transparent via-silver/30 to-transparent"></div>
+              </div>
+              
+              <div className="space-y-12 max-w-3xl mx-auto">
+                <p className="text-2xl sm:text-3xl md:text-4xl font-extralight text-charcoal/70 leading-[1.5] tracking-[-0.01em]">
+                  The AC dies.<br />
+                  You wake up drenched.
                 </p>
+                
+                <div className="space-y-6 py-8">
+                  <p className="text-lg sm:text-xl text-charcoal/40 font-light leading-relaxed tracking-wide">
+                    Your cameras: dark.
+                  </p>
+                  <p className="text-lg sm:text-xl text-charcoal/40 font-light leading-relaxed tracking-wide">
+                    Your router: dead.
+                  </p>
+                  <p className="text-lg sm:text-xl text-charcoal/40 font-light leading-relaxed tracking-wide">
+                    The baby's monitor: silent.
+                  </p>
+                </div>
+                
+                <div className="pt-8 space-y-4">
+                  <p className="text-2xl sm:text-3xl md:text-4xl font-extralight text-charcoal leading-tight tracking-[-0.01em]">
+                    At 6 AM, everything hums back.
+                  </p>
+                  <p className="text-xl text-charcoal/30 font-light italic">
+                    Like nothing happened.
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* The Question */}
-            <div className="py-12">
-              <div className="inline-block px-16 py-6 border border-border/30 rounded-full">
-                <p className="text-xl md:text-2xl font-extralight text-muted-foreground">
+            <div className="py-16">
+              <div className="inline-flex items-center justify-center px-20 py-7 border border-platinum/50 rounded-full bg-pearl/20 backdrop-blur-sm">
+                <p className="text-2xl md:text-3xl font-extralight text-charcoal/60 tracking-[-0.01em]">
                   How many more nights?
                 </p>
               </div>
             </div>
 
             {/* The Truth - Stark Numbers */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-16 max-w-5xl mx-auto">
-              <div className="space-y-4">
-                <div className="text-5xl font-extralight text-energy">46°C</div>
-                <div className="text-sm text-muted-foreground/60 font-light leading-relaxed">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-20 max-w-5xl mx-auto pt-8">
+              <div className="space-y-6 group">
+                <div className="relative inline-block">
+                  <div className="text-6xl md:text-7xl font-extralight text-energy tracking-tight transition-transform duration-700 group-hover:scale-105">
+                    46°C
+                  </div>
+                  <div className="absolute -inset-4 bg-gradient-radial from-energy/5 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10"></div>
+                </div>
+                <div className="h-px w-16 bg-gradient-to-r from-transparent via-platinum/40 to-transparent mx-auto"></div>
+                <div className="text-sm text-charcoal/40 font-light leading-relaxed tracking-wide">
                   Delhi, last May.
                   <br />
-                  The grid blinked first.
+                  <span className="text-charcoal/30">The grid blinked first.</span>
                 </div>
               </div>
-              <div className="space-y-4">
-                <div className="text-5xl font-extralight text-energy">₹96,000</div>
-                <div className="text-sm text-muted-foreground/60 font-light leading-relaxed">
+              
+              <div className="space-y-6 group">
+                <div className="relative inline-block">
+                  <div className="text-6xl md:text-7xl font-extralight text-energy tracking-tight transition-transform duration-700 group-hover:scale-105">
+                    ₹96,000
+                  </div>
+                  <div className="absolute -inset-4 bg-gradient-radial from-energy/5 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10"></div>
+                </div>
+                <div className="h-px w-16 bg-gradient-to-r from-transparent via-platinum/40 to-transparent mx-auto"></div>
+                <div className="text-sm text-charcoal/40 font-light leading-relaxed tracking-wide">
                   What you'll pay the grid
                   <br />
-                  next year. Minimum.
+                  <span className="text-charcoal/30">next year. Minimum.</span>
                 </div>
               </div>
-              <div className="space-y-4">
-                <div className="text-5xl font-extralight text-energy">6 hours</div>
-                <div className="text-sm text-muted-foreground/60 font-light leading-relaxed">
+              
+              <div className="space-y-6 group">
+                <div className="relative inline-block">
+                  <div className="text-6xl md:text-7xl font-extralight text-energy tracking-tight transition-transform duration-700 group-hover:scale-105">
+                    6 hours
+                  </div>
+                  <div className="absolute -inset-4 bg-gradient-radial from-energy/5 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10"></div>
+                </div>
+                <div className="h-px w-16 bg-gradient-to-r from-transparent via-platinum/40 to-transparent mx-auto"></div>
+                <div className="text-sm text-charcoal/40 font-light leading-relaxed tracking-wide">
                   Average blackout.
                   <br />
-                  When you need it most.
+                  <span className="text-charcoal/30">When you need it most.</span>
                 </div>
               </div>
             </div>
 
             {/* The Line They'll Remember */}
-            <div className="pt-16 max-w-3xl mx-auto border-t border-border/30">
-              <p className="text-3xl md:text-4xl font-extralight text-energy italic leading-relaxed">
-                "The grid doesn't care if you're awake."
+            <div className="pt-24 max-w-4xl mx-auto space-y-8">
+              <div className="h-px w-full bg-gradient-to-r from-transparent via-platinum/30 to-transparent"></div>
+              <p className="text-3xl sm:text-4xl md:text-5xl font-extralight text-energy italic leading-[1.4] tracking-[-0.01em]">
+                "The grid doesn't care<br className="hidden sm:block" /> if you're awake."
               </p>
-              <p className="text-lg text-muted-foreground/50 font-light pt-6">
+              <p className="text-xl text-charcoal/30 font-light pt-4">
                 But you can.
               </p>
             </div>
