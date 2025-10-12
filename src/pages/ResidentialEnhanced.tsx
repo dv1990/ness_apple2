@@ -8,89 +8,89 @@ const ResidentialEnhanced = () => {
 
   return (
     <Layout>
-      {/* 1. HERO - The Stark Truth */}
+      {/* 1. HERO - The Vision */}
       <section className="min-h-[90vh] bg-background px-6 sm:px-8 relative overflow-hidden flex items-center">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5"></div>
         
         <div className="max-w-5xl mx-auto relative z-10 py-20">
           <div className="space-y-8 animate-fade-in">
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.1] tracking-tight font-light text-foreground">
-              While other homes<br />went dark,<br />
-              <span className="text-primary font-normal">theirs stayed bright.</span>
+              Imagine a home<br />that powers<br />
+              <span className="text-primary font-normal">itself.</span>
             </h1>
             
             <p className="text-xl sm:text-2xl text-muted-foreground font-light leading-relaxed max-w-3xl">
-              The truth is simple. Some families decided to power their own lives.
-              <br />No drama. No generators. Just independence.
+              No waiting for the grid. No generator noise. No compromise.
+              <br />Just pure, quiet independence—every single day.
             </p>
 
             <div className="pt-6">
               <Button 
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-6 rounded-full text-lg font-medium"
-                onClick={() => document.getElementById('problem')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('vision')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                See How
+                Discover How
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2. THE PROBLEM - Twist the Knife */}
-      <section id="problem" className="py-32 bg-gradient-to-b from-background to-muted/10">
+      {/* 2. THE POSSIBILITY - What You Could Gain */}
+      <section id="vision" className="py-32 bg-gradient-to-b from-background to-muted/10">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           <div className="text-center mb-20 space-y-6">
             <h2 className="text-4xl sm:text-5xl md:text-6xl leading-tight tracking-tight text-foreground font-light">
-              Here's what you're<br />
-              <span className="text-destructive font-normal">actually losing.</span>
+              Picture your life<br />
+              <span className="text-primary font-normal">truly powered by the sun.</span>
             </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Cost */}
-            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-10 border border-border/50">
+            {/* Freedom */}
+            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-10 border border-primary/20 hover:border-primary/40 transition-all">
               <div className="space-y-6">
-                <div className="w-16 h-16 rounded-2xl bg-destructive/10 flex items-center justify-center">
-                  <span className="text-3xl">₹</span>
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
+                  <Heart className="w-8 h-8 text-primary" />
                 </div>
                 <div>
-                  <div className="text-4xl font-light mb-2 text-foreground">₹48,000</div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wider mb-4">Lost Every Year</div>
+                  <div className="text-4xl font-light mb-2 text-primary">Complete</div>
+                  <div className="text-sm text-muted-foreground uppercase tracking-wider mb-4">Peace of Mind</div>
                   <p className="text-base text-muted-foreground leading-relaxed">
-                    Peak-hour tariffs. Diesel for generators. Spoiled food. Wasted solar at night.
+                    Your AC runs all night. Fridge never stops. Kids study without interruption. Life flows unbroken.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Inconvenience */}
-            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-10 border border-border/50">
+            {/* Independence */}
+            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-10 border border-primary/20 hover:border-primary/40 transition-all">
               <div className="space-y-6">
-                <div className="w-16 h-16 rounded-2xl bg-destructive/10 flex items-center justify-center">
-                  <Zap className="w-8 h-8 text-destructive" />
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
+                  <Home className="w-8 h-8 text-primary" />
                 </div>
                 <div>
-                  <div className="text-4xl font-light mb-2 text-foreground">127 times</div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wider mb-4">Grid Fails/Year</div>
+                  <div className="text-4xl font-light mb-2 text-primary">True</div>
+                  <div className="text-sm text-muted-foreground uppercase tracking-wider mb-4">Energy Independence</div>
                   <p className="text-base text-muted-foreground leading-relaxed">
-                    Interrupted work. Ruined sleep. Kids can't study. Life on pause.
+                    No more waiting for power to return. No reliance on anyone else. Your home, your energy, your terms.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Waste */}
-            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-10 border border-border/50">
+            {/* Value */}
+            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-10 border border-primary/20 hover:border-primary/40 transition-all">
               <div className="space-y-6">
-                <div className="w-16 h-16 rounded-2xl bg-destructive/10 flex items-center justify-center">
-                  <Smile className="w-8 h-8 text-destructive" />
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
+                  <Sparkles className="w-8 h-8 text-primary" />
                 </div>
                 <div>
-                  <div className="text-4xl font-light mb-2 text-foreground">70%</div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wider mb-4">Solar Wasted</div>
+                  <div className="text-4xl font-light mb-2 text-primary">₹48,000</div>
+                  <div className="text-sm text-muted-foreground uppercase tracking-wider mb-4">Saved Every Year</div>
                   <p className="text-base text-muted-foreground leading-relaxed">
-                    You generate power all day. But give it away for free while paying full price at night.
+                    Every sunrise brings free energy. Every sunset, your power keeps flowing. Bills become memories.
                   </p>
                 </div>
               </div>
@@ -98,8 +98,8 @@ const ResidentialEnhanced = () => {
           </div>
 
           <div className="mt-16 text-center">
-            <p className="text-2xl sm:text-3xl text-muted-foreground font-light leading-relaxed max-w-3xl mx-auto">
-              Your home deserves better than backup plans and workarounds.
+            <p className="text-2xl sm:text-3xl text-foreground font-light leading-relaxed max-w-3xl mx-auto">
+              This isn't a dream. <span className="text-primary">This is how 2,847 families already live.</span>
             </p>
           </div>
         </div>
@@ -517,28 +517,22 @@ const ResidentialEnhanced = () => {
         </div>
       </section>
 
-      {/* 8. FINAL CTA - Urgency + Specificity */}
+      {/* 8. FINAL CTA - Empowering Action */}
       <section className="py-32 bg-gradient-to-br from-primary/5 via-background to-primary/10 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5"></div>
         
         <div className="max-w-4xl mx-auto px-6 sm:px-8 text-center relative z-10">
           <div className="space-y-8">
             <h2 className="text-5xl sm:text-6xl md:text-7xl leading-[1.1] tracking-tight font-light text-foreground">
-              Own your power.
+              Your energy freedom
               <br />
-              <span className="text-primary font-normal">This month.</span>
+              <span className="text-primary font-normal">starts here.</span>
             </h2>
             
             <p className="text-xl sm:text-2xl text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto">
-              <span className="text-foreground font-medium">2,847 families</span> already made the switch.
-              <br />Free assessment. Custom design. Install in 3 weeks.
+              Join <span className="text-primary font-medium">2,847 families</span> who chose independence.
+              <br />Free assessment. Expert design. Professional installation.
             </p>
-
-            {/* Urgency Badge */}
-            <div className="inline-flex items-center gap-2 bg-destructive/10 border border-destructive/20 text-destructive px-6 py-3 rounded-full text-sm font-medium">
-              <Shield className="w-4 h-4" />
-              <span>Limited installers available this quarter</span>
-            </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button 
@@ -546,7 +540,7 @@ const ResidentialEnhanced = () => {
                 className="bg-primary text-primary-foreground hover:bg-primary/90 px-12 py-7 rounded-full text-lg font-medium shadow-lg shadow-primary/20"
                 onClick={() => window.location.href = '/contact/homeowner'}
               >
-                Get Free Assessment
+                Begin Your Journey
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button 
