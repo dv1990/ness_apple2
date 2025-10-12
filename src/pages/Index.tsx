@@ -44,9 +44,9 @@ const Index = () => {
 
         {/* Content */}
         <div className="relative z-10 max-w-5xl mx-auto px-8 text-center">
-          <div className="space-y-16 animate-fade-in">
-            <div className="space-y-8">
-              <h1 className="text-5xl md:text-7xl font-light text-foreground leading-tight tracking-tight">
+          <div className="space-y-12 sm:space-y-16 animate-fade-in">
+            <div className="space-y-6 sm:space-y-8">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-foreground leading-tight tracking-tight">
                 Power. On your terms.
                 <br />
                 On your roof.
@@ -54,24 +54,24 @@ const Index = () => {
                 <span className="text-energy font-medium">In your hands.</span>
               </h1>
               
-              <p className="text-3xl md:text-4xl font-light text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 Welcome to energy independence.
               </p>
             </div>
 
             {/* Proof Numbers - Big and Bold */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto py-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto py-6 sm:py-8">
               <div className="space-y-2">
-                <div className="text-6xl md:text-7xl font-light text-energy">100+</div>
-                <div className="text-sm text-muted-foreground uppercase tracking-wider">MWh Delivered</div>
+                <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-energy">100+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider">MWh Delivered</div>
               </div>
               <div className="space-y-2">
-                <div className="text-6xl md:text-7xl font-light text-energy">2</div>
-                <div className="text-sm text-muted-foreground uppercase tracking-wider">Warranty Claims in 3 Years</div>
+                <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-energy">2</div>
+                <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider">Warranty Claims in 3 Years</div>
               </div>
               <div className="space-y-2">
-                <div className="text-6xl md:text-7xl font-light text-energy">1,000</div>
-                <div className="text-sm text-muted-foreground uppercase tracking-wider">Own Their Power</div>
+                <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-energy">1,000</div>
+                <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider">Own Their Power</div>
               </div>
             </div>
 
@@ -89,12 +89,12 @@ const Index = () => {
       </section>
 
       {/* WHY NOW? - Urgency Section */}
-      <section className="py-32 bg-gradient-to-b from-background to-muted/30 border-y border-border">
-        <div className="max-w-5xl mx-auto px-8">
+      <section className="py-16 sm:py-24 md:py-32 bg-gradient-to-b from-background to-muted/30 border-y border-border">
+        <div className="max-w-5xl mx-auto px-6 sm:px-8">
           <div className="space-y-20 text-center">
             {/* The Truth */}
-            <div className="space-y-8">
-              <h2 className="text-4xl md:text-5xl font-light text-foreground leading-tight">
+            <div className="space-y-6 sm:space-y-8">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-foreground leading-tight">
                 Every summer gets hotter.
                 <br />
                 Every power bill gets higher.
@@ -104,8 +104,8 @@ const Index = () => {
             </div>
 
             {/* The Moment - Visceral Scene */}
-            <div className="max-w-3xl mx-auto space-y-6">
-              <p className="text-xl md:text-2xl font-light text-muted-foreground leading-relaxed italic">
+            <div className="max-w-3xl mx-auto space-y-4 sm:space-y-6">
+              <p className="text-lg sm:text-xl md:text-2xl font-light text-muted-foreground leading-relaxed italic">
                 It's 2 AM. The AC stops. You wake up sweating.
                 <br />
                 Your security cameras: offline. Your internet: dead.
@@ -126,7 +126,7 @@ const Index = () => {
             </div>
 
             {/* The Reality - Clean Typography */}
-            <div className="grid md:grid-cols-3 gap-12 pt-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 pt-6 sm:pt-8 max-w-4xl mx-auto">
               <div className="space-y-3">
                 <div className="text-3xl font-light text-foreground">₹8,000<span className="text-muted-foreground">/mo</span></div>
                 <div className="text-sm text-muted-foreground font-light leading-relaxed">
@@ -174,18 +174,18 @@ const Index = () => {
       </section>
 
       {/* 2️⃣ Real Stories - Aspiration & Independence */}
-      <section className="py-40 bg-muted/20">
-        <div className="max-w-6xl mx-auto px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-light text-foreground mb-8">
+      <section className="py-16 sm:py-24 md:py-32 lg:py-40 bg-muted/20">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8">
+          <div className="text-center mb-12 sm:mb-16 md:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6 sm:mb-8">
               They own their power. <span className="text-energy font-semibold">You can too.</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
               Energy independence isn't just efficient. It's thrilling. It's liberating. It's joy.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {/* Residential Case Study - Woman's Perspective */}
             <div className="bg-card border border-border rounded-3xl p-12 hover:shadow-lg transition-all duration-500">
               <div className="space-y-6">
@@ -273,9 +273,9 @@ const Index = () => {
 
 
       {/* 4️⃣ For Homes - Simplified */}
-      <section className="py-40 bg-background">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section className="py-16 sm:py-24 md:py-32 lg:py-40 bg-background">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 md:gap-16 items-center">
             
             {/* Visual */}
             <div className="relative order-2 lg:order-1">
@@ -286,15 +286,15 @@ const Index = () => {
             </div>
 
             {/* Content */}
-            <div className="space-y-8 order-1 lg:order-2">
+            <div className="space-y-6 sm:space-y-8 order-1 lg:order-2">
               <div className="inline-flex items-center space-x-2">
                 <div className="w-1 h-1 rounded-full bg-energy"></div>
-                <span className="text-sm font-mono text-energy uppercase tracking-[0.2em]">
+                <span className="text-xs sm:text-sm font-mono text-energy uppercase tracking-[0.2em]">
                   For Homes
                 </span>
               </div>
 
-              <h2 className="text-5xl md:text-6xl font-light text-foreground leading-tight tracking-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-foreground leading-tight tracking-tight">
                 Your home.
                 <br />
                 Your rules.
@@ -336,9 +336,9 @@ const Index = () => {
       </section>
 
       {/* 5️⃣ For Businesses (C&I) */}
-      <section className="py-40 bg-background">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section className="py-16 sm:py-24 md:py-32 lg:py-40 bg-background">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 md:gap-16 items-center">
             
             {/* Content */}
             <div className="space-y-8">

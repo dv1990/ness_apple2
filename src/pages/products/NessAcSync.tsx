@@ -15,16 +15,16 @@ const NessAcSync = () => {
   return (
     <Layout>
       {/* 1. HERO - The Promise */}
-      <section className="min-h-screen bg-[#0B1220] text-white px-6 sm:px-8 relative overflow-hidden flex items-center justify-center">
+      <section className="min-h-[80vh] sm:min-h-screen bg-[#0B1220] text-white px-6 sm:px-8 relative overflow-hidden flex items-center justify-center py-12 sm:py-0">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0B1220] via-[#0B1220]/95 to-[#0B1220]"></div>
         
-        <div className="max-w-6xl mx-auto relative z-10 py-20 text-center">
-          <div className="space-y-12 animate-fade-in">
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[1.05] tracking-tight font-light">
+        <div className="max-w-6xl mx-auto relative z-10 py-12 sm:py-20 text-center">
+          <div className="space-y-8 sm:space-y-12 animate-fade-in">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl leading-[1.05] tracking-tight font-light">
               Power That Scales<br />With You.
             </h1>
             
-            <p className="text-2xl sm:text-3xl text-white/70 font-light leading-relaxed max-w-4xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/70 font-light leading-relaxed max-w-4xl mx-auto">
               A modular battery with a built-in inverter.<br />
               Add one. Or two. Or more.<br />
               Plug in and grow your power, your way.
@@ -46,10 +46,10 @@ const NessAcSync = () => {
               5 kWh per pack. 3.3 kW built in. Infinite calm.
             </p>
 
-            <div className="pt-8">
+            <div className="pt-6 sm:pt-8">
               <Button 
                 size="lg"
-                className="bg-[#00C853] hover:bg-[#00C853]/90 text-white px-12 py-7 rounded-full text-lg font-medium shadow-lg shadow-[#00C853]/20"
+                className="bg-[#00C853] hover:bg-[#00C853]/90 text-white px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-7 rounded-full text-base sm:text-lg font-medium shadow-lg shadow-[#00C853]/20"
                 onClick={() => document.getElementById('configurator')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Configure Your System
@@ -61,9 +61,9 @@ const NessAcSync = () => {
       </section>
 
       {/* 2. THE OPPORTUNITY - Your Solar Could Do More */}
-      <section className="py-32 bg-background">
+      <section className="py-16 sm:py-24 md:py-32 bg-background">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-12 md:gap-16 items-center">
             <div className="aspect-[4/3] bg-gradient-to-br from-amber-500/10 to-amber-600/10 rounded-3xl overflow-hidden">
               <div className="w-full h-full flex items-center justify-center p-8">
                 <div className="text-center space-y-4">

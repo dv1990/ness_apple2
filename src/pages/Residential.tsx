@@ -24,21 +24,21 @@ const Residential = () => {
   return (
     <Layout>
       {/* Minimalist Hero Section */}
-      <section className="min-h-screen bg-background flex items-center">
-        <div className="max-w-[1600px] mx-auto px-8 w-full">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+      <section className="min-h-[80vh] sm:min-h-screen bg-background flex items-center py-12 sm:py-0">
+        <div className="max-w-[1600px] mx-auto px-6 sm:px-8 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 md:gap-20 items-center">
             
             {/* Left Content */}
-            <div className="space-y-12">
+            <div className="space-y-8 sm:space-y-12">
               <div className="inline-flex items-center space-x-2">
                 <div className="w-1 h-1 rounded-full bg-primary"></div>
-                <span className="text-sm font-mono text-muted-foreground uppercase tracking-[0.2em]">
+                <span className="text-xs sm:text-sm font-mono text-muted-foreground uppercase tracking-[0.2em]">
                   Residential Energy Storage
                 </span>
               </div>
 
-              <div className="space-y-8">
-                <h1 className="font-sf text-6xl md:text-8xl font-extralight text-foreground leading-[0.8] tracking-tight">
+              <div className="space-y-6 sm:space-y-8">
+                <h1 className="font-sf text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extralight text-foreground leading-[0.85] tracking-tight">
                   The backup power
                   <br />
                   <span className="text-muted-foreground/60">that never fails</span>
@@ -49,8 +49,8 @@ const Residential = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-6">
-                <Button className="bg-foreground text-background hover:bg-foreground/90 px-8 py-4 rounded-full font-medium text-lg">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                <Button className="bg-foreground text-background hover:bg-foreground/90 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium text-base sm:text-lg">
                   Explore NESS PRO
                 </Button>
                 <button className="group inline-flex items-center space-x-3 text-muted-foreground hover:text-foreground transition-colors duration-300">
@@ -91,8 +91,8 @@ const Residential = () => {
       </section>
 
       {/* Journey Selector Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-b from-background via-[hsl(var(--muted)/0.2)] to-background">
-        <div className="container mx-auto max-w-7xl px-6">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-b from-background via-[hsl(var(--muted)/0.2)] to-background">
+        <div className="container mx-auto max-w-7xl px-6 sm:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Find your way to effortless power.
@@ -102,7 +102,7 @@ const Residential = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {/* Card 1 - Solar Owner */}
             <div className="group relative bg-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border/50 hover:border-primary/20 hover:shadow-primary/10">
               <div className="mb-6 h-48 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl flex items-center justify-center">

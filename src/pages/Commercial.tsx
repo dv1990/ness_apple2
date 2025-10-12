@@ -123,32 +123,32 @@ const Commercial = () => {
   return (
     <Layout>
       {/* Simplified Hero - Business Problem First */}
-      <section className="min-h-screen bg-background flex items-center">
-        <div className="max-w-5xl mx-auto px-8 w-full text-center">
-          <div className="space-y-16">
+      <section className="min-h-[80vh] sm:min-h-screen bg-background flex items-center py-12 sm:py-0">
+        <div className="max-w-5xl mx-auto px-6 sm:px-8 w-full text-center">
+          <div className="space-y-12 sm:space-y-16">
             
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               <div className="inline-flex items-center space-x-2">
                 <div className="w-1 h-1 rounded-full bg-primary"></div>
-                <span className="text-sm font-mono text-muted-foreground uppercase tracking-[0.2em]">
+                <span className="text-xs sm:text-sm font-mono text-muted-foreground uppercase tracking-[0.2em]">
                   Commercial & Industrial
                 </span>
               </div>
 
-              <h1 className="font-sf text-6xl md:text-8xl font-extralight text-foreground leading-[0.85] tracking-tight">
+              <h1 className="font-sf text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extralight text-foreground leading-[0.85] tracking-tight">
                 Never lose business
                 <br />
                 <span className="text-primary font-medium">to power failures.</span>
               </h1>
               
-              <p className="text-2xl font-light text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg sm:text-xl md:text-2xl font-light text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 While your competitors scramble during outages, your operations continue seamlessly.
                 <br />
                 <span className="text-foreground font-medium">This is the NESS advantage.</span>
               </p>
             </div>
 
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-6 text-xl font-medium rounded-2xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-500">
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 text-base sm:text-lg md:text-xl font-medium rounded-2xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-500">
               Secure Your Operations
               <ArrowRight className="w-6 h-6 ml-4" />
             </Button>
@@ -157,8 +157,8 @@ const Commercial = () => {
       </section>
 
       {/* Progressive Disclosure - The Business Problem */}
-      <LazySection sectionName="problem" className="py-40 bg-muted/10">
-        <div className="max-w-5xl mx-auto px-8 text-center">
+      <LazySection sectionName="problem" className="py-16 sm:py-24 md:py-32 lg:py-40 bg-muted/10">
+        <div className="max-w-5xl mx-auto px-6 sm:px-8 text-center">
           
           <div className="space-y-16">
             <div className="space-y-8">

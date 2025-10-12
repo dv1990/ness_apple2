@@ -4,8 +4,8 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram } from "luc
 const Footer = () => {
   return (
     <footer className="bg-foreground text-background border-t border-border/10">
-      <div className="max-w-7xl mx-auto px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 py-12 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-semibold mb-4">NESS</h3>
@@ -116,10 +116,10 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-background/10">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="pt-6 sm:pt-8 border-t border-background/10">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6">
             {/* Legal Links */}
-            <div className="flex flex-wrap gap-6 text-sm text-background/60">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 text-xs sm:text-sm text-background/60">
               <Link to="/privacy" className="hover:text-background transition-colors">
                 Privacy Policy
               </Link>

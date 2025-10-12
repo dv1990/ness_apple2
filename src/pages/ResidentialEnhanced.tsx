@@ -9,25 +9,25 @@ const ResidentialEnhanced = () => {
   return (
     <Layout>
       {/* 1. HERO - The Vision */}
-      <section className="min-h-[90vh] bg-background px-6 sm:px-8 relative overflow-hidden flex items-center">
+      <section className="min-h-[80vh] sm:min-h-[90vh] bg-background px-6 sm:px-8 relative overflow-hidden flex items-center py-12 sm:py-0">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5"></div>
         
-        <div className="max-w-5xl mx-auto relative z-10 py-20">
-          <div className="space-y-8 animate-fade-in">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.1] tracking-tight font-light text-foreground">
+        <div className="max-w-5xl mx-auto relative z-10 py-12 sm:py-20">
+          <div className="space-y-6 sm:space-y-8 animate-fade-in">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.1] tracking-tight font-light text-foreground">
               Imagine a home<br />that powers<br />
               <span className="text-primary font-normal">itself.</span>
             </h1>
             
-            <p className="text-xl sm:text-2xl text-muted-foreground font-light leading-relaxed max-w-3xl">
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light leading-relaxed max-w-3xl">
               No waiting for the grid. No generator noise. No compromise.
               <br />Just pure, quiet independence—every single day.
             </p>
 
-            <div className="pt-6">
+            <div className="pt-4 sm:pt-6">
               <Button 
                 size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-6 rounded-full text-lg font-medium"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 sm:px-10 py-4 sm:py-6 rounded-full text-base sm:text-lg font-medium"
                 onClick={() => document.getElementById('vision')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Discover How
@@ -38,16 +38,16 @@ const ResidentialEnhanced = () => {
       </section>
 
       {/* 2. THE POSSIBILITY - What You Could Gain */}
-      <section id="vision" className="py-32 bg-gradient-to-b from-background to-muted/10">
+      <section id="vision" className="py-16 sm:py-24 md:py-32 bg-gradient-to-b from-background to-muted/10">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
-          <div className="text-center mb-20 space-y-6">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl leading-tight tracking-tight text-foreground font-light">
+          <div className="text-center mb-12 sm:mb-16 md:mb-20 space-y-4 sm:space-y-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight text-foreground font-light">
               Picture your life<br />
               <span className="text-primary font-normal">truly powered by the sun.</span>
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {/* Freedom */}
             <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-10 border border-primary/20 hover:border-primary/40 transition-all">
               <div className="space-y-6">
