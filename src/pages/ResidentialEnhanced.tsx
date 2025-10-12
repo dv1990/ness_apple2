@@ -37,9 +37,9 @@ const ResidentialEnhanced = () => {
         </div>
       </section>
 
-      {/* Find Your Way Section - Refined Aesthetics */}
+      {/* Find Your Way Section - Three Equal Options */}
       <section className="py-32 md:py-48 bg-gradient-to-b from-background via-background to-muted/10">
-        <div className="container mx-auto max-w-[1200px] px-8">
+        <div className="container mx-auto max-w-[1400px] px-8">
           
           {/* Heading */}
           <div className="text-center mb-24 md:mb-36">
@@ -49,8 +49,69 @@ const ResidentialEnhanced = () => {
             <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-primary/40 to-transparent mx-auto mt-8"></div>
           </div>
 
-          {/* Hero Card - Complete System */}
-          <div className="mb-16 md:mb-20">
+          <div className="space-y-16 md:space-y-24">
+            
+            {/* Option 1 - Add Storage to Existing Solar */}
+            <div className="group relative bg-gradient-to-br from-card via-card to-muted/5 rounded-[2rem] border border-border/60 overflow-hidden hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5">
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="grid md:grid-cols-5 gap-0 relative">
+                {/* Left - Content */}
+                <div className="md:col-span-3 p-12 md:p-20 flex flex-col justify-center">
+                  
+                  <h3 className="text-5xl md:text-6xl font-light mb-8 tracking-tight leading-[1.1] text-foreground">
+                    Already have solar panels?
+                  </h3>
+                  
+                  <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed mb-12 max-w-lg">
+                    Let the sun also work for your home! Add batteries.
+                    <br />
+                    <span className="text-primary">NESS AC SYNC series is here to support.</span>
+                  </p>
+                  
+                  <div className="flex items-center gap-8 mb-12 pb-12 border-b border-border/40">
+                    <div>
+                      <div className="text-3xl font-light text-foreground mb-1">Store</div>
+                      <div className="text-xs text-muted-foreground uppercase tracking-wider">Solar Energy</div>
+                    </div>
+                    <div className="w-px h-12 bg-border/40"></div>
+                    <div>
+                      <div className="text-3xl font-light text-foreground mb-1">Use</div>
+                      <div className="text-xs text-muted-foreground uppercase tracking-wider">Anytime</div>
+                    </div>
+                    <div className="w-px h-12 bg-border/40"></div>
+                    <div>
+                      <div className="text-3xl font-light text-foreground mb-1">Save</div>
+                      <div className="text-xs text-muted-foreground uppercase tracking-wider">More</div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <Button 
+                      size="lg"
+                      className="h-16 px-12 text-base font-medium rounded-full group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-300"
+                    >
+                      <span>Get Started</span>
+                      <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </div>
+                </div>
+                
+                {/* Right - Visual */}
+                <div className="md:col-span-2 bg-gradient-to-br from-amber-500/5 to-amber-600/5 p-12 md:p-16 flex items-center justify-center min-h-[320px] md:min-h-[500px] relative overflow-hidden">
+                  <div className="absolute inset-0 bg-grid-white/[0.02]"></div>
+                  <div className="relative z-10">
+                    <div className="w-40 h-40 rounded-[2rem] bg-gradient-to-br from-amber-500/10 via-amber-500/5 to-transparent flex items-center justify-center border border-amber-500/10 backdrop-blur-sm shadow-2xl">
+                      <svg className="w-20 h-20 text-amber-600/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={0.75}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Option 2 - Complete System */}
             <div className="group relative bg-gradient-to-br from-card via-card to-muted/5 rounded-[2rem] border border-border/60 overflow-hidden hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
@@ -63,11 +124,13 @@ const ResidentialEnhanced = () => {
                   </div>
                   
                   <h3 className="text-5xl md:text-6xl font-light mb-8 tracking-tight leading-[1.1] text-foreground">
-                    Solar + Battery
+                    Begin to own your energy.
                   </h3>
                   
                   <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed mb-12 max-w-lg">
-                    Complete independence. Generate your power. Store it. Use it whenever you need.
+                    Complete installation of solar and battery.
+                    <br />
+                    <span className="text-primary">NESS AIO and NESS PRO batteries are here for you.</span>
                   </p>
                   
                   <div className="flex items-center gap-8 mb-12 pb-12 border-b border-border/40">
@@ -111,42 +174,66 @@ const ResidentialEnhanced = () => {
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Alternative Options */}
-          <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
-            
-            {/* Option 1 - Add Storage */}
-            <button className="group text-left p-8 md:p-10 bg-card/50 backdrop-blur-sm rounded-2xl border border-border/40 hover:border-border/70 hover:bg-card transition-all duration-300 hover:shadow-lg">
-              <div className="flex items-center gap-5">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500/10 to-amber-600/5 flex items-center justify-center flex-shrink-0 border border-amber-500/10 group-hover:scale-105 transition-transform duration-300">
-                  <svg className="w-7 h-7 text-amber-600/70 dark:text-amber-500/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
+            {/* Option 3 - Backup Only */}
+            <div className="group relative bg-gradient-to-br from-card via-card to-muted/5 rounded-[2rem] border border-border/60 overflow-hidden hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="grid md:grid-cols-5 gap-0 relative">
+                {/* Left - Content */}
+                <div className="md:col-span-3 p-12 md:p-20 flex flex-col justify-center">
+                  
+                  <h3 className="text-5xl md:text-6xl font-light mb-8 tracking-tight leading-[1.1] text-foreground">
+                    Need uninterrupted backup?
+                  </h3>
+                  
+                  <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed mb-12 max-w-lg">
+                    <span className="text-primary">NESS UPS is your guardian.</span>
+                    <br />
+                    Power when you need it most.
+                  </p>
+                  
+                  <div className="flex items-center gap-8 mb-12 pb-12 border-b border-border/40">
+                    <div>
+                      <div className="text-3xl font-light text-foreground mb-1">12h</div>
+                      <div className="text-xs text-muted-foreground uppercase tracking-wider">Backup</div>
+                    </div>
+                    <div className="w-px h-12 bg-border/40"></div>
+                    <div>
+                      <div className="text-3xl font-light text-foreground mb-1">10ms</div>
+                      <div className="text-xs text-muted-foreground uppercase tracking-wider">Switch</div>
+                    </div>
+                    <div className="w-px h-12 bg-border/40"></div>
+                    <div>
+                      <div className="text-3xl font-light text-foreground mb-1">Instant</div>
+                      <div className="text-xs text-muted-foreground uppercase tracking-wider">Protection</div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <Button 
+                      size="lg"
+                      className="h-16 px-12 text-base font-medium rounded-full group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-300"
+                    >
+                      <span>Get Started</span>
+                      <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </div>
                 </div>
-                <div className="flex-1 min-w-0">
-                  <h4 className="text-xl md:text-2xl font-light mb-1.5 text-foreground">Add Storage</h4>
-                  <p className="text-sm text-muted-foreground/70 font-light">Already have solar panels</p>
+                
+                {/* Right - Visual */}
+                <div className="md:col-span-2 bg-gradient-to-br from-blue-500/5 to-blue-600/5 p-12 md:p-16 flex items-center justify-center min-h-[320px] md:min-h-[500px] relative overflow-hidden">
+                  <div className="absolute inset-0 bg-grid-white/[0.02]"></div>
+                  <div className="relative z-10">
+                    <div className="w-40 h-40 rounded-[2rem] bg-gradient-to-br from-blue-500/10 via-blue-500/5 to-transparent flex items-center justify-center border border-blue-500/10 backdrop-blur-sm shadow-2xl">
+                      <svg className="w-20 h-20 text-blue-600/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={0.75}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
-                <ArrowRight className="w-5 h-5 text-muted-foreground/30 group-hover:text-foreground/60 group-hover:translate-x-1.5 transition-all duration-300 flex-shrink-0" />
               </div>
-            </button>
-
-            {/* Option 2 - Backup Only */}
-            <button className="group text-left p-8 md:p-10 bg-card/50 backdrop-blur-sm rounded-2xl border border-border/40 hover:border-border/70 hover:bg-card transition-all duration-300 hover:shadow-lg">
-              <div className="flex items-center gap-5">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/10 to-blue-600/5 flex items-center justify-center flex-shrink-0 border border-blue-500/10 group-hover:scale-105 transition-transform duration-300">
-                  <svg className="w-7 h-7 text-blue-600/70 dark:text-blue-500/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h4 className="text-xl md:text-2xl font-light mb-1.5 text-foreground">Backup Only</h4>
-                  <p className="text-sm text-muted-foreground/70 font-light">Just need power backup</p>
-                </div>
-                <ArrowRight className="w-5 h-5 text-muted-foreground/30 group-hover:text-foreground/60 group-hover:translate-x-1.5 transition-all duration-300 flex-shrink-0" />
-              </div>
-            </button>
+            </div>
 
           </div>
 
