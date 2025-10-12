@@ -57,7 +57,7 @@ const ResidentialEnhanced = () => {
               </div>
               
               <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">
-                Your sun deserves to work from home.
+                Already have solar? Add battery storage.
               </h3>
               
               <p className="text-muted-foreground mb-4 leading-relaxed">
