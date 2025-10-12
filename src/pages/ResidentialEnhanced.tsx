@@ -37,52 +37,73 @@ const ResidentialEnhanced = () => {
         </div>
       </section>
 
-      {/* Find Your Way Section - Jobs Simplicity */}
-      <section className="py-32 md:py-48 bg-background">
+      {/* Find Your Way Section - Refined Aesthetics */}
+      <section className="py-32 md:py-48 bg-gradient-to-b from-background via-background to-muted/10">
         <div className="container mx-auto max-w-[1200px] px-8">
           
           {/* Heading */}
-          <div className="text-center mb-20 md:mb-32">
-            <h2 className="text-5xl md:text-7xl font-light mb-8 tracking-tight text-foreground">
+          <div className="text-center mb-24 md:mb-36">
+            <h2 className="text-5xl md:text-7xl font-light mb-6 tracking-tight text-foreground leading-[1.1]">
               Choose your path.
             </h2>
+            <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-primary/40 to-transparent mx-auto mt-8"></div>
           </div>
 
           {/* Hero Card - Complete System */}
-          <div className="mb-12 md:mb-16">
-            <div className="bg-card rounded-3xl border border-border/50 overflow-hidden hover:border-border transition-colors duration-300">
-              <div className="grid md:grid-cols-2 gap-0">
+          <div className="mb-16 md:mb-20">
+            <div className="group relative bg-gradient-to-br from-card via-card to-muted/5 rounded-[2rem] border border-border/60 overflow-hidden hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="grid md:grid-cols-5 gap-0 relative">
                 {/* Left - Content */}
-                <div className="p-12 md:p-16 flex flex-col justify-center">
-                  <div className="inline-flex items-center gap-2 mb-8">
-                    <div className="w-2 h-2 rounded-full bg-primary"></div>
-                    <span className="text-sm text-muted-foreground uppercase tracking-wider">Recommended</span>
+                <div className="md:col-span-3 p-12 md:p-20 flex flex-col justify-center">
+                  <div className="inline-flex items-center gap-3 mb-10">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></div>
+                    <span className="text-xs text-muted-foreground uppercase tracking-[0.2em] font-medium">Recommended for most homes</span>
                   </div>
                   
-                  <h3 className="text-4xl md:text-5xl font-light mb-6 tracking-tight leading-tight">
+                  <h3 className="text-5xl md:text-6xl font-light mb-8 tracking-tight leading-[1.1] text-foreground">
                     Solar + Battery
                   </h3>
                   
-                  <p className="text-xl text-muted-foreground font-light leading-relaxed mb-12">
-                    Complete independence.<br />
-                    Generate your power. Store it. Use it.
+                  <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed mb-12 max-w-lg">
+                    Complete independence. Generate your power. Store it. Use it whenever you need.
                   </p>
+                  
+                  <div className="flex items-center gap-8 mb-12 pb-12 border-b border-border/40">
+                    <div>
+                      <div className="text-3xl font-light text-foreground mb-1">24/7</div>
+                      <div className="text-xs text-muted-foreground uppercase tracking-wider">Power</div>
+                    </div>
+                    <div className="w-px h-12 bg-border/40"></div>
+                    <div>
+                      <div className="text-3xl font-light text-foreground mb-1">Zero</div>
+                      <div className="text-xs text-muted-foreground uppercase tracking-wider">Bills</div>
+                    </div>
+                    <div className="w-px h-12 bg-border/40"></div>
+                    <div>
+                      <div className="text-3xl font-light text-foreground mb-1">Silent</div>
+                      <div className="text-xs text-muted-foreground uppercase tracking-wider">Operation</div>
+                    </div>
+                  </div>
                   
                   <div>
                     <Button 
                       size="lg"
-                      className="h-14 px-10 text-base font-medium rounded-2xl"
+                      className="h-16 px-12 text-base font-medium rounded-full group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-300"
                     >
-                      Get Started
+                      <span>Get Started</span>
+                      <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </div>
                 </div>
                 
                 {/* Right - Visual */}
-                <div className="bg-muted/20 p-12 md:p-16 flex items-center justify-center min-h-[300px] md:min-h-[400px]">
-                  <div className="relative">
-                    <div className="w-32 h-32 rounded-3xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center border border-primary/20">
-                      <svg className="w-16 h-16 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+                <div className="md:col-span-2 bg-gradient-to-br from-muted/30 to-muted/10 p-12 md:p-16 flex items-center justify-center min-h-[320px] md:min-h-[500px] relative overflow-hidden">
+                  <div className="absolute inset-0 bg-grid-white/[0.02]"></div>
+                  <div className="relative z-10">
+                    <div className="w-40 h-40 rounded-[2rem] bg-gradient-to-br from-primary/10 via-primary/5 to-transparent flex items-center justify-center border border-primary/10 backdrop-blur-sm shadow-2xl">
+                      <svg className="w-20 h-20 text-primary/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={0.75}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                       </svg>
                     </div>
@@ -92,38 +113,38 @@ const ResidentialEnhanced = () => {
             </div>
           </div>
 
-          {/* Alternative Options - Minimal */}
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {/* Alternative Options */}
+          <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
             
             {/* Option 1 - Add Storage */}
-            <button className="group text-left p-10 bg-card rounded-2xl border border-border/30 hover:border-border/60 transition-all duration-300">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-muted/50 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-foreground/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+            <button className="group text-left p-8 md:p-10 bg-card/50 backdrop-blur-sm rounded-2xl border border-border/40 hover:border-border/70 hover:bg-card transition-all duration-300 hover:shadow-lg">
+              <div className="flex items-center gap-5">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500/10 to-amber-600/5 flex items-center justify-center flex-shrink-0 border border-amber-500/10 group-hover:scale-105 transition-transform duration-300">
+                  <svg className="w-7 h-7 text-amber-600/70 dark:text-amber-500/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                   </svg>
                 </div>
-                <div className="flex-1">
-                  <h4 className="text-xl font-medium mb-2">Add Storage</h4>
-                  <p className="text-sm text-muted-foreground font-light">Already have solar panels</p>
+                <div className="flex-1 min-w-0">
+                  <h4 className="text-xl md:text-2xl font-light mb-1.5 text-foreground">Add Storage</h4>
+                  <p className="text-sm text-muted-foreground/70 font-light">Already have solar panels</p>
                 </div>
-                <ArrowRight className="w-5 h-5 text-muted-foreground/40 group-hover:text-foreground group-hover:translate-x-1 transition-all flex-shrink-0" />
+                <ArrowRight className="w-5 h-5 text-muted-foreground/30 group-hover:text-foreground/60 group-hover:translate-x-1.5 transition-all duration-300 flex-shrink-0" />
               </div>
             </button>
 
             {/* Option 2 - Backup Only */}
-            <button className="group text-left p-10 bg-card rounded-2xl border border-border/30 hover:border-border/60 transition-all duration-300">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-muted/50 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-foreground/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+            <button className="group text-left p-8 md:p-10 bg-card/50 backdrop-blur-sm rounded-2xl border border-border/40 hover:border-border/70 hover:bg-card transition-all duration-300 hover:shadow-lg">
+              <div className="flex items-center gap-5">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/10 to-blue-600/5 flex items-center justify-center flex-shrink-0 border border-blue-500/10 group-hover:scale-105 transition-transform duration-300">
+                  <svg className="w-7 h-7 text-blue-600/70 dark:text-blue-500/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <div className="flex-1">
-                  <h4 className="text-xl font-medium mb-2">Backup Only</h4>
-                  <p className="text-sm text-muted-foreground font-light">Just need power backup</p>
+                <div className="flex-1 min-w-0">
+                  <h4 className="text-xl md:text-2xl font-light mb-1.5 text-foreground">Backup Only</h4>
+                  <p className="text-sm text-muted-foreground/70 font-light">Just need power backup</p>
                 </div>
-                <ArrowRight className="w-5 h-5 text-muted-foreground/40 group-hover:text-foreground group-hover:translate-x-1 transition-all flex-shrink-0" />
+                <ArrowRight className="w-5 h-5 text-muted-foreground/30 group-hover:text-foreground/60 group-hover:translate-x-1.5 transition-all duration-300 flex-shrink-0" />
               </div>
             </button>
 
