@@ -14,6 +14,9 @@ import CommercialEnhanced from "./pages/CommercialEnhanced";
 import TechnologyEnhanced from "./pages/TechnologyEnhanced";
 import ContactEnhanced from "./pages/ContactEnhanced";
 
+// Product pages - Lazy loaded
+const NessAcSync = lazy(() => import("./pages/products/NessAcSync"));
+
 // Secondary pages - Lazy loaded
 const TrueWarranty = lazy(() => import("./pages/TrueWarranty"));
 const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
@@ -72,6 +75,7 @@ const App = () => {
           <Route path="/technology" element={<TechnologyEnhanced />} />
           <Route path="/warranty" element={<TrueWarranty />} />
           <Route path="/find-installer" element={<FindInstaller />} />
+          <Route path="/products/ness-ac-sync" element={<NessAcSync />} />
           
           {/* Company Routes */}
           <Route path="/company/about" element={<About />} />

@@ -159,7 +159,11 @@ const ResidentialEnhanced = () => {
                     <span className="text-xs text-muted-foreground uppercase tracking-wider">Investment</span>
                     <span className="text-3xl font-light">₹3.2L</span>
                   </div>
-                  <Button variant="outline" className="w-full rounded-full py-3 font-medium">
+                  <Button 
+                    variant="outline" 
+                    className="w-full rounded-full py-3 font-medium"
+                    onClick={() => window.location.href = '/products/ness-ac-sync'}
+                  >
                     Configure AC SYNC
                   </Button>
                 </div>
