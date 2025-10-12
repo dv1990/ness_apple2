@@ -43,44 +43,45 @@ const Index = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-5xl mx-auto px-8 text-center">
-          <div className="space-y-12 sm:space-y-16 animate-fade-in">
-            <div className="space-y-6 sm:space-y-8">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-foreground leading-tight tracking-tight">
-                Power. On your terms.
-                <br />
-                On your roof.
-                <br />
-                <span className="text-energy font-medium">In your hands.</span>
+        <div className="relative z-10 max-w-6xl mx-auto px-8 text-center">
+          <div className="space-y-16 sm:space-y-24 animate-fade-in">
+            
+            {/* The Opening - Bold Truth */}
+            <div className="space-y-12">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extralight text-foreground leading-[1.1] tracking-tight">
+                The grid is a lie<br />you pay for<br />every month.
               </h1>
               
-              <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Welcome to energy independence.
+              <p className="text-2xl sm:text-3xl md:text-4xl font-extralight text-muted-foreground/80 max-w-4xl mx-auto leading-relaxed">
+                Time to own the truth.
               </p>
             </div>
 
-            {/* Proof Numbers - Big and Bold */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto py-6 sm:py-8">
-              <div className="space-y-2">
-                <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-energy">100+</div>
-                <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider">MWh Delivered</div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-energy">2</div>
-                <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider">Warranty Claims in 3 Years</div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-energy">1,000</div>
-                <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider">Own Their Power</div>
+            {/* The Proof - Whispered, Not Shouted */}
+            <div className="max-w-4xl mx-auto">
+              <div className="inline-flex flex-col sm:flex-row items-center gap-6 sm:gap-12 text-muted-foreground/60 text-sm font-light">
+                <span className="flex items-center gap-2">
+                  <span className="text-3xl font-extralight text-energy">100+</span>
+                  <span className="text-xs uppercase tracking-wider">MWh delivered</span>
+                </span>
+                <span className="hidden sm:block text-muted-foreground/20">·</span>
+                <span className="flex items-center gap-2">
+                  <span className="text-3xl font-extralight text-energy">2</span>
+                  <span className="text-xs uppercase tracking-wider">warranty claims, 3 years</span>
+                </span>
+                <span className="hidden sm:block text-muted-foreground/20">·</span>
+                <span className="flex items-center gap-2">
+                  <span className="text-3xl font-extralight text-energy">1,000</span>
+                  <span className="text-xs uppercase tracking-wider">people free</span>
+                </span>
               </div>
             </div>
 
-            {/* Single CTA */}
-            <div className="pt-4">
+            {/* The Invitation - Impossible to Refuse */}
+            <div className="pt-8">
               <Link to="/residential">
-                <Button size="lg" className="bg-energy hover:bg-energy-dark text-primary-foreground px-12 py-6 text-xl font-medium rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
-                  Own Your Power
-                  <ArrowRight className="w-6 h-6 ml-3" />
+                <Button size="lg" className="bg-energy hover:bg-energy-dark text-primary-foreground px-16 py-7 text-xl font-light rounded-full shadow-2xl hover:shadow-energy/20 transform hover:scale-105 transition-all duration-500">
+                  Join them
                 </Button>
               </Link>
             </div>
@@ -88,100 +89,91 @@ const Index = () => {
         </div>
       </section>
 
-      {/* WHY NOW? - Urgency Section */}
-      <section className="py-16 sm:py-24 md:py-32 bg-gradient-to-b from-background to-muted/30 border-y border-border">
-        <div className="max-w-5xl mx-auto px-6 sm:px-8">
-          <div className="space-y-20 text-center">
-            {/* The Truth */}
-            <div className="space-y-6 sm:space-y-8">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-foreground leading-tight">
-                Every summer gets hotter.
-                <br />
-                Every power bill gets higher.
-                <br />
-                Every outage lasts longer.
-              </h2>
-            </div>
-
-            {/* The Moment - Visceral Scene */}
-            <div className="max-w-3xl mx-auto space-y-4 sm:space-y-6">
-              <p className="text-lg sm:text-xl md:text-2xl font-light text-muted-foreground leading-relaxed italic">
-                It's 2 AM. The AC stops. You wake up sweating.
-                <br />
-                Your security cameras: offline. Your internet: dead.
-                <br />
-                The fridge hums back to life at 6 AM.
-                <br />
-                <span className="text-foreground not-italic">Another night. Another disruption.</span>
+      {/* THE SCENE - Visceral Truth */}
+      <section className="py-32 md:py-48 bg-gradient-to-b from-background via-muted/10 to-background">
+        <div className="max-w-4xl mx-auto px-8">
+          <div className="space-y-32 text-center">
+            
+            {/* The Moment */}
+            <div className="space-y-12">
+              <p className="text-3xl sm:text-4xl md:text-5xl font-extralight text-foreground leading-tight italic">
+                2:47 AM.
               </p>
-            </div>
-
-            {/* The Divide */}
-            <div className="py-8">
-              <div className="inline-block px-12 py-4 border-y border-border">
-                <p className="text-2xl md:text-3xl font-light text-muted-foreground">
-                  Some wait. <span className="text-energy font-medium">Some act.</span>
+              <div className="space-y-8 max-w-2xl mx-auto">
+                <p className="text-xl sm:text-2xl font-light text-muted-foreground leading-relaxed">
+                  The AC dies. You wake up drenched.
+                  <br />
+                  Your cameras: dark. Your router: dead.
+                  <br />
+                  The baby's monitor: silent.
+                </p>
+                <p className="text-2xl sm:text-3xl font-extralight text-foreground/90 leading-tight pt-8">
+                  At 6 AM, everything hums back.<br />
+                  <span className="text-muted-foreground">Like nothing happened.</span>
                 </p>
               </div>
             </div>
 
-            {/* The Reality - Clean Typography */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 pt-6 sm:pt-8 max-w-4xl mx-auto">
-              <div className="space-y-3">
-                <div className="text-3xl font-light text-foreground">₹8,000<span className="text-muted-foreground">/mo</span></div>
-                <div className="text-sm text-muted-foreground font-light leading-relaxed">
-                  Your neighbor's grid bill.
+            {/* The Question */}
+            <div className="py-12">
+              <div className="inline-block px-16 py-6 border border-border/30 rounded-full">
+                <p className="text-xl md:text-2xl font-extralight text-muted-foreground">
+                  How many more nights?
+                </p>
+              </div>
+            </div>
+
+            {/* The Truth - Stark Numbers */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-16 max-w-5xl mx-auto">
+              <div className="space-y-4">
+                <div className="text-5xl font-extralight text-energy">46°C</div>
+                <div className="text-sm text-muted-foreground/60 font-light leading-relaxed">
+                  Delhi, last May.
                   <br />
-                  And rising.
+                  The grid blinked first.
                 </div>
               </div>
-              <div className="space-y-3">
-                <div className="text-3xl font-light text-foreground">46°C</div>
-                <div className="text-sm text-muted-foreground font-light leading-relaxed">
-                  Delhi, May 2024.
+              <div className="space-y-4">
+                <div className="text-5xl font-extralight text-energy">₹96,000</div>
+                <div className="text-sm text-muted-foreground/60 font-light leading-relaxed">
+                  What you'll pay the grid
                   <br />
-                  Grid couldn't keep up.
+                  next year. Minimum.
                 </div>
               </div>
-              <div className="space-y-3">
-                <div className="text-3xl font-light text-foreground">6 hours</div>
-                <div className="text-sm text-muted-foreground font-light leading-relaxed">
-                  Average outage time.
+              <div className="space-y-4">
+                <div className="text-5xl font-extralight text-energy">6 hours</div>
+                <div className="text-sm text-muted-foreground/60 font-light leading-relaxed">
+                  Average blackout.
                   <br />
-                  When you need power most.
+                  When you need it most.
                 </div>
               </div>
             </div>
 
-            {/* The Cost of Waiting */}
-            <div className="pt-8 border-t border-border max-w-3xl mx-auto">
-              <p className="text-xl font-light text-energy">
-                Own your power. Before the grid owns you.
+            {/* The Line They'll Remember */}
+            <div className="pt-16 max-w-3xl mx-auto border-t border-border/30">
+              <p className="text-3xl md:text-4xl font-extralight text-energy italic leading-relaxed">
+                "The grid doesn't care if you're awake."
+              </p>
+              <p className="text-lg text-muted-foreground/50 font-light pt-6">
+                But you can.
               </p>
             </div>
 
-            {/* The Choice */}
-            <div className="pt-4">
-              <Link to="/residential">
-                <Button size="lg" className="bg-energy hover:bg-energy-dark text-primary-foreground px-12 py-6 text-xl font-medium rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
-                  Take Control Now
-                  <ArrowRight className="w-6 h-6 ml-3" />
-                </Button>
-              </Link>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* 2️⃣ Real Stories - Aspiration & Independence */}
-      <section className="py-16 sm:py-24 md:py-32 lg:py-40 bg-muted/20">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8">
-          <div className="text-center mb-12 sm:mb-16 md:mb-20">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6 sm:mb-8">
-              They own their power. <span className="text-energy font-semibold">You can too.</span>
+      {/* THE PEOPLE WHO LEFT */}
+      <section className="py-32 md:py-48 bg-muted/20">
+        <div className="max-w-6xl mx-auto px-8">
+          <div className="text-center mb-24">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-extralight text-foreground mb-8 leading-tight">
+              1,000 people stopped<br />waiting for the grid.
             </h2>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Energy independence isn't just efficient. It's thrilling. It's liberating. It's joy.
+            <p className="text-xl sm:text-2xl text-muted-foreground/70 font-light max-w-2xl mx-auto">
+              Here's what freedom sounds like.
             </p>
           </div>
 
@@ -194,22 +186,24 @@ const Index = () => {
                   <span className="text-sm text-muted-foreground font-medium uppercase tracking-wider">Modern Villa, Gurgaon</span>
                 </div>
                 
-                <blockquote className="text-2xl font-light text-foreground leading-tight italic">
-                  "It's been over two years since I switched to Nunam batteries — no resets, no shutdowns, just flawless reliability. From home security to consistent power for all household equipment, Nunam has given me complete peace of mind."
+                <blockquote className="text-2xl md:text-3xl font-extralight text-foreground leading-relaxed italic">
+                  "Two years. Not one reset. Not one worry."
                 </blockquote>
                 
-                <p className="text-muted-foreground leading-relaxed">
-                  Dr Mohan Krishna Ranganath, Transformed his house to off-grid living. Sarjapura, Bengaluru
+                <p className="text-base text-muted-foreground/60 font-light leading-relaxed pt-4">
+                  Dr. Mohan Krishna Ranganath
+                  <br />
+                  <span className="text-sm text-muted-foreground/40">Sarjapura, Bengaluru · Off-grid since 2022</span>
                 </p>
 
-                <div className="grid grid-cols-2 gap-6 pt-4 border-t border-border">
-                  <div className="space-y-2 pt-4">
-                    <div className="text-4xl font-light text-energy">₹22K</div>
-                    <div className="text-sm text-muted-foreground">Monthly savings</div>
+                <div className="grid grid-cols-2 gap-8 pt-8 mt-8 border-t border-border/30">
+                  <div className="space-y-3">
+                    <div className="text-5xl font-extralight text-energy">₹22K</div>
+                    <div className="text-xs text-muted-foreground/60 uppercase tracking-wider">Saved monthly</div>
                   </div>
-                  <div className="space-y-2 pt-4">
-                    <div className="text-4xl font-light text-energy">100%</div>
-                    <div className="text-sm text-muted-foreground">Energy independent</div>
+                  <div className="space-y-3">
+                    <div className="text-5xl font-extralight text-energy">100%</div>
+                    <div className="text-xs text-muted-foreground/60 uppercase tracking-wider">Independent</div>
                   </div>
                 </div>
               </div>
@@ -223,22 +217,24 @@ const Index = () => {
                   <span className="text-sm text-muted-foreground font-medium uppercase tracking-wider">EV Hub, Delhi</span>
                 </div>
                 
-                <blockquote className="text-2xl font-light text-foreground leading-tight italic">
-                  "We control our energy. Not the other way around."
+                <blockquote className="text-2xl md:text-3xl font-extralight text-foreground leading-relaxed italic">
+                  "We own our energy now. The grid just watches."
                 </blockquote>
                 
-                <p className="text-muted-foreground leading-relaxed">
-                  500 kWh system, Complete energy autonomy
+                <p className="text-base text-muted-foreground/60 font-light leading-relaxed pt-4">
+                  EV Charging Hub, Delhi
+                  <br />
+                  <span className="text-sm text-muted-foreground/40">500 kWh · Zero downtime</span>
                 </p>
 
-                <div className="grid grid-cols-2 gap-6 pt-4 border-t border-border">
-                  <div className="space-y-2 pt-4">
-                    <div className="text-4xl font-light text-energy">₹2.5L</div>
-                    <div className="text-sm text-muted-foreground">Monthly savings</div>
+                <div className="grid grid-cols-2 gap-8 pt-8 mt-8 border-t border-border/30">
+                  <div className="space-y-3">
+                    <div className="text-5xl font-extralight text-energy">₹2.5L</div>
+                    <div className="text-xs text-muted-foreground/60 uppercase tracking-wider">Saved monthly</div>
                   </div>
-                  <div className="space-y-2 pt-4">
-                    <div className="text-4xl font-light text-energy">30%</div>
-                    <div className="text-sm text-muted-foreground">Peak independence</div>
+                  <div className="space-y-3">
+                    <div className="text-5xl font-extralight text-energy">30%</div>
+                    <div className="text-xs text-muted-foreground/60 uppercase tracking-wider">Grid-free</div>
                   </div>
                 </div>
               </div>
@@ -294,39 +290,38 @@ const Index = () => {
                 </span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-foreground leading-tight tracking-tight">
-                Your home.
-                <br />
-                Your rules.
-                <br />
-                <span className="text-energy font-medium">Your power.</span>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-extralight text-foreground leading-tight tracking-tight">
+                Your roof.<br />
+                Your rules.<br />
+                <span className="text-energy font-light italic">Your freedom.</span>
               </h2>
 
-              <p className="text-xl text-muted-foreground font-light leading-relaxed">
-                Imagine waking up knowing the sun works for you. Your roof, your power, your freedom. That's not just luxury—that's joy.
+              <p className="text-xl md:text-2xl text-muted-foreground/70 font-extralight leading-relaxed">
+                Wake up knowing the sun works for you.<br />
+                That's not comfort. That's power.
               </p>
 
-              {/* Key Benefits */}
-              <div className="space-y-4 pt-4">
+              {/* Key Benefits - Minimal */}
+              <div className="space-y-5 pt-6">
                 <div className="flex items-start space-x-4">
-                  <CheckCircle className="w-6 h-6 text-energy flex-shrink-0 mt-1" />
-                  <div className="text-foreground">Complete energy autonomy. No compromises.</div>
+                  <div className="w-1 h-1 rounded-full bg-energy flex-shrink-0 mt-3" />
+                  <div className="text-lg text-foreground/80 font-light">Never notice an outage again</div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <CheckCircle className="w-6 h-6 text-energy flex-shrink-0 mt-1" />
-                  <div className="text-foreground">Silent, clean, effortless. Pure luxury.</div>
+                  <div className="w-1 h-1 rounded-full bg-energy flex-shrink-0 mt-3" />
+                  <div className="text-lg text-foreground/80 font-light">Silent. Clean. Invisible.</div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <CheckCircle className="w-6 h-6 text-energy flex-shrink-0 mt-1" />
-                  <div className="text-foreground">Control your energy from anywhere.</div>
+                  <div className="w-1 h-1 rounded-full bg-energy flex-shrink-0 mt-3" />
+                  <div className="text-lg text-foreground/80 font-light">Control from anywhere</div>
                 </div>
               </div>
 
-              <div className="pt-6">
+              <div className="pt-10">
                 <Link to="/residential">
-                  <Button size="lg" className="bg-energy hover:bg-energy-dark text-primary-foreground px-10 py-5 text-lg font-medium rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                    Own Your Home's Power
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                  <Button size="lg" className="bg-energy hover:bg-energy-dark text-primary-foreground px-12 py-6 text-lg font-light rounded-full shadow-lg hover:shadow-xl transition-all duration-500">
+                    For Your Home
+                    <ArrowRight className="w-5 h-5 ml-3" />
                   </Button>
                 </Link>
               </div>
@@ -349,50 +344,40 @@ const Index = () => {
                 </span>
               </div>
 
-              <h2 className="text-5xl md:text-6xl font-light text-foreground leading-tight tracking-tight">
-                Your business.
-                <br />
-                Your energy.
-                <br />
-                <span className="text-primary font-medium">Your future.</span>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-extralight text-foreground leading-tight tracking-tight">
+                Your business.<br />
+                Your energy.<br />
+                <span className="text-primary font-light italic">Your advantage.</span>
               </h2>
 
-              <p className="text-xl text-muted-foreground font-light leading-relaxed">
-                From factories to resorts. You control your energy. Your tariffs. Your independence.
-              </p>
+               <p className="text-xl md:text-2xl text-muted-foreground/70 font-extralight leading-relaxed">
+                 When downtime costs more than power.
+               </p>
 
-              {/* Key Benefits */}
-              <div className="space-y-4 pt-4">
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <div className="text-foreground">Modular systems from 50 kWh to 2 MWh.</div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <div className="text-foreground">Peak shaving up to 30%. Lower your tariffs.</div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <div className="text-foreground">20 ms transfer for uninterrupted operations.</div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <div className="text-foreground">Remote monitoring and diagnostics.</div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <div className="text-foreground">10-year extendable warranty.</div>
-                </div>
-              </div>
+               {/* Key Benefits - Minimal */}
+               <div className="space-y-5 pt-6">
+                 <div className="flex items-start space-x-4">
+                   <div className="w-1 h-1 rounded-full bg-primary flex-shrink-0 mt-3" />
+                   <div className="text-lg text-foreground/80 font-light">50 kWh to 2 MWh. Scale as you grow.</div>
+                 </div>
+                 <div className="flex items-start space-x-4">
+                   <div className="w-1 h-1 rounded-full bg-primary flex-shrink-0 mt-3" />
+                   <div className="text-lg text-foreground/80 font-light">Peak shaving. Lower tariffs. Higher profits.</div>
+                 </div>
+                 <div className="flex items-start space-x-4">
+                   <div className="w-1 h-1 rounded-full bg-primary flex-shrink-0 mt-3" />
+                   <div className="text-lg text-foreground/80 font-light">20 ms switchover. Invisible protection.</div>
+                 </div>
+               </div>
 
-              <div className="pt-6">
-                <Link to="/commercial">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-5 text-lg font-medium rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                    Own Your Business's Power
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Button>
-                </Link>
-              </div>
+               <div className="pt-10">
+                 <Link to="/commercial">
+                   <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-6 text-lg font-light rounded-full shadow-lg hover:shadow-xl transition-all duration-500">
+                     For Your Business
+                     <ArrowRight className="w-5 h-5 ml-3" />
+                   </Button>
+                 </Link>
+               </div>
             </div>
 
             {/* Visual */}
@@ -406,64 +391,58 @@ const Index = () => {
       </section>
 
 
-      {/* 6️⃣ Why NESS Lasts Longer */}
-      <section className="py-40 bg-muted/30">
+      {/* THE DECADE BATTERY */}
+      <section className="py-32 md:py-48 bg-muted/30">
         <div className="max-w-5xl mx-auto px-8 text-center">
-          <div className="space-y-16">
-            <div className="space-y-6">
-              <h2 className="text-5xl md:text-6xl font-light text-foreground leading-tight">
-                A battery that outlasts your car loan.
-                <br />
-                <span className="text-energy font-semibold">10+ years of power that simply works.</span>
+          <div className="space-y-24">
+            <div className="space-y-12">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight text-foreground leading-tight">
+                10 years.<br />
+                Zero drama.
               </h2>
-              <p className="text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light italic">
-                10 years of mornings without worry.
-                <br />
-                10 years of nights without disruption.
-                <br />
-                <span className="text-foreground not-italic">Peace of mind that compounds.</span>
+              <p className="text-2xl md:text-3xl text-muted-foreground/60 font-extralight italic max-w-3xl mx-auto leading-relaxed">
+                While others replace batteries,<br />
+                you'll be sipping coffee.<br />
+                <span className="text-foreground not-italic">Unbothered.</span>
               </p>
             </div>
 
-            {/* The Reality of Longevity */}
-            <div className="max-w-3xl mx-auto space-y-4 pt-4">
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                While others replace batteries every 3 years, you'll be sipping coffee on your terrace.
-                <br />
-                <span className="text-foreground font-medium">Unbothered.</span>
-              </p>
+            <div className="grid md:grid-cols-3 gap-12 pt-8 max-w-4xl mx-auto">
+              <div className="space-y-6">
+                <div className="w-14 h-14 rounded-full bg-energy/10 flex items-center justify-center mx-auto">
+                  <Shield className="w-7 h-7 text-energy" />
+                </div>
+                <h3 className="text-xl font-light text-foreground">LiFePO₄</h3>
+                <p className="text-base text-muted-foreground/70 font-light leading-relaxed">
+                  The chemistry that ages<br />like fine wine.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <div className="w-14 h-14 rounded-full bg-energy/10 flex items-center justify-center mx-auto">
+                  <Zap className="w-7 h-7 text-energy" />
+                </div>
+                <h3 className="text-xl font-light text-foreground">Cell Matching</h3>
+                <p className="text-base text-muted-foreground/70 font-light leading-relaxed">
+                  Every cell perfect.<br />40% longer life.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <div className="w-14 h-14 rounded-full bg-energy/10 flex items-center justify-center mx-auto">
+                  <Award className="w-7 h-7 text-energy" />
+                </div>
+                <h3 className="text-xl font-light text-foreground">Battle-Tested</h3>
+                <p className="text-base text-muted-foreground/70 font-light leading-relaxed">
+                  3 years at 50°C.<br />Zero failures.
+                </p>
+              </div>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 pt-8">
-              <div className="space-y-4 p-8 bg-card rounded-2xl border border-border hover:shadow-lg transition-all duration-300">
-                <div className="w-12 h-12 rounded-xl bg-energy/10 flex items-center justify-center mx-auto">
-                  <Shield className="w-6 h-6 text-energy" />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground">Safer Chemistry</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  While lithium-ion batteries degrade, yours stays strong. <span className="text-foreground">A decade later.</span>
-                </p>
-              </div>
-
-              <div className="space-y-4 p-8 bg-card rounded-2xl border border-border hover:shadow-lg transition-all duration-300">
-                <div className="w-12 h-12 rounded-xl bg-energy/10 flex items-center justify-center mx-auto">
-                  <Zap className="w-6 h-6 text-energy" />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground">Precision Engineering</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Every cell matched perfectly. <span className="text-foreground">40% longer life.</span> Zero compromises.
-                </p>
-              </div>
-
-              <div className="space-y-4 p-8 bg-card rounded-2xl border border-border hover:shadow-lg transition-all duration-300">
-                <div className="w-12 h-12 rounded-xl bg-energy/10 flex items-center justify-center mx-auto">
-                  <Award className="w-6 h-6 text-energy" />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground">India Proven</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  50°C summers. 3 years. <span className="text-foreground">Zero failures.</span> Real conditions, real proof.
-                </p>
-              </div>
+            <div className="pt-12 border-t border-border/20 max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground/40 font-light italic">
+                The best battery is the one you forget you have.
+              </p>
             </div>
           </div>
         </div>
@@ -473,21 +452,20 @@ const Index = () => {
       {/* Why NESS Component - Manufacturing */}
       <WhyNess />
 
-      {/* 8️⃣ Final CTA Section */}
-      <section className="py-32 bg-background">
-        <div className="max-w-4xl mx-auto px-8 text-center">
-          <h2 className="text-5xl md:text-6xl font-light text-foreground mb-6 leading-tight">
-            Ready to feel the thrill of true independence?
+      {/* THE CHOICE */}
+      <section className="py-32 md:py-40 bg-background">
+        <div className="max-w-4xl mx-auto px-8 text-center space-y-16">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-extralight text-foreground leading-tight">
+            1,001?
           </h2>
-          <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Your journey to energy freedom starts with one conversation.
+          <p className="text-xl md:text-2xl text-muted-foreground/60 font-light max-w-2xl mx-auto leading-relaxed">
+            The next person to own their power could be you.
           </p>
           
-          <div className="pt-4">
+          <div className="pt-8">
             <Link to="/contact">
-              <Button size="lg" className="bg-energy hover:bg-energy-dark text-primary-foreground px-12 py-6 text-xl font-medium rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
-                Begin Your Journey
-                <ArrowRight className="w-6 h-6 ml-3" />
+              <Button size="lg" className="bg-energy hover:bg-energy-dark text-primary-foreground px-16 py-7 text-xl font-light rounded-full shadow-2xl hover:shadow-energy/20 transform hover:scale-105 transition-all duration-500">
+                Let's talk
               </Button>
             </Link>
           </div>
