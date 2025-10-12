@@ -90,6 +90,105 @@ const Residential = () => {
         </div>
       </section>
 
+      {/* Journey Selector Section */}
+      <section className="py-20 md:py-32 bg-gradient-to-b from-background via-[hsl(var(--muted)/0.2)] to-background">
+        <div className="container mx-auto max-w-7xl px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Find your way to effortless power.
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Every home's journey is unique — choose the path that feels like yours.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {/* Card 1 - Solar Owner */}
+            <div className="group relative bg-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border/50 hover:border-primary/20 hover:shadow-primary/10">
+              <div className="mb-6 h-48 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl flex items-center justify-center">
+                <span className="text-6xl">☀️</span>
+              </div>
+              
+              <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">
+                Your sun deserves to work from home.
+              </h3>
+              
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                You already create clean power. Add NESS to store it — and let every ray light your nights.
+              </p>
+              
+              <p className="text-sm text-muted-foreground/80 mb-6 italic">
+                Store what you generate. Use what you store.
+              </p>
+              
+              <Button 
+                className="w-full group-hover:shadow-glow transition-all duration-300"
+                size="lg"
+              >
+                Keep My Sunlight Home →
+              </Button>
+            </div>
+
+            {/* Card 2 - Hybrid Home */}
+            <div className="group relative bg-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border/50 hover:border-primary/20 hover:shadow-primary/10">
+              <div className="mb-6 h-48 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl flex items-center justify-center">
+                <span className="text-6xl">🏠</span>
+              </div>
+              
+              <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">
+                Begin your home's solar story.
+              </h3>
+              
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                Go fully hybrid with solar + NESS. Generate, store, and use clean energy the way nature intended.
+              </p>
+              
+              <p className="text-sm text-muted-foreground/80 mb-6 italic">
+                Complete energy independence starts here.
+              </p>
+              
+              <Button 
+                className="w-full group-hover:shadow-glow transition-all duration-300"
+                size="lg"
+              >
+                Build My Self-Powered Home →
+              </Button>
+            </div>
+
+            {/* Card 3 - Backup */}
+            <div className="group relative bg-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-border/50 hover:border-primary/20 hover:shadow-primary/10">
+              <div className="mb-6 h-48 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl flex items-center justify-center">
+                <span className="text-6xl">⚡</span>
+              </div>
+              
+              <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">
+                Stay calm when the grid isn't.
+              </h3>
+              
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                Start simple with a quiet NESS backup. Reliable, ready, and the first step toward independence.
+              </p>
+              
+              <p className="text-sm text-muted-foreground/80 mb-6 italic">
+                Peace of mind in 10 milliseconds.
+              </p>
+              
+              <Button 
+                className="w-full group-hover:shadow-glow transition-all duration-300"
+                size="lg"
+              >
+                Secure My Home Backup →
+              </Button>
+            </div>
+          </div>
+
+          <p className="text-center text-lg text-muted-foreground/80 italic max-w-3xl mx-auto leading-relaxed">
+            Whichever path you choose, you're not just powering your home —<br />
+            you're gifting your children a cleaner, brighter tomorrow.
+          </p>
+        </div>
+      </section>
+
       {/* Core Value - Single Benefit Focus */}
       <section className="py-40 bg-muted/10">
         <div className="max-w-[1600px] mx-auto px-8">
