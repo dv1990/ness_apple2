@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { WebPImage } from "@/components/ui/webp-image";
-import { ArrowRight, Zap, Shield, Smartphone, Battery, Leaf, Volume2 } from "lucide-react";
+import { ArrowRight, Zap, Battery, Leaf } from "lucide-react";
 
 const NessAcSync = () => {
   const [packs, setPacks] = useState(1);
@@ -15,7 +14,7 @@ const NessAcSync = () => {
 
   return (
     <Layout>
-      {/* Section 1: HERO */}
+      {/* 1. HERO - The Promise */}
       <section className="min-h-screen bg-[#0B1220] text-white px-6 sm:px-8 relative overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0B1220] via-[#0B1220]/95 to-[#0B1220]"></div>
         
@@ -26,7 +25,8 @@ const NessAcSync = () => {
             </h1>
             
             <p className="text-2xl sm:text-3xl text-white/70 font-light leading-relaxed max-w-4xl mx-auto">
-              A modular battery with a built-in inverter. Add one. Or two. Or more.<br />
+              A modular battery with a built-in inverter.<br />
+              Add one. Or two. Or more.<br />
               Plug in and grow your power, your way.
             </p>
 
@@ -46,29 +46,21 @@ const NessAcSync = () => {
               5 kWh per pack. 3.3 kW built in. Infinite calm.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+            <div className="pt-8">
               <Button 
                 size="lg"
-                className="bg-[#00C853] hover:bg-[#00C853]/90 text-white px-12 py-7 rounded-full text-lg font-medium"
+                className="bg-[#00C853] hover:bg-[#00C853]/90 text-white px-12 py-7 rounded-full text-lg font-medium shadow-lg shadow-[#00C853]/20"
                 onClick={() => document.getElementById('configurator')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Design My Power Setup
+                Configure Your System
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button 
-                variant="outline"
-                size="lg"
-                className="border-white/20 text-white hover:bg-white/10 px-12 py-7 rounded-full text-lg font-medium"
-                onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                See How It Works
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 2: The Why */}
+      {/* 2. THE OPPORTUNITY - Your Solar Could Do More */}
       <section className="py-32 bg-background">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -78,136 +70,30 @@ const NessAcSync = () => {
                   <div className="w-24 h-24 mx-auto rounded-full bg-amber-500/20 flex items-center justify-center">
                     <Leaf className="w-12 h-12 text-amber-600" />
                   </div>
-                  <p className="text-sm text-muted-foreground uppercase tracking-wider">Solar Energy</p>
+                  <p className="text-sm text-muted-foreground uppercase tracking-wider">Your Solar</p>
                 </div>
               </div>
             </div>
 
             <div className="space-y-8">
               <h2 className="text-4xl sm:text-5xl md:text-6xl leading-tight tracking-tight font-light text-foreground">
-                Your Solar<br />Already Works.
+                Your solar creates<br />power all day.
               </h2>
               
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                You already have rooftop solar feeding energy to the grid. But when the sun sets or the grid goes down, that power disappears.
-              </p>
-
               <p className="text-xl text-foreground leading-relaxed">
-                The NESS AC SYNC changes that — a plug-and-play battery that captures your extra energy and keeps life flowing when everything else stops.
+                NESS AC SYNC lets you <span className="text-primary font-medium">keep it</span> for the evening.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Section 3: Product Reveal */}
-      <section className="py-32 bg-[#0B1220] text-white">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8 text-center">
-          <div className="space-y-16">
-            <div className="space-y-6">
-              <h2 className="text-5xl sm:text-6xl font-light">Every pack has its own 3.3 kW inverter.</h2>
-              <p className="text-2xl text-white/70 font-light">Works alone. Works together. Syncs automatically.</p>
-            </div>
-
-            {/* Pack Visualization */}
-            <div className="grid md:grid-cols-3 gap-8">
-              {[1, 2, 3].map((num) => (
-                <div key={num} className="space-y-4 animate-fade-in" style={{ animationDelay: `${num * 0.2}s` }}>
-                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-[#00C853]/50 transition-all duration-500">
-                    <div className="w-24 h-32 mx-auto rounded-xl bg-gradient-to-br from-white/10 to-[#00C853]/20 flex items-center justify-center border border-white/20">
-                      <Battery className="w-12 h-12 text-[#00C853]" />
-                    </div>
-                  </div>
-                  <p className="text-3xl font-light">{num * 5} kWh</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 4: Plug-and-Play */}
-      <section className="py-32 bg-background">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="aspect-square bg-gradient-to-br from-muted/30 to-muted/50 rounded-3xl overflow-hidden flex items-center justify-center p-12">
-              <div className="relative">
-                <div className="w-48 h-48 rounded-full bg-gradient-to-br from-[#00C853]/20 to-primary/10 flex items-center justify-center border-4 border-[#00C853]/30">
-                  <Zap className="w-24 h-24 text-[#00C853]" />
-                </div>
-                <div className="absolute inset-0 rounded-full border-2 border-[#00C853]/20 animate-pulse"></div>
-              </div>
-            </div>
-
-            <div className="space-y-8">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl leading-tight tracking-tight font-light text-foreground">
-                No Rewiring.<br />
-                No Upgrades.<br />
-                No Hassle.
-              </h2>
-              
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Mount it. Plug it in. Watch it sync.<br />
-                Each pack brings its own inverter — no external electronics.<br />
-                The moment it connects, it becomes part of your home grid.
-              </p>
-
-              <p className="text-lg text-muted-foreground italic">
-                "Freedom shouldn't need a manual."
+                Plug-and-play battery that captures your extra energy. No rewiring. No upgrades. Just more independence.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 5: Smart. Silent. Scalable. */}
-      <section className="py-32 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8">
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-card rounded-2xl p-8 text-center space-y-4 border border-border/50 hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center">
-                <Zap className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold">Adaptive Power Flow</h3>
-              <p className="text-sm text-muted-foreground">Intelligent energy management</p>
-            </div>
-
-            <div className="bg-card rounded-2xl p-8 text-center space-y-4 border border-border/50 hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center">
-                <Shield className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold">Instant Backup</h3>
-              <p className="text-sm text-muted-foreground">&lt;10 ms transfer time</p>
-            </div>
-
-            <div className="bg-card rounded-2xl p-8 text-center space-y-4 border border-border/50 hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center">
-                <Smartphone className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold">App Control & Insights</h3>
-              <p className="text-sm text-muted-foreground">Monitor from anywhere</p>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 text-center">
-            <div className="space-y-2">
-              <Battery className="w-10 h-10 mx-auto text-primary" />
-              <p className="text-sm font-medium">LiFePO₄ Safety</p>
-            </div>
-            <div className="space-y-2">
-              <Volume2 className="w-10 h-10 mx-auto text-primary" />
-              <p className="text-sm font-medium">Whisper Quiet</p>
-            </div>
-            <div className="space-y-2">
-              <Shield className="w-10 h-10 mx-auto text-primary" />
-              <p className="text-sm font-medium">15-Year Warranty</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 6: How It Works */}
-      <section id="how-it-works" className="py-32 bg-background">
+      {/* 3. HOW IT WORKS - The Rhythm */}
+      <section className="py-32 bg-gradient-to-b from-background to-muted/10">
         <div className="max-w-6xl mx-auto px-6 sm:px-8 text-center">
           <div className="space-y-16">
             <h2 className="text-4xl sm:text-5xl md:text-6xl leading-tight tracking-tight font-light text-foreground">
@@ -215,71 +101,104 @@ const NessAcSync = () => {
               <span className="text-primary">The rhythm of independence.</span>
             </h2>
 
-            <div className="grid md:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-4 gap-8 relative">
+              {/* Connecting Line */}
+              <div className="hidden md:block absolute top-1/3 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-primary/20 via-primary to-primary/20"></div>
+              
               {[
                 { icon: "☀️", label: "Solar creates power" },
                 { icon: "🏠", label: "NESS detects surplus" },
                 { icon: "⚡", label: "NESS stores it" },
                 { icon: "🌙", label: "Powers your home" }
               ].map((step, idx) => (
-                <div key={idx} className="space-y-4">
-                  <div className="text-6xl">{step.icon}</div>
+                <div key={idx} className="space-y-4 relative z-10">
+                  <div className="text-6xl mb-4">{step.icon}</div>
                   <p className="text-lg text-muted-foreground">{step.label}</p>
-                  {idx < 3 && <div className="hidden md:block absolute right-0 top-1/2 text-2xl text-muted-foreground">→</div>}
                 </div>
               ))}
             </div>
+
+            <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto pt-8">
+              No manual switching. No thinking. Just continuous, quiet power.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Section 7: Specs */}
-      <section className="py-32 bg-[#0B1220] text-white">
-        <div className="max-w-5xl mx-auto px-6 sm:px-8">
-          <h2 className="text-4xl sm:text-5xl font-light text-center mb-16">Technical Specifications</h2>
+      {/* 4. THE PRODUCT - Modularity + Simplicity */}
+      <section className="py-32 bg-background">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8">
           
-          <div className="grid md:grid-cols-2 gap-x-16 gap-y-6 text-lg">
-            <div className="flex justify-between border-b border-white/10 pb-4">
-              <span className="text-white/70">Capacity</span>
-              <span className="font-medium">5 kWh per pack (usable)</span>
+          {/* Modularity */}
+          <div className="text-center mb-20">
+            <h2 className="text-5xl sm:text-6xl font-light mb-8">Every pack has its own inverter.</h2>
+            <p className="text-2xl text-muted-foreground font-light">Works alone. Works together. Syncs automatically.</p>
+          </div>
+
+          {/* Pack Visualization */}
+          <div className="grid md:grid-cols-3 gap-8 mb-20">
+            {[1, 2, 3].map((num) => (
+              <div key={num} className="space-y-4 animate-fade-in" style={{ animationDelay: `${num * 0.15}s` }}>
+                <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-12 border border-primary/20 hover:border-primary/40 hover:shadow-lg transition-all duration-500">
+                  <div className="w-24 h-32 mx-auto rounded-xl bg-gradient-to-br from-primary/10 to-primary/20 flex items-center justify-center border border-primary/30">
+                    <Battery className="w-12 h-12 text-primary" />
+                  </div>
+                </div>
+                <p className="text-3xl font-light text-center">{num * 5} kWh</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Simplicity */}
+          <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+            <div className="aspect-square bg-gradient-to-br from-muted/30 to-muted/50 rounded-3xl overflow-hidden flex items-center justify-center p-12">
+              <div className="relative">
+                <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center border-4 border-primary/30">
+                  <Zap className="w-24 h-24 text-primary" />
+                </div>
+                <div className="absolute inset-0 rounded-full border-2 border-primary/20 animate-pulse"></div>
+              </div>
             </div>
-            <div className="flex justify-between border-b border-white/10 pb-4">
-              <span className="text-white/70">Inverter</span>
-              <span className="font-medium">3.3 kW per pack</span>
-            </div>
-            <div className="flex justify-between border-b border-white/10 pb-4">
-              <span className="text-white/70">Expandability</span>
-              <span className="font-medium">Up to 3 packs</span>
-            </div>
-            <div className="flex justify-between border-b border-white/10 pb-4">
-              <span className="text-white/70">Chemistry</span>
-              <span className="font-medium">LiFePO₄</span>
-            </div>
-            <div className="flex justify-between border-b border-white/10 pb-4">
-              <span className="text-white/70">Efficiency</span>
-              <span className="font-medium">&gt; 90%</span>
-            </div>
-            <div className="flex justify-between border-b border-white/10 pb-4">
-              <span className="text-white/70">Backup Transfer</span>
-              <span className="font-medium">&lt; 10 ms</span>
-            </div>
-            <div className="flex justify-between border-b border-white/10 pb-4">
-              <span className="text-white/70">Mounting</span>
-              <span className="font-medium">Indoor / Outdoor (IP65)</span>
-            </div>
-            <div className="flex justify-between border-b border-white/10 pb-4">
-              <span className="text-white/70">Warranty</span>
-              <span className="font-medium">15 Years / 10,000 Cycles</span>
+
+            <div className="space-y-8">
+              <h2 className="text-4xl sm:text-5xl leading-tight tracking-tight font-light text-foreground">
+                No rewiring.<br />
+                No upgrades.<br />
+                No hassle.
+              </h2>
+              
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  <p className="text-lg text-muted-foreground">Mount it. Plug it in. Watch it sync.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  <p className="text-lg text-muted-foreground">Each pack brings its own inverter.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  <p className="text-lg text-muted-foreground">Instant backup. &lt;10 ms transfer time.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  <p className="text-lg text-muted-foreground">LiFePO₄ chemistry. 15-year warranty.</p>
+                </div>
+              </div>
+
+              <p className="text-lg text-muted-foreground italic pt-6">
+                "Freedom shouldn't need a manual."
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 8: Configurator */}
-      <section id="configurator" className="py-32 bg-background">
+      {/* 5. CONFIGURATOR - Your Perfect Size */}
+      <section id="configurator" className="py-32 bg-gradient-to-b from-muted/10 to-background">
         <div className="max-w-5xl mx-auto px-6 sm:px-8">
           <h2 className="text-4xl sm:text-5xl md:text-6xl leading-tight tracking-tight font-light text-center mb-16">
-            How Much Power<br />Fits Your Life?
+            How much power<br />fits your life?
           </h2>
 
           <div className="bg-card rounded-3xl p-12 border border-border/50 shadow-xl">
@@ -331,40 +250,62 @@ const NessAcSync = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Section 9: Real People */}
-      <section className="py-32 bg-muted/30">
-        <div className="max-w-4xl mx-auto px-6 sm:px-8">
-          <div className="bg-card/80 backdrop-blur-xl rounded-3xl p-12 md:p-16 border border-border/40 shadow-2xl">
-            <div className="space-y-8 text-center">
-              <p className="text-3xl sm:text-4xl text-foreground font-light leading-relaxed">
-                "We started with one NESS pack.<br />
-                Added a second when we bought our EV.<br />
-                It just worked."
-              </p>
-              <div className="pt-6">
-                <p className="text-xl font-medium text-foreground">Anita & Vikram</p>
-                <p className="text-lg text-muted-foreground">Hyderabad</p>
+          {/* Specs Footer - Subtle */}
+          <div className="mt-16 text-center">
+            <details className="text-sm text-muted-foreground">
+              <summary className="cursor-pointer hover:text-foreground transition-colors">Technical Specifications</summary>
+              <div className="grid md:grid-cols-2 gap-x-12 gap-y-3 text-left mt-8 max-w-3xl mx-auto">
+                <div className="flex justify-between border-b border-border/30 pb-2">
+                  <span>Capacity</span>
+                  <span className="font-medium">5 kWh per pack</span>
+                </div>
+                <div className="flex justify-between border-b border-border/30 pb-2">
+                  <span>Inverter</span>
+                  <span className="font-medium">3.3 kW per pack</span>
+                </div>
+                <div className="flex justify-between border-b border-border/30 pb-2">
+                  <span>Expandability</span>
+                  <span className="font-medium">Up to 3 packs</span>
+                </div>
+                <div className="flex justify-between border-b border-border/30 pb-2">
+                  <span>Chemistry</span>
+                  <span className="font-medium">LiFePO₄</span>
+                </div>
+                <div className="flex justify-between border-b border-border/30 pb-2">
+                  <span>Efficiency</span>
+                  <span className="font-medium">&gt; 90%</span>
+                </div>
+                <div className="flex justify-between border-b border-border/30 pb-2">
+                  <span>Backup Transfer</span>
+                  <span className="font-medium">&lt; 10 ms</span>
+                </div>
+                <div className="flex justify-between border-b border-border/30 pb-2">
+                  <span>Mounting</span>
+                  <span className="font-medium">Indoor / Outdoor (IP65)</span>
+                </div>
+                <div className="flex justify-between border-b border-border/30 pb-2">
+                  <span>Warranty</span>
+                  <span className="font-medium">15 Years / 10,000 Cycles</span>
+                </div>
               </div>
-            </div>
+            </details>
           </div>
         </div>
       </section>
 
-      {/* Section 10: Final CTA */}
+      {/* 6. FINAL CTA - One Clear Path */}
       <section className="py-32 bg-[#0B1220] text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#00C853]/10 to-transparent animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#00C853]/10 to-transparent"></div>
         
         <div className="max-w-4xl mx-auto px-6 sm:px-8 text-center relative z-10">
-          <div className="space-y-12">
-            <h2 className="text-5xl sm:text-6xl md:text-7xl leading-tight tracking-tight font-light">
-              Start With One.<br />
-              Grow Forever.
+          <div className="space-y-8">
+            <h2 className="text-5xl sm:text-6xl md:text-7xl leading-[1.1] tracking-tight font-light">
+              Start with one.<br />
+              <span className="text-[#00C853]">Grow forever.</span>
             </h2>
             
-            <p className="text-2xl text-white/70 font-light">
+            <p className="text-xl sm:text-2xl text-white/70 font-light leading-relaxed max-w-2xl mx-auto">
               NESS AC SYNC — Power that evolves with you.
             </p>
 
