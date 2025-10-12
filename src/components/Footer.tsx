@@ -16,8 +16,8 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-background/70">
                 <Mail className="w-4 h-4" />
-                <a href="mailto:info@ness.energy" className="hover:text-background transition-colors">
-                  info@ness.energy
+                <a href="mailto:contact@nunam.com" className="hover:text-background transition-colors">
+                  contact@nunam.com
                 </a>
               </div>
               <div className="flex items-center gap-3 text-background/70">
@@ -26,9 +26,13 @@ const Footer = () => {
                   +91 123 456 7890
                 </a>
               </div>
-              <div className="flex items-center gap-3 text-background/70">
-                <MapPin className="w-4 h-4" />
-                <span>Mumbai, India</span>
+              <div className="flex items-start gap-3 text-background/70">
+                <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
+                <span>
+                  Nunam Technologies India Private Limited<br />
+                  Plot no, 19 A, 3rd Cross, Veerasandra Industrial Area,<br />
+                  Electronic City - Phase 2, Bengaluru, Karnataka 560100
+                </span>
               </div>
             </div>
           </div>
