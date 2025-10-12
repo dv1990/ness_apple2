@@ -303,7 +303,7 @@ const ResidentialEnhanced = () => {
           <div className="bg-card/80 backdrop-blur-xl rounded-3xl p-12 md:p-16 border border-border/40 shadow-2xl">
             <div className="space-y-8">
               <p className="text-3xl sm:text-4xl md:text-5xl text-foreground font-light leading-[1.2]">
-                "We wanted our children to see sunlight as something we own, not something we waste."
+                "We want our children to see sunlight as something we preserve, not something we waste."
               </p>
               <div className="flex items-center gap-4 pt-6">
                 <div className="w-1 h-16 bg-primary/40 rounded-full"></div>
