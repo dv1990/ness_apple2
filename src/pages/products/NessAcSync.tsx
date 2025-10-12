@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Zap, Battery, Leaf } from "lucide-react";
+import { ArrowRight, Circle, Square } from "lucide-react";
 
 const NessAcSync = () => {
   const [packs, setPacks] = useState(1);
@@ -30,13 +30,20 @@ const NessAcSync = () => {
               Plug in and grow your power, your way.
             </p>
 
-            {/* Product Visual */}
+            {/* Product Visual - Abstract */}
             <div className="pt-12 pb-8">
-              <div className="relative w-full max-w-md mx-auto aspect-square">
+              <div className="relative w-full max-w-md mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#00C853]/20 to-transparent rounded-full blur-3xl"></div>
-                <div className="relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/10">
-                  <div className="w-32 h-40 mx-auto rounded-2xl bg-gradient-to-br from-white/10 via-[#00C853]/10 to-white/5 flex items-center justify-center border border-white/20">
-                    <Battery className="w-16 h-16 text-[#00C853]" />
+                <div className="relative aspect-square flex items-center justify-center">
+                  {/* Abstract modular representation */}
+                  <div className="grid grid-cols-3 gap-3 p-8">
+                    {[...Array(3)].map((_, i) => (
+                      <div 
+                        key={i} 
+                        className="w-16 h-20 rounded-lg bg-gradient-to-br from-white/20 to-white/5 border border-white/20"
+                        style={{ animationDelay: `${i * 0.2}s` }}
+                      />
+                    ))}
                   </div>
                 </div>
               </div>
@@ -64,13 +71,15 @@ const NessAcSync = () => {
       <section className="py-16 sm:py-24 md:py-32 bg-background">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-12 md:gap-16 items-center">
-            <div className="aspect-[4/3] bg-gradient-to-br from-amber-500/10 to-amber-600/10 rounded-3xl overflow-hidden">
+            <div className="aspect-[4/3] bg-gradient-to-br from-amber-500/5 to-amber-600/5 rounded-3xl overflow-hidden border border-amber-500/10">
               <div className="w-full h-full flex items-center justify-center p-8">
-                <div className="text-center space-y-4">
-                  <div className="w-24 h-24 mx-auto rounded-full bg-amber-500/20 flex items-center justify-center">
-                    <Leaf className="w-12 h-12 text-amber-600" />
+                <div className="text-center space-y-6">
+                  {/* Abstract solar representation */}
+                  <div className="relative w-32 h-32 mx-auto">
+                    <Circle className="w-32 h-32 text-amber-500/30 absolute" />
+                    <Circle className="w-20 h-20 text-amber-500/50 absolute top-6 left-6" />
+                    <Circle className="w-8 h-8 text-amber-500 absolute top-12 left-12" />
                   </div>
-                  <p className="text-sm text-muted-foreground uppercase tracking-wider">Your Solar</p>
                 </div>
               </div>
             </div>
@@ -101,19 +110,25 @@ const NessAcSync = () => {
               <span className="text-primary">The rhythm of independence.</span>
             </h2>
 
-            <div className="grid md:grid-cols-4 gap-8 relative">
-              {/* Connecting Line */}
-              <div className="hidden md:block absolute top-1/3 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-primary/20 via-primary to-primary/20"></div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 relative">
+              {/* Elegant connecting line */}
+              <div className="hidden md:block absolute top-12 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
               
               {[
-                { icon: "☀️", label: "Solar creates power" },
-                { icon: "🏠", label: "NESS detects surplus" },
-                { icon: "⚡", label: "NESS stores it" },
-                { icon: "🌙", label: "Powers your home" }
+                { label: "Solar creates", sublabel: "power" },
+                { label: "NESS detects", sublabel: "surplus" },
+                { label: "NESS stores", sublabel: "energy" },
+                { label: "Powers your", sublabel: "home" }
               ].map((step, idx) => (
-                <div key={idx} className="space-y-4 relative z-10">
-                  <div className="text-6xl mb-4">{step.icon}</div>
-                  <p className="text-lg text-muted-foreground">{step.label}</p>
+                <div key={idx} className="space-y-6 relative z-10">
+                  {/* Abstract minimal representation */}
+                  <div className="w-20 h-20 mx-auto rounded-full border border-primary/20 bg-primary/5 flex items-center justify-center">
+                    <div className="text-2xl font-light text-primary">{idx + 1}</div>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-base text-foreground font-light">{step.label}</p>
+                    <p className="text-base text-muted-foreground font-light">{step.sublabel}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -135,28 +150,36 @@ const NessAcSync = () => {
             <p className="text-2xl text-muted-foreground font-light">Works alone. Works together. Syncs automatically.</p>
           </div>
 
-          {/* Pack Visualization */}
-          <div className="grid md:grid-cols-3 gap-8 mb-20">
+          {/* Pack Visualization - Abstract & Elegant */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
             {[1, 2, 3].map((num) => (
-              <div key={num} className="space-y-4 animate-fade-in" style={{ animationDelay: `${num * 0.15}s` }}>
-                <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-12 border border-primary/20 hover:border-primary/40 hover:shadow-lg transition-all duration-500">
-                  <div className="w-24 h-32 mx-auto rounded-xl bg-gradient-to-br from-primary/10 to-primary/20 flex items-center justify-center border border-primary/30">
-                    <Battery className="w-12 h-12 text-primary" />
+              <div key={num} className="space-y-6 animate-fade-in" style={{ animationDelay: `${num * 0.15}s` }}>
+                <div className="bg-card/30 backdrop-blur-sm rounded-2xl p-12 border border-border/30 hover:border-primary/20 hover:shadow-lg transition-all duration-500 group">
+                  {/* Abstract modular units */}
+                  <div className="flex gap-2 justify-center">
+                    {[...Array(num)].map((_, i) => (
+                      <div 
+                        key={i}
+                        className="w-12 h-16 rounded-lg bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 group-hover:border-primary/40 transition-all"
+                      />
+                    ))}
                   </div>
                 </div>
-                <p className="text-3xl font-light text-center">{num * 5} kWh</p>
+                <p className="text-3xl font-light text-center text-foreground">{num * 5} kWh</p>
               </div>
             ))}
           </div>
 
-          {/* Simplicity */}
-          <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-            <div className="aspect-square bg-gradient-to-br from-muted/30 to-muted/50 rounded-3xl overflow-hidden flex items-center justify-center p-12">
-              <div className="relative">
-                <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center border-4 border-primary/30">
-                  <Zap className="w-24 h-24 text-primary" />
+          {/* Simplicity - Minimal Abstract Visualization */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center max-w-6xl mx-auto">
+            <div className="aspect-square bg-gradient-to-br from-muted/10 to-muted/5 rounded-3xl border border-border/20 overflow-hidden flex items-center justify-center p-12">
+              <div className="relative w-full h-full flex items-center justify-center">
+                {/* Abstract connection visualization */}
+                <div className="relative">
+                  <Square className="w-32 h-32 text-primary/30" />
+                  <Square className="w-32 h-32 text-primary/20 absolute top-4 left-4" />
+                  <Square className="w-32 h-32 text-primary/40 absolute -top-4 -left-4" />
                 </div>
-                <div className="absolute inset-0 rounded-full border-2 border-primary/20 animate-pulse"></div>
               </div>
             </div>
 
