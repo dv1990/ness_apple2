@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import nessCubeResort from "@/assets/ness-cube-resort.webp";
-import nessPodInstallation from "@/assets/ness-pod-installation.webp";
+import nessPodInstallation from "@/assets/ness-pod-installation-hero.webp";
 import manufacturingFacility from "@/assets/manufacturing-facility.jpg";
 import greenResort from "@/assets/green-resort.jpg";
 import dgReplacement from "@/assets/dg-replacement.jpg";
