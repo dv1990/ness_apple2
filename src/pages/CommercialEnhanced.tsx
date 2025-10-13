@@ -578,7 +578,7 @@ const CommercialEnhanced = () => {
               <Card className="bg-card/50 border-border/50 text-center">
                 <CardContent className="pt-8 space-y-3">
                   <Clock className="w-8 h-8 text-primary mx-auto" />
-                  <div className="text-4xl font-bold text-primary">10 years</div>
+                  <div className="text-4xl font-bold text-primary">15 years</div>
                   <div className="text-sm text-muted-foreground">Design life</div>
                 </CardContent>
               </Card>
