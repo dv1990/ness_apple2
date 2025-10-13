@@ -60,30 +60,50 @@ const CommercialEnhanced = () => {
         
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
+          {/* Animated background gradient */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-background to-background animate-pulse-slow" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
           
-          <div className="relative max-w-6xl mx-auto px-6 sm:px-8 text-center space-y-8 sm:space-y-12">
-            <div className="space-y-6 sm:space-y-8 animate-fade-in">
-              <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-light text-foreground leading-[0.95] tracking-tight">
-                Power that means business.
+          {/* Subtle grid overlay */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:64px_64px]" />
+          
+          <div className="relative max-w-7xl mx-auto px-6 sm:px-8 text-center space-y-12 sm:space-y-16">
+            <div className="space-y-8 sm:space-y-10 animate-fade-in">
+              {/* Premium headline with better kerning */}
+              <h1 className="text-6xl sm:text-8xl md:text-9xl font-extralight text-foreground leading-[0.9] tracking-tighter">
+                Power that<br />
+                <span className="font-light bg-gradient-to-br from-primary via-primary to-primary/60 bg-clip-text text-transparent">
+                  means business
+                </span>
               </h1>
-              <p className="text-xl sm:text-2xl md:text-3xl font-light text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-                Clean, quiet, intelligent energy for industries, resorts, and charging networks.
+              
+              <p className="text-xl sm:text-2xl md:text-3xl font-extralight text-muted-foreground/90 max-w-4xl mx-auto leading-relaxed tracking-wide">
+                Clean, quiet, intelligent energy for industries, resorts, and charging networks
               </p>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
-              <Badge variant="secondary" className="px-4 py-2 text-sm">LFP • 10,000+ cycles</Badge>
-              <Badge variant="secondary" className="px-4 py-2 text-sm">DG Replacement</Badge>
-              <Badge variant="secondary" className="px-4 py-2 text-sm">Solar + Grid Hybrid</Badge>
-              <Badge variant="secondary" className="px-4 py-2 text-sm">IP54 Outdoor</Badge>
+            {/* Premium badge pills with better spacing */}
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-5">
+              <Badge variant="secondary" className="px-5 py-2.5 text-sm font-light backdrop-blur-sm bg-secondary/50 border border-border/50">
+                LFP • 10,000+ cycles
+              </Badge>
+              <Badge variant="secondary" className="px-5 py-2.5 text-sm font-light backdrop-blur-sm bg-secondary/50 border border-border/50">
+                DG Replacement
+              </Badge>
+              <Badge variant="secondary" className="px-5 py-2.5 text-sm font-light backdrop-blur-sm bg-secondary/50 border border-border/50">
+                Solar + Grid Hybrid
+              </Badge>
+              <Badge variant="secondary" className="px-5 py-2.5 text-sm font-light backdrop-blur-sm bg-secondary/50 border border-border/50">
+                IP54 Outdoor
+              </Badge>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* Premium CTA buttons */}
+            <div className="flex flex-col sm:flex-row gap-5 justify-center pt-4">
               <Button 
                 size="lg"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 sm:px-12 py-6 rounded-2xl text-base sm:text-lg group"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 sm:px-16 py-7 rounded-full text-base sm:text-lg font-light group shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.02]"
               >
                 Start Your Transition
                 <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
@@ -92,7 +112,7 @@ const CommercialEnhanced = () => {
                 size="lg"
                 variant="outline"
                 onClick={() => document.getElementById('compare')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 sm:px-12 py-6 rounded-2xl text-base sm:text-lg"
+                className="border-border/50 backdrop-blur-sm bg-background/50 px-12 sm:px-16 py-7 rounded-full text-base sm:text-lg font-light hover:bg-secondary/50 transition-all hover:scale-[1.02]"
               >
                 Compare Systems
               </Button>
@@ -101,50 +121,60 @@ const CommercialEnhanced = () => {
         </section>
 
         {/* Small Industries Section */}
-        <section className="py-20 sm:py-32 bg-muted/30">
-          <div className="max-w-7xl mx-auto px-6 sm:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <section className="relative py-24 sm:py-40 overflow-hidden">
+          {/* Premium background with subtle gradient */}
+          <div className="absolute inset-0 bg-gradient-to-b from-muted/40 via-muted/20 to-background" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
+          
+          <div className="relative max-w-7xl mx-auto px-6 sm:px-8">
+            <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
               
-              <div className="space-y-6 sm:space-y-8">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-2">
-                    <Factory className="w-5 h-5 text-primary" />
-                    <span className="text-sm text-primary font-medium uppercase tracking-wide">
+              <div className="space-y-8 sm:space-y-10">
+                <div className="space-y-6">
+                  {/* Premium category label */}
+                  <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+                    <Factory className="w-4 h-4 text-primary" />
+                    <span className="text-xs text-primary font-medium uppercase tracking-wider">
                       Small-Scale Industries
                     </span>
                   </div>
-                  <h2 className="text-4xl sm:text-5xl md:text-6xl font-light text-foreground leading-tight tracking-tight">
+                  
+                  {/* Premium headline with better typography */}
+                  <h2 className="text-5xl sm:text-6xl md:text-7xl font-extralight text-foreground leading-[1.05] tracking-tighter">
                     When power fails,
                     <br />
-                    <span className="text-primary font-medium">reputation follows.</span>
+                    <span className="font-light bg-gradient-to-br from-primary to-primary/70 bg-clip-text text-transparent">
+                      reputation follows
+                    </span>
                   </h2>
                 </div>
                 
-                <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
+                <p className="text-xl sm:text-2xl font-light text-muted-foreground/90 leading-relaxed">
                   Every minute of downtime stops more than machines — it stops trust. 
-                  NESS keeps your production running through outages, shifts, and monsoons — 
+                  NESS keeps production running through outages, shifts, and monsoons — 
                   silently, reliably, endlessly.
                 </p>
 
-                <div className="space-y-4 pt-6">
-                  <div className="bg-card/50 rounded-xl p-4 border border-border/50">
-                    <div className="font-medium text-foreground mb-2">Tech Snapshot</div>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                        <span>150–1000 kWh (NESS CUBE)</span>
+                {/* Premium tech snapshot card */}
+                <div className="space-y-5 pt-4">
+                  <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-6 border border-border/50 shadow-lg">
+                    <div className="font-medium text-foreground mb-4 text-sm uppercase tracking-wide">Tech Snapshot</div>
+                    <ul className="space-y-3 text-base text-muted-foreground">
+                      <li className="flex items-start gap-3 group">
+                        <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                        <span className="font-light">150–1000 kWh (NESS CUBE)</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                        <span>&lt;50 ms seamless 3-phase transition</span>
+                      <li className="flex items-start gap-3 group">
+                        <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                        <span className="font-light">&lt;50 ms seamless 3-phase transition</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                        <span>Solar-hybrid EMS, IEC 62619 / UL 9540</span>
+                      <li className="flex items-start gap-3 group">
+                        <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                        <span className="font-light">Solar-hybrid EMS, IEC 62619 / UL 9540</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                        <span>Scalable racks, serviceable design</span>
+                      <li className="flex items-start gap-3 group">
+                        <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                        <span className="font-light">Scalable racks, serviceable design</span>
                       </li>
                     </ul>
                   </div>
@@ -153,7 +183,7 @@ const CommercialEnhanced = () => {
                 <Button 
                   size="lg"
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 rounded-2xl group"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-6 rounded-full font-light group shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.02]"
                 >
                   Keep Production Moving
                   <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
@@ -161,12 +191,17 @@ const CommercialEnhanced = () => {
               </div>
 
               <div className="order-first lg:order-last">
-                <div className="aspect-[4/3] bg-card rounded-3xl overflow-hidden border border-border shadow-xl">
-                  <img 
-                    src={manufacturingFacility}
-                    alt="Clean fabrication shop with NESS providing silent backup"
-                    className="w-full h-full object-cover"
-                  />
+                <div className="relative aspect-[4/3] group">
+                  {/* Glow effect behind image */}
+                  <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  
+                  <div className="relative aspect-[4/3] bg-card rounded-3xl overflow-hidden border border-border/50 shadow-2xl">
+                    <img 
+                      src={manufacturingFacility}
+                      alt="Clean fabrication shop with NESS providing silent backup"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
                 </div>
               </div>
 
