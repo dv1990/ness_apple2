@@ -96,23 +96,23 @@ const Index = () => {
 
       {/* 2. WHY NESS SECTION */}
       <LazySection>
-        <section className="relative py-40 bg-charcoal overflow-hidden">
-          {/* Subtle Ambient Glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-energy/5 rounded-full blur-[120px]"></div>
+        <section className="relative py-32 bg-gradient-radial from-charcoal via-charcoal to-graphite overflow-hidden">
+          {/* Ambient Glow */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-radial from-energy/10 to-transparent rounded-full blur-3xl"></div>
           
           <div className="relative z-10 max-w-7xl mx-auto px-8">
-            <div className="text-center mb-28 space-y-6">
-              <h2 className="text-display text-pearl font-light tracking-tight">
+            <div className="text-center mb-20">
+              <h2 className="text-5xl md:text-6xl font-light text-white mb-6 tracking-tight">
                 Why choose NESS?
               </h2>
-              <p className="text-body-large text-pearl/60 font-light max-w-2xl mx-auto">
+              <p className="text-xl text-pearl/70 font-light max-w-2xl mx-auto">
                 Engineered for excellence. Proven in India.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {whyNessFeatures.map((feature, index) => (
-                <WhyNessCard key={index} feature={feature} delay={index * 150} />
+                <WhyNessCard key={index} feature={feature} delay={index * 100} />
               ))}
             </div>
           </div>
@@ -121,18 +121,18 @@ const Index = () => {
 
       {/* 3. PRODUCT SHOWCASE SECTION */}
       <LazySection>
-        <section className="py-40 bg-pearl">
+        <section className="py-32 bg-white">
           <div className="max-w-7xl mx-auto px-8">
-            <div className="text-center mb-28 space-y-6">
-              <h2 className="text-display text-graphite font-light tracking-tight">
+            <div className="text-center mb-20">
+              <h2 className="text-5xl md:text-6xl font-light text-graphite mb-6 tracking-tight">
                 The NESS family
               </h2>
-              <p className="text-body-large text-graphite/50 font-light">
+              <p className="text-xl text-graphite/60 font-light">
                 Power solutions for every need
               </p>
             </div>
 
-            <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide -mx-8 px-8">
+            <div className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory scrollbar-hide">
               {products.map((product, index) => (
                 <ProductCard key={index} product={product} />
               ))}
@@ -143,18 +143,18 @@ const Index = () => {
 
       {/* 4. CONFIGURATOR / USE-CASE SELECTOR */}
       <LazySection>
-        <section className="py-40 bg-whisper">
+        <section className="py-32 bg-whisper">
           <div className="max-w-7xl mx-auto px-8">
-            <div className="text-center mb-28 space-y-6">
-              <h2 className="text-display text-graphite font-light tracking-tight">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl md:text-6xl font-light text-graphite mb-6 tracking-tight">
                 Find your solution
               </h2>
-              <p className="text-body-large text-graphite/50 font-light">
+              <p className="text-xl text-graphite/60 font-light">
                 Tell us about your energy needs
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
                 <UseCaseCard 
                   key={index} 
@@ -170,62 +170,62 @@ const Index = () => {
 
       {/* 5. EXPERIENCE NESS SECTION */}
       <LazySection>
-        <section className="py-40 bg-pearl">
+        <section className="py-32 bg-white">
           <div className="max-w-7xl mx-auto px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               {/* Left - Video */}
-              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-graphite shadow-lifted group cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-br from-energy/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              <div className="relative aspect-video rounded-3xl overflow-hidden bg-graphite shadow-lifted group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-br from-energy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-full bg-pearl/10 backdrop-blur-md flex items-center justify-center group-hover:scale-110 group-hover:bg-pearl/15 transition-all duration-700 border border-pearl/20">
-                    <Play className="w-9 h-9 text-pearl ml-1" />
+                  <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                    <Play className="w-10 h-10 text-white ml-1" />
                   </div>
                 </div>
                 <img 
                   src={heroHome} 
                   alt="NESS in action" 
-                  className="w-full h-full object-cover opacity-60"
+                  className="w-full h-full object-cover opacity-70"
                 />
               </div>
 
               {/* Right - Stats */}
-              <div className="space-y-16">
-                <div className="space-y-5">
-                  <h2 className="text-display text-graphite font-light tracking-tight">
+              <div className="space-y-12">
+                <div>
+                  <h2 className="text-5xl md:text-6xl font-light text-graphite mb-6 tracking-tight">
                     Experience NESS
                   </h2>
-                  <p className="text-body-large text-graphite/50 font-light">
+                  <p className="text-xl text-graphite/60 font-light">
                     Real performance. Real savings.
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-x-12 gap-y-16">
-                  <div className="space-y-4">
-                    <div className="text-display-medium font-light text-energy">
+                <div className="grid grid-cols-2 gap-10">
+                  <div className="space-y-3">
+                    <div className="text-7xl font-semibold text-energy">
                       <AnimatedCounter value={100} suffix="+" />
                     </div>
-                    <p className="text-body text-graphite/60 font-light">MWh Delivered</p>
+                    <p className="text-lg text-graphite/60 font-light">MWh Delivered</p>
                   </div>
 
-                  <div className="space-y-4">
-                    <div className="text-display-medium font-light text-energy">
+                  <div className="space-y-3">
+                    <div className="text-7xl font-semibold text-energy">
                       <AnimatedCounter value={1000} suffix="+" />
                     </div>
-                    <p className="text-body text-graphite/60 font-light">Happy Customers</p>
+                    <p className="text-lg text-graphite/60 font-light">Happy Customers</p>
                   </div>
 
-                  <div className="space-y-4">
-                    <div className="text-display-medium font-light text-energy">
+                  <div className="space-y-3">
+                    <div className="text-7xl font-semibold text-energy">
                       <AnimatedCounter value={99.9} decimals={1} suffix="%" />
                     </div>
-                    <p className="text-body text-graphite/60 font-light">Uptime</p>
+                    <p className="text-lg text-graphite/60 font-light">Uptime</p>
                   </div>
 
-                  <div className="space-y-4">
-                    <div className="text-display-medium font-light text-energy">
+                  <div className="space-y-3">
+                    <div className="text-7xl font-semibold text-energy">
                       <AnimatedCounter value={10} suffix="+" />
                     </div>
-                    <p className="text-body text-graphite/60 font-light">Year Warranty</p>
+                    <p className="text-lg text-graphite/60 font-light">Year Warranty</p>
                   </div>
                 </div>
               </div>
@@ -236,9 +236,9 @@ const Index = () => {
 
       {/* 6. TESTIMONIALS SLIDER */}
       <LazySection>
-        <section className="py-40 bg-charcoal">
+        <section className="py-32 bg-charcoal">
           <div className="max-w-5xl mx-auto px-8">
-            <div className="relative min-h-[500px] flex items-center justify-center">
+            <div className="relative min-h-[400px] flex items-center justify-center">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
@@ -251,41 +251,41 @@ const Index = () => {
                       : "opacity-0 translate-x-full"
                   )}
                 >
-                  <div className="flex flex-col items-center text-center space-y-12">
+                  <div className="flex flex-col items-center text-center space-y-8">
                     {/* Avatar */}
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-energy/15 to-energy/5 flex items-center justify-center text-title-large font-light text-pearl border border-energy/20">
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-energy/20 to-primary/20 flex items-center justify-center text-3xl font-light text-white border-2 border-energy/30">
                       {testimonial.initials}
                     </div>
 
                     {/* Quote */}
-                    <div className="relative max-w-4xl">
-                      <span className="absolute -top-12 -left-8 text-[120px] text-energy/5 font-serif leading-none">"</span>
-                      <blockquote className="text-title-large md:text-display-medium font-light text-pearl italic leading-relaxed px-12">
+                    <div className="relative">
+                      <span className="absolute -top-8 -left-4 text-8xl text-energy/10 font-serif">"</span>
+                      <blockquote className="text-3xl md:text-4xl font-light text-white italic leading-relaxed max-w-3xl">
                         {testimonial.quote}
                       </blockquote>
-                      <span className="absolute -bottom-8 -right-8 text-[120px] text-energy/5 font-serif leading-none">"</span>
+                      <span className="absolute -bottom-8 -right-4 text-8xl text-energy/10 font-serif">"</span>
                     </div>
 
                     {/* Attribution */}
-                    <div className="pt-6 space-y-2">
-                      <p className="text-body-large text-pearl font-light">{testimonial.name}</p>
-                      <p className="text-body text-pearl/50 font-light">{testimonial.location}</p>
+                    <div className="pt-8">
+                      <p className="text-lg text-pearl font-medium">{testimonial.name}</p>
+                      <p className="text-sm text-pearl/60">{testimonial.location}</p>
                     </div>
                   </div>
                 </div>
               ))}
 
               {/* Indicators */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-2">
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-3">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
                     className={cn(
-                      "h-1 rounded-full transition-all duration-500",
+                      "w-2 h-2 rounded-full transition-all duration-500",
                       currentTestimonial === index
-                        ? "w-12 bg-energy"
-                        : "w-1 bg-pearl/20 hover:bg-pearl/40"
+                        ? "w-8 bg-energy"
+                        : "bg-white/30 hover:bg-white/50"
                     )}
                   />
                 ))}
@@ -296,26 +296,23 @@ const Index = () => {
       </LazySection>
 
       {/* 7. CTA SECTION */}
-      <section className="py-40 bg-gradient-to-br from-charcoal via-graphite to-charcoal relative overflow-hidden">
-        {/* Subtle energy glow */}
-        <div className="absolute inset-0 bg-gradient-radial from-energy/5 via-transparent to-transparent"></div>
-        
-        <div className="relative max-w-4xl mx-auto px-8 text-center space-y-16">
-          <h2 className="text-display md:text-display-large text-pearl font-light leading-tight tracking-tight">
+      <section className="py-32 bg-gradient-to-br from-charcoal via-graphite to-charcoal">
+        <div className="max-w-4xl mx-auto px-8 text-center space-y-12">
+          <h2 className="text-5xl md:text-6xl font-light text-white leading-tight tracking-tight">
             Bring effortless<br />energy home.
           </h2>
 
           <Link to="/contact">
             <Button 
               size="lg" 
-              className="bg-energy hover:bg-energy-bright text-pearl px-16 py-8 text-xl rounded-full shadow-soft hover:shadow-lifted transition-all duration-500 hover:scale-105 active:scale-95 w-full sm:w-auto font-light tracking-wide"
+              className="bg-energy hover:bg-energy-glow text-white px-16 py-8 text-xl rounded-full shadow-glow hover:shadow-[0_0_60px_rgba(0,200,83,0.6)] transition-all duration-500 w-full sm:w-auto"
             >
               Get Started
             </Button>
           </Link>
 
-          <div className="pt-2">
-            <Link to="/contact" className="text-pearl/50 hover:text-pearl transition-colors inline-flex items-center gap-2 group font-light">
+          <div className="pt-4">
+            <Link to="/contact" className="text-pearl/70 hover:text-pearl transition-colors inline-flex items-center gap-2 group">
               <span>or talk to an expert</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -429,14 +426,15 @@ function WhyNessCard({ feature, delay }: { feature: typeof whyNessFeatures[0]; d
     <div
       ref={elementRef as any}
       className={cn(
-        "group p-12 rounded-3xl border border-pearl/5 bg-gradient-to-br from-pearl/5 to-transparent backdrop-blur-sm transition-all duration-700 hover:border-pearl/10 hover:bg-pearl/[0.07] hover:-translate-y-2",
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+        "group p-10 rounded-3xl border border-white/10 bg-gradient-to-br backdrop-blur-sm transition-all duration-700 hover:scale-105 hover:shadow-glow",
+        feature.color,
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       )}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <Icon className="w-14 h-14 text-energy mb-8 group-hover:scale-110 transition-transform duration-500" />
-      <h3 className="text-title text-pearl mb-4 font-light">{feature.title}</h3>
-      <p className="text-body text-pearl/60 font-light leading-relaxed">{feature.description}</p>
+      <Icon className="w-12 h-12 text-energy mb-6 group-hover:scale-110 transition-transform duration-500" />
+      <h3 className="text-2xl font-light text-white mb-3">{feature.title}</h3>
+      <p className="text-pearl/70 font-light leading-relaxed">{feature.description}</p>
     </div>
   );
 }
@@ -444,19 +442,19 @@ function WhyNessCard({ feature, delay }: { feature: typeof whyNessFeatures[0]; d
 // Component: Product Card
 function ProductCard({ product }: { product: typeof products[0] }) {
   return (
-    <Link to={product.link} className="group min-w-[380px] snap-center">
-      <div className="relative rounded-3xl overflow-hidden bg-whisper p-10 transition-all duration-700 hover:shadow-lifted hover:-translate-y-3 border border-transparent hover:border-graphite/5">
-        <div className="aspect-square mb-8 flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
+    <Link to={product.link} className="group min-w-[350px] snap-center">
+      <div className="relative rounded-3xl overflow-hidden bg-whisper p-8 transition-all duration-700 hover:shadow-lifted hover:-translate-y-2">
+        <div className="aspect-square mb-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
           <img 
             src={product.image} 
             alt={product.name} 
             className="w-full h-full object-contain"
           />
         </div>
-        <div className="space-y-3">
-          <h3 className="text-title text-graphite font-light">{product.name}</h3>
-          <p className="text-body text-graphite/50 font-light">{product.subtitle}</p>
-          <p className="text-body-large text-energy font-light pt-2">{product.capacity}</p>
+        <div className="space-y-2">
+          <h3 className="text-2xl font-light text-graphite">{product.name}</h3>
+          <p className="text-graphite/60 font-light">{product.subtitle}</p>
+          <p className="text-energy font-medium pt-2">{product.capacity}</p>
         </div>
       </div>
     </Link>
@@ -475,25 +473,25 @@ function UseCaseCard({ useCase, isSelected, onClick }: {
     <div
       onClick={onClick}
       className={cn(
-        "relative p-12 rounded-3xl border transition-all duration-500 cursor-pointer",
+        "relative p-10 rounded-3xl border-2 transition-all duration-500 cursor-pointer",
         isSelected 
-          ? "bg-pearl border-energy shadow-lifted scale-[1.02]" 
-          : "bg-pearl border-graphite/5 hover:border-graphite/10 hover:shadow-soft hover:-translate-y-1"
+          ? "bg-white border-energy shadow-glow scale-105" 
+          : "bg-white border-graphite/10 hover:border-energy/50 hover:shadow-soft hover:scale-102"
       )}
     >
       <Icon className={cn(
-        "w-14 h-14 mb-8 transition-all duration-500",
-        isSelected ? "text-energy scale-110" : "text-graphite"
+        "w-12 h-12 mb-6 transition-colors duration-500",
+        isSelected ? "text-energy" : "text-graphite"
       )} />
-      <h3 className="text-title text-graphite font-light mb-4">{useCase.title}</h3>
-      <p className="text-body text-graphite/50 font-light mb-6 leading-relaxed">{useCase.description}</p>
+      <h3 className="text-2xl font-light text-graphite mb-3">{useCase.title}</h3>
+      <p className="text-graphite/60 font-light mb-6">{useCase.description}</p>
       
       {isSelected && (
-        <div className="pt-8 border-t border-graphite/5 animate-fade-in">
+        <div className="pt-6 border-t border-graphite/10 animate-fade-in">
           <Link to={useCase.link}>
-            <Button className="w-full bg-energy hover:bg-energy-bright text-pearl rounded-full py-6 font-light transition-all duration-500 hover:shadow-soft hover:scale-105">
+            <Button className="w-full bg-energy hover:bg-energy-glow text-white rounded-full">
               Learn More
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
           </Link>
         </div>
