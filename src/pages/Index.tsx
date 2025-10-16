@@ -96,23 +96,23 @@ const Index = () => {
 
       {/* 2. WHY NESS SECTION */}
       <LazySection>
-        <section className="relative py-32 bg-gradient-radial from-charcoal via-charcoal to-graphite overflow-hidden">
+        <section className="relative py-40 bg-gradient-radial from-charcoal via-charcoal to-graphite overflow-hidden">
           {/* Ambient Glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-radial from-energy/10 to-transparent rounded-full blur-3xl"></div>
           
           <div className="relative z-10 max-w-7xl mx-auto px-8">
-            <div className="text-center mb-20">
-              <h2 className="text-5xl md:text-6xl font-light text-white mb-6 tracking-tight">
-                Why choose NESS?
+            <div className="text-center mb-32">
+              <h2 className="text-6xl md:text-7xl font-light text-white mb-8 tracking-tight leading-[1.1]">
+                Power that thinks.<br />Batteries that last.
               </h2>
-              <p className="text-xl text-pearl/70 font-light max-w-2xl mx-auto">
-                Engineered for excellence. Proven in India.
+              <p className="text-2xl text-pearl/80 font-light max-w-3xl mx-auto leading-relaxed">
+                Most batteries fail when you need them most. NESS doesn't.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {whyNessFeatures.map((feature, index) => (
-                <WhyNessCard key={index} feature={feature} delay={index * 100} />
+                <WhyNessCard key={index} feature={feature} delay={index * 150} />
               ))}
             </div>
           </div>
@@ -326,22 +326,25 @@ const Index = () => {
 // Why NESS Features
 const whyNessFeatures = [
   {
-    icon: Shield,
-    title: "Built to Last",
-    description: "LiFePO₄ chemistry. 10-year warranty. Zero drama.",
-    color: "from-blue-500/20 to-blue-500/5"
+    icon: Clock,
+    title: "6,000 nights.",
+    description: "That's how long our LiFePO₄ cells last. Your kids will inherit this before it dies. 10-year warranty included.",
+    color: "from-energy/20 to-energy/5",
+    stat: "16+ years"
   },
   {
     icon: Zap,
-    title: "Intelligent Power",
-    description: "Smart monitoring. Auto-optimization. Total control.",
-    color: "from-energy/20 to-energy/5"
+    title: "Works while you sleep.",
+    description: "Learns your usage. Optimizes itself. Switches to backup in 10 milliseconds. You'll never notice a power cut again.",
+    color: "from-blue-500/20 to-blue-500/5",
+    stat: "10ms switch"
   },
   {
     icon: Battery,
-    title: "India-Ready",
-    description: "50°C tested. Voltage resilient. Always on.",
-    color: "from-orange-500/20 to-orange-500/5"
+    title: "Built for 50°C summers.",
+    description: "Tested in Nagpur heat. Handles voltage drops from 90V to 300V. When the grid fails, NESS doesn't blink.",
+    color: "from-orange-500/20 to-orange-500/5",
+    stat: "50°C rated"
   }
 ];
 
@@ -426,15 +429,20 @@ function WhyNessCard({ feature, delay }: { feature: typeof whyNessFeatures[0]; d
     <div
       ref={elementRef as any}
       className={cn(
-        "group p-10 rounded-3xl border border-white/10 bg-gradient-to-br backdrop-blur-sm transition-all duration-700 hover:scale-105 hover:shadow-glow",
+        "group relative p-12 rounded-[2rem] border border-white/10 bg-gradient-to-br backdrop-blur-sm transition-all duration-700 hover:scale-[1.02] hover:border-energy/30",
         feature.color,
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
       )}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <Icon className="w-12 h-12 text-energy mb-6 group-hover:scale-110 transition-transform duration-500" />
-      <h3 className="text-2xl font-light text-white mb-3">{feature.title}</h3>
-      <p className="text-pearl/70 font-light leading-relaxed">{feature.description}</p>
+      {/* Stat Badge */}
+      <div className="absolute top-8 right-8 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
+        <span className="text-sm font-medium text-energy">{feature.stat}</span>
+      </div>
+
+      <Icon className="w-14 h-14 text-energy mb-8 group-hover:scale-110 transition-transform duration-500" />
+      <h3 className="text-3xl font-light text-white mb-5 leading-tight">{feature.title}</h3>
+      <p className="text-lg text-pearl/70 font-light leading-relaxed">{feature.description}</p>
     </div>
   );
 }
