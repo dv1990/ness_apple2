@@ -96,21 +96,22 @@ const Index = () => {
 
       {/* 2. WHY NESS SECTION */}
       <LazySection>
-        <section className="relative py-40 bg-gradient-radial from-charcoal via-charcoal to-graphite overflow-hidden">
-          {/* Ambient Glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-radial from-energy/10 to-transparent rounded-full blur-3xl"></div>
+        <section className="relative py-40 bg-gradient-to-b from-[#0a0a0a] via-[#0f0f0f] to-[#0a0a0a] overflow-hidden">
+          {/* Ambient Glow - Subtle Blue */}
+          <div className="absolute top-1/4 left-1/4 w-[800px] h-[800px] bg-gradient-radial from-blue-500/5 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-gradient-radial from-purple-500/5 to-transparent rounded-full blur-3xl"></div>
           
           <div className="relative z-10 max-w-7xl mx-auto px-8">
             <div className="text-center mb-32">
               <h2 className="text-6xl md:text-7xl font-light text-white mb-8 tracking-tight leading-[1.1]">
                 Power that thinks.<br />Batteries that last.
               </h2>
-              <p className="text-2xl text-pearl/80 font-light max-w-3xl mx-auto leading-relaxed">
+              <p className="text-2xl text-white/60 font-light max-w-3xl mx-auto leading-relaxed">
                 Most batteries fail when you need them most. NESS doesn't.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {whyNessFeatures.map((feature, index) => (
                 <WhyNessCard key={index} feature={feature} delay={index * 150} />
               ))}
@@ -329,22 +330,31 @@ const whyNessFeatures = [
     icon: Clock,
     title: "6,000 nights.",
     description: "That's how long our LiFePO₄ cells last. Your kids will inherit this before it dies. 10-year warranty included.",
-    color: "from-energy/20 to-energy/5",
-    stat: "16+ years"
+    gradient: "from-indigo-500/10 via-purple-500/10 to-pink-500/10",
+    iconColor: "text-indigo-400",
+    accentColor: "border-indigo-500/20",
+    stat: "16+ years",
+    statColor: "text-indigo-400"
   },
   {
     icon: Zap,
     title: "Works while you sleep.",
     description: "Learns your usage. Optimizes itself. Switches to backup in 10 milliseconds. You'll never notice a power cut again.",
-    color: "from-blue-500/20 to-blue-500/5",
-    stat: "10ms switch"
+    gradient: "from-cyan-500/10 via-blue-500/10 to-indigo-500/10",
+    iconColor: "text-cyan-400",
+    accentColor: "border-cyan-500/20",
+    stat: "10ms switch",
+    statColor: "text-cyan-400"
   },
   {
     icon: Battery,
     title: "Built for 50°C summers.",
     description: "Tested in Nagpur heat. Handles voltage drops from 90V to 300V. When the grid fails, NESS doesn't blink.",
-    color: "from-orange-500/20 to-orange-500/5",
-    stat: "50°C rated"
+    gradient: "from-emerald-500/10 via-teal-500/10 to-cyan-500/10",
+    iconColor: "text-emerald-400",
+    accentColor: "border-emerald-500/20",
+    stat: "50°C rated",
+    statColor: "text-emerald-400"
   }
 ];
 
@@ -429,20 +439,27 @@ function WhyNessCard({ feature, delay }: { feature: typeof whyNessFeatures[0]; d
     <div
       ref={elementRef as any}
       className={cn(
-        "group relative p-12 rounded-[2rem] border border-white/10 bg-gradient-to-br backdrop-blur-sm transition-all duration-700 hover:scale-[1.02] hover:border-energy/30",
-        feature.color,
+        "group relative p-12 rounded-[2rem] border bg-gradient-to-br backdrop-blur-xl transition-all duration-700 hover:scale-[1.02]",
+        feature.gradient,
+        feature.accentColor,
+        "bg-white/[0.02] hover:bg-white/[0.04]",
+        "border-white/[0.05] hover:border-white/[0.1]",
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
       )}
       style={{ transitionDelay: `${delay}ms` }}
     >
       {/* Stat Badge */}
-      <div className="absolute top-8 right-8 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
-        <span className="text-sm font-medium text-energy">{feature.stat}</span>
+      <div className={cn(
+        "absolute top-8 right-8 px-4 py-2 rounded-full backdrop-blur-md transition-colors duration-500",
+        "bg-white/[0.03] border group-hover:bg-white/[0.06]",
+        feature.accentColor
+      )}>
+        <span className={cn("text-sm font-medium", feature.statColor)}>{feature.stat}</span>
       </div>
 
-      <Icon className="w-14 h-14 text-energy mb-8 group-hover:scale-110 transition-transform duration-500" />
+      <Icon className={cn("w-14 h-14 mb-8 group-hover:scale-110 transition-transform duration-500", feature.iconColor)} />
       <h3 className="text-3xl font-light text-white mb-5 leading-tight">{feature.title}</h3>
-      <p className="text-lg text-pearl/70 font-light leading-relaxed">{feature.description}</p>
+      <p className="text-lg text-white/50 font-light leading-relaxed group-hover:text-white/60 transition-colors duration-500">{feature.description}</p>
     </div>
   );
 }
