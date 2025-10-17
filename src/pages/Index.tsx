@@ -325,11 +325,11 @@ const Index = () => {
         </section>
       </LazySection>
 
-      {/* 5. STORY SECTION - Building Trust */}
+      {/* 5. EXPERIENCE NESS SECTION */}
       <LazySection>
-        <section className="py-40 bg-gradient-to-b from-white via-whisper to-white">
+        <section className="py-32 bg-white">
           <div className="max-w-7xl mx-auto px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               {/* Left - Video */}
               <div className="relative aspect-video rounded-3xl overflow-hidden bg-graphite shadow-lifted group cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-br from-energy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -345,69 +345,44 @@ const Index = () => {
                 />
               </div>
 
-              {/* Right - Story */}
-              <div className="space-y-10">
-                <div className="space-y-8">
-                  <div className="inline-block">
-                    <div className="flex items-center gap-3 mb-6">
-                      <div className="w-1 h-16 bg-gradient-to-b from-energy to-energy-glow rounded-full"></div>
-                      <span className="text-sm font-medium text-energy uppercase tracking-[0.2em]">Our Promise</span>
-                    </div>
-                  </div>
-                  
-                  <h2 className="text-5xl md:text-6xl font-light text-graphite mb-8 tracking-tight leading-[1.1]">
-                    Energy shouldn't be<br />something you<br />worry about.
+              {/* Right - Stats */}
+              <div className="space-y-12">
+                <div>
+                  <h2 className="text-5xl md:text-6xl font-light text-graphite mb-6 tracking-tight">
+                    Experience NESS
                   </h2>
-                  
-                  <div className="space-y-6 text-lg text-graphite/70 font-light leading-relaxed">
-                    <p>
-                      Every day, millions of Indians face the same frustration. The power cuts. The flickering lights. The sudden silence when machines stop mid-production. The awkward pause when your presentation goes dark. The anxiety of wondering if tonight's dinner will cook in time.
-                    </p>
-                    
-                    <p className="text-graphite/80">
-                      <span className="font-medium text-graphite">We asked ourselves a simple question:</span> What if energy was so reliable, you forgot it existed? What if it just… worked?
-                    </p>
-                    
-                    <p className="text-graphite/80">
-                      That's why we built NESS. Not just as a battery, but as a promise. A promise that when you flip a switch, the lights come on. When you start your business day, your systems are ready. When your family needs power, it's there.
-                    </p>
-                    
-                    <p className="font-medium text-graphite text-xl leading-relaxed">
-                      Because the best technology is the one you never have to think about. It simply delivers—silently, seamlessly, every single time.
-                    </p>
-                  </div>
+                  <p className="text-xl text-graphite/60 font-light">
+                    Real performance. Real savings.
+                  </p>
                 </div>
 
-                {/* Trust Indicators - Stats Grid */}
-                <div className="pt-8 border-t border-graphite/10">
-                  <div className="grid grid-cols-2 gap-x-12 gap-y-8">
-                    <div className="space-y-2">
-                      <div className="text-6xl font-semibold text-energy">
-                        <AnimatedCounter value={100} suffix="+" />
-                      </div>
-                      <p className="text-base text-graphite/60 font-light">MWh Delivered Daily</p>
+                <div className="grid grid-cols-2 gap-10">
+                  <div className="space-y-3">
+                    <div className="text-7xl font-semibold text-energy">
+                      <AnimatedCounter value={100} suffix="+" />
                     </div>
+                    <p className="text-lg text-graphite/60 font-light">MWh Delivered</p>
+                  </div>
 
-                    <div className="space-y-2">
-                      <div className="text-6xl font-semibold text-energy">
-                        <AnimatedCounter value={1000} suffix="+" />
-                      </div>
-                      <p className="text-base text-graphite/60 font-light">Trust Us Daily</p>
+                  <div className="space-y-3">
+                    <div className="text-7xl font-semibold text-energy">
+                      <AnimatedCounter value={1000} suffix="+" />
                     </div>
+                    <p className="text-lg text-graphite/60 font-light">Happy Customers</p>
+                  </div>
 
-                    <div className="space-y-2">
-                      <div className="text-6xl font-semibold text-energy">
-                        <AnimatedCounter value={99.9} decimals={1} suffix="%" />
-                      </div>
-                      <p className="text-base text-graphite/60 font-light">System Uptime</p>
+                  <div className="space-y-3">
+                    <div className="text-7xl font-semibold text-energy">
+                      <AnimatedCounter value={99.9} decimals={1} suffix="%" />
                     </div>
+                    <p className="text-lg text-graphite/60 font-light">Uptime</p>
+                  </div>
 
-                    <div className="space-y-2">
-                      <div className="text-6xl font-semibold text-energy">
-                        <AnimatedCounter value={10} suffix="+" />
-                      </div>
-                      <p className="text-base text-graphite/60 font-light">Year Warranty</p>
+                  <div className="space-y-3">
+                    <div className="text-7xl font-semibold text-energy">
+                      <AnimatedCounter value={10} suffix="+" />
                     </div>
+                    <p className="text-lg text-graphite/60 font-light">Year Warranty</p>
                   </div>
                 </div>
               </div>
