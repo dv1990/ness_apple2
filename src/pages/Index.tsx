@@ -120,6 +120,94 @@ const Index = () => {
         </section>
       </LazySection>
 
+      {/* THE OLD WAYS VS. THE NEW WAY */}
+      <LazySection>
+        <section className="py-40 bg-white">
+          <div className="max-w-7xl mx-auto px-8">
+            <div className="text-center mb-24">
+              <h2 className="text-6xl md:text-7xl font-light text-graphite mb-8 tracking-tight leading-[1.1]">
+                The old ways<br />held you back.
+              </h2>
+              <p className="text-2xl text-graphite/60 font-light max-w-3xl mx-auto leading-relaxed">
+                For years, we accepted noise, fumes, and constant maintenance. There's a better way now.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-24">
+              {/* Lead Acid */}
+              <div className="bg-whisper rounded-3xl p-12 space-y-6">
+                <div className="w-16 h-16 rounded-2xl bg-graphite/10 flex items-center justify-center">
+                  <Battery className="w-8 h-8 text-graphite/40" />
+                </div>
+                <h3 className="text-3xl font-light text-graphite">Lead Acid Batteries</h3>
+                <p className="text-lg text-graphite/60 leading-relaxed">
+                  Heavy. Slow to charge. Need replacement every 2-3 years. Regular maintenance. Limited depth of discharge means you can't use most of the capacity you paid for.
+                </p>
+                <div className="pt-4 space-y-2 text-sm text-graphite/50">
+                  <p>• Dies after 500-800 cycles</p>
+                  <p>• Only 50% usable capacity</p>
+                  <p>• Constant water topping & cleaning</p>
+                  <p>• Loses efficiency in heat</p>
+                </div>
+              </div>
+
+              {/* Diesel Genset */}
+              <div className="bg-whisper rounded-3xl p-12 space-y-6">
+                <div className="w-16 h-16 rounded-2xl bg-graphite/10 flex items-center justify-center">
+                  <Zap className="w-8 h-8 text-graphite/40" />
+                </div>
+                <h3 className="text-3xl font-light text-graphite">Diesel Generators</h3>
+                <p className="text-lg text-graphite/60 leading-relaxed">
+                  Loud enough to wake the neighbors. Diesel prices that change by the week. Fumes and pollution in your compound. Manual starting. Running costs that never end.
+                </p>
+                <div className="pt-4 space-y-2 text-sm text-graphite/50">
+                  <p>• ₹20-30/kWh running cost</p>
+                  <p>• 85dB noise pollution</p>
+                  <p>• Regular servicing needed</p>
+                  <p>• Can't start instantly</p>
+                </div>
+              </div>
+
+              {/* Lithium Ion (NESS) */}
+              <div className="bg-gradient-to-br from-energy/10 to-energy/5 rounded-3xl p-12 space-y-6 border-2 border-energy/20 relative overflow-hidden">
+                <div className="absolute top-6 right-6">
+                  <span className="px-4 py-1.5 bg-energy text-white text-xs font-medium rounded-full uppercase tracking-wider">The New Way</span>
+                </div>
+                <div className="w-16 h-16 rounded-2xl bg-energy/20 flex items-center justify-center">
+                  <Shield className="w-8 h-8 text-energy" />
+                </div>
+                <h3 className="text-3xl font-light text-graphite">Lithium Ion (NESS)</h3>
+                <p className="text-lg text-graphite/80 leading-relaxed font-medium">
+                  Silent. Instant. Zero maintenance. Lasts 10+ years. Deep discharge means you use every bit of capacity. Smart software that learns your patterns.
+                </p>
+                <div className="pt-4 space-y-2 text-sm text-energy font-medium">
+                  <p>• 6000+ cycles = 10-15 years</p>
+                  <p>• 95% usable capacity</p>
+                  <p>• Zero maintenance, ever</p>
+                  <p>• 10ms instant switchover</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom CTA */}
+            <div className="text-center">
+              <p className="text-2xl text-graphite/70 font-light mb-8 max-w-2xl mx-auto leading-relaxed">
+                The math is simple. Over 10 years, lithium ion costs less than half of lead acid or diesel—and gives you peace of mind you can't put a price on.
+              </p>
+              <Link to="/residential">
+                <Button 
+                  size="lg" 
+                  className="bg-energy hover:bg-energy-glow text-white px-12 py-7 text-lg rounded-full shadow-glow hover:shadow-[0_0_50px_rgba(0,200,83,0.5)] transition-all duration-500"
+                >
+                  See How Much You'll Save
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+      </LazySection>
+
       {/* 3. PRODUCT SHOWCASE SECTION */}
       <LazySection>
         <section className="bg-white">
