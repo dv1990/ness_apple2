@@ -43,11 +43,11 @@ const Index = () => {
         <div className="relative z-10 h-full flex items-center max-w-7xl mx-auto px-8">
           <div className="max-w-2xl space-y-8 animate-fade-up">
             <h1 className="text-7xl md:text-8xl font-bold text-white leading-[0.95] tracking-tight">
-              Own your<br />energy.<br />Own your life.
+              The battery<br />that never<br />lets you down.
             </h1>
             
             <p className="text-2xl text-pearl/90 font-light max-w-xl leading-relaxed">
-              Intelligent battery systems engineered for the modern Indian home and business.
+              When the grid fails, NESS keeps running. Seamless power storage engineered for India's toughest conditions.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
