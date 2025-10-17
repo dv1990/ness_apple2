@@ -454,10 +454,18 @@ const Index = () => {
 
       {/* 7. CTA SECTION */}
       <section className="py-32 bg-gradient-to-br from-charcoal via-graphite to-charcoal">
-        <div className="max-w-4xl mx-auto px-8 text-center space-y-12">
-          <h2 className="text-5xl md:text-6xl font-light text-white leading-tight tracking-tight">
-            Bring effortless<br />energy home.
-          </h2>
+        <div className="max-w-4xl mx-auto px-8 text-center space-y-10">
+          <div className="space-y-6">
+            <h2 className="text-5xl md:text-6xl font-light text-white leading-tight tracking-tight">
+              Energy shouldn't be<br />something you think about.
+            </h2>
+            <p className="text-xl text-pearl/80 font-light max-w-2xl mx-auto leading-relaxed">
+              Until the power goes out. Until your business stalls. Until you realize—your backup has become your worry.
+            </p>
+            <p className="text-xl text-pearl/70 font-light max-w-2xl mx-auto leading-relaxed">
+              <span className="text-white">NESS is different.</span> It works silently in the background. You install it once. It delivers for decades.
+            </p>
+          </div>
 
           <Link to="/contact">
             <Button 
