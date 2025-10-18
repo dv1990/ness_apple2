@@ -12,6 +12,7 @@ import nessProProduct from "@/assets/ness-pro-product.png";
 import nessCubeProduct from "@/assets/ness-cube-resort.webp";
 import nucuPcb from "@/assets/nucu-pcb-premium.webp";
 import { useState, useEffect, useRef } from "react";
+import NucuSection from "@/components/NucuSection";
 const Index = () => {
   const [selectedUseCase, setSelectedUseCase] = useState<string | null>(null);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -191,61 +192,9 @@ const Index = () => {
         </section>
       </LazySection>
 
-      {/* INSIDE NUCU SECTION */}
+      {/* MEET NUCU SECTION */}
       <LazySection>
-        <section className="relative py-40 from-[#0B0B0C] to-[#0B0B0D] overflow-hidden bg-[0B0B0C] bg-[#0b0b0c]">
-          <div className="max-w-7xl mx-auto px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-              {/* Left Column - NUCU PCB */}
-              <div className="relative">
-                <img src={nucuPcb} alt="NUCU Control Board PCB" className="w-full h-auto object-contain" />
-              </div>
-
-              {/* Right Column - Typography */}
-              <div className="space-y-8 lg:pl-8">
-                <div className="space-y-6">
-                  <h2 className="text-5xl md:text-6xl font-light text-white tracking-tight" style={{
-                  fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif"
-                }}>
-                    Inside NUCU
-                  </h2>
-                  
-                  <p className="text-2xl text-white/70 font-light leading-relaxed" style={{
-                  fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif"
-                }}>
-                    Where smart design meets powerful thinking.
-                  </p>
-                  
-                  <div className="pt-6 space-y-6 text-lg text-white/60 font-light leading-relaxed" style={{
-                  fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif"
-                }}>
-                    <p>
-                      NUCU is the brain of your home's energy system.<br />
-                      It watches, learns, and protects — every second, without a sound.
-                    </p>
-                    
-                    <p>
-                      Built to predict power flow, prevent faults, and optimize every watt.<br />
-                      It's not just smart — it's aware.
-                    </p>
-                    
-                    <p>
-                      Because the best technology doesn't shout.<br />
-                      It simply works, perfectly.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="pt-8">
-                  <Button size="lg" className="bg-white/10 hover:bg-white/15 backdrop-blur-md text-white border border-white/20 px-10 py-6 text-lg rounded-full transition-all duration-500 group">
-                    See How NUCU Works
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <NucuSection nucuPcb={nucuPcb} />
       </LazySection>
 
       {/* 3. PRODUCT SHOWCASE SECTION */}
