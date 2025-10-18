@@ -61,7 +61,7 @@ const ResidentialEnhanced = () => {
       {/* Specs Section - Steve Jobs Style Numbers */}
       <section className="py-20 sm:py-24 md:py-32 bg-background">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             
             <div className="text-center">
               <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight mb-3 text-foreground">
@@ -73,28 +73,21 @@ const ResidentialEnhanced = () => {
             
             <div className="text-center">
               <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight mb-3 text-foreground">
-                <AnimatedCounter value={60} suffix="" decimals={0} />
+                <AnimatedCounter value={50} suffix="" decimals={0} />
                 <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">%</span>
               </div>
-              <div className="text-sm sm:text-base text-muted-foreground font-light">Smaller Volume</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight mb-3 text-primary">
-                <AnimatedCounter value={0} suffix="" decimals={0} />
-              </div>
-              <div className="text-sm sm:text-base text-muted-foreground font-light">Fumes · Pollution</div>
+              <div className="text-sm sm:text-base text-muted-foreground font-light">Smaller volume</div>
             </div>
             
             <div className="text-center">
               <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight mb-3 text-foreground">
-                <AnimatedCounter value={10} suffix="" decimals={0} />
-                <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl"> ms</span>
+                <AnimatedCounter value={100} suffix="" decimals={0} />
+                <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">%</span>
               </div>
-              <div className="text-sm sm:text-base text-muted-foreground font-light">Switch Time</div>
+              <div className="text-sm sm:text-base text-muted-foreground font-light">Elegant</div>
             </div>
             
-            <div className="text-center col-span-2 md:col-span-1">
+            <div className="text-center">
               <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight mb-3 text-primary">
                 ₹<AnimatedCounter value={48000} decimals={0} />
               </div>
