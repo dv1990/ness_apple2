@@ -10,9 +10,8 @@ import heroHome from "@/assets/hero-homeowners.jpg";
 import nessPodProduct from "@/assets/ness-pod-product.png";
 import nessProProduct from "@/assets/ness-pro-product.png";
 import nessCubeProduct from "@/assets/ness-cube-resort.webp";
-import nucuPcb from "@/assets/nucu-pcb-premium.webp";
+import nucuPcb from "@/assets/nucu-pcb.png";
 import { useState, useEffect, useRef } from "react";
-
 const Index = () => {
   const [selectedUseCase, setSelectedUseCase] = useState<string | null>(null);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -20,23 +19,16 @@ const Index = () => {
   // Testimonial auto-rotation
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+      setCurrentTestimonial(prev => (prev + 1) % testimonials.length);
     }, 6000);
     return () => clearInterval(timer);
   }, []);
-
-  return (
-    <Layout>
+  return <Layout>
       {/* 1. HERO SECTION */}
       <section className="relative h-screen w-full overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img 
-            src={heroHome} 
-            alt="Modern Indian villa with NESS Powerwall" 
-            className="w-full h-full object-cover"
-            loading="eager"
-          />
+          <img src={heroHome} alt="Modern Indian villa with NESS Powerwall" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
         </div>
 
@@ -53,21 +45,14 @@ const Index = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link to="/residential">
-                <Button 
-                  size="lg" 
-                  className="bg-energy hover:bg-energy-glow text-white px-10 py-7 text-lg rounded-full shadow-glow hover:shadow-[0_0_50px_rgba(0,200,83,0.5)] transition-all duration-500"
-                >
+                <Button size="lg" className="bg-energy hover:bg-energy-glow text-white px-10 py-7 text-lg rounded-full shadow-glow hover:shadow-[0_0_50px_rgba(0,200,83,0.5)] transition-all duration-500">
                   Design My System
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
               
               <Link to="/residential">
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="border-2 border-white/30 bg-white/10 backdrop-blur-md text-white hover:bg-white/20 px-10 py-7 text-lg rounded-full"
-                >
+                <Button variant="outline" size="lg" className="border-2 border-white/30 bg-white/10 backdrop-blur-md text-white hover:bg-white/20 px-10 py-7 text-lg rounded-full">
                   Explore Products
                 </Button>
               </Link>
@@ -85,7 +70,9 @@ const Index = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 animate-bounce" style={{ animationDuration: '3s' }}>
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 animate-bounce" style={{
+        animationDuration: '3s'
+      }}>
           <div className="flex flex-col items-center gap-3 opacity-40 hover:opacity-60 transition-opacity">
             <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2">
               <div className="w-1 h-3 bg-white/60 rounded-full"></div>
@@ -113,9 +100,7 @@ const Index = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {whyNessFeatures.map((feature, index) => (
-                <WhyNessCard key={index} feature={feature} delay={index * 150} />
-              ))}
+              {whyNessFeatures.map((feature, index) => <WhyNessCard key={index} feature={feature} delay={index * 150} />)}
             </div>
           </div>
         </section>
@@ -196,10 +181,7 @@ const Index = () => {
                 The math is simple. Over 10 years, lithium ion costs less than half of lead acid or diesel—and gives you peace of mind you can't put a price on.
               </p>
               <Link to="/residential">
-                <Button 
-                  size="lg" 
-                  className="bg-energy hover:bg-energy-glow text-white px-12 py-7 text-lg rounded-full shadow-glow hover:shadow-[0_0_50px_rgba(0,200,83,0.5)] transition-all duration-500"
-                >
+                <Button size="lg" className="bg-energy hover:bg-energy-glow text-white px-12 py-7 text-lg rounded-full shadow-glow hover:shadow-[0_0_50px_rgba(0,200,83,0.5)] transition-all duration-500">
                   See How Much You'll Save
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
@@ -211,30 +193,32 @@ const Index = () => {
 
       {/* INSIDE NUCU SECTION */}
       <LazySection>
-        <section className="relative py-40 bg-gradient-to-b from-[#0B0B0C] to-[#0B0B0D] overflow-hidden">
+        <section className="relative py-40 from-[#0B0B0C] to-[#0B0B0D] overflow-hidden bg-[0B0B0C] bg-[#0b0b0c]">
           <div className="max-w-7xl mx-auto px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
               {/* Left Column - NUCU PCB */}
               <div className="relative">
-                <img 
-                  src={nucuPcb} 
-                  alt="NUCU Control Board PCB" 
-                  className="w-full h-auto object-contain"
-                />
+                <img src={nucuPcb} alt="NUCU Control Board PCB" className="w-full h-auto object-contain" />
               </div>
 
               {/* Right Column - Typography */}
               <div className="space-y-8 lg:pl-8">
                 <div className="space-y-6">
-                  <h2 className="text-5xl md:text-6xl font-light text-white tracking-tight" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
+                  <h2 className="text-5xl md:text-6xl font-light text-white tracking-tight" style={{
+                  fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif"
+                }}>
                     Inside NUCU
                   </h2>
                   
-                  <p className="text-2xl text-white/70 font-light leading-relaxed" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
+                  <p className="text-2xl text-white/70 font-light leading-relaxed" style={{
+                  fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif"
+                }}>
                     Where smart design meets powerful thinking.
                   </p>
                   
-                  <div className="pt-6 space-y-6 text-lg text-white/60 font-light leading-relaxed" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
+                  <div className="pt-6 space-y-6 text-lg text-white/60 font-light leading-relaxed" style={{
+                  fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif"
+                }}>
                     <p>
                       NUCU is the brain of your home's energy system.<br />
                       It watches, learns, and protects — every second, without a sound.
@@ -253,10 +237,7 @@ const Index = () => {
                 </div>
 
                 <div className="pt-8">
-                  <Button 
-                    size="lg" 
-                    className="bg-white/10 hover:bg-white/15 backdrop-blur-md text-white border border-white/20 px-10 py-6 text-lg rounded-full transition-all duration-500 group"
-                  >
+                  <Button size="lg" className="bg-white/10 hover:bg-white/15 backdrop-blur-md text-white border border-white/20 px-10 py-6 text-lg rounded-full transition-all duration-500 group">
                     See How NUCU Works
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
@@ -285,11 +266,7 @@ const Index = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center bg-whisper rounded-[3rem] overflow-hidden p-12 lg:p-16 hover:shadow-lifted transition-all duration-700">
                 {/* Image */}
                 <div className="relative aspect-square flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
-                  <img 
-                    src={nessPodProduct} 
-                    alt="NESS Powerwall" 
-                    className="w-full h-full object-contain"
-                  />
+                  <img src={nessPodProduct} alt="NESS Powerwall" className="w-full h-full object-contain" />
                 </div>
                 
                 {/* Content */}
@@ -308,24 +285,14 @@ const Index = () => {
 
                   {/* Key Highlights */}
                   <div className="space-y-4">
-                    {[
-                      "5-15 kWh modular capacity",
-                      "10ms seamless switchover",
-                      "Silent operation, zero maintenance",
-                      "Works with solar or grid"
-                    ].map((highlight, i) => (
-                      <div key={i} className="flex items-start gap-3">
+                    {["5-15 kWh modular capacity", "10ms seamless switchover", "Silent operation, zero maintenance", "Works with solar or grid"].map((highlight, i) => <div key={i} className="flex items-start gap-3">
                         <CheckCircle className="w-6 h-6 text-energy mt-0.5 flex-shrink-0" />
                         <span className="text-lg text-graphite/80">{highlight}</span>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
 
                   <Link to="/residential">
-                    <Button 
-                      size="lg" 
-                      className="bg-energy hover:bg-energy-glow text-white px-10 py-6 text-lg rounded-full shadow-glow hover:shadow-[0_0_40px_rgba(0,200,83,0.4)] transition-all duration-500 group"
-                    >
+                    <Button size="lg" className="bg-energy hover:bg-energy-glow text-white px-10 py-6 text-lg rounded-full shadow-glow hover:shadow-[0_0_40px_rgba(0,200,83,0.4)] transition-all duration-500 group">
                       Design Your System
                       <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Button>
@@ -353,24 +320,14 @@ const Index = () => {
 
                   {/* Key Highlights */}
                   <div className="space-y-4">
-                    {[
-                      "20-50 kWh scalable systems",
-                      "Peak shaving & load management",
-                      "Remote monitoring & control",
-                      "Reduce diesel dependency by 80%"
-                    ].map((highlight, i) => (
-                      <div key={i} className="flex items-start gap-3">
+                    {["20-50 kWh scalable systems", "Peak shaving & load management", "Remote monitoring & control", "Reduce diesel dependency by 80%"].map((highlight, i) => <div key={i} className="flex items-start gap-3">
                         <CheckCircle className="w-6 h-6 text-energy mt-0.5 flex-shrink-0" />
                         <span className="text-lg text-pearl/80">{highlight}</span>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
 
                   <Link to="/commercial">
-                    <Button 
-                      size="lg" 
-                      className="bg-white hover:bg-white/90 text-graphite px-10 py-6 text-lg rounded-full shadow-lifted hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all duration-500 group"
-                    >
+                    <Button size="lg" className="bg-white hover:bg-white/90 text-graphite px-10 py-6 text-lg rounded-full shadow-lifted hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all duration-500 group">
                       Explore Commercial Solutions
                       <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Button>
@@ -379,11 +336,7 @@ const Index = () => {
 
                 {/* Image */}
                 <div className="relative aspect-square flex items-center justify-center lg:order-2 group-hover:scale-105 transition-transform duration-700">
-                  <img 
-                    src={nessProProduct} 
-                    alt="NESS Pod" 
-                    className="w-full h-full object-contain"
-                  />
+                  <img src={nessProProduct} alt="NESS Pod" className="w-full h-full object-contain" />
                 </div>
               </div>
             </div>
@@ -393,11 +346,7 @@ const Index = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center bg-gradient-to-br from-graphite to-charcoal rounded-[3rem] overflow-hidden p-12 lg:p-16 hover:shadow-lifted transition-all duration-700">
                 {/* Image */}
                 <div className="relative aspect-square flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
-                  <img 
-                    src={nessCubeProduct} 
-                    alt="NESS Cube" 
-                    className="w-full h-full object-contain"
-                  />
+                  <img src={nessCubeProduct} alt="NESS Cube" className="w-full h-full object-contain" />
                 </div>
                 
                 {/* Content */}
@@ -416,24 +365,14 @@ const Index = () => {
 
                   {/* Key Highlights */}
                   <div className="space-y-4">
-                    {[
-                      "100+ kWh containerized systems",
-                      "Grid stabilization & power quality",
-                      "Microgrid & off-grid capable",
-                      "Enterprise-grade monitoring & analytics"
-                    ].map((highlight, i) => (
-                      <div key={i} className="flex items-start gap-3">
+                    {["100+ kWh containerized systems", "Grid stabilization & power quality", "Microgrid & off-grid capable", "Enterprise-grade monitoring & analytics"].map((highlight, i) => <div key={i} className="flex items-start gap-3">
                         <CheckCircle className="w-6 h-6 text-energy mt-0.5 flex-shrink-0" />
                         <span className="text-lg text-pearl/80">{highlight}</span>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
 
                   <Link to="/commercial">
-                    <Button 
-                      size="lg" 
-                      className="bg-energy hover:bg-energy-glow text-white px-10 py-6 text-lg rounded-full shadow-glow hover:shadow-[0_0_40px_rgba(0,200,83,0.4)] transition-all duration-500 group"
-                    >
+                    <Button size="lg" className="bg-energy hover:bg-energy-glow text-white px-10 py-6 text-lg rounded-full shadow-glow hover:shadow-[0_0_40px_rgba(0,200,83,0.4)] transition-all duration-500 group">
                       Request Industrial Consultation
                       <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Button>
@@ -459,14 +398,7 @@ const Index = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {useCases.map((useCase, index) => (
-                <UseCaseCard 
-                  key={index} 
-                  useCase={useCase} 
-                  isSelected={selectedUseCase === useCase.id}
-                  onClick={() => setSelectedUseCase(selectedUseCase === useCase.id ? null : useCase.id)}
-                />
-              ))}
+              {useCases.map((useCase, index) => <UseCaseCard key={index} useCase={useCase} isSelected={selectedUseCase === useCase.id} onClick={() => setSelectedUseCase(selectedUseCase === useCase.id ? null : useCase.id)} />)}
             </div>
           </div>
         </section>
@@ -485,11 +417,7 @@ const Index = () => {
                     <Play className="w-10 h-10 text-white ml-1" />
                   </div>
                 </div>
-                <img 
-                  src={heroHome} 
-                  alt="NESS in action" 
-                  className="w-full h-full object-cover opacity-70"
-                />
+                <img src={heroHome} alt="NESS in action" className="w-full h-full object-cover opacity-70" />
               </div>
 
               {/* Right - Stats */}
@@ -543,18 +471,7 @@ const Index = () => {
         <section className="py-32 bg-charcoal">
           <div className="max-w-5xl mx-auto px-8">
             <div className="relative min-h-[400px] flex items-center justify-center">
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className={cn(
-                    "absolute inset-0 transition-all duration-1000 ease-in-out",
-                    currentTestimonial === index
-                      ? "opacity-100 translate-x-0"
-                      : index < currentTestimonial
-                      ? "opacity-0 -translate-x-full"
-                      : "opacity-0 translate-x-full"
-                  )}
-                >
+              {testimonials.map((testimonial, index) => <div key={index} className={cn("absolute inset-0 transition-all duration-1000 ease-in-out", currentTestimonial === index ? "opacity-100 translate-x-0" : index < currentTestimonial ? "opacity-0 -translate-x-full" : "opacity-0 translate-x-full")}>
                   <div className="flex flex-col items-center text-center space-y-8">
                     {/* Avatar */}
                     <div className="w-20 h-20 rounded-full bg-gradient-to-br from-energy/20 to-primary/20 flex items-center justify-center text-3xl font-light text-white border-2 border-energy/30">
@@ -576,23 +493,11 @@ const Index = () => {
                       <p className="text-sm text-pearl/60">{testimonial.location}</p>
                     </div>
                   </div>
-                </div>
-              ))}
+                </div>)}
 
               {/* Indicators */}
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-3">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentTestimonial(index)}
-                    className={cn(
-                      "w-2 h-2 rounded-full transition-all duration-500",
-                      currentTestimonial === index
-                        ? "w-8 bg-energy"
-                        : "bg-white/30 hover:bg-white/50"
-                    )}
-                  />
-                ))}
+                {testimonials.map((_, index) => <button key={index} onClick={() => setCurrentTestimonial(index)} className={cn("w-2 h-2 rounded-full transition-all duration-500", currentTestimonial === index ? "w-8 bg-energy" : "bg-white/30 hover:bg-white/50")} />)}
               </div>
             </div>
           </div>
@@ -615,10 +520,7 @@ const Index = () => {
           </div>
 
           <Link to="/contact">
-            <Button 
-              size="lg" 
-              className="bg-energy hover:bg-energy-glow text-white px-16 py-8 text-xl rounded-full shadow-glow hover:shadow-[0_0_60px_rgba(0,200,83,0.6)] transition-all duration-500 w-full sm:w-auto"
-            >
+            <Button size="lg" className="bg-energy hover:bg-energy-glow text-white px-16 py-8 text-xl rounded-full shadow-glow hover:shadow-[0_0_60px_rgba(0,200,83,0.6)] transition-all duration-500 w-full sm:w-auto">
               Get Started
             </Button>
           </Link>
@@ -631,164 +533,129 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
 
 // Why NESS Features
-const whyNessFeatures = [
-  {
-    icon: Clock,
-    title: "6,000 nights.",
-    description: "That's how long our LiFePO₄ cells last. Your kids will inherit this before it dies. 10-year warranty included.",
-    gradient: "from-indigo-500/10 via-purple-500/10 to-pink-500/10",
-    iconColor: "text-indigo-400",
-    accentColor: "border-indigo-500/20",
-    stat: "16+ years",
-    statColor: "text-indigo-400"
-  },
-  {
-    icon: Zap,
-    title: "Works while you sleep.",
-    description: "Learns your usage. Optimizes itself. Switches to backup in 10 milliseconds. You'll never notice a power cut again.",
-    gradient: "from-cyan-500/10 via-blue-500/10 to-indigo-500/10",
-    iconColor: "text-cyan-400",
-    accentColor: "border-cyan-500/20",
-    stat: "10ms switch",
-    statColor: "text-cyan-400"
-  },
-  {
-    icon: Battery,
-    title: "Built for 50°C summers.",
-    description: "Tested in Nagpur heat. Handles voltage drops from 90V to 300V. When the grid fails, NESS doesn't blink.",
-    gradient: "from-emerald-500/10 via-teal-500/10 to-cyan-500/10",
-    iconColor: "text-emerald-400",
-    accentColor: "border-emerald-500/20",
-    stat: "50°C rated",
-    statColor: "text-emerald-400"
-  }
-];
-
+const whyNessFeatures = [{
+  icon: Clock,
+  title: "6,000 nights.",
+  description: "That's how long our LiFePO₄ cells last. Your kids will inherit this before it dies. 10-year warranty included.",
+  gradient: "from-indigo-500/10 via-purple-500/10 to-pink-500/10",
+  iconColor: "text-indigo-400",
+  accentColor: "border-indigo-500/20",
+  stat: "16+ years",
+  statColor: "text-indigo-400"
+}, {
+  icon: Zap,
+  title: "Works while you sleep.",
+  description: "Learns your usage. Optimizes itself. Switches to backup in 10 milliseconds. You'll never notice a power cut again.",
+  gradient: "from-cyan-500/10 via-blue-500/10 to-indigo-500/10",
+  iconColor: "text-cyan-400",
+  accentColor: "border-cyan-500/20",
+  stat: "10ms switch",
+  statColor: "text-cyan-400"
+}, {
+  icon: Battery,
+  title: "Built for 50°C summers.",
+  description: "Tested in Nagpur heat. Handles voltage drops from 90V to 300V. When the grid fails, NESS doesn't blink.",
+  gradient: "from-emerald-500/10 via-teal-500/10 to-cyan-500/10",
+  iconColor: "text-emerald-400",
+  accentColor: "border-emerald-500/20",
+  stat: "50°C rated",
+  statColor: "text-emerald-400"
+}];
 
 // Use Cases
-const useCases = [
-  {
-    id: "home",
-    icon: Shield,
-    title: "Homeowners",
-    description: "Never worry about power cuts again",
-    link: "/residential"
-  },
-  {
-    id: "business",
-    icon: Zap,
-    title: "Businesses",
-    description: "Cut costs and boost reliability",
-    link: "/ci"
-  },
-  {
-    id: "installer",
-    icon: Users,
-    title: "Installers",
-    description: "Partner with the best",
-    link: "/installers"
-  }
-];
+const useCases = [{
+  id: "home",
+  icon: Shield,
+  title: "Homeowners",
+  description: "Never worry about power cuts again",
+  link: "/residential"
+}, {
+  id: "business",
+  icon: Zap,
+  title: "Businesses",
+  description: "Cut costs and boost reliability",
+  link: "/ci"
+}, {
+  id: "installer",
+  icon: Users,
+  title: "Installers",
+  description: "Partner with the best",
+  link: "/installers"
+}];
 
 // Testimonials
-const testimonials = [
-  {
-    initials: "MK",
-    quote: "Two years. Not one reset. Not one worry.",
-    name: "Dr. Mohan Krishna",
-    location: "Bengaluru • Off-grid since 2022"
-  },
-  {
-    initials: "RG",
-    quote: "Our operations run smoother than ever. The grid is just backup now.",
-    name: "Rajesh Gupta",
-    location: "Delhi • EV Charging Hub"
-  },
-  {
-    initials: "PS",
-    quote: "The configurator made it simple. The installation was flawless.",
-    name: "Priya Sharma",
-    location: "Gurgaon • Villa Community"
-  }
-];
+const testimonials = [{
+  initials: "MK",
+  quote: "Two years. Not one reset. Not one worry.",
+  name: "Dr. Mohan Krishna",
+  location: "Bengaluru • Off-grid since 2022"
+}, {
+  initials: "RG",
+  quote: "Our operations run smoother than ever. The grid is just backup now.",
+  name: "Rajesh Gupta",
+  location: "Delhi • EV Charging Hub"
+}, {
+  initials: "PS",
+  quote: "The configurator made it simple. The installation was flawless.",
+  name: "Priya Sharma",
+  location: "Gurgaon • Villa Community"
+}];
 
 // Component: Why NESS Card
-function WhyNessCard({ feature, delay }: { feature: typeof whyNessFeatures[0]; delay: number }) {
-  const { elementRef, isVisible } = useScrollAnimation();
+function WhyNessCard({
+  feature,
+  delay
+}: {
+  feature: typeof whyNessFeatures[0];
+  delay: number;
+}) {
+  const {
+    elementRef,
+    isVisible
+  } = useScrollAnimation();
   const Icon = feature.icon;
-
-  return (
-    <div
-      ref={elementRef as any}
-      className={cn(
-        "group relative p-12 rounded-[2rem] border bg-gradient-to-br backdrop-blur-xl transition-all duration-700 hover:scale-[1.02]",
-        feature.gradient,
-        feature.accentColor,
-        "bg-white/[0.02] hover:bg-white/[0.04]",
-        "border-white/[0.05] hover:border-white/[0.1]",
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-      )}
-      style={{ transitionDelay: `${delay}ms` }}
-    >
+  return <div ref={elementRef as any} className={cn("group relative p-12 rounded-[2rem] border bg-gradient-to-br backdrop-blur-xl transition-all duration-700 hover:scale-[1.02]", feature.gradient, feature.accentColor, "bg-white/[0.02] hover:bg-white/[0.04]", "border-white/[0.05] hover:border-white/[0.1]", isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12")} style={{
+    transitionDelay: `${delay}ms`
+  }}>
       {/* Stat Badge */}
-      <div className={cn(
-        "absolute top-8 right-8 px-4 py-2 rounded-full backdrop-blur-md transition-colors duration-500",
-        "bg-white/[0.03] border group-hover:bg-white/[0.06]",
-        feature.accentColor
-      )}>
+      <div className={cn("absolute top-8 right-8 px-4 py-2 rounded-full backdrop-blur-md transition-colors duration-500", "bg-white/[0.03] border group-hover:bg-white/[0.06]", feature.accentColor)}>
         <span className={cn("text-sm font-medium", feature.statColor)}>{feature.stat}</span>
       </div>
 
       <Icon className={cn("w-14 h-14 mb-8 group-hover:scale-110 transition-transform duration-500", feature.iconColor)} />
       <h3 className="text-3xl font-light text-white mb-5 leading-tight">{feature.title}</h3>
       <p className="text-lg text-white/50 font-light leading-relaxed group-hover:text-white/60 transition-colors duration-500">{feature.description}</p>
-    </div>
-  );
+    </div>;
 }
 
-
 // Component: Use Case Card
-function UseCaseCard({ useCase, isSelected, onClick }: { 
-  useCase: typeof useCases[0]; 
+function UseCaseCard({
+  useCase,
+  isSelected,
+  onClick
+}: {
+  useCase: typeof useCases[0];
   isSelected: boolean;
   onClick: () => void;
 }) {
   const Icon = useCase.icon;
-
-  return (
-    <div
-      onClick={onClick}
-      className={cn(
-        "relative p-10 rounded-3xl border-2 transition-all duration-500 cursor-pointer",
-        isSelected 
-          ? "bg-white border-energy shadow-glow scale-105" 
-          : "bg-white border-graphite/10 hover:border-energy/50 hover:shadow-soft hover:scale-102"
-      )}
-    >
-      <Icon className={cn(
-        "w-12 h-12 mb-6 transition-colors duration-500",
-        isSelected ? "text-energy" : "text-graphite"
-      )} />
+  return <div onClick={onClick} className={cn("relative p-10 rounded-3xl border-2 transition-all duration-500 cursor-pointer", isSelected ? "bg-white border-energy shadow-glow scale-105" : "bg-white border-graphite/10 hover:border-energy/50 hover:shadow-soft hover:scale-102")}>
+      <Icon className={cn("w-12 h-12 mb-6 transition-colors duration-500", isSelected ? "text-energy" : "text-graphite")} />
       <h3 className="text-2xl font-light text-graphite mb-3">{useCase.title}</h3>
       <p className="text-graphite/60 font-light mb-6">{useCase.description}</p>
       
-      {isSelected && (
-        <div className="pt-6 border-t border-graphite/10 animate-fade-in">
+      {isSelected && <div className="pt-6 border-t border-graphite/10 animate-fade-in">
           <Link to={useCase.link}>
             <Button className="w-full bg-energy hover:bg-energy-glow text-white rounded-full">
               Learn More
               <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
           </Link>
-        </div>
-      )}
-    </div>
-  );
+        </div>}
+    </div>;
 }
-
 export default Index;
