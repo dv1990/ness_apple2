@@ -216,22 +216,11 @@ const Index = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
               {/* Left Column - NUCU PCB */}
               <div className="relative">
-                <div className="relative group">
-                  {/* Floating PCB with cinematic effects */}
-                  <div className="relative z-10 transform transition-transform duration-700 group-hover:scale-105">
-                    <img 
-                      src={nucuPcb} 
-                      alt="NUCU Control Board PCB" 
-                      className="w-full h-auto object-contain drop-shadow-[0_25px_60px_rgba(0,0,0,0.8)]"
-                    />
-                  </div>
-                  
-                  {/* Halo glow beneath */}
-                  <div className="absolute inset-0 top-1/2 bg-gradient-radial from-white/8 via-white/3 to-transparent blur-3xl scale-75 transform translate-y-8"></div>
-                  
-                  {/* Subtle metallic reflection overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-transparent pointer-events-none"></div>
-                </div>
+                <img 
+                  src={nucuPcb} 
+                  alt="NUCU Control Board PCB" 
+                  className="w-full h-auto object-contain"
+                />
               </div>
 
               {/* Right Column - Typography */}
