@@ -65,26 +65,25 @@ const ResidentialEnhanced = () => {
             
             <div className="text-center">
               <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight mb-3 text-foreground">
-                <AnimatedCounter value={75} suffix="" decimals={0} />
-                <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl"> kg</span>
+                <AnimatedCounter value={70} suffix="" decimals={0} />
+                <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">%</span>
               </div>
-              <div className="text-sm sm:text-base text-muted-foreground font-light">Weight</div>
+              <div className="text-sm sm:text-base text-muted-foreground font-light">Lighter than Lead Acid</div>
             </div>
             
             <div className="text-center">
               <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight mb-3 text-foreground">
-                <AnimatedCounter value={5} suffix="" decimals={0} />
-                <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl"> kWh</span>
+                <AnimatedCounter value={60} suffix="" decimals={0} />
+                <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">%</span>
               </div>
-              <div className="text-sm sm:text-base text-muted-foreground font-light">Capacity</div>
+              <div className="text-sm sm:text-base text-muted-foreground font-light">Smaller Volume</div>
             </div>
             
             <div className="text-center">
-              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight mb-3 text-foreground">
-                <AnimatedCounter value={3} suffix="" decimals={0} />
-                <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl"> kW</span>
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight mb-3 text-primary">
+                <AnimatedCounter value={0} suffix="" decimals={0} />
               </div>
-              <div className="text-sm sm:text-base text-muted-foreground font-light">Output</div>
+              <div className="text-sm sm:text-base text-muted-foreground font-light">Fumes · Pollution</div>
             </div>
             
             <div className="text-center">
