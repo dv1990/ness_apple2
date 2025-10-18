@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { WebPImage } from "@/components/ui/webp-image";
+import { AnimatedCounter } from "@/components/ui/animated-counter";
 import { ArrowRight, Heart, Home, Sparkles, Shield, Zap, Smile } from "lucide-react";
 
 const ResidentialEnhanced = () => {
@@ -53,6 +54,54 @@ const ResidentialEnhanced = () => {
               </Button>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Specs Section - Steve Jobs Style Numbers */}
+      <section className="py-20 sm:py-24 md:py-32 bg-background">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12">
+            
+            <div className="text-center">
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight mb-3 text-foreground">
+                <AnimatedCounter value={75} suffix="" decimals={0} />
+                <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl"> kg</span>
+              </div>
+              <div className="text-sm sm:text-base text-muted-foreground font-light">Weight</div>
+            </div>
+            
+            <div className="text-center">
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight mb-3 text-foreground">
+                <AnimatedCounter value={5} suffix="" decimals={0} />
+                <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl"> kWh</span>
+              </div>
+              <div className="text-sm sm:text-base text-muted-foreground font-light">Capacity</div>
+            </div>
+            
+            <div className="text-center">
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight mb-3 text-foreground">
+                <AnimatedCounter value={3} suffix="" decimals={0} />
+                <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl"> kW</span>
+              </div>
+              <div className="text-sm sm:text-base text-muted-foreground font-light">Output</div>
+            </div>
+            
+            <div className="text-center">
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight mb-3 text-foreground">
+                <AnimatedCounter value={10} suffix="" decimals={0} />
+                <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl"> ms</span>
+              </div>
+              <div className="text-sm sm:text-base text-muted-foreground font-light">Switch Time</div>
+            </div>
+            
+            <div className="text-center col-span-2 md:col-span-1">
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight mb-3 text-primary">
+                ₹<AnimatedCounter value={48000} decimals={0} />
+              </div>
+              <div className="text-sm sm:text-base text-muted-foreground font-light">Saved/Year</div>
+            </div>
+            
           </div>
         </div>
       </section>
