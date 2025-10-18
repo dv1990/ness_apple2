@@ -18,7 +18,7 @@ const NucuSection = ({ nucuPcb }: NucuSectionProps) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left Column - NUCU PCB with animations */}
           <div 
-            className="relative animate-in fade-in slide-in-from-bottom-2 duration-[800ms] ease-out group cursor-default order-1"
+            className="relative animate-in fade-in slide-in-from-bottom-2 duration-[800ms] ease-out group cursor-default order-1 mt-12 lg:mt-16"
             style={{ transform: `translateY(${offset}px)` }}
           >
             <img 
