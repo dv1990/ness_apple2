@@ -10,7 +10,7 @@ import heroHome from "@/assets/hero-homeowners.jpg";
 import nessPodProduct from "@/assets/ness-pod-product.png";
 import nessProProduct from "@/assets/ness-pro-product.png";
 import nessCubeProduct from "@/assets/ness-cube-resort.webp";
-import nucuPcb from "@/assets/nucu-pcb.png";
+import nucuPcb from "@/assets-webp/nucu-pcb-premium.webp";
 import { useState, useEffect, useRef } from "react";
 const Index = () => {
   const [selectedUseCase, setSelectedUseCase] = useState<string | null>(null);
