@@ -211,30 +211,53 @@ const Index = () => {
 
       {/* INSIDE NUCU SECTION */}
       <LazySection>
-        <section className="relative py-40 bg-gradient-to-b from-[#0B0B0C] to-[#0B0B0D] overflow-hidden">
-          <div className="max-w-7xl mx-auto px-8">
+        <section className="relative py-40 bg-gradient-to-b from-white via-whisper to-white overflow-hidden">
+          {/* Ambient Glow Effects */}
+          <div className="absolute top-1/2 left-1/4 w-[600px] h-[600px] bg-energy/5 rounded-full blur-[120px] -translate-y-1/2"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px]"></div>
+          
+          <div className="relative z-10 max-w-7xl mx-auto px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
               {/* Left Column - NUCU PCB */}
-              <div className="relative">
-                <img 
-                  src={nucuPcb} 
-                  alt="NUCU Control Board PCB" 
-                  className="w-full h-auto object-contain"
-                />
+              <div className="relative group">
+                {/* Background Card Shadow */}
+                <div className="absolute inset-0 bg-gradient-to-br from-graphite via-charcoal to-graphite rounded-[3rem] transform rotate-1 group-hover:rotate-2 transition-transform duration-700 opacity-20"></div>
+                
+                {/* Main Container */}
+                <div className="relative bg-gradient-to-br from-[#0a0a0a] via-[#0f0f0f] to-[#0a0a0a] rounded-[3rem] p-12 shadow-lifted">
+                  {/* Spotlight Effect */}
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1/2 bg-gradient-to-b from-white/10 to-transparent rounded-full blur-2xl"></div>
+                  
+                  {/* PCB Image */}
+                  <div className="relative transform group-hover:scale-105 transition-transform duration-700">
+                    <img 
+                      src={nucuPcb} 
+                      alt="NUCU Control Board PCB" 
+                      className="w-full h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,200,83,0.3)]"
+                    />
+                    
+                    {/* Glow Halo */}
+                    <div className="absolute inset-0 bg-gradient-radial from-energy/20 via-energy/5 to-transparent blur-3xl scale-75 opacity-60 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  </div>
+                </div>
+                
+                {/* Floating accent elements */}
+                <div className="absolute -top-4 -right-4 w-24 h-24 bg-energy/10 rounded-full blur-2xl animate-pulse"></div>
+                <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
               </div>
 
               {/* Right Column - Typography */}
               <div className="space-y-8 lg:pl-8">
                 <div className="space-y-6">
-                  <h2 className="text-5xl md:text-6xl font-light text-white tracking-tight" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
+                  <h2 className="text-5xl md:text-6xl font-light text-graphite tracking-tight" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
                     Inside NUCU
                   </h2>
                   
-                  <p className="text-2xl text-white/70 font-light leading-relaxed" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
+                  <p className="text-2xl text-graphite/70 font-light leading-relaxed" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
                     Where smart design meets powerful thinking.
                   </p>
                   
-                  <div className="pt-6 space-y-6 text-lg text-white/60 font-light leading-relaxed" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
+                  <div className="pt-6 space-y-6 text-lg text-graphite/60 font-light leading-relaxed" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
                     <p>
                       NUCU is the brain of your home's energy system.<br />
                       It watches, learns, and protects — every second, without a sound.
@@ -255,7 +278,7 @@ const Index = () => {
                 <div className="pt-8">
                   <Button 
                     size="lg" 
-                    className="bg-white/10 hover:bg-white/15 backdrop-blur-md text-white border border-white/20 px-10 py-6 text-lg rounded-full transition-all duration-500 group"
+                    className="bg-energy hover:bg-energy-glow text-white px-10 py-6 text-lg rounded-full shadow-glow hover:shadow-[0_0_40px_rgba(0,200,83,0.4)] transition-all duration-500 group"
                   >
                     See How NUCU Works
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
