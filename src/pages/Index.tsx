@@ -211,7 +211,7 @@ const Index = () => {
 
       {/* INSIDE NUCU SECTION */}
       <LazySection>
-        <section className="relative py-40 bg-gradient-to-b from-[#0B0B0C] to-[#121212] overflow-hidden">
+        <section className="relative py-40 bg-gradient-to-b from-[#0B0B0C] to-[#0B0B0D] overflow-hidden">
           <div className="max-w-7xl mx-auto px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
               {/* Left Column - NUCU PCB */}
