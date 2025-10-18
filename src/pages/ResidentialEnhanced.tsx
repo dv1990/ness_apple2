@@ -8,31 +8,126 @@ const ResidentialEnhanced = () => {
 
   return (
     <Layout>
-      {/* 1. HERO - The Vision */}
-      <section className="min-h-[80vh] sm:min-h-[90vh] bg-background px-6 sm:px-8 relative overflow-hidden flex items-center py-12 sm:py-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5"></div>
+      {/* 1. HERO - NESS AIO Product Hero */}
+      <section className="min-h-screen bg-background relative overflow-hidden flex items-center">
+        {/* Background Image - Product in Use */}
+        <div className="absolute inset-0">
+          <WebPImage 
+            src="/src/assets/ness-pod-installation-hero.webp"
+            fallbackSrc="/src/assets/hero-residential-installation.jpg"
+            alt="NESS AIO powering a modern home"
+            className="w-full h-full"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/85 to-background/70"></div>
+        </div>
         
-        <div className="max-w-5xl mx-auto relative z-10 py-12 sm:py-20">
-          <div className="space-y-6 sm:space-y-8 animate-fade-in">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.1] tracking-tight font-light text-foreground">
-              Imagine a home<br />that powers<br />
-              <span className="text-primary font-normal">itself.</span>
-            </h1>
+        {/* Content */}
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10 py-20 sm:py-32">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light leading-relaxed max-w-3xl">
-              No waiting for the grid. No generator noise. No compromise.
-              <br />Just pure, quiet independence—every single day.
-            </p>
+            {/* Left Column - Hero Message + Product Info */}
+            <div className="space-y-8 animate-fade-in">
+              {/* Pre-headline */}
+              <div className="inline-block">
+                <p className="text-sm text-primary uppercase tracking-widest font-medium px-4 py-2 bg-primary/10 rounded-full">
+                  The Complete Answer
+                </p>
+              </div>
+              
+              {/* Main Headline */}
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight font-light text-foreground">
+                NESS AIO.<br />
+                <span className="text-primary font-normal">Energy independence, complete.</span>
+              </h1>
+              
+              {/* Subheadline */}
+              <p className="text-xl sm:text-2xl text-muted-foreground font-light leading-relaxed max-w-xl">
+                Solar + battery + inverter. One system. Zero compromises.
+                <br />No waiting. No noise. Just pure independence.
+              </p>
 
-            <div className="pt-4 sm:pt-6">
-              <Button 
-                size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 sm:px-10 py-4 sm:py-6 rounded-full text-base sm:text-lg font-medium"
-                onClick={() => document.getElementById('vision')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Discover How
-              </Button>
+              {/* Key Stats */}
+              <div className="grid grid-cols-3 gap-6 pt-4">
+                <div>
+                  <div className="text-4xl sm:text-5xl font-light text-primary mb-1">24h</div>
+                  <div className="text-sm text-muted-foreground uppercase tracking-wide">Full Backup</div>
+                </div>
+                <div>
+                  <div className="text-4xl sm:text-5xl font-light text-primary mb-1">₹0</div>
+                  <div className="text-sm text-muted-foreground uppercase tracking-wide">Monthly Bills</div>
+                </div>
+                <div>
+                  <div className="text-4xl sm:text-5xl font-light text-primary mb-1">15yr</div>
+                  <div className="text-sm text-muted-foreground uppercase tracking-wide">Warranty</div>
+                </div>
+              </div>
+
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button 
+                  size="lg"
+                  className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-7 rounded-full text-lg font-medium shadow-lg shadow-primary/20"
+                  onClick={() => window.location.href = '/contact/homeowner'}
+                >
+                  Get NESS AIO
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+                <Button 
+                  variant="outline"
+                  size="lg"
+                  className="px-10 py-7 rounded-full text-lg font-medium border-2"
+                  onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  See How It Works
+                </Button>
+              </div>
+
+              {/* Social Proof */}
+              <div className="pt-4 border-t border-border/30">
+                <p className="text-sm text-muted-foreground">
+                  <span className="text-primary font-semibold">2,847 families</span> already power their own lives
+                </p>
+              </div>
             </div>
+
+            {/* Right Column - Product Image with Benefits */}
+            <div className="relative lg:block hidden animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="bg-gradient-to-br from-card/60 to-primary/5 backdrop-blur-xl rounded-3xl p-8 border border-primary/20 shadow-2xl">
+                {/* Product Image */}
+                <div className="aspect-[4/3] bg-gradient-to-br from-muted/20 to-muted/40 rounded-2xl overflow-hidden mb-6">
+                  <div className="flex items-center justify-center h-full p-6">
+                    <WebPImage 
+                      src="/src/assets/ness-pod-product.png" 
+                      alt="NESS AIO - Complete Home Energy System" 
+                      className="w-full h-full object-contain"
+                      loading="eager"
+                    />
+                  </div>
+                </div>
+
+                {/* What You Get */}
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <p className="text-base text-foreground">Your AC runs all night. On your power.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <p className="text-base text-foreground">The refrigerator never stops. Ever.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <p className="text-base text-foreground">Your kids study without interruption.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <p className="text-base text-foreground">You forget power cuts exist.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -105,101 +200,70 @@ const ResidentialEnhanced = () => {
         </div>
       </section>
 
-      {/* 3. THE SOLUTION - Hero Product (NESS AIO) */}
-      <section className="py-32 bg-background">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8">
-          
-          {/* Headline */}
+      {/* 3. THE VISION - What You Could Gain (Previously section 2) */}
+      <section id="vision" className="py-32 bg-gradient-to-b from-muted/10 to-background">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8">
           <div className="text-center mb-20 space-y-6">
-            <p className="text-sm text-primary uppercase tracking-widest font-medium">The Complete Answer</p>
             <h2 className="text-4xl sm:text-5xl md:text-6xl leading-tight tracking-tight text-foreground font-light">
-              NESS AIO.<br />
-              <span className="text-primary font-normal">Energy independence, complete.</span>
+              Picture your life<br />
+              <span className="text-primary font-normal">truly powered by the sun.</span>
             </h2>
-            <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto">
-              Solar + battery + inverter. One system. Zero compromises.
-            </p>
           </div>
 
-          {/* Hero Product Card */}
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-card/80 to-primary/5 backdrop-blur-sm rounded-3xl p-12 md:p-16 border border-primary/20 shadow-2xl">
-              
-              {/* Product Image */}
-              <div className="aspect-[4/3] bg-gradient-to-br from-muted/30 to-muted/50 rounded-2xl overflow-hidden mb-12">
-                <div className="flex items-center justify-center h-full p-8">
-                  <WebPImage 
-                    src="/src/assets/ness-pod-product.png" 
-                    alt="NESS AIO - Complete Home Energy System" 
-                    className="w-full h-full object-contain"
-                    loading="eager"
-                  />
-                </div>
-              </div>
-
-              {/* Key Benefits */}
-              <div className="grid md:grid-cols-3 gap-8 mb-12 text-center">
-                <div>
-                  <div className="text-5xl font-light mb-2 text-primary">24h</div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wide">Full Backup</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Freedom */}
+            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-10 border border-primary/20 hover:border-primary/40 transition-all">
+              <div className="space-y-6">
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
+                  <Heart className="w-8 h-8 text-primary" />
                 </div>
                 <div>
-                  <div className="text-5xl font-light mb-2 text-primary">₹0</div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wide">Monthly Bills</div>
+                  <div className="text-4xl font-light mb-2 text-primary">Complete</div>
+                  <div className="text-sm text-muted-foreground uppercase tracking-wider mb-4">Peace of Mind</div>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    Your AC runs all night. Fridge never stops. Kids study without interruption. Life flows unbroken.
+                  </p>
                 </div>
-                <div>
-                  <div className="text-5xl font-light mb-2 text-primary">15yr</div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wide">Warranty</div>
-                </div>
-              </div>
-
-              {/* What You Get */}
-              <div className="space-y-4 mb-12 py-8 border-y border-border/50">
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <p className="text-lg text-foreground">Your AC runs all night. On your power.</p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <p className="text-lg text-foreground">The refrigerator never stops. Ever.</p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <p className="text-lg text-foreground">Your kids study without interruption.</p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <p className="text-lg text-foreground">You forget power cuts exist.</p>
-                </div>
-              </div>
-
-              {/* CTA */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  size="lg"
-                  className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-7 rounded-full text-lg font-medium shadow-lg shadow-primary/20"
-                  onClick={() => window.location.href = '/contact/homeowner'}
-                >
-                  Get NESS AIO
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-                <Button 
-                  variant="outline"
-                  size="lg"
-                  className="flex-1 px-10 py-7 rounded-full text-lg font-medium"
-                  onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  See How It Works
-                </Button>
-              </div>
-
-              {/* Social Proof Micro */}
-              <div className="mt-8 pt-8 border-t border-border/30 text-center">
-                <p className="text-sm text-muted-foreground">
-                  <span className="text-primary font-semibold">2,847 families</span> already power their own lives
-                </p>
               </div>
             </div>
+
+            {/* Independence */}
+            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-10 border border-primary/20 hover:border-primary/40 transition-all">
+              <div className="space-y-6">
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
+                  <Home className="w-8 h-8 text-primary" />
+                </div>
+                <div>
+                  <div className="text-4xl font-light mb-2 text-primary">True</div>
+                  <div className="text-sm text-muted-foreground uppercase tracking-wider mb-4">Energy Independence</div>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    No more waiting for power to return. No reliance on anyone else. Your home, your energy, your terms.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Value */}
+            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-10 border border-primary/20 hover:border-primary/40 transition-all">
+              <div className="space-y-6">
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
+                  <Sparkles className="w-8 h-8 text-primary" />
+                </div>
+                <div>
+                  <div className="text-4xl font-light mb-2 text-primary">₹48,000</div>
+                  <div className="text-sm text-muted-foreground uppercase tracking-wider mb-4">Saved Every Year</div>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    Every sunrise brings free energy. Every sunset, your power keeps flowing. Bills become memories.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-16 text-center">
+            <p className="text-2xl sm:text-3xl text-foreground font-light leading-relaxed max-w-3xl mx-auto">
+              This isn't a dream. <span className="text-primary">This is how 2,847 families already live.</span>
+            </p>
           </div>
         </div>
       </section>
