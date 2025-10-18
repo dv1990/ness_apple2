@@ -8,124 +8,49 @@ const ResidentialEnhanced = () => {
 
   return (
     <Layout>
-      {/* 1. HERO - NESS AIO Product Hero */}
+      {/* 1. HERO - Simple. Clear. Powerful. */}
       <section className="min-h-screen bg-background relative overflow-hidden flex items-center">
-        {/* Background Image - Product in Use */}
-        <div className="absolute inset-0">
-          <WebPImage 
-            src="/src/assets/ness-pod-installation-hero.webp"
-            fallbackSrc="/src/assets/hero-residential-installation.jpg"
-            alt="NESS AIO powering a modern home"
-            className="w-full h-full"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/85 to-background/70"></div>
-        </div>
+        {/* Subtle Background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-muted/5"></div>
         
-        {/* Content */}
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10 py-20 sm:py-32">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            
-            {/* Left Column - Hero Message + Product Info */}
-            <div className="space-y-8 animate-fade-in">
-              {/* Pre-headline */}
-              <div className="inline-block">
-                <p className="text-sm text-primary uppercase tracking-widest font-medium px-4 py-2 bg-primary/10 rounded-full">
-                  The Complete Answer
-                </p>
-              </div>
-              
-              {/* Main Headline */}
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight font-light text-foreground">
-                NESS AIO.<br />
-                <span className="text-primary font-normal">Energy independence, complete.</span>
-              </h1>
-              
-              {/* Subheadline */}
-              <p className="text-xl sm:text-2xl text-muted-foreground font-light leading-relaxed max-w-xl">
-                Solar + battery + inverter. One system. Zero compromises.
-                <br />No waiting. No noise. Just pure independence.
-              </p>
-
-              {/* Key Stats */}
-              <div className="grid grid-cols-3 gap-6 pt-4">
-                <div>
-                  <div className="text-4xl sm:text-5xl font-light text-primary mb-1">24h</div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wide">Full Backup</div>
-                </div>
-                <div>
-                  <div className="text-4xl sm:text-5xl font-light text-primary mb-1">₹0</div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wide">Monthly Bills</div>
-                </div>
-                <div>
-                  <div className="text-4xl sm:text-5xl font-light text-primary mb-1">15yr</div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wide">Warranty</div>
-                </div>
-              </div>
-
-              {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button 
-                  size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-7 rounded-full text-lg font-medium shadow-lg shadow-primary/20"
-                  onClick={() => window.location.href = '/contact/homeowner'}
-                >
-                  Get NESS AIO
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-                <Button 
-                  variant="outline"
-                  size="lg"
-                  className="px-10 py-7 rounded-full text-lg font-medium border-2"
-                  onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  See How It Works
-                </Button>
-              </div>
-
-              {/* Social Proof */}
-              <div className="pt-4 border-t border-border/30">
-                <p className="text-sm text-muted-foreground">
-                  <span className="text-primary font-semibold">2,847 families</span> already power their own lives
-                </p>
-              </div>
+        {/* Content - Centered, Minimal */}
+        <div className="max-w-5xl mx-auto px-6 sm:px-8 relative z-10 py-20 text-center">
+          
+          {/* The Product */}
+          <div className="mb-16 animate-fade-in">
+            <div className="max-w-2xl mx-auto">
+              <WebPImage 
+                src="/src/assets/ness-pod-product.png" 
+                alt="NESS AIO" 
+                className="w-full h-full object-contain drop-shadow-2xl"
+                loading="eager"
+              />
             </div>
+          </div>
 
-            {/* Right Column - Product Image with Benefits */}
-            <div className="relative lg:block hidden animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="bg-gradient-to-br from-card/60 to-primary/5 backdrop-blur-xl rounded-3xl p-8 border border-primary/20 shadow-2xl">
-                {/* Product Image */}
-                <div className="aspect-[4/3] bg-gradient-to-br from-muted/20 to-muted/40 rounded-2xl overflow-hidden mb-6">
-                  <div className="flex items-center justify-center h-full p-6">
-                    <WebPImage 
-                      src="/src/assets/ness-pod-product.png" 
-                      alt="NESS AIO - Complete Home Energy System" 
-                      className="w-full h-full object-contain"
-                      loading="eager"
-                    />
-                  </div>
-                </div>
+          {/* The Message */}
+          <div className="space-y-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            
+            {/* Headline - One clear thought */}
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight font-light text-foreground">
+              Energy independence.<br />
+              <span className="text-primary font-normal">Complete.</span>
+            </h1>
+            
+            {/* One line. That's it. */}
+            <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground font-light max-w-3xl mx-auto">
+              Solar + battery + inverter. One system.
+            </p>
 
-                {/* What You Get */}
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <p className="text-base text-foreground">Your AC runs all night. On your power.</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <p className="text-base text-foreground">The refrigerator never stops. Ever.</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <p className="text-base text-foreground">Your kids study without interruption.</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <p className="text-base text-foreground">You forget power cuts exist.</p>
-                  </div>
-                </div>
-              </div>
+            {/* One action */}
+            <div className="pt-8">
+              <Button 
+                size="lg"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 px-12 py-7 rounded-full text-lg font-medium shadow-xl shadow-primary/20"
+                onClick={() => window.location.href = '/contact/homeowner'}
+              >
+                Get Started
+              </Button>
             </div>
 
           </div>
