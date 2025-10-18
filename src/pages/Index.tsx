@@ -211,39 +211,37 @@ const Index = () => {
 
       {/* INSIDE NUCU SECTION */}
       <LazySection>
-        <section className="relative py-40 bg-gradient-to-b from-white via-whisper to-white overflow-hidden">
-          {/* Ambient Glow Effects */}
-          <div className="absolute top-1/2 left-1/4 w-[600px] h-[600px] bg-energy/5 rounded-full blur-[120px] -translate-y-1/2"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px]"></div>
+        <section className="relative py-40 bg-white overflow-hidden">
+          {/* Subtle radial gradient backdrop */}
+          <div className="absolute inset-0 bg-gradient-radial from-whisper via-white to-white opacity-60"></div>
           
           <div className="relative z-10 max-w-7xl mx-auto px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
               {/* Left Column - NUCU PCB */}
-              <div className="relative group">
-                {/* Background Card Shadow */}
-                <div className="absolute inset-0 bg-gradient-to-br from-graphite via-charcoal to-graphite rounded-[3rem] transform rotate-1 group-hover:rotate-2 transition-transform duration-700 opacity-20"></div>
-                
-                {/* Main Container */}
-                <div className="relative bg-gradient-to-br from-[#0a0a0a] via-[#0f0f0f] to-[#0a0a0a] rounded-[3rem] p-12 shadow-lifted">
-                  {/* Spotlight Effect */}
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1/2 bg-gradient-to-b from-white/10 to-transparent rounded-full blur-2xl"></div>
+              <div className="relative group perspective-1000">
+                {/* Elevated card with clean shadow */}
+                <div className="relative bg-white rounded-3xl p-16 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] hover:shadow-[0_50px_120px_-20px_rgba(0,0,0,0.2)] transition-all duration-700 border border-graphite/5">
+                  {/* Subtle top highlight */}
+                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-energy/20 to-transparent"></div>
                   
-                  {/* PCB Image */}
-                  <div className="relative transform group-hover:scale-105 transition-transform duration-700">
+                  {/* Focused spotlight from top */}
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-1/3 bg-gradient-to-b from-energy/8 to-transparent rounded-full blur-3xl"></div>
+                  
+                  {/* PCB Image - Hero treatment */}
+                  <div className="relative transform group-hover:scale-[1.03] transition-transform duration-700 ease-out">
                     <img 
                       src={nucuPcb} 
                       alt="NUCU Control Board PCB" 
-                      className="w-full h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,200,83,0.3)]"
+                      className="w-full h-auto object-contain drop-shadow-[0_30px_60px_rgba(0,200,83,0.25)] group-hover:drop-shadow-[0_35px_70px_rgba(0,200,83,0.35)] transition-all duration-700"
                     />
                     
-                    {/* Glow Halo */}
-                    <div className="absolute inset-0 bg-gradient-radial from-energy/20 via-energy/5 to-transparent blur-3xl scale-75 opacity-60 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    {/* Clean energy glow underneath */}
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4/5 h-1/4 bg-energy/10 rounded-full blur-3xl opacity-40 group-hover:opacity-60 transition-opacity duration-700"></div>
                   </div>
                 </div>
                 
-                {/* Floating accent elements */}
-                <div className="absolute -top-4 -right-4 w-24 h-24 bg-energy/10 rounded-full blur-2xl animate-pulse"></div>
-                <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+                {/* Minimal accent dot */}
+                <div className="absolute -top-2 -right-2 w-4 h-4 bg-energy rounded-full shadow-[0_0_20px_rgba(0,200,83,0.6)]"></div>
               </div>
 
               {/* Right Column - Typography */}
