@@ -211,41 +211,35 @@ const Index = () => {
 
       {/* INSIDE NUCU SECTION */}
       <LazySection>
-        <section className="relative py-40 bg-gradient-to-b from-[#0B0B0C] to-[#0B0B0D] overflow-hidden">
+        <section className="relative py-40 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
               {/* Left Column - NUCU PCB */}
               <div className="relative">
                 <div className="relative group">
-                  {/* Floating PCB with cinematic effects */}
+                  {/* Floating PCB with clean presentation */}
                   <div className="relative z-10 transform transition-transform duration-700 group-hover:scale-105">
                     <img 
                       src={nucuPcb} 
                       alt="NUCU Control Board PCB" 
-                      className="w-full h-auto object-contain drop-shadow-[0_25px_60px_rgba(0,0,0,0.8)]"
+                      className="w-full h-auto object-contain"
                     />
                   </div>
-                  
-                  {/* Halo glow beneath */}
-                  <div className="absolute inset-0 top-1/2 bg-gradient-radial from-white/8 via-white/3 to-transparent blur-3xl scale-75 transform translate-y-8"></div>
-                  
-                  {/* Subtle metallic reflection overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-transparent pointer-events-none"></div>
                 </div>
               </div>
 
               {/* Right Column - Typography */}
               <div className="space-y-8 lg:pl-8">
                 <div className="space-y-6">
-                  <h2 className="text-5xl md:text-6xl font-light text-white tracking-tight" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
+                  <h2 className="text-5xl md:text-6xl font-light text-graphite tracking-tight" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
                     Inside NUCU
                   </h2>
                   
-                  <p className="text-2xl text-white/70 font-light leading-relaxed" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
+                  <p className="text-2xl text-graphite/70 font-light leading-relaxed" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
                     Where smart design meets powerful thinking.
                   </p>
                   
-                  <div className="pt-6 space-y-6 text-lg text-white/60 font-light leading-relaxed" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
+                  <div className="pt-6 space-y-6 text-lg text-graphite/60 font-light leading-relaxed" style={{ fontFamily: "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" }}>
                     <p>
                       NUCU is the brain of your home's energy system.<br />
                       It watches, learns, and protects — every second, without a sound.
@@ -266,7 +260,7 @@ const Index = () => {
                 <div className="pt-8">
                   <Button 
                     size="lg" 
-                    className="bg-white/10 hover:bg-white/15 backdrop-blur-md text-white border border-white/20 px-10 py-6 text-lg rounded-full transition-all duration-500 group"
+                    className="bg-energy hover:bg-energy-glow text-white px-10 py-6 text-lg rounded-full shadow-glow hover:shadow-[0_0_40px_rgba(0,200,83,0.4)] transition-all duration-500 group"
                   >
                     See How NUCU Works
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
