@@ -46,7 +46,7 @@ const products: Product[] = [
     capacity: '5 kWh',
     backupTime: '12 hours',
     price: '₹89,999',
-    idealFor: 'Apartments, Small Homes, Small Offices & Buildings',
+    idealFor: 'Small homes, Apartments and offices',
     features: ['Pure sine wave energy', 'Wi-Fi never drops', 'Perfect for WFH']
   },
   {
