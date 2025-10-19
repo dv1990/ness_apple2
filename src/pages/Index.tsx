@@ -113,10 +113,10 @@ const Index = () => {
           <div className="max-w-7xl mx-auto px-8">
             <div className="text-center mb-24">
               <h2 className="text-6xl md:text-7xl font-light text-graphite mb-8 tracking-tight leading-[1.1]">
-                The old ways<br />held you back.
+                Rethink power.
               </h2>
               <p className="text-2xl text-graphite/60 font-light max-w-3xl mx-auto leading-relaxed">
-                For years, we accepted noise, fumes, and constant maintenance. There's a better way now.
+                No noise. No fumes. No maintenance.
               </p>
             </div>
 
@@ -126,15 +126,14 @@ const Index = () => {
                 <div className="w-16 h-16 rounded-2xl bg-graphite/10 flex items-center justify-center">
                   <Battery className="w-8 h-8 text-graphite/40" />
                 </div>
-                <h3 className="text-3xl font-light text-graphite">Lead Acid Batteries</h3>
+                <h3 className="text-3xl font-light text-graphite">Lead Acid</h3>
                 <p className="text-lg text-graphite/60 leading-relaxed">
-                  Heavy. Slow to charge. Need replacement every 2-3 years. Regular maintenance. Limited depth of discharge means you can't use most of the capacity you paid for.
+                  Heavy. Hot. Half usable.
                 </p>
                 <div className="pt-4 space-y-2 text-sm text-graphite/50">
-                  <p>• Dies after 500-800 cycles</p>
-                  <p>• Only 50% usable capacity</p>
-                  <p>• Constant water topping & cleaning</p>
-                  <p>• Loses efficiency in heat</p>
+                  <p>• 500-800 cycles only</p>
+                  <p>• 50% usable capacity</p>
+                  <p>• Constant maintenance</p>
                 </div>
               </div>
 
@@ -143,15 +142,14 @@ const Index = () => {
                 <div className="w-16 h-16 rounded-2xl bg-graphite/10 flex items-center justify-center">
                   <Zap className="w-8 h-8 text-graphite/40" />
                 </div>
-                <h3 className="text-3xl font-light text-graphite">Diesel Generators</h3>
+                <h3 className="text-3xl font-light text-graphite">Diesel</h3>
                 <p className="text-lg text-graphite/60 leading-relaxed">
-                  Loud enough to wake the neighbors. Diesel prices that change by the week. Fumes and pollution in your compound. Manual starting. Running costs that never end.
+                  Loud. Expensive. Pollutes.
                 </p>
                 <div className="pt-4 space-y-2 text-sm text-graphite/50">
                   <p>• ₹20-30/kWh running cost</p>
-                  <p>• 85dB noise pollution</p>
-                  <p>• Regular servicing needed</p>
-                  <p>• Can't start instantly</p>
+                  <p>• 85dB noise</p>
+                  <p>• Regular servicing</p>
                 </div>
               </div>
 
@@ -163,15 +161,14 @@ const Index = () => {
                 <div className="w-16 h-16 rounded-2xl bg-energy/20 flex items-center justify-center">
                   <Shield className="w-8 h-8 text-energy" />
                 </div>
-                <h3 className="text-3xl font-light text-graphite">Lithium Ion (NESS)</h3>
+                <h3 className="text-3xl font-light text-graphite">NESS</h3>
                 <p className="text-lg text-graphite/80 leading-relaxed font-medium">
-                  Silent. Instant. Zero maintenance. Lasts 10+ years. Deep discharge means you use every bit of capacity. Smart software that learns your patterns.
+                  Silent. Instant. Lasts 10+ years.
                 </p>
                 <div className="pt-4 space-y-2 text-sm text-energy font-medium">
-                  <p>• 6000+ cycles = 10-15 years</p>
+                  <p>• 6000+ cycles</p>
                   <p>• 95% usable capacity</p>
-                  <p>• Zero maintenance, ever</p>
-                  <p>• 10ms instant switchover</p>
+                  <p>• Zero maintenance</p>
                 </div>
               </div>
             </div>
