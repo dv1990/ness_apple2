@@ -102,137 +102,129 @@ const ResidentialEnhanced = () => {
       <section id="vision" className="py-16 sm:py-24 md:py-32 bg-gradient-to-b from-background to-muted/10">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           <div className="text-center mb-12 sm:mb-16 md:mb-20 space-y-4 sm:space-y-6">
+            <p className="text-sm uppercase tracking-widest text-primary mb-4">Your Solar Life</p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight text-foreground font-light">
-              Picture your life<br />
-              <span className="text-primary font-normal">truly powered by the sun.</span>
+              Imagine a home where<br />
+              <span className="text-primary font-normal">power never runs out.</span>
             </h2>
+            <p className="text-lg sm:text-xl text-muted-foreground font-light max-w-2xl mx-auto">
+              Here's what changes when you go solar with NESS
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {/* Freedom */}
-            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-10 border border-primary/20 hover:border-primary/40 transition-all">
-              <div className="space-y-6">
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
-                  <Heart className="w-8 h-8 text-primary" />
+            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-8 sm:p-10 border border-primary/20 hover:border-primary/40 transition-all">
+              <div className="space-y-4">
+                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+                  <Smile className="w-7 h-7 text-primary" />
                 </div>
                 <div>
-                  <div className="text-4xl font-light mb-2 text-primary">Complete</div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wider mb-4">Peace of Mind</div>
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    Your AC runs all night. Fridge never stops. Kids study without interruption. Life flows unbroken.
-                  </p>
+                  <div className="text-2xl sm:text-3xl font-light mb-1 text-foreground">Never worry again</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider mb-3">24/7 Power</div>
+                  
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <p className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">✓</span>
+                      <span>AC runs through the night</span>
+                    </p>
+                    <p className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">✓</span>
+                      <span>Fridge stays on always</span>
+                    </p>
+                    <p className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">✓</span>
+                      <span>Kids' studies uninterrupted</span>
+                    </p>
+                    <p className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">✓</span>
+                      <span>No waiting for power</span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Independence */}
-            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-10 border border-primary/20 hover:border-primary/40 transition-all">
-              <div className="space-y-6">
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
-                  <Home className="w-8 h-8 text-primary" />
+            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-8 sm:p-10 border border-primary/20 hover:border-primary/40 transition-all">
+              <div className="space-y-4">
+                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+                  <Zap className="w-7 h-7 text-primary" />
                 </div>
                 <div>
-                  <div className="text-4xl font-light mb-2 text-primary">True</div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wider mb-4">Energy Independence</div>
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    No more waiting for power to return. No reliance on anyone else. Your home, your energy, your terms.
-                  </p>
+                  <div className="text-2xl sm:text-3xl font-light mb-1 text-foreground">Be independent</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Your Energy, Your Rules</div>
+                  
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <p className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">✓</span>
+                      <span>Free from power cuts</span>
+                    </p>
+                    <p className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">✓</span>
+                      <span>No dependency on grid</span>
+                    </p>
+                    <p className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">✓</span>
+                      <span>Generate your own power</span>
+                    </p>
+                    <p className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">✓</span>
+                      <span>Control your energy future</span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Value */}
-            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-10 border border-primary/20 hover:border-primary/40 transition-all">
-              <div className="space-y-6">
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
-                  <Sparkles className="w-8 h-8 text-primary" />
+            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-8 sm:p-10 border border-primary/20 hover:border-primary/40 transition-all">
+              <div className="space-y-4">
+                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+                  <Sparkles className="w-7 h-7 text-primary" />
                 </div>
                 <div>
-                  <div className="text-4xl font-light mb-2 text-primary">₹48,000</div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wider mb-4">Saved Every Year</div>
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    Every sunrise brings free energy. Every sunset, your power keeps flowing. Bills become memories.
-                  </p>
+                  <div className="text-2xl sm:text-3xl font-light mb-1 text-foreground">Save real money</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider mb-3">₹48,000/Year Savings</div>
+                  
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <p className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">✓</span>
+                      <span>Zero electricity bills</span>
+                    </p>
+                    <p className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">✓</span>
+                      <span>Free solar energy daily</span>
+                    </p>
+                    <p className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">✓</span>
+                      <span>No fuel or maintenance costs</span>
+                    </p>
+                    <p className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">✓</span>
+                      <span>15-year warranty included</span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="mt-16 text-center">
-            <p className="text-2xl sm:text-3xl text-foreground font-light leading-relaxed max-w-3xl mx-auto">
-              This isn't a dream. <span className="text-primary">This is how 2,847 families already live.</span>
+          <div className="mt-12 sm:mt-16 text-center space-y-6">
+            <p className="text-xl sm:text-2xl text-foreground font-light leading-relaxed max-w-2xl mx-auto">
+              <span className="text-primary font-normal">2,847 families</span> already living this life today
             </p>
+            <Button 
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 rounded-full text-base font-medium"
+              onClick={() => window.location.href = '/contact/homeowner'}
+            >
+              Join Them <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* 3. THE VISION - What You Could Gain (Previously section 2) */}
-      <section id="vision" className="py-32 bg-gradient-to-b from-muted/10 to-background">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8">
-          <div className="text-center mb-20 space-y-6">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl leading-tight tracking-tight text-foreground font-light">
-              Picture your life<br />
-              <span className="text-primary font-normal">truly powered by the sun.</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Freedom */}
-            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-10 border border-primary/20 hover:border-primary/40 transition-all">
-              <div className="space-y-6">
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
-                  <Heart className="w-8 h-8 text-primary" />
-                </div>
-                <div>
-                  <div className="text-4xl font-light mb-2 text-primary">Complete</div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wider mb-4">Peace of Mind</div>
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    Your AC runs all night. Fridge never stops. Kids study without interruption. Life flows unbroken.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Independence */}
-            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-10 border border-primary/20 hover:border-primary/40 transition-all">
-              <div className="space-y-6">
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
-                  <Home className="w-8 h-8 text-primary" />
-                </div>
-                <div>
-                  <div className="text-4xl font-light mb-2 text-primary">True</div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wider mb-4">Energy Independence</div>
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    No more waiting for power to return. No reliance on anyone else. Your home, your energy, your terms.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Value */}
-            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-10 border border-primary/20 hover:border-primary/40 transition-all">
-              <div className="space-y-6">
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
-                  <Sparkles className="w-8 h-8 text-primary" />
-                </div>
-                <div>
-                  <div className="text-4xl font-light mb-2 text-primary">₹48,000</div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wider mb-4">Saved Every Year</div>
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    Every sunrise brings free energy. Every sunset, your power keeps flowing. Bills become memories.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-16 text-center">
-            <p className="text-2xl sm:text-3xl text-foreground font-light leading-relaxed max-w-3xl mx-auto">
-              This isn't a dream. <span className="text-primary">This is how 2,847 families already live.</span>
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* 4. HOW IT WORKS - Remove Mystery */}
       <section id="how-it-works" className="py-32 bg-gradient-to-b from-muted/10 to-background">
