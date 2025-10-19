@@ -39,12 +39,21 @@ export const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 
         if (progress < 1) {
           animationFrame = requestAnimationFrame(animate);
+        } else {
+          // Final update to ensure exact value
+          setCount(value);
         }
       };
 
-      animationFrame = requestAnimationFrame(animate);
+      // Delay animation start slightly to prevent all counters animating at once
+      const delayTimer = setTimeout(() => {
+        animationFrame = requestAnimationFrame(animate);
+      }, Math.random() * 100);
 
-      return () => cancelAnimationFrame(animationFrame);
+      return () => {
+        clearTimeout(delayTimer);
+        cancelAnimationFrame(animationFrame);
+      };
     }
   }, [isInView, value, duration]);
 

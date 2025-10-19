@@ -105,6 +105,39 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
+  /* Performance: CSS Containment for isolated sections */
+  section {
+    contain: layout style paint;
+  }
+
+  /* Performance: will-change hints (use sparingly) */
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .will-change-opacity {
+    will-change: opacity;
+  }
+
+  /* Remove will-change after animation completes */
+  .animate-complete {
+    will-change: auto;
+  }
+
+  /* Optimize animations for 60fps */
+  @media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* GPU acceleration for transforms */
+  .gpu-accelerate {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-system);
     font-weight: 400;

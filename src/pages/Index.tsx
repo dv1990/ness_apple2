@@ -85,7 +85,7 @@ const Index = () => {
 
       {/* 2. WHY NESS SECTION */}
       <LazySection>
-        <section className="relative py-40 bg-gradient-to-b from-[#0a0a0a] via-[#0f0f0f] to-[#0a0a0a] overflow-hidden">
+        <section className="relative py-40 bg-gradient-to-b from-[#0a0a0a] via-[#0f0f0f] to-[#0a0a0a] overflow-hidden" style={{ contentVisibility: 'auto' }}>
           {/* Ambient Glow - Subtle Blue */}
           <div className="absolute top-1/4 left-1/4 w-[800px] h-[800px] bg-gradient-radial from-blue-500/5 to-transparent rounded-full blur-3xl"></div>
           <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-gradient-radial from-purple-500/5 to-transparent rounded-full blur-3xl"></div>
@@ -109,7 +109,7 @@ const Index = () => {
 
       {/* THE OLD WAYS VS. THE NEW WAY */}
       <LazySection>
-        <section className="py-40 bg-white">
+        <section className="py-40 bg-white" style={{ contentVisibility: 'auto' }}>
           <div className="max-w-7xl mx-auto px-8">
             <div className="text-center mb-24">
               <h2 className="text-6xl md:text-7xl font-light text-graphite mb-8 tracking-tight leading-[1.1]">
