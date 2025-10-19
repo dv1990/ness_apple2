@@ -45,13 +45,13 @@ const Residential = () => {
                 </h1>
                 
                 <p className="text-xl font-light text-muted-foreground max-w-lg leading-relaxed">
-                  NESS PRO. Engineered for Indian homes. Your family's comfort, guaranteed.
+                  NESS Energy. Engineered for Indian homes. Your family's comfort, guaranteed.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                 <Button className="bg-foreground text-background hover:bg-foreground/90 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium text-base sm:text-lg">
-                  Explore NESS PRO
+                  Explore NESS Products
                 </Button>
                 <button className="group inline-flex items-center space-x-3 text-muted-foreground hover:text-foreground transition-colors duration-300">
                   <Play className="w-5 h-5" />
@@ -75,7 +75,7 @@ const Residential = () => {
               <div className="absolute -bottom-12 -left-12 bg-background/95 backdrop-blur-xl border border-muted-foreground/10 rounded-2xl p-8">
                 <img 
                   src={productImage} 
-                  alt="NESS PRO Home Battery System" 
+                  alt="NESS Home Battery System"
                   className="w-32 h-auto"
                 />
               </div>
@@ -230,7 +230,7 @@ const Residential = () => {
         </div>
       </section>
 
-      {/* NESS PRO Series - Full Banner Hero */}
+      {/* NESS Product Series - Full Banner Hero */}
       <section className="py-0 bg-background">
         <div className="w-full">
           
@@ -252,7 +252,7 @@ const Residential = () => {
                   <div className="inline-flex items-center space-x-2">
                     <div className="w-1 h-1 rounded-full bg-white"></div>
                     <span className="text-sm font-mono text-white/80 uppercase tracking-[0.2em]">
-                      NESS PRO Series
+                      NESS Product Series
                     </span>
                   </div>
 
@@ -263,12 +263,12 @@ const Residential = () => {
                   </h2>
 
                   <p className="text-xl font-light text-white/80 leading-relaxed max-w-2xl mx-auto">
-                    Your family's comfort, guaranteed. NESS PRO ensures your home never skips a beat, even when everything else does.
+                    Your family's comfort, guaranteed. NESS ensures your home never skips a beat, even when everything else does.
                   </p>
                   
                   <div className="pt-8">
                     <Button className="bg-white text-background hover:bg-white/90 px-12 py-6 rounded-full font-medium text-lg">
-                      Explore NESS PRO
+                      Explore NESS Products
                     </Button>
                   </div>
                 </div>
@@ -279,11 +279,11 @@ const Residential = () => {
             <div className="absolute bottom-12 right-12 bg-white/95 backdrop-blur-xl border border-white/20 rounded-2xl p-8 max-w-xs">
               <img 
                 src={productImage} 
-                alt="NESS PRO Home Battery System" 
+                alt="NESS Home Battery System" 
                 className="w-full h-auto mb-4"
               />
               <div className="text-center space-y-2">
-                <div className="text-lg font-medium text-foreground">NESS PRO</div>
+                <div className="text-lg font-medium text-foreground">NESS Energy</div>
                 <div className="text-sm text-muted-foreground">Home Energy Storage</div>
               </div>
             </div>
@@ -355,7 +355,7 @@ const Residential = () => {
                 <p className="text-xl font-light text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                   Voltage swings. Monsoon floods. Summer heat waves. 
                   <br />
-                  NESS PRO handles what India throws at it.
+                  NESS handles what India throws at it.
                 </p>
               </div>
               

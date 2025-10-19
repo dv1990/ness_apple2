@@ -37,7 +37,7 @@ const NavigationEnhanced = () => {
 
   const mainNavItems = [
     { label: "Overview", href: "/", icon: LayoutGrid, description: "Complete NESS ecosystem" },
-    { label: "Homeowners", href: "/homeowners", icon: Home, description: "NESS PRO for homes" },
+    { label: "Homeowners", href: "/homeowners", icon: Home, description: "NESS products for homes" },
     { label: "C&I", href: "/ci", icon: Building2, description: "POD & CUBE systems" },
     { label: "Installers", href: "/installers", icon: Wrench, description: "Partner with NESS" },
     { label: "Warranty", href: "/warranty", icon: Shield, description: "Trust that matters" },

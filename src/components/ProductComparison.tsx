@@ -7,68 +7,68 @@ import nessCubeImage from "@/assets/ness-cube-product.png";
 
 const products = [
   {
-    id: "pod",
-    name: "NESS POD",
+    id: "ups",
+    name: "NESS UPS",
     tier: "ESSENTIAL",
     image: nessPodImage,
-    lifeBenefit: "Your life doesn't stop for a 4-hour power cut.",
-    whatYouGet: "Essentials stay on. Work continues. Life stays normal.",
+    lifeBenefit: "Your essentials never stop.",
+    whatYouGet: "Pure sine wave energy. Wi-Fi stays on. Perfect for work from home.",
     invisibleBenefit: "No flicker",
     backupTime: "12h",
     switchover: "10ms",
     coverage: "5yr",
     scenarios: [
-      "Your Zoom call doesn't drop",
-      "Your child's online class continues",
-      "The Wi-Fi never goes down"
+      "Your Zoom call never drops",
+      "Wi-Fi router runs 24/7",
+      "Perfect for WFH setup"
     ],
     priceLabel: "Investment",
     price: "₹89,999",
-    targetAudience: "Apartments and smaller homes",
+    targetAudience: "Apartments, small homes, small offices & buildings",
     highlight: false
   },
   {
-    id: "cube",
-    name: "NESS AIO",
+    id: "oneaio",
+    name: "NESS ONE AIO",
     tier: "COMPLETE",
     image: nessCubeImage,
-    lifeBenefit: "Never think about power. Ever.",
-    whatYouGet: "Solar + battery combined. Energy independence for medium homes.",
+    lifeBenefit: "Plug and play power independence.",
+    whatYouGet: "Built-in inverter and solar controller. 3-12kW inverter, 5-20kWh battery. Just connect and go.",
     invisibleBenefit: "Instant switchover",
-    backupTime: "24h",
+    backupTime: "24-48h",
     switchover: "Instant",
     coverage: "7yr",
     scenarios: [
       "Your AC runs all night",
-      "The refrigerator never stops",
-      "You forget power cuts exist"
+      "Add more units anytime",
+      "Complete villa coverage"
     ],
     priceLabel: "Investment",
     price: "₹1,39,999",
-    targetAudience: "Medium homes seeking energy independence",
+    targetAudience: "Villas and small homes",
     highlight: false
   },
   {
-    id: "pro",
-    name: "NESS PRO",
-    tier: "ULTIMATE",
+    id: "brick",
+    name: "NESS BRICK",
+    tier: "CUSTOMIZABLE",
     image: nessProImage,
-    lifeBenefit: "Complete luxury. Complete silence.",
-    whatYouGet: "Your entire home ecosystem. Backup, intelligence, and luxury for larger homes.",
-    invisibleBenefit: "Seamless switchover",
-    backupTime: "48h",
+    lifeBenefit: "Build your perfect power system.",
+    whatYouGet: "5kWh modular blocks, stackable up to 80kWh. Works with Solis, Victron, Studer, Deye.",
+    invisibleBenefit: "Seamless scalability",
+    backupTime: "Custom",
     switchover: "Seamless",
     coverage: "10yr",
     scenarios: [
-      "Run everything—for 48 hours",
-      "Your neighbors won't know the grid failed",
-      "Absolute silence. Zero emissions."
+      "Buy now, add more blocks later",
+      "Choose your own inverter",
+      "Scale to 80kWh capacity"
     ],
     priceLabel: "Investment",
     price: "₹1,89,999",
-    targetAudience: "Larger homes demanding ultimate peace",
+    targetAudience: "Villas, small offices & custom projects",
     highlight: true,
-    badge: "Ultimate"
+    badge: "Customizable"
   }
 ];
 

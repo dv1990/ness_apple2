@@ -39,37 +39,37 @@ interface Product {
 
 const products: Product[] = [
   {
-    id: 'pod',
-    name: 'NESS POD',
+    id: 'ups',
+    name: 'NESS UPS',
     tier: 'Essential',
     image: nessPodImage,
     capacity: '5 kWh',
     backupTime: '12 hours',
     price: '₹89,999',
-    idealFor: 'Apartments & Small Homes',
-    features: ['Essentials powered', 'Wi-Fi never drops', 'Perfect for WFH']
+    idealFor: 'Apartments, Small Homes, Small Offices & Buildings',
+    features: ['Pure sine wave energy', 'Wi-Fi never drops', 'Perfect for WFH']
   },
   {
-    id: 'cube',
-    name: 'NESS AIO',
+    id: 'oneaio',
+    name: 'NESS ONE AIO',
     tier: 'Complete',
     image: nessCubeImage,
-    capacity: '10 kWh',
-    backupTime: '24 hours',
+    capacity: '5-20 kWh',
+    backupTime: '24-48 hours',
     price: '₹1,39,999',
-    idealFor: 'Medium Homes',
-    features: ['AC runs all night', 'Solar integrated', 'Energy independent']
+    idealFor: 'Villas & Small Homes',
+    features: ['Built-in inverter & solar', '3-12kW inverter', 'Add more units as needed']
   },
   {
-    id: 'pro',
-    name: 'NESS PRO',
-    tier: 'Ultimate',
+    id: 'brick',
+    name: 'NESS BRICK',
+    tier: 'Customizable',
     image: nessProImage,
-    capacity: '15 kWh',
-    backupTime: '48 hours',
+    capacity: '5-80 kWh',
+    backupTime: 'Customizable',
     price: '₹1,89,999',
-    idealFor: 'Large Homes & Villas',
-    features: ['Whole home coverage', 'Complete silence', 'Ultimate peace']
+    idealFor: 'Villas, Small Offices & Custom Projects',
+    features: ['5kWh modular blocks', 'Stackable up to 80kWh', 'Works with Solis, Victron, Studer, Deye']
   }
 ];
 

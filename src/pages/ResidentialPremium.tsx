@@ -46,7 +46,7 @@ const ResidentialPremium = () => {
                   <div className="w-16 h-px bg-gradient-to-r from-primary to-transparent opacity-40"></div>
                   
                   <p className="text-2xl font-extralight text-muted-foreground/80 max-w-md leading-[1.6] tracking-[-0.01em]">
-                    NESS PRO transforms your home into an energy fortress. 
+                    NESS transforms your home into an energy fortress. 
                     <span className="text-foreground/60 italic"> Seamlessly invisible. Infinitely reliable.</span>
                   </p>
                 </div>
@@ -54,7 +54,7 @@ const ResidentialPremium = () => {
 
               <div className="space-y-8">
                 <Button className="bg-foreground text-background hover:bg-foreground/90 px-12 py-6 rounded-full text-lg font-light tracking-wide transition-all duration-300 hover:scale-105">
-                  Experience NESS PRO
+                  Experience NESS Products
                 </Button>
                 
                 <div className="flex items-center space-x-8 opacity-50">
@@ -88,13 +88,13 @@ const ResidentialPremium = () => {
                     <div className="relative">
                       <img 
                         src={productImage} 
-                        alt="NESS PRO Battery System" 
+                        alt="NESS Battery System" 
                         className="w-24 h-auto"
                       />
                       <div className="absolute -top-2 -right-2 w-4 h-4 bg-green-500 rounded-full border-2 border-background animate-pulse"></div>
                     </div>
                     <div className="space-y-1">
-                      <div className="text-lg font-light text-foreground">NESS PRO</div>
+                      <div className="text-lg font-light text-foreground">NESS Energy</div>
                       <div className="text-xs text-muted-foreground uppercase tracking-wider">Active Protection</div>
                     </div>
                   </div>
@@ -140,7 +140,7 @@ const ResidentialPremium = () => {
               
               <div className="max-w-2xl mx-auto space-y-8">
                 <p className="text-2xl font-extralight text-muted-foreground leading-[1.6] tracking-[-0.01em]">
-                  NESS PRO doesn't just store energy—it preserves moments. 
+                  NESS doesn't just store energy—it preserves moments. 
                   The birthday video call that doesn't drop. The work presentation that finishes flawlessly. 
                   The peaceful night's sleep, uninterrupted.
                 </p>
@@ -202,7 +202,7 @@ const ResidentialPremium = () => {
               <div className="aspect-square bg-gradient-to-br from-muted/10 via-background to-muted/5 rounded-[3rem] p-16 flex items-center justify-center relative overflow-hidden">
                 <img 
                   src={productImage} 
-                  alt="NESS PRO Energy System" 
+                  alt="NESS Energy System" 
                   className="w-full h-auto relative z-10"
                 />
                 
@@ -217,7 +217,7 @@ const ResidentialPremium = () => {
               <div className="space-y-12">
                 <div className="space-y-4">
                   <div className="text-xs text-muted-foreground/40 font-light uppercase tracking-[0.3em]">
-                    NESS PRO Series
+                    NESS Product Series
                   </div>
                   <div className="w-8 h-px bg-primary"></div>
                 </div>

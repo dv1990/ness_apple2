@@ -94,7 +94,7 @@ export const ProductConfigurator = () => {
 
         if (requiredCapacity > 3.5 || requiredPower > 2000) {
           if (requiredCapacity > 7.2 || requiredPower > 3500 || config.evCharging) {
-            product = "NESS PRO";
+            product = "NESS BRICK";
             capacity = "10.24 kWh";
             price = 189999;
             confidence = 95;
@@ -114,8 +114,8 @@ export const ProductConfigurator = () => {
           confidence += 5;
         }
 
-        if (config.evCharging && product !== "NESS PRO") {
-          warnings.push("EV charging requires NESS PRO for optimal performance");
+        if (config.evCharging && product !== "NESS BRICK") {
+          warnings.push("EV charging requires NESS BRICK for optimal performance");
           confidence -= 10;
         }
 
