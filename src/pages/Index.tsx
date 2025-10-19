@@ -465,14 +465,14 @@ const Index = () => {
             </p>
           </div>
 
-          <Link to="/contact">
+          <Link to="/contact/homeowner">
             <Button size="lg" className="bg-energy hover:bg-energy-glow text-white px-16 py-8 text-xl rounded-full shadow-glow hover:shadow-[0_0_60px_rgba(0,200,83,0.6)] transition-all duration-500 w-full sm:w-auto">
               Get Started
             </Button>
           </Link>
 
           <div className="pt-4">
-            <Link to="/contact" className="text-pearl/70 hover:text-pearl transition-colors inline-flex items-center gap-2 group">
+            <Link to="/contact/homeowner" className="text-pearl/70 hover:text-pearl transition-colors inline-flex items-center gap-2 group">
               <span>or talk to an expert</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>

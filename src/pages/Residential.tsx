@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { 
   Calculator,
@@ -12,7 +13,6 @@ import {
   Zap, 
   BatteryCharging 
 } from "lucide-react";
-import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-homeowners.jpg";
 import productImage from "@/assets/ness-pro-product.png";
 import ottImage from "@/assets/carousel-ott-streaming.jpg";
@@ -485,9 +485,11 @@ const Residential = () => {
                   />
                 </div>
 
-                <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-2xl text-lg font-medium transition-all duration-150">
-                  Schedule Consultation
-                </Button>
+                <Link to="/contact/homeowner" className="w-full">
+                  <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-2xl text-lg font-medium transition-all duration-150">
+                    Schedule Consultation
+                  </Button>
+                </Link>
 
                 <p className="text-sm text-muted-foreground">
                   Free consultation • No obligations

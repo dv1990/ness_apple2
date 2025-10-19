@@ -497,7 +497,7 @@ const About = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center pt-4 md:pt-8">
-              <Link to="/contact">
+              <Link to="/contact/homeowner">
                 <Button size="lg" className="bg-pearl text-charcoal hover:bg-pearl/90 px-8 md:px-10 py-5 md:py-6 text-base md:text-lg rounded-full transition-all hover:scale-105 w-full sm:w-auto">
                   <div className="flex items-center gap-2">
                     <span>Talk to Us</span>

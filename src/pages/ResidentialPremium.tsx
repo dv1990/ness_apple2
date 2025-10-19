@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { 
+import { Link } from "react-router-dom";
+import {
   ArrowRight, 
   Play, 
   Shield, 
@@ -10,7 +11,6 @@ import {
   Users,
   Star 
 } from "lucide-react";
-import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-homeowners.jpg";
 import productImage from "@/assets/ness-pro-product.png";
 
@@ -356,9 +356,11 @@ const ResidentialPremium = () => {
                   />
                 </div>
 
-                <Button className="w-full bg-foreground text-background hover:bg-foreground/90 px-8 py-4 rounded-2xl text-lg font-light transition-all duration-300 hover:scale-105">
-                  Schedule Your Consultation
-                </Button>
+                <Link to="/contact/homeowner" className="w-full">
+                  <Button className="w-full bg-foreground text-background hover:bg-foreground/90 px-8 py-4 rounded-2xl text-lg font-light transition-all duration-300 hover:scale-105">
+                    Schedule Your Consultation
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

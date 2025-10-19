@@ -351,7 +351,7 @@ const FindInstaller = () => {
                     </p>
                   </div>
                   <div className="pt-4">
-                    <Link to="/contact">
+                    <Link to="/contact/homeowner">
                       <Button className="bg-primary hover:bg-primary/90">Contact Us Directly</Button>
                     </Link>
                   </div>

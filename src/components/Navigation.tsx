@@ -131,7 +131,7 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex">
-            <Link to="/contact">
+            <Link to="/contact/homeowner">
               <Button className="btn-primary">Get Quote</Button>
             </Link>
           </div>
@@ -172,7 +172,7 @@ const Navigation = () => {
                   </div>
 
                   <div className="p-6 border-t">
-                    <Link to="/contact" onClick={() => setIsOpen(false)}>
+                    <Link to="/contact/homeowner" onClick={() => setIsOpen(false)}>
                       <Button className="btn-primary w-full">Get Quote</Button>
                     </Link>
                   </div>

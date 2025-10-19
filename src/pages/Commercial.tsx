@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { WebPImage } from "@/components/ui/webp-image";
 import { OptimizedImage } from "@/components/ui/optimized-image";
 import { LazySection } from "@/components/ui/lazy-section";
@@ -148,10 +149,12 @@ const Commercial = () => {
               </p>
             </div>
 
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 text-base sm:text-lg md:text-xl font-medium rounded-2xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-500">
-              Secure Your Operations
-              <ArrowRight className="w-6 h-6 ml-4" />
-            </Button>
+            <Link to="/contact/distributor">
+              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 text-base sm:text-lg md:text-xl font-medium rounded-2xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-500">
+                Secure Your Operations
+                <ArrowRight className="w-6 h-6 ml-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -588,15 +591,17 @@ const Commercial = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
-            <Button className="bg-foreground text-background hover:bg-foreground/90 px-12 py-4 rounded-full font-medium text-lg">
-              <Calculator className="mr-2 w-5 h-5" />
-              Get specifications
-            </Button>
+            <Link to="/contact/distributor">
+              <Button className="bg-foreground text-background hover:bg-foreground/90 px-12 py-4 rounded-full font-medium text-lg">
+                <Calculator className="mr-2 w-5 h-5" />
+                Get specifications
+              </Button>
+            </Link>
             
-            <button className="group inline-flex items-center space-x-3 text-muted-foreground hover:text-foreground transition-colors duration-300">
+            <Link to="/contact/distributor" className="group inline-flex items-center space-x-3 text-muted-foreground hover:text-foreground transition-colors duration-300">
               <span className="font-light">Schedule consultation</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-            </button>
+            </Link>
           </div>
         </div>
        </section>

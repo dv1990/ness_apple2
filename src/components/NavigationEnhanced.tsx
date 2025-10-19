@@ -205,7 +205,7 @@ const NavigationEnhanced = () => {
 
           {/* Enhanced CTA Button */}
           <div className="hidden lg:flex">
-            <Link to="/contact">
+            <Link to="/contact/homeowner">
               <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-2 rounded-xl font-medium text-sm transition-all duration-200 hover:scale-105 hover:shadow-lg">
                 Get Quote
               </Button>
@@ -254,7 +254,7 @@ const NavigationEnhanced = () => {
                   </div>
 
                   <div className="p-6 border-t border-border/20">
-                    <Link to="/contact" onClick={() => setIsOpen(false)}>
+                    <Link to="/contact/homeowner" onClick={() => setIsOpen(false)}>
                       <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl font-medium">
                         Get Quote
                       </Button>

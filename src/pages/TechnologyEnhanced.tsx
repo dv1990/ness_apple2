@@ -100,7 +100,7 @@ const TechnologyEnhanced = () => {
 
             {/* CTA */}
             <div className="pt-4">
-              <Link to="/contact">
+              <Link to="/contact/homeowner">
                 <MagneticButton variant="primary" size="lg" className="text-base font-medium px-10 py-5">
                   See How We Keep You Safe
                 </MagneticButton>
@@ -468,7 +468,7 @@ const TechnologyEnhanced = () => {
               </p>
             </div>
 
-            <Link to="/contact">
+            <Link to="/contact/homeowner">
               <MagneticButton variant="primary" size="lg" className="text-base font-medium px-10 py-5">
                 Talk to Us
                 <ArrowRight className="ml-2 w-4 h-4" />

@@ -288,7 +288,7 @@ const TrueWarranty = () => {
                 variant="outline" 
                 className="border border-pearl/40 bg-transparent text-pearl hover:bg-pearl/10 hover:border-pearl/60 px-12 py-6 text-base rounded-full transition-all duration-300 w-full sm:w-auto font-normal"
               >
-                <Link to="/contact">Ask Us Anything</Link>
+                <Link to="/contact/homeowner">Ask Us Anything</Link>
               </Button>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { OptimizedImage } from "@/components/ui/optimized-image";
 import { LazySection } from "@/components/ui/lazy-section";
 import { usePerformanceTracking } from "@/hooks/use-performance";
@@ -510,14 +511,16 @@ const Installers = () => {
               </div>
 
               <div className="flex items-center space-x-4">
-                <Button className="bg-foreground text-background hover:bg-foreground/90 px-6 py-3 rounded-xl font-medium">
-                  Start learning
-                </Button>
+                <Link to="/contact/installer">
+                  <Button className="bg-foreground text-background hover:bg-foreground/90 px-6 py-3 rounded-xl font-medium">
+                    Start learning
+                  </Button>
+                </Link>
                 
-                <button className="group inline-flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors duration-300">
+                <Link to="/contact/installer" className="group inline-flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors duration-300">
                   <span className="text-sm">Schedule workshop</span>
                   <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-300" />
-                </button>
+                </Link>
               </div>
             </div>
           </div>
