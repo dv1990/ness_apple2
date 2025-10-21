@@ -55,7 +55,7 @@ const InstallersEnhanced = () => {
             </p>
 
             <Button 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-6 text-lg rounded-full"
+              className="bg-primary hover:bg-cta-green text-primary-foreground px-12 py-6 text-lg rounded-full transition-all duration-300 ease-out hover:shadow-[0_8px_30px_rgba(92,203,136,0.3)] hover:scale-105"
               onClick={() => document.getElementById('program')?.scrollIntoView({ behavior: 'smooth' })}
             >
               View Program Details
@@ -244,7 +244,7 @@ const InstallersEnhanced = () => {
                 <Textarea placeholder="Why do you want to become a certified installer?" rows={3} />
 
                 <Button 
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-lg"
+                  className="w-full bg-primary hover:bg-cta-green text-primary-foreground py-6 text-lg transition-all duration-300 ease-out hover:shadow-[0_8px_30px_rgba(92,203,136,0.3)]"
                   onClick={handleJoinMovement}
                 >
                   Submit Application

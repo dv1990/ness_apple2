@@ -20,7 +20,7 @@ export const MagneticButton = ({
   
   const baseClasses = "group relative overflow-hidden transition-all duration-300 ease-out";
   const variantClasses = {
-    primary: "bg-foreground text-background hover:bg-foreground/90 hover:scale-105 hover:shadow-2xl",
+    primary: "bg-foreground text-background hover:bg-cta-green hover:scale-105 hover:shadow-[0_8px_30px_rgba(92,203,136,0.3)]",
     secondary: "border-2 border-foreground/10 text-foreground hover:border-foreground/30 hover:bg-foreground/5",
     ghost: "text-muted-foreground hover:text-foreground"
   };

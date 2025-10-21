@@ -19,7 +19,7 @@ export const AnimatedButton = ({
 
   const animationClasses = {
     'scale': 'hover:scale-105 active:scale-95',
-    'glow': 'hover:shadow-glow hover:ring-2 hover:ring-primary/20',
+    'glow': 'hover:shadow-[0_8px_30px_rgba(92,203,136,0.3)] hover:ring-2 hover:ring-cta-green/20 hover:bg-cta-green',
     'slide': 'hover:translate-x-1',
     'none': ''
   };

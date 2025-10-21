@@ -52,7 +52,7 @@ const NucuSection = ({ nucuPcb }: NucuSectionProps) => {
             <div className="pt-4 lg:pt-6 animate-in fade-in slide-in-from-bottom-2 duration-500 delay-300">
               <Button 
                 size="lg" 
-                className="h-[44px] lg:h-[48px] bg-[#E6EDF3] hover:bg-[#00C853] text-[#0B0A0C] px-8 lg:px-10 text-base lg:text-lg rounded-full transition-all duration-300 shadow-[0_0_0_1px_rgba(255,255,255,0.08)] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.08)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00C853] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B0A0C] w-full lg:w-auto group"
+                className="h-[44px] lg:h-[48px] bg-[#E6EDF3] hover:bg-cta-green text-[#0B0A0C] px-8 lg:px-10 text-base lg:text-lg rounded-full transition-all duration-300 ease-out shadow-[0_0_0_1px_rgba(255,255,255,0.08)] hover:shadow-[0_8px_30px_rgba(92,203,136,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cta-green focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B0A0C] w-full lg:w-auto group"
                 style={{ fontFamily: "'SF Pro Text', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" }}
               >
                 See How NUCU Works
