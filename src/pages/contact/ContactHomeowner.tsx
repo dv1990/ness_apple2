@@ -3,7 +3,7 @@ import { ProductSelectorWizard } from "@/components/ProductSelectorWizard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Shield, Zap, Home, Star, CheckCircle, Users, ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-homeowners.jpg";
+import heroImage from "@/assets/homeowner-hero-battery.webp";
 
 const ContactHomeowner = () => {
   return (
