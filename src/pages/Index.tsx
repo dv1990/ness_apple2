@@ -173,18 +173,6 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Bottom CTA */}
-            <div className="text-center">
-              <p className="text-2xl text-graphite/70 font-light mb-8 max-w-2xl mx-auto leading-relaxed">
-                The math is simple. Over 10 years, lithium ion costs less than half of lead acid or diesel—and gives you peace of mind you can't put a price on.
-              </p>
-              <Link to="/residential">
-                <Button size="lg" className="bg-energy hover:bg-energy-glow text-white px-12 py-7 text-lg rounded-full shadow-glow hover:shadow-[0_0_50px_rgba(0,200,83,0.5)] transition-all duration-500">
-                  See How Much You'll Save
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
-            </div>
           </div>
         </section>
       </LazySection>
