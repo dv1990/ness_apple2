@@ -17,8 +17,8 @@ const ContactHomeowner = () => {
             alt="Premium NESS home battery system with sophisticated wall-mount design"
             className="w-full h-full object-cover"
           />
-          {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/60 to-transparent" />
+          {/* Dark overlay for text readability - concentrated on left side only */}
+          <div className="absolute inset-y-0 left-0 right-1/2 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />
         </div>
 
         {/* Content Overlay */}
