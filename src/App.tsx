@@ -70,7 +70,7 @@ const App = () => {
           <Route path="/installers-enhanced" element={<InstallersEnhanced />} />
           
           {/* Product Routes */}
-          <Route path="/homeowners" element={<ResidentialEnhanced />} />
+          <Route path="/homeowners" element={<ContactHomeowner />} />
           <Route path="/ci" element={<CommercialEnhanced />} />
           <Route path="/installers" element={<InstallersEnhanced />} />
           <Route path="/technology" element={<TechnologyEnhanced />} />
