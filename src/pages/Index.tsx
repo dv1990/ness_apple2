@@ -504,7 +504,7 @@ const whyNessFeatures = [{
 }, {
   icon: Battery,
   title: "Built for 50°C summers.",
-  description: "Tested in Nagpur heat. Handles voltage drops from 90V to 300V. When the grid fails, NESS doesn't blink.",
+  description: "Tested through three scorching Jharkhand summers. Powering over 500 homes — every night, for the last three years — on the same NESS batteries. Reliability isn't claimed here. It's proven.",
   gradient: "from-emerald-500/10 via-teal-500/10 to-cyan-500/10",
   iconColor: "text-emerald-400",
   accentColor: "border-emerald-500/20",
