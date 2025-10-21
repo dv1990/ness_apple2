@@ -85,8 +85,6 @@ export default {
           light: "hsl(var(--energy-subtle))",
           glow: "hsl(var(--energy-glow))",
         },
-        // CTA colors
-        "cta-green": "hsl(var(--cta-green))",
         // Brand gradient colors
         "brand-glow": "hsl(var(--brand-glow))",
       },

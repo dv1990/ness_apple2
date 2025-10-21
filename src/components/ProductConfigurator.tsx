@@ -385,9 +385,8 @@ export const ProductConfigurator = () => {
 
                   {/* CTA */}
                   <div className="space-y-3">
-                    <Button className="w-full py-3 bg-primary hover:bg-cta-green text-primary-foreground transition-all duration-300 ease-out hover:shadow-[0_8px_30px_rgba(92,203,136,0.3)] hover:scale-105">
+                    <Button className="btn-premium w-full py-3">
                       Get Detailed Quote
-                      <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
                   </div>
                 </div>

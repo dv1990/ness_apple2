@@ -25,10 +25,6 @@
     --energy-subtle: 142 15% 94%;    /* Barely-there tint */
     --energy-glow: 142 25% 45%;      /* Reserved glow */
     
-    /* CTA Hover Green - Vibrant & Energetic */
-    --cta-green: 142 71% 58%;        /* #5CCB88 - Primary CTA hover */
-    --cta-green-shadow: 142 71% 58%; /* Shadow for glow effect */
-    
     /* Premium Gradients */
     --gradient-energy: linear-gradient(135deg, hsl(var(--energy-core)), hsl(var(--energy-bright)));
     --gradient-premium: linear-gradient(135deg, hsl(var(--charcoal)), hsl(var(--graphite)));
@@ -170,13 +166,8 @@
   
   .btn-premium {
     @apply px-8 py-4 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground rounded-xl;
-    @apply transition-all duration-300 ease-out hover:scale-105 active:scale-95;
+    @apply transition-all duration-300 hover:scale-105 active:scale-95;
     box-shadow: var(--shadow-premium);
-  }
-  
-  .btn-premium:hover {
-    background: hsl(var(--cta-green));
-    box-shadow: 0 8px 30px rgba(92, 203, 136, 0.3);
   }
   
   .text-display {
