@@ -494,8 +494,8 @@ const whyNessFeatures = [{
   statColor: "text-indigo-400"
 }, {
   icon: Zap,
-  title: "Works while you sleep.",
-  description: "Learns your usage. Optimizes itself. Switches to backup in 10 milliseconds. You'll never notice a power cut again.",
+  title: "24x7 Protection",
+  description: "Smart battery intelligence: Reduce bills, preps for outages, boosts solar use, reduces diesel—effortless home backup.",
   gradient: "from-cyan-500/10 via-blue-500/10 to-indigo-500/10",
   iconColor: "text-cyan-400",
   accentColor: "border-cyan-500/20",
