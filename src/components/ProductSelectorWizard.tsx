@@ -18,9 +18,13 @@ import {
   Wifi,
   Fan,
   Lightbulb,
-  Check
+  Check,
+  Mail,
+  Package
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
 import nessPodImage from '@/assets/ness-pod-product.png';
 import nessProImage from '@/assets/ness-pro-product.png';
 import nessCubeImage from '@/assets/ness-cube-product.png';
@@ -91,12 +95,24 @@ const commonAppliances: Appliance[] = [
 ];
 
 export const ProductSelectorWizard: React.FC = () => {
+  const { toast } = useToast();
   const [step, setStep] = useState(1);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [selectedAppliances, setSelectedAppliances] = useState<string[]>([]);
   const [homeSize, setHomeSize] = useState('');
   const [hasSolar, setHasSolar] = useState<string>('');
   const [consent, setConsent] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Contact form fields
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    city: '',
+    pincode: '',
+    message: ''
+  });
 
   // Calculate recommended product based on appliances
   const calculateRecommendation = () => {
@@ -143,10 +159,94 @@ export const ProductSelectorWizard: React.FC = () => {
     setStep(prev => Math.max(prev - 1, 1));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement actual form submission
-    console.log('Form submitted', { selectedProduct, selectedAppliances, homeSize, hasSolar });
+    
+    if (!formData.name || !formData.phone || !formData.email) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill in all required fields (Name, Phone, Email)",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const totalWatts = selectedAppliances.reduce((sum, appId) => {
+        const appliance = commonAppliances.find(a => a.id === appId);
+        return sum + (appliance?.watts || 0);
+      }, 0);
+
+      const appliancesList = selectedAppliances.map(appId => {
+        const appliance = commonAppliances.find(a => a.id === appId);
+        return appliance ? `- ${appliance.name}: ${appliance.watts}W (${appliance.hours}h daily)` : '';
+      }).filter(Boolean).join('\n');
+
+      const emailContent = `
+New Custom Quote Request
+
+CUSTOMER DETAILS:
+Name: ${formData.name}
+Phone: ${formData.phone}
+Email: ${formData.email}
+City: ${formData.city}
+Pincode: ${formData.pincode}
+
+CONFIGURATION:
+Selected Product: ${selectedProduct?.name} (${selectedProduct?.tier})
+Home Size: ${homeSize}
+Solar Panels: ${hasSolar}
+Total Power Requirement: ${totalWatts}W
+
+SELECTED APPLIANCES:
+${appliancesList}
+
+CUSTOMER MESSAGE:
+${formData.message || 'No additional message'}
+      `.trim();
+
+      // Using EmailJS - Users need to configure their EmailJS account
+      await emailjs.send(
+        'YOUR_SERVICE_ID', // Replace with your EmailJS Service ID
+        'YOUR_TEMPLATE_ID', // Replace with your EmailJS Template ID
+        {
+          to_email: 'contact@nunam.com',
+          from_name: formData.name,
+          from_email: formData.email,
+          from_phone: formData.phone,
+          message: emailContent
+        },
+        'YOUR_PUBLIC_KEY' // Replace with your EmailJS Public Key
+      );
+
+      toast({
+        title: "Quote Request Sent!",
+        description: "We'll get back to you within 24 hours with your custom quote.",
+      });
+
+      // Reset form after successful submission
+      setTimeout(() => {
+        setStep(1);
+        setSelectedProduct(null);
+        setSelectedAppliances([]);
+        setHomeSize('');
+        setHasSolar('');
+        setFormData({ name: '', phone: '', email: '', city: '', pincode: '', message: '' });
+        setConsent(false);
+      }, 2000);
+
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Setup Required",
+        description: "EmailJS needs to be configured. Please see EMAILJS_SETUP.md or contact us at contact@nunam.com",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -377,93 +477,164 @@ export const ProductSelectorWizard: React.FC = () => {
       {step === 3 && selectedProduct && (
         <div className="space-y-8 animate-fade-in max-w-3xl mx-auto">
           <div className="text-center space-y-3">
-            <h2 className="text-3xl md:text-4xl font-light">Let's get you powered up</h2>
-            <p className="text-lg text-muted-foreground">We'll contact you with a customized quote</p>
+            <h2 className="text-3xl md:text-4xl font-light">Review & Submit</h2>
+            <p className="text-lg text-muted-foreground">Confirm your details to get a custom quote</p>
           </div>
 
-          {/* Selected Configuration Summary */}
-          <Card className="p-6 bg-primary/5 border-primary/20">
-            <h3 className="font-medium mb-4">Your Configuration</h3>
-            <div className="grid md:grid-cols-2 gap-4 text-sm">
-              <div>
-                <span className="text-muted-foreground">Product:</span>
-                <span className="ml-2 font-medium">{selectedProduct.name}</span>
+          <Card className="p-6 space-y-6">
+            {/* Configuration Summary */}
+            <div className="space-y-4">
+              <h3 className="font-semibold flex items-center gap-2">
+                <Package className="w-5 h-5" />
+                Your Configuration
+              </h3>
+              
+              <div className="flex items-start gap-4 pb-4 border-b">
+                <img src={selectedProduct.image} alt={selectedProduct.name} className="w-24 h-24 object-contain" />
+                <div className="flex-1">
+                  <h4 className="text-xl font-semibold">{selectedProduct.name}</h4>
+                  <p className="text-sm text-muted-foreground">{selectedProduct.tier}</p>
+                  <p className="text-sm mt-1">{selectedProduct.idealFor}</p>
+                  <p className="text-2xl font-bold mt-2">{selectedProduct.price}</p>
+                </div>
               </div>
-              <div>
-                <span className="text-muted-foreground">Home Size:</span>
-                <span className="ml-2 font-medium">{homeSize}</span>
+
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <Label className="text-sm text-muted-foreground">Home Size</Label>
+                  <p className="font-medium">{homeSize}</p>
+                </div>
+                <div>
+                  <Label className="text-sm text-muted-foreground">Solar Panels</Label>
+                  <p className="font-medium">{hasSolar}</p>
+                </div>
               </div>
-              <div>
-                <span className="text-muted-foreground">Solar:</span>
-                <span className="ml-2 font-medium">{hasSolar}</span>
-              </div>
-              <div>
-                <span className="text-muted-foreground">Appliances:</span>
-                <span className="ml-2 font-medium">{selectedAppliances.length} selected</span>
-              </div>
+
+              {selectedAppliances.length > 0 && (
+                <div>
+                  <Label className="text-sm text-muted-foreground mb-2 block">Appliances to Power</Label>
+                  <div className="space-y-1 max-h-32 overflow-y-auto">
+                    {selectedAppliances.map((appId) => {
+                      const app = commonAppliances.find(a => a.id === appId);
+                      return app ? (
+                        <div key={appId} className="flex justify-between text-sm">
+                          <span>{app.name}</span>
+                          <span className="text-muted-foreground">{app.watts}W × {app.hours}h</span>
+                        </div>
+                      ) : null;
+                    })}
+                  </div>
+                  <div className="flex justify-between font-semibold mt-2 pt-2 border-t">
+                    <span>Total Power Required</span>
+                    <span>{selectedAppliances.reduce((sum, appId) => {
+                      const app = commonAppliances.find(a => a.id === appId);
+                      return sum + (app?.watts || 0);
+                    }, 0)}W</span>
+                  </div>
+                </div>
+              )}
             </div>
-          </Card>
 
-          <Card className="p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Contact Form */}
+            <form onSubmit={handleSubmit} className="space-y-4 pt-4 border-t">
+              <h3 className="font-semibold flex items-center gap-2">
+                <Mail className="w-5 h-5" />
+                Your Contact Details
+              </h3>
               <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="name">Full Name *</Label>
-                  <Input id="name" placeholder="Your name" required />
+                <div className="space-y-2">
+                  <Label htmlFor="name">Name *</Label>
+                  <Input 
+                    id="name" 
+                    placeholder="John Doe"
+                    value={formData.name}
+                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    required
+                  />
                 </div>
-                <div>
-                  <Label htmlFor="phone">Phone Number *</Label>
-                  <Input id="phone" type="tel" placeholder="+91 98765 43210" required />
+                <div className="space-y-2">
+                  <Label htmlFor="phone">Phone *</Label>
+                  <Input 
+                    id="phone" 
+                    type="tel" 
+                    placeholder="+91 98765 43210"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    required
+                  />
                 </div>
-              </div>
-
-              <div>
-                <Label htmlFor="email">Email *</Label>
-                <Input id="email" type="email" placeholder="your@email.com" required />
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email *</Label>
+                  <Input 
+                    id="email" 
+                    type="email" 
+                    placeholder="john@example.com"
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    required
+                  />
+                </div>
+                <div className="space-y-2">
                   <Label htmlFor="city">City *</Label>
-                  <Input id="city" placeholder="Your city" required />
+                  <Input 
+                    id="city" 
+                    placeholder="Mumbai"
+                    value={formData.city}
+                    onChange={(e) => setFormData({...formData, city: e.target.value})}
+                    required
+                  />
                 </div>
-                <div>
-                  <Label htmlFor="pin">PIN Code *</Label>
-                  <Input id="pin" placeholder="400001" required />
+                <div className="space-y-2">
+                  <Label htmlFor="pincode">Pincode *</Label>
+                  <Input 
+                    id="pincode" 
+                    placeholder="400001"
+                    value={formData.pincode}
+                    onChange={(e) => setFormData({...formData, pincode: e.target.value})}
+                    required
+                  />
                 </div>
               </div>
-
-              <div>
+              <div className="space-y-2">
                 <Label htmlFor="message">Additional Requirements (Optional)</Label>
                 <Textarea 
                   id="message" 
-                  placeholder="Tell us more about your energy needs..."
-                  rows={4}
+                  placeholder="Any specific requirements or questions?"
+                  value={formData.message}
+                  onChange={(e) => setFormData({...formData, message: e.target.value})}
+                  rows={3}
                 />
               </div>
-
-              <div className="flex items-start space-x-3">
-                <Checkbox
-                  id="consent"
+              <div className="flex items-start gap-2">
+                <Checkbox 
+                  id="consent" 
                   checked={consent}
                   onCheckedChange={(checked) => setConsent(checked as boolean)}
-                  required
                 />
-                <Label htmlFor="consent" className="text-sm leading-relaxed">
-                  I consent to NESS Energy contacting me about their products and services.
+                <Label htmlFor="consent" className="text-sm leading-tight cursor-pointer">
+                  I agree to receive information about NESS Energy products and services
                 </Label>
               </div>
 
-              <div className="flex gap-4">
-                <Button type="button" variant="outline" onClick={handleBack} size="lg" className="flex-1">
+              <div className="flex gap-4 pt-4">
+                <Button type="button" variant="outline" size="lg" onClick={handleBack} className="flex-1">
                   <ArrowLeft className="w-4 h-4 mr-2" />
                   Back
                 </Button>
-                <Button type="submit" disabled={!consent} size="lg" className="flex-1">
-                  Get My Custom Quote
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  disabled={!consent || isSubmitting}
+                  className="flex-1"
+                >
+                  {isSubmitting ? 'Sending...' : 'Submit Quote Request'}
+                  {!isSubmitting && <ArrowRight className="w-4 h-4 ml-2" />}
                 </Button>
               </div>
+              
+              <p className="text-center text-sm text-muted-foreground">
+                Your quote request will be sent to contact@nunam.com
+              </p>
             </form>
           </Card>
         </div>
