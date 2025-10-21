@@ -388,9 +388,6 @@ export const ProductConfigurator = () => {
                     <Button className="btn-premium w-full py-3">
                       Get Detailed Quote
                     </Button>
-                    <Button variant="outline" className="w-full">
-                      Schedule Site Visit
-                    </Button>
                   </div>
                 </div>
               ) : null}

@@ -247,10 +247,6 @@ export function WhyNess() {
 
             {selectedCard === index && <div className="border-t border-border pt-8 mt-8 animate-fade-in">
                 <p className="text-muted-foreground leading-relaxed mb-6 font-light">{feature.fullDesc}</p>
-                <button className="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all duration-300 font-medium">
-                  Learn more
-                  <ArrowRight className="w-4 h-4" />
-                </button>
               </div>}
 
             <div className="absolute bottom-6 right-6">

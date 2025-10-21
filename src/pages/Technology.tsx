@@ -81,10 +81,6 @@ const Technology = () => {
 
           {/* Call to Action */}
           <div className="space-y-8">
-            <Button className="bg-white text-black hover:bg-gray-100 px-12 py-6 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105">
-              Experience the Future
-            </Button>
-            
             <div className="text-gray-500 text-sm">
               Available now
             </div>
@@ -350,17 +346,6 @@ const Technology = () => {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Button className="bg-white text-black hover:bg-gray-100 px-12 py-6 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105">
-              Get Started Today
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black px-12 py-6 rounded-full text-lg font-medium transition-all duration-300">
-              <Download className="mr-2 w-5 h-5" />
-              Download Specs
-            </Button>
-          </div>
 
           <div className="text-gray-500 text-sm">
             Available through certified installers worldwide
