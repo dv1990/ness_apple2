@@ -4,19 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Shield, Zap, Home, Star, CheckCircle, Users, ArrowRight } from "lucide-react";
 import heroImage from "@/assets/homeowner-hero-battery.webp";
-
 const ContactHomeowner = () => {
-  return (
-    <Layout>
+  return <Layout>
       {/* Full-Screen Hero Section */}
       <section className="relative h-screen w-full overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img
-            src={heroImage}
-            alt="Premium NESS home battery system with sophisticated wall-mount design"
-            className="w-full h-full object-cover"
-          />
+          <img src={heroImage} alt="Premium NESS home battery system with sophisticated wall-mount design" className="w-full h-full object-cover" />
           {/* Dark overlay for text readability - concentrated on left side only */}
           <div className="absolute inset-y-0 left-0 right-1/2 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />
         </div>
@@ -66,18 +60,9 @@ const ContactHomeowner = () => {
         </div>
 
         {/* Floating Stat Cards */}
-        <div className="absolute top-24 right-12 backdrop-blur-xl bg-background/90 rounded-2xl p-6 shadow-2xl border border-border/50 animate-fade-in hidden lg:block">
-          <div className="text-5xl font-extralight text-primary mb-2">24</div>
-          <div className="text-sm text-muted-foreground">Hours Protected</div>
-        </div>
+        
 
-        <div className="absolute bottom-24 right-24 backdrop-blur-xl bg-background/90 rounded-2xl p-6 shadow-2xl border border-border/50 animate-fade-in hidden lg:block" style={{ animationDelay: '0.2s' }}>
-          <div className="flex items-center gap-2 mb-2">
-            <Shield className="w-5 h-5 text-primary" />
-            <div className="text-2xl font-light">Zero</div>
-          </div>
-          <div className="text-sm text-muted-foreground">Noise Emissions</div>
-        </div>
+        
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
@@ -209,9 +194,7 @@ const ContactHomeowner = () => {
             {/* Star Rating */}
             <div className="text-center p-6">
               <div className="flex justify-center gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 fill-primary text-primary" />
-                ))}
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-6 h-6 fill-primary text-primary" />)}
               </div>
               <div className="text-3xl font-light mb-2">4.9/5</div>
               <div className="text-sm text-muted-foreground">Customer Rating</div>
@@ -245,8 +228,6 @@ const ContactHomeowner = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default ContactHomeowner;
