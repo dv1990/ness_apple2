@@ -41,35 +41,35 @@ const products: Product[] = [
   {
     id: 'ups',
     name: 'NESS UPS',
-    tier: 'Essential',
+    tier: 'Grid Backup',
     image: nessPodImage,
     capacity: '5 kWh',
     backupTime: '12 hours',
     price: '₹89,999',
-    idealFor: 'Small homes, Apartments and offices',
-    features: ['Pure sine wave energy', 'Wi-Fi never drops', 'Perfect for WFH']
+    idealFor: 'Backup from grid outage',
+    features: ['Instant power during blackouts', 'No solar required', 'Simple plug-and-play']
   },
   {
     id: 'oneaio',
-    name: 'NESS ONE AIO',
-    tier: 'Complete',
+    name: 'NESS AIO',
+    tier: 'Backup + Solar',
     image: nessCubeImage,
     capacity: '5-20 kWh',
     backupTime: '24-48 hours',
     price: '₹1,39,999',
-    idealFor: 'Villas & Small Homes',
-    features: ['Built-in inverter & solar', '3-12kW inverter', 'Add more units as needed']
+    idealFor: 'Backup + Solar integration',
+    features: ['Built-in solar inverter', 'Grid backup included', 'Save on electricity bills']
   },
   {
     id: 'brick',
-    name: 'NESS BRICK',
-    tier: 'Customizable',
+    name: 'NESS AC Brick',
+    tier: 'Retrofit Solution',
     image: nessProImage,
     capacity: '5-80 kWh',
     backupTime: 'Customizable',
     price: '₹1,89,999',
-    idealFor: 'Villas, Small Offices & Custom Projects',
-    features: ['5kWh modular blocks', 'Stackable up to 80kWh', 'Works with Solis, Victron, Studer, Deye']
+    idealFor: 'For existing on-grid installations',
+    features: ['Works with your current system', 'AC-coupled design', 'Easy to expand']
   }
 ];
 
@@ -185,7 +185,7 @@ export const ProductSelectorWizard: React.FC = () => {
         <div className="space-y-8 animate-fade-in">
           <div className="text-center space-y-3">
             <h2 className="text-3xl md:text-4xl font-light">Choose your power level</h2>
-            <p className="text-lg text-muted-foreground">Select the system that matches your lifestyle</p>
+            <p className="text-lg text-muted-foreground">Pick the solution that fits your needs</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
