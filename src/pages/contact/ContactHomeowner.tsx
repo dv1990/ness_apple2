@@ -8,77 +8,81 @@ import heroImage from "@/assets/homeowner-hero-battery.webp";
 const ContactHomeowner = () => {
   return (
     <Layout>
-      {/* Full-Viewport Hero Section */}
-      <section className="relative min-h-screen flex items-center bg-background">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-            {/* Left Column: Content */}
-            <div className="lg:col-span-5 space-y-8">
-              <div className="inline-block px-4 py-2 bg-primary/10 rounded-full backdrop-blur-sm">
+      {/* Full-Screen Hero Section */}
+      <section className="relative h-screen w-full overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={heroImage}
+            alt="Premium NESS home battery system with sophisticated wall-mount design"
+            className="w-full h-full object-cover"
+          />
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/60 to-transparent" />
+        </div>
+
+        {/* Content Overlay */}
+        <div className="relative h-full flex items-center">
+          <div className="container mx-auto px-6 lg:px-12">
+            <div className="max-w-3xl space-y-8">
+              <div className="inline-block px-4 py-2 bg-primary/10 rounded-full backdrop-blur-sm border border-primary/20">
                 <span className="text-sm font-medium text-primary">Premium Home Energy</span>
               </div>
               
               <div className="space-y-6">
-                <h1 className="text-6xl md:text-7xl font-extralight tracking-tight leading-[0.9]">
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight tracking-tight leading-[0.9] text-foreground">
                   Your life doesn't<br />
                   <span className="text-primary font-light">pause</span><br />
                   when the power does
                 </h1>
                 
-                <p className="text-2xl text-muted-foreground font-light leading-relaxed max-w-xl">
+                <p className="text-2xl md:text-3xl text-muted-foreground font-light leading-relaxed max-w-2xl">
                   The new luxury isn't a louder generator.<br />
                   It's silence.
                 </p>
               </div>
 
               <div className="flex flex-wrap gap-6 pt-4">
-                <div className="flex items-center gap-3 text-sm">
+                <div className="flex items-center gap-3 text-sm backdrop-blur-sm bg-background/30 px-4 py-2 rounded-full">
                   <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                  <span className="text-muted-foreground">Live monitoring</span>
+                  <span className="text-foreground">Live monitoring</span>
                 </div>
-                <div className="flex items-center gap-3 text-sm">
+                <div className="flex items-center gap-3 text-sm backdrop-blur-sm bg-background/30 px-4 py-2 rounded-full">
                   <Zap className="w-4 h-4 text-primary" />
-                  <span className="text-muted-foreground">10ms response time</span>
+                  <span className="text-foreground">10ms response time</span>
                 </div>
               </div>
 
               <div className="pt-6">
                 <a href="#configurator">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-full shadow-2xl hover:shadow-primary/50 transition-all duration-300">
                     Design Your System
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </a>
               </div>
             </div>
+          </div>
+        </div>
 
-            {/* Right Column: Hero Image with Floating Stats */}
-            <div className="lg:col-span-7 relative">
-              <div className="relative rounded-3xl overflow-hidden group">
-                <img
-                  src={heroImage}
-                  alt="Premium NESS home battery system with sophisticated wall-mount design"
-                  className="w-full h-auto transform transition-transform duration-700 group-hover:scale-105"
-                />
-                
-                {/* Floating Stat Cards */}
-                <div className="absolute top-8 right-8 backdrop-blur-xl bg-background/80 rounded-2xl p-6 shadow-2xl border border-border/50 animate-fade-in">
-                  <div className="text-5xl font-extralight text-primary mb-2">24</div>
-                  <div className="text-sm text-muted-foreground">Hours Protected</div>
-                </div>
+        {/* Floating Stat Cards */}
+        <div className="absolute top-24 right-12 backdrop-blur-xl bg-background/90 rounded-2xl p-6 shadow-2xl border border-border/50 animate-fade-in hidden lg:block">
+          <div className="text-5xl font-extralight text-primary mb-2">24</div>
+          <div className="text-sm text-muted-foreground">Hours Protected</div>
+        </div>
 
-                <div className="absolute bottom-8 left-8 backdrop-blur-xl bg-background/80 rounded-2xl p-6 shadow-2xl border border-border/50 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                  <div className="flex items-center gap-2 mb-2">
-                    <Shield className="w-5 h-5 text-primary" />
-                    <div className="text-2xl font-light">Zero</div>
-                  </div>
-                  <div className="text-sm text-muted-foreground">Noise Emissions</div>
-                </div>
-              </div>
+        <div className="absolute bottom-24 right-24 backdrop-blur-xl bg-background/90 rounded-2xl p-6 shadow-2xl border border-border/50 animate-fade-in hidden lg:block" style={{ animationDelay: '0.2s' }}>
+          <div className="flex items-center gap-2 mb-2">
+            <Shield className="w-5 h-5 text-primary" />
+            <div className="text-2xl font-light">Zero</div>
+          </div>
+          <div className="text-sm text-muted-foreground">Noise Emissions</div>
+        </div>
 
-              {/* Ambient Glow Effect */}
-              <div className="absolute inset-0 -z-10 bg-gradient-radial from-primary/20 via-transparent to-transparent blur-3xl" />
-            </div>
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-foreground/30 rounded-full flex items-start justify-center p-2">
+            <div className="w-1 h-3 bg-foreground/50 rounded-full animate-pulse" />
           </div>
         </div>
       </section>
