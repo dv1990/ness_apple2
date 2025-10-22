@@ -82,9 +82,9 @@ const CommercialEnhanced = () => {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:64px_64px]" />
           
           {/* Content */}
-          <div className="relative max-w-7xl px-6 sm:px-8 w-full py-20" style={{
+          <div style={{
           marginLeft: '10%'
-        }}>
+        }} className="relative max-w-7xl px-6 w-full py-20 sm:px-[40px]">
             <div className="max-w-3xl">
               {/* Content card */}
               <div className="rounded-3xl p-8 sm:p-12 lg:p-14 px-0">
