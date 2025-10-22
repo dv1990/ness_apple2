@@ -18,13 +18,17 @@ const NucuSection = ({ nucuPcb }: NucuSectionProps) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left Column - NUCU PCB with animations */}
           <div 
-            className="relative animate-in fade-in slide-in-from-bottom-2 duration-[800ms] ease-out group cursor-default order-1 mt-12 lg:mt-16"
-            style={{ transform: `translateY(${offset}px)` }}
+            className="relative group cursor-default order-1 mt-12 lg:mt-16 opacity-0 animate-in fade-in duration-700"
+            style={{ 
+              transform: `translateY(${offset}px)`,
+              willChange: 'transform'
+            }}
           >
             <img 
               src={nucuPcb} 
               alt="NUCU Control Board - Premium AI-powered energy management" 
-              className="w-full h-auto object-contain transition-all duration-300 lg:group-hover:translate-y-[-2px] lg:group-hover:drop-shadow-[0_20px_60px_rgba(0,0,0,0.4)]" 
+              className="w-full h-auto object-contain lg:group-hover:scale-[1.02] transition-transform duration-500 ease-out" 
+              loading="lazy"
             />
           </div>
 
@@ -32,14 +36,14 @@ const NucuSection = ({ nucuPcb }: NucuSectionProps) => {
           <div className="space-y-7 lg:space-y-8 order-2 text-center lg:text-left">
             <div className="space-y-7 lg:space-y-8">
               <h1 
-                className="text-[40px] leading-[1.1] lg:text-[clamp(56px,5vw,64px)] font-bold text-white tracking-[-0.5px] animate-in fade-in slide-in-from-bottom-2 duration-500"
+                className="text-[40px] leading-[1.1] lg:text-[clamp(56px,5vw,64px)] font-bold text-white tracking-[-0.5px] opacity-0 animate-in fade-in duration-700 delay-100"
                 style={{ fontFamily: "'SF Pro Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" }}
               >
                 Meet NUCU
               </h1>
               
               <div 
-                className="space-y-5 text-[18px] lg:text-[clamp(20px,1.5vw,22px)] text-[#D0D3D8] leading-[1.6] max-w-[560px] mx-auto lg:mx-0 animate-in fade-in slide-in-from-bottom-2 duration-500 delay-150"
+                className="space-y-5 text-[18px] lg:text-[clamp(20px,1.5vw,22px)] text-[#D0D3D8] leading-[1.6] max-w-[560px] mx-auto lg:mx-0 opacity-0 animate-in fade-in duration-700 delay-300"
                 style={{ fontFamily: "'SF Pro Text', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" }}
               >
                 <p>The family doctor for your home's energy.</p>
@@ -49,7 +53,7 @@ const NucuSection = ({ nucuPcb }: NucuSectionProps) => {
               </div>
             </div>
 
-            <div className="pt-4 lg:pt-6 animate-in fade-in slide-in-from-bottom-2 duration-500 delay-300">
+            <div className="pt-4 lg:pt-6 opacity-0 animate-in fade-in duration-700 delay-500">
               <Button 
                 size="lg" 
                 className="h-[44px] lg:h-[48px] bg-[#E6EDF3] hover:bg-[#00C853] text-[#0B0A0C] px-8 lg:px-10 text-base lg:text-lg rounded-full transition-all duration-300 shadow-[0_0_0_1px_rgba(255,255,255,0.08)] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.08)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00C853] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B0A0C] w-full lg:w-auto group"
