@@ -603,35 +603,7 @@ const CommercialEnhanced = () => {
         </section>
 
         {/* Scale Section */}
-        <section className="py-20 sm:py-32 bg-muted/30">
-          <div className="max-w-6xl mx-auto px-6 sm:px-8 text-center space-y-8 sm:space-y-12">
-            <div className="space-y-6">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-light text-foreground leading-tight tracking-tight max-w-4xl mx-auto">
-                Start with one site.
-                <br />
-                <span className="text-primary font-medium">End with an empire powered by clean energy.</span>
-              </h2>
-              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                Link multiple sites, monitor performance in real time, and expand capacity on demand. 
-                Seamless today. Scalable tomorrow.
-              </p>
-            </div>
-
-            <div className="aspect-video bg-card rounded-3xl overflow-hidden border border-border shadow-xl flex items-center justify-center">
-              <div className="text-center space-y-4 p-8">
-                <MapPin className="w-16 h-16 text-primary mx-auto" />
-                <p className="text-muted-foreground">Multi-site network visualization</p>
-              </div>
-            </div>
-
-            <Button size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({
-            behavior: 'smooth'
-          })} className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 rounded-2xl group">
-              Talk to Our Energy Engineers
-              <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
-            </Button>
-          </div>
-        </section>
+        
 
         {/* FAQ Section */}
         <section className="py-20 sm:py-32 bg-background">
