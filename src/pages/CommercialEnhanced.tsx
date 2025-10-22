@@ -59,97 +59,77 @@ const CommercialEnhanced = () => {
     <Layout>
       <div className="min-h-screen bg-background">
         
-        {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
-          {/* Animated background gradient */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-primary/10 via-background to-background" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
+        {/* Hero Section - Full Page Image */}
+        <section className="relative min-h-screen flex items-center overflow-hidden">
+          {/* Full page hero image */}
+          <div className="absolute inset-0">
+            <img 
+              src={ciHeroPremium}
+              alt="NESS energy storage systems for commercial and industrial applications"
+              className="w-full h-full object-cover"
+              loading="eager"
+            />
+            {/* Premium gradient overlays for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/60 to-background/30" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/40" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
+          </div>
           
           {/* Subtle grid overlay */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:64px_64px]" />
           
-          <div className="relative max-w-[1600px] mx-auto px-6 sm:px-8 w-full">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-screen py-20">
-              
-              {/* Left Column - Text Content */}
-              <div className="space-y-12 sm:space-y-16 animate-fade-in">
-                <div className="space-y-8 sm:space-y-10">
-                  {/* Premium headline with better kerning */}
-                  <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-extralight text-foreground leading-[0.9] tracking-tighter">
-                    Power that<br />
-                    <span className="font-light bg-gradient-to-br from-primary via-primary to-primary/60 bg-clip-text text-transparent">
-                      means business
-                    </span>
-                  </h1>
-                  
-                  <p className="text-xl sm:text-2xl lg:text-3xl font-extralight text-muted-foreground/90 max-w-2xl leading-relaxed tracking-wide">
-                    Clean, quiet, intelligent energy for industries, resorts, and charging networks
-                  </p>
-                </div>
-
-                {/* Premium badge pills with better spacing */}
-                <div className="flex flex-wrap gap-4 sm:gap-5">
-                  <Badge variant="secondary" className="px-5 py-2.5 text-sm font-light backdrop-blur-sm bg-secondary/50 border border-border/50 hover:bg-secondary/70 transition-colors">
-                    LFP • 10,000+ cycles
-                  </Badge>
-                  <Badge variant="secondary" className="px-5 py-2.5 text-sm font-light backdrop-blur-sm bg-secondary/50 border border-border/50 hover:bg-secondary/70 transition-colors">
-                    DG Replacement
-                  </Badge>
-                  <Badge variant="secondary" className="px-5 py-2.5 text-sm font-light backdrop-blur-sm bg-secondary/50 border border-border/50 hover:bg-secondary/70 transition-colors">
-                    Solar + Grid Hybrid
-                  </Badge>
-                  <Badge variant="secondary" className="px-5 py-2.5 text-sm font-light backdrop-blur-sm bg-secondary/50 border border-border/50 hover:bg-secondary/70 transition-colors">
-                    IP54 Outdoor
-                  </Badge>
-                </div>
-
-                {/* Premium CTA buttons */}
-                <div className="flex flex-col sm:flex-row gap-5 pt-4">
-                  <Button 
-                    size="lg"
-                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 sm:px-14 py-7 rounded-full text-base sm:text-lg font-light group shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.02]"
-                  >
-                    Start Your Transition
-                    <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                  </Button>
-                  <Button 
-                    size="lg"
-                    variant="outline"
-                    onClick={() => document.getElementById('compare')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="border-border/50 backdrop-blur-sm bg-background/50 px-12 sm:px-14 py-7 rounded-full text-base sm:text-lg font-light hover:bg-secondary/50 transition-all hover:scale-[1.02]"
-                  >
-                    Compare Systems
-                  </Button>
-                </div>
-              </div>
-
-              {/* Right Column - Hero Image */}
-              <div className="relative lg:h-[700px] xl:h-[800px] animate-fade-in animation-delay-300">
-                <div className="relative h-full rounded-3xl overflow-hidden shadow-2xl border border-border/50 group">
-                  {/* Premium glow effect */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10" />
-                  
-                  {/* Image */}
-                  <img 
-                    src={ciHeroPremium}
-                    alt="NESS energy storage systems for commercial and industrial applications"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    loading="eager"
-                  />
-                  
-                  {/* Subtle overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent pointer-events-none" />
-                  
-                  {/* Premium accent border */}
-                  <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-primary/10 pointer-events-none" />
-                </div>
+          {/* Content */}
+          <div className="relative max-w-7xl mx-auto px-6 sm:px-8 w-full py-20">
+            <div className="max-w-3xl space-y-12 sm:space-y-16 animate-fade-in">
+              <div className="space-y-8 sm:space-y-10">
+                {/* Premium headline with better kerning */}
+                <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-extralight text-foreground leading-[0.9] tracking-tighter">
+                  Power that<br />
+                  <span className="font-light bg-gradient-to-br from-primary via-primary to-primary/60 bg-clip-text text-transparent">
+                    means business
+                  </span>
+                </h1>
                 
-                {/* Floating accent element */}
-                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl animate-pulse-slow" />
-                <div className="absolute -top-6 -left-6 w-24 h-24 bg-primary/5 rounded-full blur-2xl animate-pulse-slow animation-delay-700" />
+                <p className="text-xl sm:text-2xl lg:text-3xl font-extralight text-foreground/90 max-w-2xl leading-relaxed tracking-wide">
+                  Clean, quiet, intelligent energy for industries, resorts, and charging networks
+                </p>
               </div>
-              
+
+              {/* Premium badge pills with better spacing */}
+              <div className="flex flex-wrap gap-4 sm:gap-5">
+                <Badge variant="secondary" className="px-5 py-2.5 text-sm font-light backdrop-blur-sm bg-background/80 border border-border/50 hover:bg-background/90 transition-colors shadow-lg">
+                  LFP • 10,000+ cycles
+                </Badge>
+                <Badge variant="secondary" className="px-5 py-2.5 text-sm font-light backdrop-blur-sm bg-background/80 border border-border/50 hover:bg-background/90 transition-colors shadow-lg">
+                  DG Replacement
+                </Badge>
+                <Badge variant="secondary" className="px-5 py-2.5 text-sm font-light backdrop-blur-sm bg-background/80 border border-border/50 hover:bg-background/90 transition-colors shadow-lg">
+                  Solar + Grid Hybrid
+                </Badge>
+                <Badge variant="secondary" className="px-5 py-2.5 text-sm font-light backdrop-blur-sm bg-background/80 border border-border/50 hover:bg-background/90 transition-colors shadow-lg">
+                  IP54 Outdoor
+                </Badge>
+              </div>
+
+              {/* Premium CTA buttons */}
+              <div className="flex flex-col sm:flex-row gap-5 pt-4">
+                <Button 
+                  size="lg"
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 sm:px-14 py-7 rounded-full text-base sm:text-lg font-light group shadow-xl shadow-primary/30 transition-all hover:shadow-2xl hover:shadow-primary/40 hover:scale-[1.02]"
+                >
+                  Start Your Transition
+                  <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                </Button>
+                <Button 
+                  size="lg"
+                  variant="outline"
+                  onClick={() => document.getElementById('compare')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="border-border/50 backdrop-blur-md bg-background/60 px-12 sm:px-14 py-7 rounded-full text-base sm:text-lg font-light hover:bg-background/80 transition-all hover:scale-[1.02] shadow-lg"
+                >
+                  Compare Systems
+                </Button>
+              </div>
             </div>
           </div>
         </section>
