@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { Sun, Battery, Zap, Car, AlertCircle, TrendingUp, CheckCircle2, Building2, Truck, Navigation, Plane, Factory, Award, ArrowDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import heroImage from '@/assets/ev-hero-sunrise.webp';
 
 const EVChargingMicrogrid = () => {
   const [stickyNav, setStickyNav] = useState(false);
@@ -109,49 +110,42 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Sunrise to Night Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-amber-50 to-blue-950 dark:from-orange-950/20 dark:via-amber-950/20 dark:to-blue-950/80" />
-      
-      {/* Animated Grid Pattern */}
-      <div className="absolute inset-0 opacity-10">
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Hero Image Background */}
+      <div className="absolute inset-0">
+        <img 
+          src={heroImage} 
+          alt="NESS Battery Energy Storage System at sunrise with EV charging" 
+          className="w-full h-full object-cover"
+        />
+        {/* Gradient Overlays for Text Readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+      </div>
+
+      {/* Subtle Animated Grid Pattern */}
+      <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)',
+          backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
           backgroundSize: '40px 40px'
         }} />
       </div>
 
-      {/* Floating Particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 bg-orange-400/20 rounded-full animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${3 + Math.random() * 4}s`
-            }}
-          />
-        ))}
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className={cn(
-          "max-w-6xl mx-auto transition-all duration-1500 ease-out",
+          "max-w-7xl mx-auto transition-all duration-1500 ease-out",
           heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
         )}>
           {/* Main Headline */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-foreground mb-8 leading-[1.1] tracking-tight">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-white mb-8 leading-[1.1] tracking-tight max-w-4xl">
             Never lose a customer<br />
-            <span className="bg-gradient-to-r from-orange-600 via-amber-500 to-orange-600 dark:from-orange-400 dark:via-amber-400 dark:to-orange-400 bg-clip-text text-transparent font-normal">
+            <span className="bg-gradient-to-r from-orange-400 via-amber-300 to-orange-400 bg-clip-text text-transparent font-normal">
               to a grid failure.
             </span>
           </h1>
 
           {/* Subtext */}
-          <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground max-w-3xl mb-12 leading-relaxed font-light">
+          <p className="text-xl sm:text-2xl md:text-3xl text-white/90 max-w-3xl mb-12 leading-relaxed font-light">
             Open-access solar and NESS batteries keep EV charging 24×7 — clean, affordable, independent.
           </p>
 
@@ -159,7 +153,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
             <AnimatedButton 
               size="lg" 
-              className="text-lg px-10 py-7 rounded-full bg-foreground text-background hover:bg-foreground/90 hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl"
+              className="text-lg px-10 py-7 rounded-full bg-white text-black hover:bg-white/95 hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-orange-500/20"
               onClick={() => document.getElementById('savings')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Estimate My Savings
@@ -167,7 +161,7 @@ const HeroSection = () => {
             <AnimatedButton 
               variant="outline"
               size="lg" 
-              className="text-lg px-10 py-7 rounded-full border-2 border-foreground/20 hover:bg-foreground/5 hover:border-foreground/40 hover:scale-105 transition-all duration-300"
+              className="text-lg px-10 py-7 rounded-full border-2 border-white/40 text-white hover:bg-white/10 hover:border-white/60 hover:scale-105 transition-all duration-300 backdrop-blur-sm"
               onClick={() => window.location.href = '/contact/distributor'}
             >
               Book a Demo
@@ -175,29 +169,29 @@ const HeroSection = () => {
           </div>
 
           {/* 24x7 Visual Indicator */}
-          <div className="flex flex-wrap items-center gap-6 sm:gap-8 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2 group cursor-default">
+          <div className="flex flex-wrap items-center gap-6 sm:gap-8 text-sm">
+            <div className="flex items-center gap-2 group cursor-default backdrop-blur-sm bg-white/5 px-4 py-2 rounded-full border border-white/10">
               <div className="relative">
-                <Sun className="w-5 h-5 text-orange-500 group-hover:scale-110 transition-transform" />
-                <div className="absolute inset-0 blur-md bg-orange-500/30 group-hover:bg-orange-500/50 transition-all" />
+                <Sun className="w-5 h-5 text-orange-400 group-hover:scale-110 transition-transform" />
+                <div className="absolute inset-0 blur-md bg-orange-400/40 group-hover:bg-orange-400/60 transition-all" />
               </div>
-              <span className="group-hover:text-foreground transition-colors">Day charging</span>
+              <span className="text-white/90 group-hover:text-white transition-colors">Day charging</span>
             </div>
-            <div className="h-px w-8 sm:w-12 bg-border" />
-            <div className="flex items-center gap-2 group cursor-default">
+            <div className="h-px w-8 sm:w-12 bg-white/20" />
+            <div className="flex items-center gap-2 group cursor-default backdrop-blur-sm bg-white/5 px-4 py-2 rounded-full border border-white/10">
               <div className="relative">
-                <Battery className="w-5 h-5 text-blue-500 group-hover:scale-110 transition-transform" />
-                <div className="absolute inset-0 blur-md bg-blue-500/30 group-hover:bg-blue-500/50 transition-all" />
+                <Battery className="w-5 h-5 text-blue-400 group-hover:scale-110 transition-transform" />
+                <div className="absolute inset-0 blur-md bg-blue-400/40 group-hover:bg-blue-400/60 transition-all" />
               </div>
-              <span className="group-hover:text-foreground transition-colors">Night backup</span>
+              <span className="text-white/90 group-hover:text-white transition-colors">Night backup</span>
             </div>
-            <div className="h-px w-8 sm:w-12 bg-border" />
-            <div className="flex items-center gap-2 group cursor-default">
+            <div className="h-px w-8 sm:w-12 bg-white/20" />
+            <div className="flex items-center gap-2 group cursor-default backdrop-blur-sm bg-white/5 px-4 py-2 rounded-full border border-white/10">
               <div className="relative">
-                <Zap className="w-5 h-5 text-green-500 group-hover:scale-110 transition-transform" />
-                <div className="absolute inset-0 blur-md bg-green-500/30 group-hover:bg-green-500/50 transition-all" />
+                <Zap className="w-5 h-5 text-green-400 group-hover:scale-110 transition-transform" />
+                <div className="absolute inset-0 blur-md bg-green-400/40 group-hover:bg-green-400/60 transition-all" />
               </div>
-              <span className="group-hover:text-foreground transition-colors">Always ready</span>
+              <span className="text-white/90 group-hover:text-white transition-colors">Always ready</span>
             </div>
           </div>
         </div>
@@ -212,7 +206,7 @@ const HeroSection = () => {
         )}
         aria-label="Scroll to next section"
       >
-        <div className="flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+        <div className="flex flex-col items-center gap-2 text-white/70 hover:text-white transition-colors backdrop-blur-sm bg-white/5 px-6 py-3 rounded-full border border-white/10">
           <span className="text-xs font-medium tracking-wide uppercase">Explore</span>
           <ArrowDown className="w-5 h-5 animate-bounce" />
         </div>
