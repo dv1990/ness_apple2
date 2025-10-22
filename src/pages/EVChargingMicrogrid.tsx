@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
+import Layout from '@/components/Layout';
 import { AnimatedButton } from '@/components/ui/animated-button';
 import { AnimatedCounter } from '@/components/ui/animated-counter';
 import { AnimatedCard } from '@/components/ui/animated-card';
@@ -34,9 +33,7 @@ const EVChargingMicrogrid = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
-      
+    <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-background to-background/95">
         <div className={cn(
@@ -99,9 +96,7 @@ const EVChargingMicrogrid = () => {
 
       {/* Closing CTA */}
       <ClosingSection />
-
-      <Footer />
-    </div>
+    </Layout>
   );
 };
 

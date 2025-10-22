@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ScrollProgressBar } from "@/components/ScrollProgressBar";
+import ErrorBoundary from "@/components/ErrorBoundary";
 import React, { Suspense, lazy } from 'react';
 
 // Critical pages - Eager loaded for instant navigation
@@ -52,14 +53,15 @@ const PageLoadingFallback = () => (
 
 const App = () => {
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <ScrollProgressBar />
-        <BrowserRouter>
-          <Suspense fallback={<PageLoadingFallback />}>
-            <Routes>
+    <ErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <ScrollProgressBar />
+          <BrowserRouter>
+            <Suspense fallback={<PageLoadingFallback />}>
+              <Routes>
           {/* Overview (Landing) */}
           <Route path="/" element={<Index />} />
           
@@ -114,11 +116,12 @@ const App = () => {
           
           {/* 404 Catch-all */}
           <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
+              </Routes>
+            </Suspense>
+          </BrowserRouter>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </ErrorBoundary>
   );
 };
 
