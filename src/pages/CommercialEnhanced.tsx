@@ -70,8 +70,8 @@ const CommercialEnhanced = () => {
               loading="eager"
             />
             {/* Gradient overlay - only on left side to keep product visible */}
-            <div className="absolute inset-0 bg-gradient-to-r from-background via-background/50 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
           </div>
           
           {/* Subtle grid overlay */}
@@ -89,7 +89,7 @@ const CommercialEnhanced = () => {
                 </h1>
                 
                 <p className="text-xl sm:text-2xl lg:text-3xl font-extralight text-foreground/90 max-w-2xl leading-relaxed tracking-wide">
-                  Clean, intelligent energy that fuels progress — lowering costs, emissions, and complexity.
+                  Clean, intelligent energy that drives progress — lowering costs, emissions, and complexity.
                 </p>
               </div>
 
