@@ -102,11 +102,11 @@ const CommercialEnhanced = () => {
           {/* Subtle grid overlay */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:64px_64px]" />
           
-          {/* Content with backdrop blur card */}
-          <div className="relative max-w-7xl mx-auto px-6 sm:px-8 w-full py-20">
+          {/* Content */}
+          <div className="relative max-w-7xl px-6 sm:px-8 w-full py-20" style={{ marginLeft: '10%' }}>
             <div className="max-w-3xl">
-              {/* Frosted glass backdrop */}
-              <div className="backdrop-blur-sm bg-black/20 rounded-3xl p-8 sm:p-12 lg:p-14 border border-white/10 shadow-2xl">
+              {/* Content card */}
+              <div className="rounded-3xl p-8 sm:p-12 lg:p-14">
                 
                 {/* Eyebrow text with icon - staggered animation */}
                 <div 
