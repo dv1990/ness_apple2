@@ -69,9 +69,9 @@ const CommercialEnhanced = () => {
               className="w-full h-full object-cover"
               loading="eager"
             />
-            {/* Gradient overlay - only on left side to keep product visible */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            {/* Gradient blur overlay - 45% from left to keep product visible */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" style={{ width: '45%' }} />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
           </div>
           
           {/* Subtle grid overlay */}
@@ -82,13 +82,13 @@ const CommercialEnhanced = () => {
             <div className="max-w-3xl space-y-12 sm:space-y-16 animate-fade-in">
               <div className="space-y-8 sm:space-y-10">
                 {/* Premium headline with better kerning */}
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extralight text-foreground leading-[0.95] tracking-tighter">
-                  <span className="font-light bg-gradient-to-br from-primary via-primary to-primary/60 bg-clip-text text-transparent">
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extralight text-white leading-[0.95] tracking-tighter">
+                  <span className="font-light bg-gradient-to-br from-white via-white to-white/90 bg-clip-text text-transparent">
                     Empower productivity, sustainably.
                   </span>
                 </h1>
                 
-                <p className="text-xl sm:text-2xl lg:text-3xl font-extralight text-foreground/90 max-w-2xl leading-relaxed tracking-wide">
+                <p className="text-xl sm:text-2xl lg:text-3xl font-extralight text-white/95 max-w-2xl leading-relaxed tracking-wide">
                   Clean, intelligent energy that drives progress — lowering costs, emissions, and complexity.
                 </p>
               </div>
