@@ -107,7 +107,6 @@ const App = () => {
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           
           {/* Legacy redirects for existing routes */}
-          <Route path="/residential" element={<ResidentialEnhanced />} />
           <Route path="/commercial" element={<CommercialEnhanced />} />
           <Route path="/hiring" element={<Hiring />} />
           <Route path="/knowledge-hub" element={<KnowledgeHub />} />
