@@ -89,7 +89,7 @@ const CommercialEnhanced = () => {
           
           {/* Content */}
           <div style={{
-          marginLeft: '-5%'
+          marginLeft: '2%'
         }} className="relative max-w-7xl px-6 w-full py-20 sm:px-[5px]">
             <div className="max-w-3xl">
               {/* Content card */}
