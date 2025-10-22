@@ -121,7 +121,7 @@ const CommercialEnhanced = () => {
                 animationDelay: '0.5s',
                 animationFillMode: 'forwards'
               }}>
-                  Clean, intelligent energy that drives progress — lowering costs, emissions, and complexity.
+                  Clean, intelligent energy that drives progress     lowering costs, emissions, and complexity.
                 </p>
 
                 {/* Key stat badges - staggered animation */}
