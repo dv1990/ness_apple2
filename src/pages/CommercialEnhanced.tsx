@@ -7,20 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { 
-  ArrowRight, 
-  CheckCircle2, 
-  Factory, 
-  Hotel, 
-  Fuel,
-  Zap,
-  TrendingDown,
-  Clock,
-  Leaf,
-  MapPin,
-  ChevronDown,
-  Sparkles
-} from "lucide-react";
+import { ArrowRight, CheckCircle2, Factory, Hotel, Fuel, Zap, TrendingDown, Clock, Leaf, MapPin, ChevronDown, Sparkles } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import nessCubeResort from "@/assets/ness-cube-resort.webp";
 import nessPodInstallation from "@/assets/ness-pod-installation-hero.webp";
@@ -41,9 +28,7 @@ const contactSchema = z.object({
   solar: z.string().optional(),
   notes: z.string().trim().max(1000, "Notes too long").optional()
 });
-
 type FormData = z.infer<typeof contactSchema>;
-
 const CommercialEnhanced = () => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -64,37 +49,31 @@ const CommercialEnhanced = () => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll, {
+      passive: true
+    });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  return (
-    <Layout>
+  return <Layout>
       <div className="min-h-screen bg-background">
         
         {/* Hero Section - Full Page Image */}
         <section className="relative min-h-screen flex items-center overflow-hidden">
           {/* Full page hero image with parallax */}
-          <div 
-            className="absolute inset-0"
-            style={{ 
-              transform: `translateY(${scrollY * 0.5}px)`,
-              transition: 'transform 0.1s ease-out'
-            }}
-          >
-            <img 
-              src={ciHeroPremium}
-              alt="NESS energy storage systems for commercial and industrial applications"
-              className={`w-full h-full object-cover transition-all duration-700 ${
-                imageLoaded ? 'blur-0 scale-100' : 'blur-md scale-105'
-              }`}
-              loading="eager"
-              onLoad={() => setImageLoaded(true)}
-            />
+          <div className="absolute inset-0" style={{
+          transform: `translateY(${scrollY * 0.5}px)`,
+          transition: 'transform 0.1s ease-out'
+        }}>
+            <img src={ciHeroPremium} alt="NESS energy storage systems for commercial and industrial applications" className={`w-full h-full object-cover transition-all duration-700 ${imageLoaded ? 'blur-0 scale-100' : 'blur-md scale-105'}`} loading="eager" onLoad={() => setImageLoaded(true)} />
             {/* Desktop gradient blur overlay - 45% from left */}
-            <div className="hidden sm:block absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" style={{ width: '45%' }} />
+            <div className="hidden sm:block absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" style={{
+            width: '45%'
+          }} />
             {/* Mobile gradient - bottom to top for better text visibility */}
-            <div className="sm:hidden absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" style={{ height: '60%', bottom: 0 }} />
+            <div className="sm:hidden absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" style={{
+            height: '60%',
+            bottom: 0
+          }} />
             {/* Subtle bottom gradient for scroll indicator */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
           </div>
@@ -103,16 +82,18 @@ const CommercialEnhanced = () => {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:64px_64px]" />
           
           {/* Content */}
-          <div className="relative max-w-7xl px-6 sm:px-8 w-full py-20" style={{ marginLeft: '10%' }}>
+          <div className="relative max-w-7xl px-6 sm:px-8 w-full py-20" style={{
+          marginLeft: '10%'
+        }}>
             <div className="max-w-3xl">
               {/* Content card */}
-              <div className="rounded-3xl p-8 sm:p-12 lg:p-14">
+              <div className="rounded-3xl p-8 sm:p-12 lg:p-14 px-0">
                 
                 {/* Eyebrow text with icon - staggered animation */}
-                <div 
-                  className="inline-flex items-center gap-2 mb-6 sm:mb-8 opacity-0 animate-fade-in"
-                  style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}
-                >
+                <div className="inline-flex items-center gap-2 mb-6 sm:mb-8 opacity-0 animate-fade-in" style={{
+                animationDelay: '0.1s',
+                animationFillMode: 'forwards'
+              }}>
                   <Sparkles className="w-4 h-4 text-primary" />
                   <span className="text-xs sm:text-sm text-white/80 font-medium uppercase tracking-wider">
                     Commercial & Industrial Solutions
@@ -120,28 +101,28 @@ const CommercialEnhanced = () => {
                 </div>
 
                 {/* Premium headline - staggered animation */}
-                <h1 
-                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight text-white leading-[1.05] tracking-tighter mb-6 sm:mb-8 opacity-0 animate-fade-in"
-                  style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}
-                >
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight text-white leading-[1.05] tracking-tighter mb-6 sm:mb-8 opacity-0 animate-fade-in" style={{
+                animationDelay: '0.3s',
+                animationFillMode: 'forwards'
+              }}>
                   <span className="font-light">
                     Empower productivity, sustainably.
                   </span>
                 </h1>
                 
                 {/* Subtext - staggered animation */}
-                <p 
-                  className="text-lg sm:text-xl lg:text-2xl font-light text-white/90 max-w-2xl leading-relaxed mb-8 sm:mb-10 opacity-0 animate-fade-in"
-                  style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}
-                >
+                <p className="text-lg sm:text-xl lg:text-2xl font-light text-white/90 max-w-2xl leading-relaxed mb-8 sm:mb-10 opacity-0 animate-fade-in" style={{
+                animationDelay: '0.5s',
+                animationFillMode: 'forwards'
+              }}>
                   Clean, intelligent energy that drives progress — lowering costs, emissions, and complexity.
                 </p>
 
                 {/* Key stat badges - staggered animation */}
-                <div 
-                  className="flex flex-wrap gap-3 sm:gap-4 mb-8 sm:mb-10 opacity-0 animate-fade-in"
-                  style={{ animationDelay: '0.7s', animationFillMode: 'forwards' }}
-                >
+                <div className="flex flex-wrap gap-3 sm:gap-4 mb-8 sm:mb-10 opacity-0 animate-fade-in" style={{
+                animationDelay: '0.7s',
+                animationFillMode: 'forwards'
+              }}>
                   <div className="bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full px-4 sm:px-5 py-2 sm:py-2.5 flex items-center gap-2 hover:bg-primary/30 transition-all">
                     <TrendingDown className="w-4 h-4 text-primary" />
                     <span className="text-xs sm:text-sm font-medium text-white">↓60% Energy Costs</span>
@@ -157,16 +138,13 @@ const CommercialEnhanced = () => {
                 </div>
 
                 {/* Enhanced CTA button with pulsing glow - staggered animation */}
-                <div 
-                  className="opacity-0 animate-fade-in"
-                  style={{ animationDelay: '0.9s', animationFillMode: 'forwards' }}
-                >
-                  <Button 
-                    size="lg"
-                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="relative bg-primary hover:bg-primary/90 text-primary-foreground px-10 sm:px-12 py-6 sm:py-7 rounded-full text-base sm:text-lg font-medium group shadow-xl shadow-primary/30 transition-all hover:shadow-2xl hover:shadow-primary/50 hover:scale-[1.02] focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-                    aria-label="Start your transition to clean energy"
-                  >
+                <div className="opacity-0 animate-fade-in" style={{
+                animationDelay: '0.9s',
+                animationFillMode: 'forwards'
+              }}>
+                  <Button size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({
+                  behavior: 'smooth'
+                })} className="relative bg-primary hover:bg-primary/90 text-primary-foreground px-10 sm:px-12 py-6 sm:py-7 rounded-full text-base sm:text-lg font-medium group shadow-xl shadow-primary/30 transition-all hover:shadow-2xl hover:shadow-primary/50 hover:scale-[1.02] focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black" aria-label="Start your transition to clean energy">
                     {/* Pulsing glow effect */}
                     <span className="absolute inset-0 rounded-full bg-primary/40 blur-xl animate-pulse" />
                     <span className="relative flex items-center">
@@ -180,11 +158,10 @@ const CommercialEnhanced = () => {
           </div>
 
           {/* Animated scroll indicator */}
-          <button
-            onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/60 hover:text-white transition-colors group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-lg p-2"
-            aria-label="Scroll to next section"
-          >
+          <button onClick={() => window.scrollBy({
+          top: window.innerHeight,
+          behavior: 'smooth'
+        })} className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/60 hover:text-white transition-colors group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-lg p-2" aria-label="Scroll to next section">
             <span className="text-xs uppercase tracking-wider font-medium">Explore</span>
             <ChevronDown className="w-6 h-6 animate-bounce group-hover:text-primary transition-colors" />
           </button>
@@ -250,11 +227,9 @@ const CommercialEnhanced = () => {
                   </div>
                 </div>
 
-                <Button 
-                  size="lg"
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-6 rounded-full font-light group shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.02]"
-                >
+                <Button size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({
+                behavior: 'smooth'
+              })} className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-6 rounded-full font-light group shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.02]">
                   Keep Production Moving
                   <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
                 </Button>
@@ -266,11 +241,7 @@ const CommercialEnhanced = () => {
                   <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                   
                   <div className="relative aspect-[4/3] bg-card rounded-3xl overflow-hidden border border-border/50 shadow-2xl">
-                    <img 
-                      src={manufacturingFacility}
-                      alt="Clean fabrication shop with NESS providing silent backup"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
+                    <img src={manufacturingFacility} alt="Clean fabrication shop with NESS providing silent backup" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>
                 </div>
               </div>
@@ -285,11 +256,7 @@ const CommercialEnhanced = () => {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               
               <div className="aspect-[4/3] bg-card rounded-3xl overflow-hidden border border-border shadow-xl">
-                <img 
-                  src={greenResort}
-                  alt="Luxury resort running on silent NESS power"
-                  className="w-full h-full object-cover"
-                />
+                <img src={greenResort} alt="Luxury resort running on silent NESS power" className="w-full h-full object-cover" />
               </div>
 
               <div className="space-y-6 sm:space-y-8">
@@ -337,11 +304,9 @@ const CommercialEnhanced = () => {
                   </div>
                 </div>
 
-                <Button 
-                  size="lg"
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 rounded-2xl group"
-                >
+                <Button size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({
+                behavior: 'smooth'
+              })} className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 rounded-2xl group">
                   Power Your Paradise
                   <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
                 </Button>
@@ -403,19 +368,13 @@ const CommercialEnhanced = () => {
             </div>
 
             <div className="aspect-[21/9] bg-card rounded-3xl overflow-hidden border border-border shadow-xl">
-              <img 
-                src={dgReplacement}
-                alt="Diesel generator replaced by NESS Cube"
-                className="w-full h-full object-cover"
-              />
+              <img src={dgReplacement} alt="Diesel generator replaced by NESS Cube" className="w-full h-full object-cover" />
             </div>
 
             <div className="text-center mt-12">
-              <Button 
-                size="lg"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 rounded-2xl group"
-              >
+              <Button size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({
+              behavior: 'smooth'
+            })} className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 rounded-2xl group">
                 Switch Off Diesel
                 <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
               </Button>
@@ -473,11 +432,7 @@ const CommercialEnhanced = () => {
                   </div>
                 </div>
 
-                <Button 
-                  size="lg"
-                  onClick={() => window.location.href = '/ev-charging-microgrid'}
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 rounded-2xl group"
-                >
+                <Button size="lg" onClick={() => window.location.href = '/ev-charging-microgrid'} className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 rounded-2xl group">
                   Charge Without Limits
                   <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
                 </Button>
@@ -485,11 +440,7 @@ const CommercialEnhanced = () => {
 
               <div className="order-first lg:order-last">
                 <div className="aspect-[4/3] bg-card rounded-3xl overflow-hidden border border-border shadow-xl">
-                  <img 
-                    src={evCharging}
-                    alt="EV plaza operating smoothly with NESS-powered buffering"
-                    className="w-full h-full object-cover"
-                  />
+                  <img src={evCharging} alt="EV plaza operating smoothly with NESS-powered buffering" className="w-full h-full object-cover" />
                 </div>
               </div>
 
@@ -513,11 +464,7 @@ const CommercialEnhanced = () => {
               {/* NESS POD */}
               <Card className="bg-card border-border shadow-xl overflow-hidden hover:shadow-2xl transition-shadow">
                 <div className="aspect-[4/3] bg-gradient-to-br from-blue-500/10 to-blue-500/5 overflow-hidden">
-                  <img 
-                    src={nessPodInstallation}
-                    alt="NESS POD compact outdoor unit"
-                    className="w-full h-full object-contain p-8"
-                  />
+                  <img src={nessPodInstallation} alt="NESS POD compact outdoor unit" className="w-full h-full object-contain p-8" />
                 </div>
                 <CardHeader>
                   <CardTitle className="text-3xl">NESS POD</CardTitle>
@@ -550,11 +497,9 @@ const CommercialEnhanced = () => {
                       <span>Rapid install, minimal footprint</span>
                     </div>
                   </div>
-                  <Button 
-                    variant="outline" 
-                    className="w-full"
-                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  >
+                  <Button variant="outline" className="w-full" onClick={() => document.getElementById('contact')?.scrollIntoView({
+                  behavior: 'smooth'
+                })}>
                     View POD Configurations
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
@@ -564,11 +509,7 @@ const CommercialEnhanced = () => {
               {/* NESS CUBE */}
               <Card className="bg-card border-border shadow-xl overflow-hidden hover:shadow-2xl transition-shadow">
                 <div className="aspect-[4/3] bg-gradient-to-br from-green-500/10 to-green-500/5 overflow-hidden">
-                  <img 
-                    src={nessCubeResort}
-                    alt="NESS CUBE containerized solution"
-                    className="w-full h-full object-cover"
-                  />
+                  <img src={nessCubeResort} alt="NESS CUBE containerized solution" className="w-full h-full object-cover" />
                 </div>
                 <CardHeader>
                   <CardTitle className="text-3xl">NESS CUBE</CardTitle>
@@ -601,11 +542,9 @@ const CommercialEnhanced = () => {
                       <span>Service aisles, safety labeling</span>
                     </div>
                   </div>
-                  <Button 
-                    variant="outline" 
-                    className="w-full"
-                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  >
+                  <Button variant="outline" className="w-full" onClick={() => document.getElementById('contact')?.scrollIntoView({
+                  behavior: 'smooth'
+                })}>
                     View CUBE Configurations
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
@@ -685,11 +624,9 @@ const CommercialEnhanced = () => {
               </div>
             </div>
 
-            <Button 
-              size="lg"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 rounded-2xl group"
-            >
+            <Button size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({
+            behavior: 'smooth'
+          })} className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 rounded-2xl group">
               Talk to Our Energy Engineers
               <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
             </Button>
@@ -758,11 +695,9 @@ const CommercialEnhanced = () => {
               <br />
               <span className="text-primary font-medium">it'll be powered by people who care.</span>
             </h2>
-            <Button 
-              size="lg"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-6 rounded-2xl text-lg group"
-            >
+            <Button size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({
+            behavior: 'smooth'
+          })} className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-6 rounded-2xl text-lg group">
               Join the Movement
               <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
             </Button>
@@ -783,83 +718,52 @@ const CommercialEnhanced = () => {
 
             <Card className="bg-card shadow-xl">
               <CardContent className="pt-8">
-                <form
-                  className="space-y-6"
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    setFormErrors({});
-                    const validation = contactSchema.safeParse(formData);
-                    if (!validation.success) {
-                      const errors: Record<string, string> = {};
-                      validation.error.errors.forEach((err) => {
-                        if (err.path[0]) errors[err.path[0].toString()] = err.message;
-                      });
-                      setFormErrors(errors);
-                      return;
-                    }
-                    // Success - open WhatsApp
-                    const message = `C&I System Design Request\nName: ${encodeURIComponent(
-                      formData.name
-                    )}\nEmail: ${encodeURIComponent(
-                      formData.email
-                    )}\nPhone: ${encodeURIComponent(
-                      formData.phone
-                    )}\nUse Case: ${encodeURIComponent(
-                      formData.segment
-                    )}\nRuntime: ${encodeURIComponent(
-                      formData.runtime || 'N/A'
-                    )}\nPeak Load: ${encodeURIComponent(
-                      formData.peak_load || 'N/A'
-                    )}\nSolar: ${encodeURIComponent(
-                      formData.solar || 'N/A'
-                    )}\nNotes: ${encodeURIComponent(formData.notes || 'None')}`;
-                    window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
-                  }}
-                >
+                <form className="space-y-6" onSubmit={e => {
+                e.preventDefault();
+                setFormErrors({});
+                const validation = contactSchema.safeParse(formData);
+                if (!validation.success) {
+                  const errors: Record<string, string> = {};
+                  validation.error.errors.forEach(err => {
+                    if (err.path[0]) errors[err.path[0].toString()] = err.message;
+                  });
+                  setFormErrors(errors);
+                  return;
+                }
+                // Success - open WhatsApp
+                const message = `C&I System Design Request\nName: ${encodeURIComponent(formData.name)}\nEmail: ${encodeURIComponent(formData.email)}\nPhone: ${encodeURIComponent(formData.phone)}\nUse Case: ${encodeURIComponent(formData.segment)}\nRuntime: ${encodeURIComponent(formData.runtime || 'N/A')}\nPeak Load: ${encodeURIComponent(formData.peak_load || 'N/A')}\nSolar: ${encodeURIComponent(formData.solar || 'N/A')}\nNotes: ${encodeURIComponent(formData.notes || 'None')}`;
+                window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+              }}>
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <Input
-                        placeholder="Full Name *"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className={formErrors.name ? "border-destructive" : ""}
-                      />
-                      {formErrors.name && (
-                        <p className="text-sm text-destructive">{formErrors.name}</p>
-                      )}
+                      <Input placeholder="Full Name *" value={formData.name} onChange={e => setFormData({
+                      ...formData,
+                      name: e.target.value
+                    })} className={formErrors.name ? "border-destructive" : ""} />
+                      {formErrors.name && <p className="text-sm text-destructive">{formErrors.name}</p>}
                     </div>
                     <div className="space-y-2">
-                      <Input
-                        type="email"
-                        placeholder="Work Email *"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className={formErrors.email ? "border-destructive" : ""}
-                      />
-                      {formErrors.email && (
-                        <p className="text-sm text-destructive">{formErrors.email}</p>
-                      )}
+                      <Input type="email" placeholder="Work Email *" value={formData.email} onChange={e => setFormData({
+                      ...formData,
+                      email: e.target.value
+                    })} className={formErrors.email ? "border-destructive" : ""} />
+                      {formErrors.email && <p className="text-sm text-destructive">{formErrors.email}</p>}
                     </div>
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <Input
-                        type="tel"
-                        placeholder="Phone *"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className={formErrors.phone ? "border-destructive" : ""}
-                      />
-                      {formErrors.phone && (
-                        <p className="text-sm text-destructive">{formErrors.phone}</p>
-                      )}
+                      <Input type="tel" placeholder="Phone *" value={formData.phone} onChange={e => setFormData({
+                      ...formData,
+                      phone: e.target.value
+                    })} className={formErrors.phone ? "border-destructive" : ""} />
+                      {formErrors.phone && <p className="text-sm text-destructive">{formErrors.phone}</p>}
                     </div>
                     <div className="space-y-2">
-                      <Select
-                        value={formData.segment}
-                        onValueChange={(value) => setFormData({ ...formData, segment: value })}
-                      >
+                      <Select value={formData.segment} onValueChange={value => setFormData({
+                      ...formData,
+                      segment: value
+                    })}>
                         <SelectTrigger className={formErrors.segment ? "border-destructive" : ""}>
                           <SelectValue placeholder="Use Case *" />
                         </SelectTrigger>
@@ -870,31 +774,25 @@ const CommercialEnhanced = () => {
                           <SelectItem value="EV Charging">EV Charging</SelectItem>
                         </SelectContent>
                       </Select>
-                      {formErrors.segment && (
-                        <p className="text-sm text-destructive">{formErrors.segment}</p>
-                      )}
+                      {formErrors.segment && <p className="text-sm text-destructive">{formErrors.segment}</p>}
                     </div>
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-6">
-                    <Input
-                      type="number"
-                      placeholder="Required Backup Runtime (hours)"
-                      value={formData.runtime}
-                      onChange={(e) => setFormData({ ...formData, runtime: e.target.value })}
-                    />
-                    <Input
-                      type="number"
-                      placeholder="Peak Load (kW)"
-                      value={formData.peak_load}
-                      onChange={(e) => setFormData({ ...formData, peak_load: e.target.value })}
-                    />
+                    <Input type="number" placeholder="Required Backup Runtime (hours)" value={formData.runtime} onChange={e => setFormData({
+                    ...formData,
+                    runtime: e.target.value
+                  })} />
+                    <Input type="number" placeholder="Peak Load (kW)" value={formData.peak_load} onChange={e => setFormData({
+                    ...formData,
+                    peak_load: e.target.value
+                  })} />
                   </div>
 
-                  <Select
-                    value={formData.solar}
-                    onValueChange={(value) => setFormData({ ...formData, solar: value })}
-                  >
+                  <Select value={formData.solar} onValueChange={value => setFormData({
+                  ...formData,
+                  solar: value
+                })}>
                     <SelectTrigger>
                       <SelectValue placeholder="Do you have solar?" />
                     </SelectTrigger>
@@ -905,22 +803,16 @@ const CommercialEnhanced = () => {
                     </SelectContent>
                   </Select>
 
-                  <Textarea
-                    placeholder="Notes / Constraints"
-                    value={formData.notes}
-                    onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                    rows={4}
-                  />
+                  <Textarea placeholder="Notes / Constraints" value={formData.notes} onChange={e => setFormData({
+                  ...formData,
+                  notes: e.target.value
+                })} rows={4} />
 
                   <div className="text-sm text-muted-foreground text-center">
                     By submitting, you agree to be contacted about NESS products and services.
                   </div>
 
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 rounded-2xl text-lg group"
-                  >
+                  <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 rounded-2xl text-lg group">
                     Get My Plan
                     <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
                   </Button>
@@ -931,8 +823,6 @@ const CommercialEnhanced = () => {
         </section>
 
       </div>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default CommercialEnhanced;
