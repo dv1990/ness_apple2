@@ -83,14 +83,13 @@ const CommercialEnhanced = () => {
               <div className="space-y-8 sm:space-y-10">
                 {/* Premium headline with better kerning */}
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extralight text-foreground leading-[0.95] tracking-tighter">
-                  Power that<br />
                   <span className="font-light bg-gradient-to-br from-primary via-primary to-primary/60 bg-clip-text text-transparent">
-                    means business
+                    Empower productivity, sustainably.
                   </span>
                 </h1>
                 
                 <p className="text-xl sm:text-2xl lg:text-3xl font-extralight text-foreground/90 max-w-2xl leading-relaxed tracking-wide">
-                  Clean, quiet, intelligent energy for industries, resorts, and charging networks
+                  Clean, intelligent energy that fuels progress — lowering costs, emissions, and complexity.
                 </p>
               </div>
 
