@@ -59,8 +59,8 @@ const CommercialEnhanced = () => {
     <Layout>
       <div className="min-h-screen bg-background">
         
-        {/* Hero Section - Apple-Grade Minimalism */}
-        <section className="relative min-h-screen overflow-hidden">
+        {/* Hero Section - Full Page Image */}
+        <section className="relative min-h-screen flex items-center overflow-hidden">
           {/* Full page hero image */}
           <div className="absolute inset-0">
             <img 
@@ -69,76 +69,41 @@ const CommercialEnhanced = () => {
               className="w-full h-full object-cover"
               loading="eager"
             />
-            {/* Desktop: Left 40% overlay - rgba(0,0,0,0.45) */}
-            <div 
-              className="hidden md:block absolute inset-0" 
-              style={{
-                background: 'linear-gradient(to right, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.45) 40%, transparent 40%)'
-              }}
-            />
-            {/* Mobile: Bottom 55% overlay - rgba(0,0,0,0.55) */}
-            <div 
-              className="md:hidden absolute inset-0" 
-              style={{
-                background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.55) 55%, transparent 55%)'
-              }}
-            />
+            {/* Gradient overlay - only on left side to keep product visible */}
+            <div className="absolute inset-0 bg-gradient-to-r from-background via-background/50 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
           </div>
           
-          {/* Content Container */}
-          <div className="relative min-h-screen flex items-center">
-            <div 
-              className="w-full px-[8%] pt-[28vh] md:px-[14%] md:pt-[38vh] animate-fade-in"
-              style={{
-                animationDuration: '0.6s',
-                animationTimingFunction: 'ease-in'
-              }}
-            >
-              <div className="max-w-[550px]">
-                {/* Headline */}
-                <h1 
-                  className="text-[38px] md:text-[72px] leading-[110%] font-semibold text-white"
-                  style={{ 
-                    fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif',
-                    letterSpacing: '-1.5%'
-                  }}
-                >
-                  Empower productivity, sustainably.
+          {/* Subtle grid overlay */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:64px_64px]" />
+          
+          {/* Content */}
+          <div className="relative max-w-7xl mx-auto px-6 sm:px-8 w-full py-20">
+            <div className="max-w-3xl space-y-12 sm:space-y-16 animate-fade-in">
+              <div className="space-y-8 sm:space-y-10">
+                {/* Premium headline with better kerning */}
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extralight text-foreground leading-[0.95] tracking-tighter">
+                  Power that<br />
+                  <span className="font-light bg-gradient-to-br from-primary via-primary to-primary/60 bg-clip-text text-transparent">
+                    means business
+                  </span>
                 </h1>
                 
-                {/* Subtext */}
-                <p 
-                  className="mt-7 md:mt-[60px] text-[16px] md:text-[22px] leading-[150%] max-w-[320px] md:max-w-[550px]"
-                  style={{ 
-                    fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif',
-                    color: '#D0D0D0'
-                  }}
-                >
-                  Clean, intelligent energy that fuels progress — lowering costs, emissions, and complexity.
+                <p className="text-xl sm:text-2xl lg:text-3xl font-extralight text-foreground/90 max-w-2xl leading-relaxed tracking-wide">
+                  Clean, quiet, intelligent energy for industries, resorts, and charging networks
                 </p>
-                
-                {/* CTA Button */}
-                <div className="mt-6 md:mt-[45px] flex md:block justify-center">
-                  <button
-                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="px-8 py-3.5 md:px-10 md:py-[18px] rounded-[28px] md:rounded-[36px] text-[15px] md:text-[18px] font-medium transition-all duration-300"
-                    style={{ 
-                      fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif',
-                      color: '#0B1220',
-                      backgroundColor: '#00C853'
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = '#1EFF74';
-                      e.currentTarget.style.boxShadow = '0 0 25px rgba(0, 200, 83, 0.2)';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = '#00C853';
-                      e.currentTarget.style.boxShadow = 'none';
-                    }}
-                  >
-                    Start your transition →
-                  </button>
-                </div>
+              </div>
+
+              {/* Premium CTA button */}
+              <div className="pt-4">
+                <Button 
+                  size="lg"
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 sm:px-14 py-7 rounded-full text-base sm:text-lg font-light group shadow-xl shadow-primary/30 transition-all hover:shadow-2xl hover:shadow-primary/40 hover:scale-[1.02]"
+                >
+                  Start Your Transition
+                  <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                </Button>
               </div>
             </div>
           </div>
