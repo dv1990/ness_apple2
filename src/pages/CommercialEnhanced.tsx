@@ -69,10 +69,9 @@ const CommercialEnhanced = () => {
               className="w-full h-full object-cover"
               loading="eager"
             />
-            {/* Premium gradient overlays for text readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/60 to-background/30" />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/40" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
+            {/* Gradient overlay - only on left side to keep product visible */}
+            <div className="absolute inset-0 bg-gradient-to-r from-background via-background/50 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
           </div>
           
           {/* Subtle grid overlay */}
@@ -83,7 +82,7 @@ const CommercialEnhanced = () => {
             <div className="max-w-3xl space-y-12 sm:space-y-16 animate-fade-in">
               <div className="space-y-8 sm:space-y-10">
                 {/* Premium headline with better kerning */}
-                <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-extralight text-foreground leading-[0.9] tracking-tighter">
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extralight text-foreground leading-[0.95] tracking-tighter">
                   Power that<br />
                   <span className="font-light bg-gradient-to-br from-primary via-primary to-primary/60 bg-clip-text text-transparent">
                     means business
@@ -95,24 +94,8 @@ const CommercialEnhanced = () => {
                 </p>
               </div>
 
-              {/* Premium badge pills with better spacing */}
-              <div className="flex flex-wrap gap-4 sm:gap-5">
-                <Badge variant="secondary" className="px-5 py-2.5 text-sm font-light backdrop-blur-sm bg-background/80 border border-border/50 hover:bg-background/90 transition-colors shadow-lg">
-                  LFP • 10,000+ cycles
-                </Badge>
-                <Badge variant="secondary" className="px-5 py-2.5 text-sm font-light backdrop-blur-sm bg-background/80 border border-border/50 hover:bg-background/90 transition-colors shadow-lg">
-                  DG Replacement
-                </Badge>
-                <Badge variant="secondary" className="px-5 py-2.5 text-sm font-light backdrop-blur-sm bg-background/80 border border-border/50 hover:bg-background/90 transition-colors shadow-lg">
-                  Solar + Grid Hybrid
-                </Badge>
-                <Badge variant="secondary" className="px-5 py-2.5 text-sm font-light backdrop-blur-sm bg-background/80 border border-border/50 hover:bg-background/90 transition-colors shadow-lg">
-                  IP54 Outdoor
-                </Badge>
-              </div>
-
-              {/* Premium CTA buttons */}
-              <div className="flex flex-col sm:flex-row gap-5 pt-4">
+              {/* Premium CTA button */}
+              <div className="pt-4">
                 <Button 
                   size="lg"
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
@@ -120,14 +103,6 @@ const CommercialEnhanced = () => {
                 >
                   Start Your Transition
                   <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                </Button>
-                <Button 
-                  size="lg"
-                  variant="outline"
-                  onClick={() => document.getElementById('compare')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="border-border/50 backdrop-blur-md bg-background/60 px-12 sm:px-14 py-7 rounded-full text-base sm:text-lg font-light hover:bg-background/80 transition-all hover:scale-[1.02] shadow-lg"
-                >
-                  Compare Systems
                 </Button>
               </div>
             </div>
