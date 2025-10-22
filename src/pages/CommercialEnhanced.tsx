@@ -681,7 +681,7 @@ const CommercialEnhanced = () => {
           <div className="max-w-4xl mx-auto px-6 sm:px-8">
             <div className="text-center mb-12 sm:mb-16 space-y-4">
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-light text-foreground leading-tight tracking-tight">
-                Design my C&I system
+                Let us help you design a solution
               </h2>
               <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
                 Tell us your loads, runtime, and site constraints. We'll send a right-sized plan.
