@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { z } from "zod";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
@@ -17,7 +17,9 @@ import {
   TrendingDown,
   Clock,
   Leaf,
-  MapPin
+  MapPin,
+  ChevronDown,
+  Sparkles
 } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import nessCubeResort from "@/assets/ness-cube-resort.webp";
@@ -54,6 +56,17 @@ const CommercialEnhanced = () => {
     notes: ""
   });
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
+  const [scrollY, setScrollY] = useState(0);
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  // Parallax effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <Layout>
@@ -61,51 +74,120 @@ const CommercialEnhanced = () => {
         
         {/* Hero Section - Full Page Image */}
         <section className="relative min-h-screen flex items-center overflow-hidden">
-          {/* Full page hero image */}
-          <div className="absolute inset-0">
+          {/* Full page hero image with parallax */}
+          <div 
+            className="absolute inset-0"
+            style={{ 
+              transform: `translateY(${scrollY * 0.5}px)`,
+              transition: 'transform 0.1s ease-out'
+            }}
+          >
             <img 
               src={ciHeroPremium}
               alt="NESS energy storage systems for commercial and industrial applications"
-              className="w-full h-full object-cover"
+              className={`w-full h-full object-cover transition-all duration-700 ${
+                imageLoaded ? 'blur-0 scale-100' : 'blur-md scale-105'
+              }`}
               loading="eager"
+              onLoad={() => setImageLoaded(true)}
             />
-            {/* Gradient blur overlay - 45% from left to keep product visible */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" style={{ width: '45%' }} />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+            {/* Desktop gradient blur overlay - 45% from left */}
+            <div className="hidden sm:block absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" style={{ width: '45%' }} />
+            {/* Mobile gradient - bottom to top for better text visibility */}
+            <div className="sm:hidden absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" style={{ height: '60%', bottom: 0 }} />
+            {/* Subtle bottom gradient for scroll indicator */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
           </div>
           
           {/* Subtle grid overlay */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:64px_64px]" />
           
-          {/* Content */}
+          {/* Content with backdrop blur card */}
           <div className="relative max-w-7xl mx-auto px-6 sm:px-8 w-full py-20">
-            <div className="max-w-3xl space-y-12 sm:space-y-16 animate-fade-in">
-              <div className="space-y-8 sm:space-y-10">
-                {/* Premium headline with better kerning */}
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extralight text-white leading-[0.95] tracking-tighter">
-                  <span className="font-light bg-gradient-to-br from-white via-white to-white/90 bg-clip-text text-transparent">
+            <div className="max-w-3xl">
+              {/* Frosted glass backdrop */}
+              <div className="backdrop-blur-sm bg-black/20 rounded-3xl p-8 sm:p-12 lg:p-14 border border-white/10 shadow-2xl">
+                
+                {/* Eyebrow text with icon - staggered animation */}
+                <div 
+                  className="inline-flex items-center gap-2 mb-6 sm:mb-8 opacity-0 animate-fade-in"
+                  style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}
+                >
+                  <Sparkles className="w-4 h-4 text-primary" />
+                  <span className="text-xs sm:text-sm text-white/80 font-medium uppercase tracking-wider">
+                    Commercial & Industrial Solutions
+                  </span>
+                </div>
+
+                {/* Premium headline - staggered animation */}
+                <h1 
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight text-white leading-[1.05] tracking-tighter mb-6 sm:mb-8 opacity-0 animate-fade-in"
+                  style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}
+                >
+                  <span className="font-light">
                     Empower productivity, sustainably.
                   </span>
                 </h1>
                 
-                <p className="text-xl sm:text-2xl lg:text-3xl font-extralight text-white/95 max-w-2xl leading-relaxed tracking-wide">
+                {/* Subtext - staggered animation */}
+                <p 
+                  className="text-lg sm:text-xl lg:text-2xl font-light text-white/90 max-w-2xl leading-relaxed mb-8 sm:mb-10 opacity-0 animate-fade-in"
+                  style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}
+                >
                   Clean, intelligent energy that drives progress — lowering costs, emissions, and complexity.
                 </p>
-              </div>
 
-              {/* Premium CTA button */}
-              <div className="pt-4">
-                <Button 
-                  size="lg"
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 sm:px-14 py-7 rounded-full text-base sm:text-lg font-light group shadow-xl shadow-primary/30 transition-all hover:shadow-2xl hover:shadow-primary/40 hover:scale-[1.02]"
+                {/* Key stat badges - staggered animation */}
+                <div 
+                  className="flex flex-wrap gap-3 sm:gap-4 mb-8 sm:mb-10 opacity-0 animate-fade-in"
+                  style={{ animationDelay: '0.7s', animationFillMode: 'forwards' }}
                 >
-                  Start Your Transition
-                  <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                </Button>
+                  <div className="bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full px-4 sm:px-5 py-2 sm:py-2.5 flex items-center gap-2 hover:bg-primary/30 transition-all">
+                    <TrendingDown className="w-4 h-4 text-primary" />
+                    <span className="text-xs sm:text-sm font-medium text-white">↓60% Energy Costs</span>
+                  </div>
+                  <div className="bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full px-4 sm:px-5 py-2 sm:py-2.5 flex items-center gap-2 hover:bg-primary/30 transition-all">
+                    <Leaf className="w-4 h-4 text-primary" />
+                    <span className="text-xs sm:text-sm font-medium text-white">Zero Emissions</span>
+                  </div>
+                  <div className="bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full px-4 sm:px-5 py-2 sm:py-2.5 flex items-center gap-2 hover:bg-primary/30 transition-all">
+                    <Zap className="w-4 h-4 text-primary" />
+                    <span className="text-xs sm:text-sm font-medium text-white">≤50ms Switch</span>
+                  </div>
+                </div>
+
+                {/* Enhanced CTA button with pulsing glow - staggered animation */}
+                <div 
+                  className="opacity-0 animate-fade-in"
+                  style={{ animationDelay: '0.9s', animationFillMode: 'forwards' }}
+                >
+                  <Button 
+                    size="lg"
+                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="relative bg-primary hover:bg-primary/90 text-primary-foreground px-10 sm:px-12 py-6 sm:py-7 rounded-full text-base sm:text-lg font-medium group shadow-xl shadow-primary/30 transition-all hover:shadow-2xl hover:shadow-primary/50 hover:scale-[1.02] focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                    aria-label="Start your transition to clean energy"
+                  >
+                    {/* Pulsing glow effect */}
+                    <span className="absolute inset-0 rounded-full bg-primary/40 blur-xl animate-pulse" />
+                    <span className="relative flex items-center">
+                      Start Your Transition
+                      <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                    </span>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
+
+          {/* Animated scroll indicator */}
+          <button
+            onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/60 hover:text-white transition-colors group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-lg p-2"
+            aria-label="Scroll to next section"
+          >
+            <span className="text-xs uppercase tracking-wider font-medium">Explore</span>
+            <ChevronDown className="w-6 h-6 animate-bounce group-hover:text-primary transition-colors" />
+          </button>
         </section>
 
         {/* Small Industries Section */}
