@@ -5,34 +5,63 @@ import { AnimatedCounter } from '@/components/ui/animated-counter';
 import { AnimatedCard } from '@/components/ui/animated-card';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 import { Button } from '@/components/ui/button';
-import { Sun, Battery, Zap, Car, AlertCircle, TrendingUp, CheckCircle2, Building2, Truck, Navigation, Plane, Factory, Award } from 'lucide-react';
+import { Progress } from '@/components/ui/progress';
+import { Sun, Battery, Zap, Car, AlertCircle, TrendingUp, CheckCircle2, Building2, Truck, Navigation, Plane, Factory, Award, ArrowDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const EVChargingMicrogrid = () => {
   const [stickyNav, setStickyNav] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight - windowHeight;
+      const scrolled = (window.scrollY / documentHeight) * 100;
+      setScrollProgress(scrolled);
       setStickyNav(window.scrollY > 800);
     };
-    window.addEventListener('scroll', handleScroll);
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
     <Layout>
+      {/* Reading Progress Bar */}
+      <div className="fixed top-0 left-0 right-0 z-50 h-1 bg-transparent">
+        <div 
+          className="h-full bg-gradient-to-r from-orange-500 via-green-500 to-blue-500 transition-all duration-300"
+          style={{ width: `${scrollProgress}%` }}
+        />
+      </div>
+
       {/* Sticky CTA Nav */}
       <div className={cn(
-        "fixed top-20 left-0 right-0 z-40 bg-background/95 backdrop-blur-lg border-b border-border shadow-lg transition-all duration-500",
-        stickyNav ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+        "fixed top-0 left-0 right-0 z-40 bg-background/95 backdrop-blur-xl border-b border-border transition-all duration-500",
+        stickyNav ? "translate-y-0 opacity-100 shadow-lg" : "-translate-y-full opacity-0"
       )}>
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div className="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-3">
           <span className="text-sm font-medium">NESS Microgrid for EV Charging</span>
           <div className="flex gap-3">
-            <Button variant="ghost" size="sm" onClick={() => window.location.href = '#savings'}>
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              onClick={() => scrollToSection('savings')}
+              className="hover:scale-105 transition-transform"
+            >
               💡 Estimate Savings
             </Button>
-            <Button size="sm" onClick={() => window.location.href = '/contact/distributor'}>
+            <Button 
+              size="sm" 
+              onClick={() => window.location.href = '/contact/distributor'}
+              className="hover:scale-105 transition-transform"
+            >
               ⚙️ Book Demo
             </Button>
           </div>
@@ -71,8 +100,13 @@ const HeroSection = () => {
   const [heroVisible, setHeroVisible] = useState(false);
 
   useEffect(() => {
-    setHeroVisible(true);
+    setTimeout(() => setHeroVisible(true), 100);
   }, []);
+
+  const scrollToNext = () => {
+    const element = document.getElementById('problem-section');
+    element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -87,15 +121,33 @@ const HeroSection = () => {
         }} />
       </div>
 
+      {/* Floating Particles */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-2 h-2 bg-orange-400/20 rounded-full animate-pulse"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${3 + Math.random() * 4}s`
+            }}
+          />
+        ))}
+      </div>
+
       <div className="container mx-auto px-4 relative z-10">
         <div className={cn(
-          "max-w-6xl mx-auto transition-all duration-1500",
-          heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          "max-w-6xl mx-auto transition-all duration-1500 ease-out",
+          heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
         )}>
           {/* Main Headline */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-foreground mb-8 leading-tight tracking-tight">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-foreground mb-8 leading-[1.1] tracking-tight">
             Never lose a customer<br />
-            <span className="text-orange-600 dark:text-orange-400 font-normal">to a grid failure.</span>
+            <span className="bg-gradient-to-r from-orange-600 via-amber-500 to-orange-600 dark:from-orange-400 dark:via-amber-400 dark:to-orange-400 bg-clip-text text-transparent font-normal">
+              to a grid failure.
+            </span>
           </h1>
 
           {/* Subtext */}
@@ -104,18 +156,18 @@ const HeroSection = () => {
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 mb-16">
             <AnimatedButton 
               size="lg" 
-              className="text-lg px-10 py-7 rounded-full bg-foreground text-background hover:bg-foreground/90"
-              onClick={() => window.location.href = '#savings'}
+              className="text-lg px-10 py-7 rounded-full bg-foreground text-background hover:bg-foreground/90 hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl"
+              onClick={() => document.getElementById('savings')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Estimate My Savings
             </AnimatedButton>
             <AnimatedButton 
               variant="outline"
               size="lg" 
-              className="text-lg px-10 py-7 rounded-full border-2 border-foreground/20 hover:bg-foreground/5"
+              className="text-lg px-10 py-7 rounded-full border-2 border-foreground/20 hover:bg-foreground/5 hover:border-foreground/40 hover:scale-105 transition-all duration-300"
               onClick={() => window.location.href = '/contact/distributor'}
             >
               Book a Demo
@@ -123,24 +175,48 @@ const HeroSection = () => {
           </div>
 
           {/* 24x7 Visual Indicator */}
-          <div className="mt-16 flex items-center gap-8 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <Sun className="w-5 h-5 text-orange-500" />
-              <span>Day charging</span>
+          <div className="flex flex-wrap items-center gap-6 sm:gap-8 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2 group cursor-default">
+              <div className="relative">
+                <Sun className="w-5 h-5 text-orange-500 group-hover:scale-110 transition-transform" />
+                <div className="absolute inset-0 blur-md bg-orange-500/30 group-hover:bg-orange-500/50 transition-all" />
+              </div>
+              <span className="group-hover:text-foreground transition-colors">Day charging</span>
             </div>
-            <div className="h-px w-12 bg-border" />
-            <div className="flex items-center gap-2">
-              <Battery className="w-5 h-5 text-blue-500" />
-              <span>Night backup</span>
+            <div className="h-px w-8 sm:w-12 bg-border" />
+            <div className="flex items-center gap-2 group cursor-default">
+              <div className="relative">
+                <Battery className="w-5 h-5 text-blue-500 group-hover:scale-110 transition-transform" />
+                <div className="absolute inset-0 blur-md bg-blue-500/30 group-hover:bg-blue-500/50 transition-all" />
+              </div>
+              <span className="group-hover:text-foreground transition-colors">Night backup</span>
             </div>
-            <div className="h-px w-12 bg-border" />
-            <div className="flex items-center gap-2">
-              <Zap className="w-5 h-5 text-green-500" />
-              <span>Always ready</span>
+            <div className="h-px w-8 sm:w-12 bg-border" />
+            <div className="flex items-center gap-2 group cursor-default">
+              <div className="relative">
+                <Zap className="w-5 h-5 text-green-500 group-hover:scale-110 transition-transform" />
+                <div className="absolute inset-0 blur-md bg-green-500/30 group-hover:bg-green-500/50 transition-all" />
+              </div>
+              <span className="group-hover:text-foreground transition-colors">Always ready</span>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Scroll Indicator */}
+      <button
+        onClick={scrollToNext}
+        className={cn(
+          "absolute bottom-12 left-1/2 -translate-x-1/2 transition-all duration-1000 delay-1000 hover:scale-110",
+          heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+        )}
+        aria-label="Scroll to next section"
+      >
+        <div className="flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+          <span className="text-xs font-medium tracking-wide uppercase">Explore</span>
+          <ArrowDown className="w-5 h-5 animate-bounce" />
+        </div>
+      </button>
     </section>
   );
 };
@@ -154,24 +230,30 @@ const ProblemSection = () => {
       icon: AlertCircle,
       title: 'Grid downtime',
       description: 'Lost revenue every minute offline',
-      color: 'text-red-500'
+      color: 'text-red-500',
+      bgColor: 'bg-red-500/10',
+      borderColor: 'border-red-500/20'
     },
     {
       icon: TrendingUp,
       title: 'Peak demand',
       description: 'Heavy bills during charging hours',
-      color: 'text-orange-500'
+      color: 'text-orange-500',
+      bgColor: 'bg-orange-500/10',
+      borderColor: 'border-orange-500/20'
     },
     {
       icon: AlertCircle,
       title: 'Unreliable power',
       description: 'Angry customers, damaged reputation',
-      color: 'text-red-600'
+      color: 'text-red-600',
+      bgColor: 'bg-red-600/10',
+      borderColor: 'border-red-600/20'
     }
   ];
 
   return (
-    <section ref={elementRef as any} className="py-24 md:py-32 bg-gradient-to-b from-background to-muted/30">
+    <section id="problem-section" ref={elementRef as any} className="py-24 md:py-32 bg-gradient-to-b from-background to-muted/30 scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           {/* Headline */}
@@ -195,11 +277,18 @@ const ProblemSection = () => {
                 delay={index * 150}
                 animation="fade-up"
                 hover="lift"
-                className="p-8 text-center"
+                className={cn(
+                  "p-8 text-center group cursor-default border-2",
+                  problem.bgColor,
+                  problem.borderColor
+                )}
               >
-                <problem.icon className={cn("w-12 h-12 mx-auto mb-4", problem.color)} />
-                <h3 className="text-xl font-medium mb-2">{problem.title}</h3>
-                <p className="text-muted-foreground">{problem.description}</p>
+                <div className="relative inline-block mb-4">
+                  <problem.icon className={cn("w-12 h-12 group-hover:scale-110 transition-transform duration-300", problem.color)} />
+                  <div className={cn("absolute inset-0 blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300", problem.color.replace('text-', 'bg-'))} />
+                </div>
+                <h3 className="text-xl font-medium mb-2 group-hover:text-foreground transition-colors">{problem.title}</h3>
+                <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors">{problem.description}</p>
               </AnimatedCard>
             ))}
           </div>
@@ -259,18 +348,20 @@ const SolutionSection = () => {
               {flow.map((step, index) => (
                 <div key={step.label} className="flex items-center gap-4">
                   <div className={cn(
-                    "transition-all duration-1000",
+                    "transition-all duration-1000 group cursor-default",
                     isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
                   )}
                   style={{ transitionDelay: `${index * 200}ms` }}
                   >
                     <div className={cn(
-                      "w-32 h-32 rounded-3xl flex flex-col items-center justify-center gap-3",
+                      "w-32 h-32 rounded-3xl flex flex-col items-center justify-center gap-3 relative overflow-hidden",
                       step.bg,
-                      "border-2 border-border"
+                      "border-2 border-border hover:border-border/60 transition-all duration-300",
+                      "hover:shadow-xl hover:scale-105"
                     )}>
-                      <step.icon className={cn("w-12 h-12", step.color)} />
-                      <span className="text-sm font-medium">{step.label}</span>
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <step.icon className={cn("w-12 h-12 relative z-10 group-hover:scale-110 transition-transform duration-300", step.color)} />
+                      <span className="text-sm font-medium relative z-10">{step.label}</span>
                     </div>
                   </div>
 
@@ -324,7 +415,7 @@ const DeploymentsSection = () => {
   ];
 
   return (
-    <section ref={elementRef as any} className="py-24 md:py-32 bg-gradient-to-b from-muted/30 to-background">
+    <section ref={elementRef as any} className="py-24 md:py-32 bg-gradient-to-b from-muted/30 to-background scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Headline */}
@@ -352,7 +443,7 @@ const DeploymentsSection = () => {
                 delay={index * 200}
                 animation="fade-up"
                 hover="glow"
-                className="p-8 bg-gradient-to-br from-card to-muted/30"
+                className="p-8 bg-gradient-to-br from-card to-muted/30 cursor-default hover:from-card/90 hover:to-muted/40 transition-all duration-300"
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -422,7 +513,7 @@ const ImpactMetricsSection = () => {
   ];
 
   return (
-    <section ref={elementRef as any} className="py-24 md:py-32" id="savings">
+    <section ref={elementRef as any} className="py-24 md:py-32 scroll-mt-20" id="savings">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           {/* Headline */}
@@ -452,13 +543,13 @@ const ImpactMetricsSection = () => {
                   <tr 
                     key={item.metric}
                     className={cn(
-                      "border-b border-border last:border-0 transition-all duration-700",
+                      "border-b border-border last:border-0 transition-all duration-700 hover:bg-muted/30 group cursor-default",
                       isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
                     )}
                     style={{ transitionDelay: `${index * 100}ms` }}
                   >
-                    <td className="px-6 py-5 text-base">{item.metric}</td>
-                    <td className="px-6 py-5 text-right text-lg font-medium text-green-600 dark:text-green-400">
+                    <td className="px-6 py-5 text-base group-hover:text-foreground transition-colors">{item.metric}</td>
+                    <td className="px-6 py-5 text-right text-lg font-medium text-green-600 dark:text-green-400 group-hover:scale-110 transition-transform">
                       {item.improvement}
                     </td>
                   </tr>
@@ -485,7 +576,7 @@ const UseCasesSection = () => {
   ];
 
   return (
-    <section ref={elementRef as any} className="py-24 md:py-32 bg-muted/30">
+    <section ref={elementRef as any} className="py-24 md:py-32 bg-muted/30 scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-light mb-6">
@@ -497,13 +588,13 @@ const UseCasesSection = () => {
               <div
                 key={useCase.label}
                 className={cn(
-                  "flex items-center gap-3 px-6 py-4 rounded-full bg-card border border-border transition-all duration-700 hover:scale-105 hover:shadow-lg",
+                  "flex items-center gap-3 px-6 py-4 rounded-full bg-card border border-border transition-all duration-700 hover:scale-105 hover:shadow-lg cursor-default group hover:border-primary/20 hover:bg-primary/5",
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 )}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <useCase.icon className="w-5 h-5 text-muted-foreground" />
-                <span className="font-medium">{useCase.label}</span>
+                <useCase.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                <span className="font-medium group-hover:text-foreground transition-colors">{useCase.label}</span>
               </div>
             ))}
           </div>
@@ -518,7 +609,7 @@ const CredibilitySection = () => {
   const { elementRef, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={elementRef as any} className="py-24 md:py-32">
+    <section ref={elementRef as any} className="py-24 md:py-32 scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-light mb-12">
@@ -563,7 +654,7 @@ const FinalCTASection = () => {
   const { elementRef, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={elementRef as any} className="py-32 md:py-40 relative overflow-hidden">
+    <section ref={elementRef as any} className="py-32 md:py-40 relative overflow-hidden scroll-mt-20">
       {/* Night Scene Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-purple-950 to-slate-950 dark:from-blue-950/50 dark:via-purple-950/50 dark:to-slate-950/80" />
       
@@ -604,15 +695,15 @@ const FinalCTASection = () => {
           )}>
             <Button
               size="lg"
-              className="text-lg px-10 py-7 rounded-full bg-white text-slate-950 hover:bg-white/90"
-              onClick={() => window.location.href = '#savings'}
+              className="text-lg px-10 py-7 rounded-full bg-white text-slate-950 hover:bg-white/90 hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-white/20"
+              onClick={() => document.getElementById('savings')?.scrollIntoView({ behavior: 'smooth' })}
             >
               💡 Estimate My Savings
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="text-lg px-10 py-7 rounded-full border-2 border-white/30 text-white hover:bg-white/10"
+              className="text-lg px-10 py-7 rounded-full border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300 backdrop-blur-sm"
               onClick={() => window.location.href = '/contact/distributor'}
             >
               ⚙️ Book a Demo
