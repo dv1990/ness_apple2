@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { z } from "zod";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
@@ -54,123 +54,78 @@ const CommercialEnhanced = () => {
     notes: ""
   });
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
-  
-  // Parallax and scroll effects
-  const heroRef = useRef<HTMLDivElement>(null);
-  const [scrollY, setScrollY] = useState(0);
-  const [isHeroHovered, setIsHeroHovered] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Calculate dynamic values based on scroll
-  const parallaxOffset = scrollY * 0.05; // 1.05x parallax ratio
-  const gradientShift = Math.min(scrollY * 0.01, 10); // Max 10% shift
-  const overlayOpacity = Math.max(0.7 - scrollY * 0.0001, 0.6); // Reduce opacity on scroll
 
   return (
     <Layout>
       <div className="min-h-screen bg-background">
         
-        {/* Hero Section - Premium with Parallax & Gradient Blur */}
-        <section 
-          ref={heroRef}
-          className="relative min-h-screen overflow-hidden"
-          onMouseEnter={() => setIsHeroHovered(true)}
-          onMouseLeave={() => setIsHeroHovered(false)}
-        >
-          {/* Background Image with Parallax */}
-          <div 
-            className="absolute inset-0 will-change-transform"
-            style={{
-              transform: `translateY(${parallaxOffset}px) scale(1.05)`,
-              transition: 'transform 0.1s ease-out'
-            }}
-          >
+        {/* Hero Section - Apple-Grade Minimalism */}
+        <section className="relative min-h-screen overflow-hidden">
+          {/* Full page hero image */}
+          <div className="absolute inset-0">
             <img 
               src={ciHeroPremium}
               alt="NESS energy storage systems for commercial and industrial applications"
               className="w-full h-full object-cover"
               loading="eager"
             />
+            {/* Desktop: Left 40% overlay - rgba(0,0,0,0.45) */}
+            <div 
+              className="hidden md:block absolute inset-0" 
+              style={{
+                background: 'linear-gradient(to right, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.45) 40%, transparent 40%)'
+              }}
+            />
+            {/* Mobile: Bottom 55% overlay - rgba(0,0,0,0.55) */}
+            <div 
+              className="md:hidden absolute inset-0" 
+              style={{
+                background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.55) 55%, transparent 55%)'
+              }}
+            />
           </div>
-
-          {/* Desktop: Premium Gradient Blur Overlay (Left 40%) */}
-          <div 
-            className="hidden md:block absolute inset-0 backdrop-blur-[20px] pointer-events-none transition-all duration-[600ms] ease-in-out"
-            style={{
-              background: `linear-gradient(to right,
-                rgba(0,0,0,${isHeroHovered ? overlayOpacity - 0.15 : overlayOpacity}) 0%,
-                rgba(0,0,0,${isHeroHovered ? 0.30 : 0.45}) ${35 + gradientShift}%,
-                rgba(0,0,0,0.15) ${70 + gradientShift}%,
-                rgba(0,0,0,0.00) 100%)`,
-              WebkitMaskImage: 'linear-gradient(to right, black 40%, transparent 100%)',
-              maskImage: 'linear-gradient(to right, black 40%, transparent 100%)'
-            }}
-          />
-
-          {/* Mobile: Premium Gradient Blur Overlay (Bottom 55%) */}
-          <div 
-            className="md:hidden absolute inset-0 backdrop-blur-[15px] pointer-events-none transition-all duration-[600ms] ease-in-out"
-            style={{
-              background: `linear-gradient(to top,
-                rgba(0,0,0,${isHeroHovered ? 0.60 : 0.75}) 0%,
-                rgba(0,0,0,${isHeroHovered ? 0.40 : 0.55}) 45%,
-                rgba(0,0,0,0.15) 90%)`,
-              WebkitMaskImage: 'linear-gradient(to top, black 55%, transparent 100%)',
-              maskImage: 'linear-gradient(to top, black 55%, transparent 100%)'
-            }}
-          />
           
           {/* Content Container */}
           <div className="relative min-h-screen flex items-center">
-            <div className="w-full px-[8%] pt-[28vh] md:px-[14%] md:pt-[38vh]">
+            <div 
+              className="w-full px-[8%] pt-[28vh] md:px-[14%] md:pt-[38vh] animate-fade-in"
+              style={{
+                animationDuration: '0.6s',
+                animationTimingFunction: 'ease-in'
+              }}
+            >
               <div className="max-w-[550px]">
-                {/* Headline - Staggered Fade In */}
+                {/* Headline */}
                 <h1 
-                  className="text-[38px] md:text-[72px] leading-[110%] font-semibold text-white opacity-0 translate-y-5"
+                  className="text-[38px] md:text-[72px] leading-[110%] font-semibold text-white"
                   style={{ 
                     fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif',
-                    letterSpacing: '-1.5%',
-                    animation: 'fadeInUp 0.6s ease-in forwards 0.1s'
+                    letterSpacing: '-1.5%'
                   }}
                 >
                   Empower productivity, sustainably.
                 </h1>
                 
-                {/* Subtext - Staggered Fade In */}
+                {/* Subtext */}
                 <p 
-                  className="mt-7 md:mt-[60px] text-[16px] md:text-[22px] leading-[150%] max-w-[320px] md:max-w-[550px] opacity-0 translate-y-5"
+                  className="mt-7 md:mt-[60px] text-[16px] md:text-[22px] leading-[150%] max-w-[320px] md:max-w-[550px]"
                   style={{ 
                     fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif',
-                    color: '#D0D0D0',
-                    animation: 'fadeInUp 0.6s ease-in forwards 0.3s'
+                    color: '#D0D0D0'
                   }}
                 >
                   Clean, intelligent energy that fuels progress — lowering costs, emissions, and complexity.
                 </p>
                 
-                {/* CTA Button - Staggered Fade In */}
-                <div 
-                  className="mt-6 md:mt-[45px] flex md:block justify-center opacity-0 translate-y-5"
-                  style={{
-                    animation: 'fadeInUp 0.6s ease-in forwards 0.5s'
-                  }}
-                >
+                {/* CTA Button */}
+                <div className="mt-6 md:mt-[45px] flex md:block justify-center">
                   <button
                     onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="px-8 py-3.5 md:px-10 md:py-[18px] rounded-[28px] md:rounded-[36px] text-[15px] md:text-[18px] font-medium transition-all duration-[400ms]"
+                    className="px-8 py-3.5 md:px-10 md:py-[18px] rounded-[28px] md:rounded-[36px] text-[15px] md:text-[18px] font-medium transition-all duration-300"
                     style={{ 
                       fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif',
                       color: '#0B1220',
-                      backgroundColor: '#00C853',
-                      transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)'
+                      backgroundColor: '#00C853'
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.backgroundColor = '#1EFF74';
@@ -188,20 +143,6 @@ const CommercialEnhanced = () => {
             </div>
           </div>
         </section>
-
-        {/* Keyframes for staggered fade-in animation */}
-        <style>{`
-          @keyframes fadeInUp {
-            from {
-              opacity: 0;
-              transform: translateY(20px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-        `}</style>
 
         {/* Small Industries Section */}
         <section className="relative py-24 sm:py-40 overflow-hidden">
