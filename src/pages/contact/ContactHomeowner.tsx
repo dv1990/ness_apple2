@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import { ProductSelectorWizard } from "@/components/ProductSelectorWizard";
 import { Button } from "@/components/ui/button";
+import { PerformanceImage } from "@/components/ui/performance-image";
 import { Link } from "react-router-dom";
 import { Shield, Zap, Home, Star, CheckCircle, Users, ArrowRight } from "lucide-react";
 import heroImage from "@/assets/homeowner-hero-battery.webp";
@@ -10,7 +11,12 @@ const ContactHomeowner = () => {
       <section className="relative h-screen w-full overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img src={heroImage} alt="Premium NESS home battery system with sophisticated wall-mount design" className="w-full h-full object-cover" />
+          <PerformanceImage
+            src={heroImage}
+            alt="Premium NESS home battery system with sophisticated wall-mount design"
+            className="w-full h-full"
+            priority={true}
+          />
           {/* Dark overlay for text readability - concentrated on left side only */}
           <div className="absolute inset-y-0 left-0 right-1/2 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />
         </div>

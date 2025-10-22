@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { z } from "zod";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
+import { PerformanceImage } from "@/components/ui/performance-image";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -64,7 +65,12 @@ const CommercialEnhanced = () => {
           transform: `translateY(${scrollY * 0.5}px)`,
           transition: 'transform 0.1s ease-out'
         }}>
-            <img src={ciHeroPremium} alt="NESS energy storage systems for commercial and industrial applications" className={`w-full h-full object-cover transition-all duration-700 ${imageLoaded ? 'blur-0 scale-100' : 'blur-md scale-105'}`} loading="eager" onLoad={() => setImageLoaded(true)} />
+            <PerformanceImage
+              src={ciHeroPremium}
+              alt="NESS energy storage systems for commercial and industrial applications"
+              className="w-full h-full"
+              priority={true}
+            />
             {/* Desktop gradient blur overlay - 45% from left */}
             <div className="hidden sm:block absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" style={{
             width: '45%'

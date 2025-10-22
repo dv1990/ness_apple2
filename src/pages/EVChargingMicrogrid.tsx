@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { PerformanceImage } from '@/components/ui/performance-image';
 import heroImage from '@/assets/ev-hero-sunrise.webp';
 
 const EVChargingMicrogrid = () => {
@@ -59,10 +60,11 @@ const HeroSection = () => {
     <section className="relative h-screen flex items-center overflow-hidden">
       {/* Hero Image */}
       <div className="absolute inset-0">
-        <img 
-          src={heroImage} 
+        <PerformanceImage
+          src={heroImage}
           alt="NESS Battery Energy Storage System"
-          className="w-full h-full object-cover"
+          className="w-full h-full"
+          priority={true}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

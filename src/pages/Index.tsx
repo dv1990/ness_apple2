@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { AnimatedCounter } from "@/components/ui/animated-counter";
 import { LazySection } from "@/components/ui/lazy-section";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { PerformanceImage } from "@/components/ui/performance-image";
 import { cn } from "@/lib/utils";
 import heroHome from "@/assets/hero-homeowners.jpg";
 import nessPodProduct from "@/assets/ness-pod-product.png";
@@ -29,7 +30,12 @@ const Index = () => {
       <section className="relative h-screen w-full overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img src={heroHome} alt="Modern Indian villa with NESS Powerwall" className="w-full h-full object-cover" loading="eager" />
+          <PerformanceImage
+            src={heroHome}
+            alt="Modern Indian villa with NESS Powerwall"
+            className="w-full h-full"
+            priority={true}
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
         </div>
 
@@ -200,7 +206,12 @@ const Index = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center bg-whisper rounded-[3rem] overflow-hidden p-12 lg:p-16 hover:shadow-lifted transition-all duration-700">
                 {/* Image */}
                 <div className="relative aspect-square flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
-                  <img src={nessPodProduct} alt="NESS Powerwall" className="w-full h-full object-contain" />
+                  <PerformanceImage
+                    src={nessPodProduct}
+                    alt="NESS Powerwall"
+                    className="w-full h-full"
+                    aspectRatio="1/1"
+                  />
                 </div>
                 
                 {/* Content */}
@@ -270,7 +281,12 @@ const Index = () => {
 
                 {/* Image */}
                 <div className="relative aspect-square flex items-center justify-center lg:order-2 group-hover:scale-105 transition-transform duration-700">
-                  <img src={nessProProduct} alt="NESS Pod" className="w-full h-full object-contain" />
+                  <PerformanceImage
+                    src={nessProProduct}
+                    alt="NESS Pod"
+                    className="w-full h-full"
+                    aspectRatio="1/1"
+                  />
                 </div>
               </div>
             </div>
@@ -280,7 +296,12 @@ const Index = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center bg-gradient-to-br from-graphite to-charcoal rounded-[3rem] overflow-hidden p-12 lg:p-16 hover:shadow-lifted transition-all duration-700">
                 {/* Image */}
                 <div className="relative aspect-square flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
-                  <img src={nessCubeProduct} alt="NESS Cube" className="w-full h-full object-contain" />
+                  <PerformanceImage
+                    src={nessCubeProduct}
+                    alt="NESS Cube"
+                    className="w-full h-full"
+                    aspectRatio="1/1"
+                  />
                 </div>
                 
                 {/* Content */}
