@@ -12,8 +12,10 @@ import nessPodProduct from "@/assets/ness-pod-product.png";
 import nessProProduct from "@/assets/ness-pro-product.png";
 import nessCubeProduct from "@/assets/ness-cube-resort.webp";
 import nucuPcb from "@/assets/nucu-pcb-premium.webp";
-import { useState, useEffect, useRef } from "react";
-import NucuSection from "@/components/NucuSection";
+import { useState, useEffect, useRef, lazy, Suspense } from "react";
+
+// Lazy load below-the-fold components
+const NucuSection = lazy(() => import("@/components/NucuSection"));
 const Index = () => {
   const [selectedUseCase, setSelectedUseCase] = useState<string | null>(null);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -185,7 +187,9 @@ const Index = () => {
 
       {/* MEET NUCU SECTION */}
       <LazySection>
-        <NucuSection nucuPcb={nucuPcb} />
+        <Suspense fallback={null}>
+          <NucuSection nucuPcb={nucuPcb} />
+        </Suspense>
       </LazySection>
 
       {/* 3. PRODUCT SHOWCASE SECTION */}

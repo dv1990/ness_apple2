@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import Layout from "@/components/Layout";
 import { MagneticButton } from "@/components/EnhancedInteractions";
 import { Shield, Clock, Heart, ArrowRight, Award, CheckCircle2 } from "lucide-react";
@@ -5,9 +6,11 @@ import { Link } from "react-router-dom";
 import { PerformanceImage } from "@/components/ui/performance-image";
 import { WhyNess } from "@/components/WhyNess";
 import { AnimatedCounter } from "@/components/ui/animated-counter";
-import { Battery3D } from "@/components/ui/battery-3d";
 import { AnimatedCard } from "@/components/ui/animated-card";
 import { LiveTicker } from "@/components/ui/live-ticker";
+
+// Lazy load heavy 3D component
+const Battery3D = lazy(() => import("@/components/ui/battery-3d").then(module => ({ default: module.Battery3D })));
 
 // Import images
 import batteryTechnology from "@/assets/battery-technology.jpg";
@@ -89,7 +92,9 @@ const TechnologyEnhanced = () => {
             {/* 3D Battery Visualization */}
             <div className="max-w-4xl mx-auto pt-16">
               <div className="rounded-2xl overflow-hidden bg-muted/5 border border-border/50">
-                <Battery3D view="pack" className="h-[400px]" />
+                <Suspense fallback={<div className="h-[400px] flex items-center justify-center text-muted-foreground">Loading 3D view...</div>}>
+                  <Battery3D view="pack" className="h-[400px]" />
+                </Suspense>
               </div>
             </div>
 
