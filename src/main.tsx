@@ -7,3 +7,5 @@ const rootElement = document.getElementById("root");
 if (rootElement) {
   createRoot(rootElement).render(<App />);
 }
+
+// no-op change to force rebuild
