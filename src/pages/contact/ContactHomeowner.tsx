@@ -85,19 +85,27 @@ const ContactHomeowner = () => {
 
       {/* Lazy-loaded below-the-fold sections */}
       <Suspense fallback={<div className="py-32 bg-muted/20" />}>
-        <PhilosophicalPromiseSection />
+        <div className="cv-auto">
+          <PhilosophicalPromiseSection />
+        </div>
       </Suspense>
 
       <Suspense fallback={<div className="py-32 bg-background" />}>
-        <ProductSelectorSection />
+        <div className="cv-auto">
+          <ProductSelectorSection />
+        </div>
       </Suspense>
 
       <Suspense fallback={<div className="py-32 bg-muted/10" />}>
-        <WhyNessSection />
+        <div className="cv-auto">
+          <WhyNessSection />
+        </div>
       </Suspense>
 
       <Suspense fallback={<div className="py-32 bg-muted/30" />}>
-        <SocialProofSection />
+        <div className="cv-auto">
+          <SocialProofSection />
+        </div>
       </Suspense>
     </Layout>;
 };
