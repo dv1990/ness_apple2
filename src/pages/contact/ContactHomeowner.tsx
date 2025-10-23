@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import { ProductSelectorWizard } from "@/components/ProductSelectorWizard";
 import { Button } from "@/components/ui/button";
 import { PerformanceImage } from "@/components/ui/performance-image";
 import { Link } from "react-router-dom";
@@ -114,26 +115,17 @@ const ContactHomeowner = () => {
       {/* Product Selector Section */}
       <section id="configurator" className="py-20 md:py-32 bg-gradient-to-b from-muted/20 via-background to-background">
         <div className="container mx-auto max-w-7xl px-6">
-          <div className="text-center mb-16 space-y-6">
+          <div className="text-center mb-16 space-y-4">
             <div className="inline-block px-4 py-2 bg-primary/10 rounded-full backdrop-blur-sm">
               <span className="text-sm font-medium text-primary">Personalized Design</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-extralight tracking-tight">
-              Choose your power level
+              Tell us about your home.<br />
+              <span className="text-muted-foreground">We'll design your energy sanctuary.</span>
             </h2>
-            <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto leading-relaxed">
-              In under a minute, design your perfect energy setup tailored to your home.
-            </p>
           </div>
           
-          <div className="flex justify-center">
-            <Link to="/experience">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-12 py-7 text-lg rounded-full shadow-2xl hover:shadow-primary/50 transition-all duration-500 group">
-                Start Your Design
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-          </div>
+          <ProductSelectorWizard />
         </div>
       </section>
 

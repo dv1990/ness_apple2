@@ -18,7 +18,6 @@ import ContactEnhanced from "./pages/ContactEnhanced";
 // Product pages - Lazy loaded
 const NessAcSync = lazy(() => import("./pages/products/NessAcSync"));
 const EVChargingMicrogrid = lazy(() => import("./pages/EVChargingMicrogrid"));
-const NessExperience = lazy(() => import("./pages/NessExperience"));
 
 // Secondary pages - Lazy loaded
 const TrueWarranty = lazy(() => import("./pages/TrueWarranty"));
@@ -81,7 +80,6 @@ const App = () => {
           <Route path="/find-installer" element={<FindInstaller />} />
           <Route path="/products/ness-ac-sync" element={<NessAcSync />} />
           <Route path="/ev-charging-microgrid" element={<EVChargingMicrogrid />} />
-          <Route path="/experience" element={<NessExperience />} />
           
           {/* Company Routes */}
           <Route path="/company/about" element={<About />} />
@@ -107,6 +105,7 @@ const App = () => {
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           
           {/* Legacy redirects for existing routes */}
+          <Route path="/residential" element={<ResidentialEnhanced />} />
           <Route path="/commercial" element={<CommercialEnhanced />} />
           <Route path="/hiring" element={<Hiring />} />
           <Route path="/knowledge-hub" element={<KnowledgeHub />} />
