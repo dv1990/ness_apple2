@@ -19,21 +19,11 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
-    dedupe: ['react', 'react-dom', 'react-router-dom']
   },
   build: {
-    target: 'es2019',
-    minify: 'terser',
+    target: "es2019",
     cssCodeSplit: true,
     sourcemap: false,
-    chunkSizeWarningLimit: 1500,
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
-      }
-    },
     rollupOptions: {
       output: {
         manualChunks(id) {
@@ -46,18 +36,7 @@ export default defineConfig(({ mode }) => ({
         chunkFileNames: "assets/[name]-[hash].js",
         entryFileNames: "assets/[name]-[hash].js",
         assetFileNames: "assets/[name]-[hash][extname]",
-      }
-    }
+      },
+    },
   },
-  optimizeDeps: {
-    include: [
-      'react',
-      'react-dom',
-      'react-router-dom',
-      '@radix-ui/react-tooltip',
-      '@radix-ui/react-slot',
-      '@tanstack/react-query'
-    ],
-    force: mode === 'production'
-  }
 }));

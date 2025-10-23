@@ -20,6 +20,8 @@ If you want to work locally using your own IDE, you can clone this repo and push
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
+**Important**: This project uses npm for package management. Do not use other package managers (bun, yarn, pnpm) as they create additional lockfiles that can cause non-deterministic installs.
+
 Follow these steps:
 
 ```sh
