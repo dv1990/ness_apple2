@@ -31,7 +31,7 @@ const News = lazy(() => import("./pages/company/News"));
 const NewsArticle = lazy(() => import("./pages/company/NewsArticle"));
 const KnowledgeHub = lazy(() => import("./pages/KnowledgeHub"));
 const KnowledgeArticle = lazy(() => import("./pages/KnowledgeArticle"));
-const ContactHomeowner = lazy(() => import("./pages/contact/ContactHomeowner"));
+import ContactHomeowner from "./pages/contact/ContactHomeowner";
 const ContactDistributor = lazy(() => import("./pages/contact/ContactDistributor"));
 const ContactInstaller = lazy(() => import("./pages/contact/ContactInstaller"));
 const Troubleshooting = lazy(() => import("./pages/Troubleshooting"));

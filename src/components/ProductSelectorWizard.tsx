@@ -5,7 +5,7 @@ import { Label } from '@/components/ui/label';
 import { ArrowRight, ArrowLeft, Check, Home, Sun } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useToast } from '@/hooks/use-toast';
-import emailjs from '@emailjs/browser';
+
 
 // Import types and config
 import type { Product } from '@/types/product';
@@ -163,7 +163,8 @@ CUSTOMER MESSAGE:
 ${formData.message || 'No additional message'}
       `.trim();
 
-      // Using EmailJS - Users need to configure their EmailJS account
+      // Using EmailJS - dynamically loaded to keep initial bundle small
+      const { default: emailjs } = await import('@emailjs/browser');
       await emailjs.send(
         'YOUR_SERVICE_ID',
         'YOUR_TEMPLATE_ID',
