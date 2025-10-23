@@ -27,11 +27,13 @@
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
     </noscript>
     
-    <!-- Critical Hero Image Preload -->
+    <!-- Critical Hero Image Preload - Only preload above-the-fold hero -->
     <link 
       rel="preload" 
       as="image"
-      href="/src/assets/hero-homeowners.jpg"
+      href="/src/assets-webp/hero-homeowners.webp"
+      imagesrcset="/src/assets-webp/hero-homeowners.webp 1920w, /src/assets/hero-homeowners.jpg 1920w"
+      imagesizes="100vw"
       fetchpriority="high"
     />
     
