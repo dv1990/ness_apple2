@@ -13,7 +13,6 @@ import nessProProduct from "@/assets/ness-pro-product.png";
 import nessCubeProduct from "@/assets/ness-cube-resort.webp";
 import nucuPcb from "@/assets/nucu-pcb-premium.webp";
 import { useState, useEffect, useRef, lazy, Suspense } from "react";
-import { ProofStrips } from "@/components/ProofStrips";
 
 // Lazy load below-the-fold components
 const NucuSection = lazy(() => import("@/components/NucuSection"));
@@ -91,9 +90,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* PROOF STRIPS */}
-      <ProofStrips />
 
       {/* 2. WHY NESS SECTION */}
       <LazySection>
