@@ -28,15 +28,7 @@
       "purpose": "any maskable"
     }
   ],
-  "screenshots": [
-    {
-      "src": "/src/assets-webp/hero-homeowners.webp",
-      "sizes": "1920x1080",
-      "type": "image/webp",
-      "platform": "wide",
-      "label": "NESS Energy home page"
-    }
-  ],
+  "screenshots": [],
   "shortcuts": [
     {
       "name": "Residential Products",
