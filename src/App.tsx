@@ -3,17 +3,18 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ScrollProgressBar } from "@/components/ScrollProgressBar";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import React, { Suspense, lazy } from 'react';
 
-// Critical pages - Eager loaded for instant navigation
+// Only homepage loaded eagerly
 import Index from "./pages/Index";
-import ResidentialEnhanced from "./pages/ResidentialEnhanced";
-import InstallersEnhanced from "./pages/InstallersEnhanced";
-import CommercialEnhanced from "./pages/CommercialEnhanced";
-import TechnologyEnhanced from "./pages/TechnologyEnhanced";
-import ContactEnhanced from "./pages/ContactEnhanced";
+
+// All other pages lazy loaded
+const ResidentialEnhanced = lazy(() => import("./pages/ResidentialEnhanced"));
+const InstallersEnhanced = lazy(() => import("./pages/InstallersEnhanced"));
+const CommercialEnhanced = lazy(() => import("./pages/CommercialEnhanced"));
+const TechnologyEnhanced = lazy(() => import("./pages/TechnologyEnhanced"));
+const ContactEnhanced = lazy(() => import("./pages/ContactEnhanced"));
 
 // Product pages - Lazy loaded
 const NessAcSync = lazy(() => import("./pages/products/NessAcSync"));
@@ -58,7 +59,6 @@ const App = () => {
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <ScrollProgressBar />
           <BrowserRouter>
             <Suspense fallback={<PageLoadingFallback />}>
               <Routes>

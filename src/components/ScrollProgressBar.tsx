@@ -1,24 +1,28 @@
 import { useEffect, useState } from 'react';
-import { useThrottle } from '@/hooks/use-performance';
 
 export const ScrollProgressBar = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
+    let ticking = false;
+    
     const updateScrollProgress = () => {
       const currentScrollY = window.scrollY;
       const scrollHeight = document.body.scrollHeight - window.innerHeight;
       const progress = (currentScrollY / scrollHeight) * 100;
       setScrollProgress(Math.min(progress, 100));
+      ticking = false;
     };
 
-    // Throttle scroll updates to 16ms (60fps)
-    const throttledUpdate = () => {
-      window.requestAnimationFrame(updateScrollProgress);
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateScrollProgress);
+        ticking = true;
+      }
     };
 
-    window.addEventListener('scroll', throttledUpdate, { passive: true });
-    return () => window.removeEventListener('scroll', throttledUpdate);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
