@@ -1,16 +1,13 @@
-import { lazy, Suspense } from "react";
 import Layout from "@/components/Layout";
 import { MagneticButton } from "@/components/EnhancedInteractions";
 import { Shield, Clock, Heart, ArrowRight, Award, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { FastImage } from "@/components/ui/fast-image";
+import { PerformanceImage } from "@/components/ui/performance-image";
 import { WhyNess } from "@/components/WhyNess";
 import { AnimatedCounter } from "@/components/ui/animated-counter";
+import { Battery3D } from "@/components/ui/battery-3d";
 import { AnimatedCard } from "@/components/ui/animated-card";
 import { LiveTicker } from "@/components/ui/live-ticker";
-
-// Lazy load heavy 3D component
-const Battery3D = lazy(() => import("@/components/ui/battery-3d").then(module => ({ default: module.Battery3D })));
 
 // Import images
 import batteryTechnology from "@/assets/battery-technology.jpg";
@@ -92,9 +89,7 @@ const TechnologyEnhanced = () => {
             {/* 3D Battery Visualization */}
             <div className="max-w-4xl mx-auto pt-16">
               <div className="rounded-2xl overflow-hidden bg-muted/5 border border-border/50">
-                <Suspense fallback={<div className="h-[400px] flex items-center justify-center text-muted-foreground">Loading 3D view...</div>}>
-                  <Battery3D view="pack" className="h-[400px]" />
-                </Suspense>
+                <Battery3D view="pack" className="h-[400px]" />
               </div>
             </div>
 
@@ -157,14 +152,11 @@ const TechnologyEnhanced = () => {
             </div>
             
             <div className="relative rounded-2xl overflow-hidden">
-              <FastImage
+              <PerformanceImage
                 src={batteryTechnology}
                 alt="LiFePO4 cell testing"
                 className="w-full"
                 aspectRatio="16/9"
-                width={1200}
-                height={675}
-                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>
@@ -172,14 +164,11 @@ const TechnologyEnhanced = () => {
           {/* Decision 2: Manufacturing */}
           <div className="grid lg:grid-cols-2 gap-20 items-center mb-32">
             <div className="relative rounded-2xl overflow-hidden order-2 lg:order-1">
-              <FastImage
+              <PerformanceImage
                 src={rdLaboratory}
                 alt="Manufacturing process"
                 className="w-full"
                 aspectRatio="16/9"
-                width={1200}
-                height={675}
-                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
 
@@ -249,14 +238,11 @@ const TechnologyEnhanced = () => {
             </div>
             
             <div className="relative rounded-2xl overflow-hidden">
-              <FastImage
+              <PerformanceImage
                 src={systemArchitecture}
                 alt="System monitoring interface"
                 className="w-full"
                 aspectRatio="16/9"
-                width={1200}
-                height={675}
-                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>

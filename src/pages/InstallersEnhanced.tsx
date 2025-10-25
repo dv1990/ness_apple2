@@ -1,4 +1,4 @@
-import React, { useState, lazy, Suspense } from "react";
+import React, { useState } from "react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -18,6 +18,7 @@ import {
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { MagneticButton, PlayButton, FloatingCard, ProgressiveDisclosure, ParallaxContainer } from "@/components/EnhancedInteractions";
+import SystemConfigurator from "@/components/SystemConfigurator";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import heroIndustrialInstallation from "@/assets/hero-industrial-installation.jpg";
 import heroResidentialInstallation from "@/assets/hero-residential-installation.jpg";
@@ -25,9 +26,6 @@ import trainingWorkshop from "@/assets/training-workshop.jpg";
 import configuratorTool from "@/assets/configurator-tool.jpg";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-
-// Lazy load heavy dialog components
-const SystemConfigurator = lazy(() => import("@/components/SystemConfigurator"));
 
 const InstallersEnhanced = () => {
   const { toast } = useToast();
@@ -334,9 +332,7 @@ const InstallersEnhanced = () => {
                   </MagneticButton>
                 </DialogTrigger>
                 <DialogContent className="max-w-7xl max-h-[90vh] overflow-y-auto">
-                  <Suspense fallback={<div className="flex items-center justify-center p-12">Loading configurator...</div>}>
-                    <SystemConfigurator />
-                  </Suspense>
+                  <SystemConfigurator />
                 </DialogContent>
               </Dialog>
             </div>

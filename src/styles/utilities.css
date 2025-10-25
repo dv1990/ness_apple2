@@ -1,5 +1,0 @@
-/* Performance utilities for below-the-fold content */
-.cv-auto {
-  content-visibility: auto;
-  contain-intrinsic-size: 1000px 800px;
-}

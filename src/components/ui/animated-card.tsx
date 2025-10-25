@@ -59,7 +59,8 @@ export const AnimatedCard = ({
       )}
       onClick={onClick}
       style={{ 
-        transitionDelay: `${delay}ms`
+        transitionDelay: `${delay}ms`,
+        willChange: 'transform, opacity'
       }}
       {...props}
     >

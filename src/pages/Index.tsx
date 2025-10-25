@@ -1,20 +1,19 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { Shield, Zap, Battery, Clock, ArrowRight, Users, Play } from "lucide-react";
+import { Shield, Zap, Battery, Clock, ArrowRight, Play, Users, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { AnimatedCounter } from "@/components/ui/animated-counter";
 import { LazySection } from "@/components/ui/lazy-section";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { FastImage } from "@/components/ui/fast-image";
+import { PerformanceImage } from "@/components/ui/performance-image";
 import { cn } from "@/lib/utils";
 import heroHome from "@/assets/hero-homeowners.jpg";
+import nessPodProduct from "@/assets/ness-pod-product.png";
+import nessProProduct from "@/assets/ness-pro-product.png";
+import nessCubeProduct from "@/assets/ness-cube-resort.webp";
 import nucuPcb from "@/assets/nucu-pcb-premium.webp";
-import { useState, useEffect, lazy, Suspense } from "react";
-import { HeroSection } from "@/components/sections/HeroSection";
-import { ProductShowcaseSection } from "@/components/sections/ProductShowcaseSection";
-
-// Lazy load below-the-fold components
-const NucuSection = lazy(() => import("@/components/NucuSection"));
+import { useState, useEffect, useRef } from "react";
+import NucuSection from "@/components/NucuSection";
 const Index = () => {
   const [selectedUseCase, setSelectedUseCase] = useState<string | null>(null);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -28,7 +27,67 @@ const Index = () => {
   }, []);
   return <Layout>
       {/* 1. HERO SECTION */}
-      <HeroSection />
+      <section className="relative h-screen w-full overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <PerformanceImage
+            src={heroHome}
+            alt="Modern Indian villa with NESS Powerwall"
+            className="w-full h-full"
+            priority={true}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 h-full flex items-center max-w-7xl mx-auto px-8">
+          <div className="max-w-2xl space-y-8 animate-fade-up">
+            <h1 className="text-7xl md:text-8xl font-bold text-white leading-[0.95] tracking-tight">
+              Power you<br />can count on.<br />When everything<br />else fails.
+            </h1>
+            
+            <p className="text-2xl text-pearl/90 font-light max-w-xl leading-relaxed">
+              The lights stay on. Work continues. Life doesn't stop. Because NESS was built for moments that matter—engineered to outlast India's harshest conditions.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Link to="/residential">
+                <Button size="lg" className="bg-energy hover:bg-energy-glow text-white px-10 py-7 text-lg rounded-full shadow-glow hover:shadow-[0_0_50px_rgba(0,200,83,0.5)] transition-all duration-500">
+                  Design My System
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+              
+              <Link to="/residential">
+                <Button variant="outline" size="lg" className="border-2 border-white/30 bg-white/10 backdrop-blur-md text-white hover:bg-white/20 px-10 py-7 text-lg rounded-full">
+                  Explore Products
+                </Button>
+              </Link>
+            </div>
+
+            {/* Pulsing LED Indicator */}
+            <div className="flex items-center gap-3 pt-8">
+              <div className="relative">
+                <div className="w-3 h-3 bg-energy rounded-full animate-pulse"></div>
+                <div className="absolute inset-0 w-3 h-3 bg-energy rounded-full animate-ping opacity-75"></div>
+              </div>
+              <span className="text-sm text-white/60 uppercase tracking-wider">System Active</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 animate-bounce" style={{
+        animationDuration: '3s'
+      }}>
+          <div className="flex flex-col items-center gap-3 opacity-40 hover:opacity-60 transition-opacity">
+            <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2">
+              <div className="w-1 h-3 bg-white/60 rounded-full"></div>
+            </div>
+            <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 font-light">Scroll</span>
+          </div>
+        </div>
+      </section>
 
       {/* 2. WHY NESS SECTION */}
       <LazySection>
@@ -126,14 +185,158 @@ const Index = () => {
 
       {/* MEET NUCU SECTION */}
       <LazySection>
-        <Suspense fallback={null}>
-          <NucuSection nucuPcb={nucuPcb} />
-        </Suspense>
+        <NucuSection nucuPcb={nucuPcb} />
       </LazySection>
 
       {/* 3. PRODUCT SHOWCASE SECTION */}
       <LazySection>
-        <ProductShowcaseSection />
+        <section className="bg-white">
+          <div className="max-w-7xl mx-auto px-8 py-32">
+            <div className="text-center mb-24">
+              <h2 className="text-5xl md:text-6xl font-light text-graphite mb-6 tracking-tight">
+                The NESS family
+              </h2>
+              <p className="text-xl text-graphite/60 font-light">
+                Engineered for excellence. Designed for you.
+              </p>
+            </div>
+
+            {/* NESS Powerwall - For Homeowners */}
+            <div className="mb-24 group">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center bg-whisper rounded-[3rem] overflow-hidden p-12 lg:p-16 hover:shadow-lifted transition-all duration-700">
+                {/* Image */}
+                <div className="relative aspect-square flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
+                  <PerformanceImage
+                    src={nessPodProduct}
+                    alt="NESS Powerwall"
+                    className="w-full h-full"
+                    aspectRatio="1/1"
+                  />
+                </div>
+                
+                {/* Content */}
+                <div className="space-y-8">
+                  <div>
+                    <div className="inline-block px-4 py-2 bg-energy/10 rounded-full mb-6">
+                      <span className="text-sm font-medium text-energy uppercase tracking-wider">For Homeowners</span>
+                    </div>
+                    <h3 className="text-5xl md:text-6xl font-light text-graphite mb-6 tracking-tight leading-[1.1]">
+                      Your home.<br />Always on.
+                    </h3>
+                    <p className="text-xl text-graphite/70 font-light leading-relaxed">
+                      Never pause life for a power cut. NESS Powerwall keeps your home running—from morning coffee to midnight Netflix.
+                    </p>
+                  </div>
+
+                  {/* Key Highlights */}
+                  <div className="space-y-4">
+                    {["5-15 kWh modular capacity", "10ms seamless switchover", "Silent operation, zero maintenance", "Works with solar or grid"].map((highlight, i) => <div key={i} className="flex items-start gap-3">
+                        <CheckCircle className="w-6 h-6 text-energy mt-0.5 flex-shrink-0" />
+                        <span className="text-lg text-graphite/80">{highlight}</span>
+                      </div>)}
+                  </div>
+
+                  <Link to="/residential">
+                    <Button size="lg" className="bg-energy hover:bg-energy-glow text-white px-10 py-6 text-lg rounded-full shadow-glow hover:shadow-[0_0_40px_rgba(0,200,83,0.4)] transition-all duration-500 group">
+                      Design Your System
+                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* NESS Pod - For SMEs & Resorts */}
+            <div className="mb-24 group">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center bg-charcoal rounded-[3rem] overflow-hidden p-12 lg:p-16 hover:shadow-lifted transition-all duration-700">
+                {/* Content */}
+                <div className="space-y-8 lg:order-1">
+                  <div>
+                    <div className="inline-block px-4 py-2 bg-energy/20 rounded-full mb-6">
+                      <span className="text-sm font-medium text-energy uppercase tracking-wider">For Businesses</span>
+                    </div>
+                    <h3 className="text-5xl md:text-6xl font-light text-white mb-6 tracking-tight leading-[1.1]">
+                      Downtime is<br />not an option.
+                    </h3>
+                    <p className="text-xl text-pearl/70 font-light leading-relaxed">
+                      When guests expect perfection and operations can't pause, NESS Pod delivers rock-solid reliability at commercial scale.
+                    </p>
+                  </div>
+
+                  {/* Key Highlights */}
+                  <div className="space-y-4">
+                    {["20-50 kWh scalable systems", "Peak shaving & load management", "Remote monitoring & control", "Reduce diesel dependency by 80%"].map((highlight, i) => <div key={i} className="flex items-start gap-3">
+                        <CheckCircle className="w-6 h-6 text-energy mt-0.5 flex-shrink-0" />
+                        <span className="text-lg text-pearl/80">{highlight}</span>
+                      </div>)}
+                  </div>
+
+                  <Link to="/commercial">
+                    <Button size="lg" className="bg-white hover:bg-white/90 text-graphite px-10 py-6 text-lg rounded-full shadow-lifted hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all duration-500 group">
+                      Explore Commercial Solutions
+                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
+
+                {/* Image */}
+                <div className="relative aspect-square flex items-center justify-center lg:order-2 group-hover:scale-105 transition-transform duration-700">
+                  <PerformanceImage
+                    src={nessProProduct}
+                    alt="NESS Pod"
+                    className="w-full h-full"
+                    aspectRatio="1/1"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* NESS Cube - For Industrial */}
+            <div className="group">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center bg-gradient-to-br from-graphite to-charcoal rounded-[3rem] overflow-hidden p-12 lg:p-16 hover:shadow-lifted transition-all duration-700">
+                {/* Image */}
+                <div className="relative aspect-square flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
+                  <PerformanceImage
+                    src={nessCubeProduct}
+                    alt="NESS Cube"
+                    className="w-full h-full"
+                    aspectRatio="1/1"
+                  />
+                </div>
+                
+                {/* Content */}
+                <div className="space-y-8">
+                  <div>
+                    <div className="inline-block px-4 py-2 bg-energy/20 rounded-full mb-6">
+                      <span className="text-sm font-medium text-energy uppercase tracking-wider">For Industry</span>
+                    </div>
+                    <h3 className="text-5xl md:text-6xl font-light text-white mb-6 tracking-tight leading-[1.1]">
+                      Power plants<br />in containers.
+                    </h3>
+                    <p className="text-xl text-pearl/70 font-light leading-relaxed">
+                      From manufacturing floors to data centers—NESS Cube delivers megawatt-scale reliability with precision engineering.
+                    </p>
+                  </div>
+
+                  {/* Key Highlights */}
+                  <div className="space-y-4">
+                    {["100+ kWh containerized systems", "Grid stabilization & power quality", "Microgrid & off-grid capable", "Enterprise-grade monitoring & analytics"].map((highlight, i) => <div key={i} className="flex items-start gap-3">
+                        <CheckCircle className="w-6 h-6 text-energy mt-0.5 flex-shrink-0" />
+                        <span className="text-lg text-pearl/80">{highlight}</span>
+                      </div>)}
+                  </div>
+
+                  <Link to="/commercial">
+                    <Button size="lg" className="bg-energy hover:bg-energy-glow text-white px-10 py-6 text-lg rounded-full shadow-glow hover:shadow-[0_0_40px_rgba(0,200,83,0.4)] transition-all duration-500 group">
+                      Request Industrial Consultation
+                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </LazySection>
 
       {/* 4. CONFIGURATOR / USE-CASE SELECTOR */}
@@ -169,7 +372,7 @@ const Index = () => {
                     <Play className="w-10 h-10 text-white ml-1" />
                   </div>
                 </div>
-                <FastImage src={heroHome} alt="NESS in action" className="w-full h-full opacity-70" width={800} height={450} sizes="(max-width: 768px) 100vw, 50vw" />
+                <img src={heroHome} alt="NESS in action" className="w-full h-full object-cover opacity-70" />
               </div>
 
               {/* Right - Stats */}

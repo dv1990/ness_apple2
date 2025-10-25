@@ -27,10 +27,16 @@
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
     </noscript>
     
-    <!-- Critical Hero Image Preload removed: used source paths that break after build; critical images are now preloaded via components when needed -->
+    <!-- Critical Hero Image Preload -->
+    <link 
+      rel="preload" 
+      as="image"
+      href="/src/assets/hero-homeowners.jpg"
+      fetchpriority="high"
+    />
     
     <!-- PWA Configuration -->
-    <link rel="manifest" href="manifest.json" />
+    <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#22c55e" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -42,7 +48,7 @@
     <meta name="keywords" content="battery storage, energy systems, solar battery, home energy, commercial energy" />
     <link rel="canonical" href="https://nessenergy.com" />
     
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   </head>
   <body>
     <div id="root"></div>

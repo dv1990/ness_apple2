@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { FastImage } from "@/components/ui/fast-image";
+import { PerformanceImage } from "@/components/ui/performance-image";
 import { AnimatedCounter } from "@/components/ui/animated-counter";
 import { ArrowRight, Heart, Home, Sparkles, Shield, Zap, Smile } from "lucide-react";
 import nessPodProduct from "@/assets/ness-pod-product.png";
@@ -22,15 +22,12 @@ const ResidentialEnhanced = () => {
           {/* The Product */}
           <div className="mb-16 animate-fade-in">
             <div className="max-w-2xl mx-auto">
-              <FastImage
+              <PerformanceImage
                 src={nessPodProduct}
                 alt="NESS AIO"
                 className="w-full drop-shadow-2xl"
                 priority={true}
                 aspectRatio="16/9"
-                width={1200}
-                height={675}
-                sizes="(max-width: 768px) 100vw, 1200px"
               />
             </div>
           </div>
@@ -442,14 +439,11 @@ const ResidentialEnhanced = () => {
               {/* Product Image */}
               <div className="aspect-[4/3] bg-gradient-to-br from-blue-500/10 to-blue-600/10 rounded-2xl overflow-hidden mb-8">
                 <div className="flex items-center justify-center h-full p-8">
-                  <FastImage
+                  <PerformanceImage
                     src={nessProProduct}
                     alt="NESS UPS - Pure Backup Power"
                     className="w-full h-full"
                     aspectRatio="4/3"
-                    width={800}
-                    height={600}
-                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
               </div>

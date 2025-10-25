@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { FastImage } from "@/components/ui/fast-image";
+import { PerformanceImage } from "@/components/ui/performance-image";
 import { Check, Shield, TrendingUp, BarChart3, Battery, Fuel } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -111,14 +111,11 @@ const TrueWarranty = () => {
               </p>
             </div>
             <div className="animate-fade-in">
-              <FastImage
+              <PerformanceImage
                 src={nessPodProduct}
                 alt="NESS Pod Battery"
                 className="w-full"
                 aspectRatio="4/3"
-                width={800}
-                height={600}
-                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>

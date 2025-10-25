@@ -1,29 +1,21 @@
-import { lazy, Suspense } from "react";
 import Layout from "@/components/Layout";
+import { ProductSelectorWizard } from "@/components/ProductSelectorWizard";
 import { Button } from "@/components/ui/button";
-import { FastImage } from "@/components/ui/fast-image";
-import { Zap, ArrowRight } from "lucide-react";
+import { PerformanceImage } from "@/components/ui/performance-image";
+import { Link } from "react-router-dom";
+import { Shield, Zap, Home, Star, CheckCircle, Users, ArrowRight } from "lucide-react";
 import heroImage from "@/assets/homeowner-hero-battery.webp";
-
-// Lazy load below-the-fold sections
-const PhilosophicalPromiseSection = lazy(() => import("@/components/sections/PhilosophicalPromiseSection"));
-const ProductSelectorSection = lazy(() => import("@/components/sections/ProductSelectorSection"));
-const WhyNessSection = lazy(() => import("@/components/sections/WhyNessSection"));
-const SocialProofSection = lazy(() => import("@/components/sections/SocialProofSection"));
 const ContactHomeowner = () => {
   return <Layout>
       {/* Full-Screen Hero Section */}
       <section className="relative h-screen w-full overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <FastImage
+          <PerformanceImage
             src={heroImage}
             alt="Premium NESS home battery system with sophisticated wall-mount design"
             className="w-full h-full"
             priority={true}
-            width={1920}
-            height={1080}
-            sizes="100vw"
           />
           {/* Dark overlay for text readability - concentrated on left side only */}
           <div className="absolute inset-y-0 left-0 right-1/2 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />
@@ -86,30 +78,162 @@ const ContactHomeowner = () => {
         </div>
       </section>
 
-      {/* Lazy-loaded below-the-fold sections */}
-      <Suspense fallback={<div className="py-32 bg-muted/20" />}>
-        <div className="cv-auto">
-          <PhilosophicalPromiseSection />
-        </div>
-      </Suspense>
+      {/* Philosophical Promise Section */}
+      <section className="py-32 md:py-48 bg-gradient-to-b from-background to-muted/20">
+        <div className="container mx-auto max-w-4xl px-6 text-center">
+          <h2 className="text-4xl md:text-5xl font-extralight mb-8 leading-tight tracking-tight">
+            Your child's exam. Your work deadline.<br />
+            <span className="text-muted-foreground">None of it stops.</span>
+          </h2>
+          
+          <p className="text-xl text-muted-foreground/80 font-light leading-relaxed max-w-2xl mx-auto mb-16">
+            Life's most important moments happen at home. Your energy system should be invisible, reliable, and effortlessly elegant.
+          </p>
 
-      <Suspense fallback={<div className="py-32 bg-background" />}>
-        <div className="cv-auto">
-          <ProductSelectorSection />
+          {/* Stats Grid */}
+          <div className="grid md:grid-cols-4 gap-8 mt-16">
+            <div className="space-y-2">
+              <div className="text-4xl font-extralight text-primary">99.97%</div>
+              <div className="text-sm text-muted-foreground">System Uptime</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-4xl font-extralight text-primary">10ms</div>
+              <div className="text-sm text-muted-foreground">Switch Response</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-4xl font-extralight text-primary">500+</div>
+              <div className="text-sm text-muted-foreground">Homes Protected</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-4xl font-extralight text-primary">15yr</div>
+              <div className="text-sm text-muted-foreground">Warranty Period</div>
+            </div>
+          </div>
         </div>
-      </Suspense>
+      </section>
 
-      <Suspense fallback={<div className="py-32 bg-muted/10" />}>
-        <div className="cv-auto">
-          <WhyNessSection />
+      {/* Product Selector Section */}
+      <section id="configurator" className="py-20 md:py-32 bg-gradient-to-b from-muted/20 via-background to-background">
+        <div className="container mx-auto max-w-7xl px-6">
+          <div className="text-center mb-16 space-y-4">
+            <div className="inline-block px-4 py-2 bg-primary/10 rounded-full backdrop-blur-sm">
+              <span className="text-sm font-medium text-primary">Personalized Design</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extralight tracking-tight">
+              Tell us about your home.<br />
+              <span className="text-muted-foreground">We'll design your energy sanctuary.</span>
+            </h2>
+          </div>
+          
+          <ProductSelectorWizard />
         </div>
-      </Suspense>
+      </section>
 
-      <Suspense fallback={<div className="py-32 bg-muted/30" />}>
-        <div className="cv-auto">
-          <SocialProofSection />
+      {/* Why NESS - Refined Trust Section */}
+      <section className="py-32 md:py-48 bg-gradient-to-b from-background to-muted/10">
+        <div className="container mx-auto max-w-6xl px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-extralight mb-6 tracking-tight">
+              Why Homeowners Choose NESS
+            </h2>
+            <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto leading-relaxed">
+              Clean energy is the new luxury. Here's what makes NESS different.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Silent Guardian */}
+            <div className="group relative p-8 rounded-2xl border border-border/50 bg-card hover:bg-card/80 transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
+                  <Shield className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-light mb-4">Silent Guardian</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Your neighbors won't know you have backup power. Zero noise. Zero emissions. Pure peace.
+                </p>
+              </div>
+            </div>
+
+            {/* Instant Response */}
+            <div className="group relative p-8 rounded-2xl border border-border/50 bg-card hover:bg-card/80 transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
+                  <Zap className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-light mb-4">Instant Response</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Switches in 10 milliseconds. Your Wi-Fi doesn't drop. Your calls stay connected. Life continues.
+                </p>
+              </div>
+            </div>
+
+            {/* Whole Home Coverage */}
+            <div className="group relative p-8 rounded-2xl border border-border/50 bg-card hover:bg-card/80 transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
+                  <Home className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-light mb-4">Whole Home Coverage</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Run everything—AC, refrigerator, Wi-Fi—for 24+ hours. Not just "essentials." Everything.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </Suspense>
+      </section>
+
+      {/* Social Proof Section */}
+      <section className="py-20 md:py-32 bg-muted/30">
+        <div className="container mx-auto max-w-5xl px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-extralight mb-6 tracking-tight">
+              Trusted by discerning homeowners across India
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 items-center">
+            {/* Star Rating */}
+            <div className="text-center p-6">
+              <div className="flex justify-center gap-1 mb-3">
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-6 h-6 fill-primary text-primary" />)}
+              </div>
+              <div className="text-3xl font-light mb-2">4.9/5</div>
+              <div className="text-sm text-muted-foreground">Customer Rating</div>
+            </div>
+
+            {/* BIS Certification */}
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <CheckCircle className="w-8 h-8 text-primary" />
+              </div>
+              <div className="text-2xl font-light mb-2">BIS Certified</div>
+              <div className="text-sm text-muted-foreground">Government Approved</div>
+            </div>
+
+            {/* Homes Protected */}
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Users className="w-8 h-8 text-primary" />
+              </div>
+              <div className="text-3xl font-light mb-2">500+</div>
+              <div className="text-sm text-muted-foreground">Homes Protected</div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link to="/">
+              <Button variant="outline" size="lg" className="rounded-full px-8">
+                Explore NESS Systems
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
     </Layout>;
 };
 export default ContactHomeowner;
