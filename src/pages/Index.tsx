@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { AnimatedCounter } from "@/components/ui/animated-counter";
 import { LazySection } from "@/components/ui/lazy-section";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { PerformanceImage } from "@/components/ui/performance-image";
+import { FastImage } from "@/components/ui/fast-image";
 import { cn } from "@/lib/utils";
 import heroHome from "@/assets/hero-homeowners.jpg";
 import nucuPcb from "@/assets/nucu-pcb-premium.webp";
@@ -169,7 +169,7 @@ const Index = () => {
                     <Play className="w-10 h-10 text-white ml-1" />
                   </div>
                 </div>
-                <PerformanceImage src={heroHome} alt="NESS in action" className="w-full h-full opacity-70" />
+                <FastImage src={heroHome} alt="NESS in action" className="w-full h-full opacity-70" width={800} height={450} sizes="(max-width: 768px) 100vw, 50vw" />
               </div>
 
               {/* Right - Stats */}

@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { PerformanceImage } from "@/components/ui/performance-image";
+import { FastImage } from "@/components/ui/fast-image";
 import { Zap, ArrowRight } from "lucide-react";
 import heroImage from "@/assets/homeowner-hero-battery.webp";
 
@@ -16,11 +16,14 @@ const ContactHomeowner = () => {
       <section className="relative h-screen w-full overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <PerformanceImage
+          <FastImage
             src={heroImage}
             alt="Premium NESS home battery system with sophisticated wall-mount design"
             className="w-full h-full"
             priority={true}
+            width={1920}
+            height={1080}
+            sizes="100vw"
           />
           {/* Dark overlay for text readability - concentrated on left side only */}
           <div className="absolute inset-y-0 left-0 right-1/2 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />

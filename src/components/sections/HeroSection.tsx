@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { PerformanceImage } from "@/components/ui/performance-image";
+import { FastImage } from "@/components/ui/fast-image";
 import heroHome from "@/assets/hero-homeowners.jpg";
 
 export const HeroSection = () => {
@@ -9,11 +9,14 @@ export const HeroSection = () => {
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <PerformanceImage
+        <FastImage
           src={heroHome}
           alt="Modern Indian villa with NESS Powerwall"
           className="w-full h-full"
           priority={true}
+          width={1920}
+          height={1080}
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
       </div>

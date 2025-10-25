@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import { PerformanceImage } from "@/components/ui/performance-image";
+import { FastImage } from "@/components/ui/fast-image";
 import nessPodProduct from "@/assets/ness-pod-product.png";
 import nessProProduct from "@/assets/ness-pro-product.png";
 import nessCubeProduct from "@/assets/ness-cube-resort.webp";
@@ -24,11 +24,14 @@ export const ProductShowcaseSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center bg-whisper rounded-[3rem] overflow-hidden p-12 lg:p-16 hover:shadow-lifted transition-all duration-700">
             {/* Image */}
             <div className="relative aspect-square flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
-              <PerformanceImage
+              <FastImage
                 src={nessPodProduct}
                 alt="NESS Powerwall"
                 className="w-full h-full"
                 aspectRatio="1/1"
+                width={800}
+                height={800}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             
@@ -103,11 +106,14 @@ export const ProductShowcaseSection = () => {
 
             {/* Image */}
             <div className="relative aspect-square flex items-center justify-center lg:order-2 group-hover:scale-105 transition-transform duration-700">
-              <PerformanceImage
+              <FastImage
                 src={nessProProduct}
                 alt="NESS Pod"
                 className="w-full h-full"
                 aspectRatio="1/1"
+                width={800}
+                height={800}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>
@@ -118,11 +124,14 @@ export const ProductShowcaseSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center bg-gradient-to-br from-graphite to-charcoal rounded-[3rem] overflow-hidden p-12 lg:p-16 hover:shadow-lifted transition-all duration-700">
             {/* Image */}
             <div className="relative aspect-square flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
-              <PerformanceImage
+              <FastImage
                 src={nessCubeProduct}
                 alt="NESS Cube"
                 className="w-full h-full"
                 aspectRatio="1/1"
+                width={800}
+                height={800}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             

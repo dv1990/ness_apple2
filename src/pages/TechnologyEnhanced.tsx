@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 import { MagneticButton } from "@/components/EnhancedInteractions";
 import { Shield, Clock, Heart, ArrowRight, Award, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { PerformanceImage } from "@/components/ui/performance-image";
+import { FastImage } from "@/components/ui/fast-image";
 import { WhyNess } from "@/components/WhyNess";
 import { AnimatedCounter } from "@/components/ui/animated-counter";
 import { AnimatedCard } from "@/components/ui/animated-card";
@@ -157,11 +157,14 @@ const TechnologyEnhanced = () => {
             </div>
             
             <div className="relative rounded-2xl overflow-hidden">
-              <PerformanceImage
+              <FastImage
                 src={batteryTechnology}
                 alt="LiFePO4 cell testing"
                 className="w-full"
                 aspectRatio="16/9"
+                width={1200}
+                height={675}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>
@@ -169,11 +172,14 @@ const TechnologyEnhanced = () => {
           {/* Decision 2: Manufacturing */}
           <div className="grid lg:grid-cols-2 gap-20 items-center mb-32">
             <div className="relative rounded-2xl overflow-hidden order-2 lg:order-1">
-              <PerformanceImage
+              <FastImage
                 src={rdLaboratory}
                 alt="Manufacturing process"
                 className="w-full"
                 aspectRatio="16/9"
+                width={1200}
+                height={675}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
 
@@ -243,11 +249,14 @@ const TechnologyEnhanced = () => {
             </div>
             
             <div className="relative rounded-2xl overflow-hidden">
-              <PerformanceImage
+              <FastImage
                 src={systemArchitecture}
                 alt="System monitoring interface"
                 className="w-full"
                 aspectRatio="16/9"
+                width={1200}
+                height={675}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>
