@@ -89,8 +89,8 @@ export const FastImage = ({
         height={height}
         loading={priority ? 'eager' : 'lazy'}
         decoding="async"
-        fetchPriority={priority ? 'high' : 'auto'}
         sizes={sizes}
+        {...(priority ? ({ fetchpriority: 'high' } as any) : ({ fetchpriority: 'auto' } as any))}
         onLoad={handleLoad}
         onError={handleError}
         className={cn(
