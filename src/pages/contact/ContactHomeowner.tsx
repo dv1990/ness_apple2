@@ -198,7 +198,7 @@ const ContactHomeowner = () => {
                   >
                     <div className="w-16 h-1 bg-primary mx-auto rounded-full animate-pulse" />
                     <h2 className="text-6xl sm:text-7xl md:text-8xl font-light tracking-tight text-foreground">
-                      Find Your NESS
+                      Choose your NESS
                     </h2>
                     <p className="text-xl sm:text-2xl text-muted-foreground font-light max-w-2xl mx-auto">
                       Because every home deserves intelligent energy.
