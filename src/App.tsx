@@ -7,13 +7,15 @@ import { ScrollProgressBar } from "@/components/ScrollProgressBar";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import React, { Suspense, lazy } from 'react';
 
-// Critical pages - Eager loaded for instant navigation
+// Critical page - Eager loaded for instant first paint
 import Index from "./pages/Index";
-import ResidentialEnhanced from "./pages/ResidentialEnhanced";
-import InstallersEnhanced from "./pages/InstallersEnhanced";
-import CommercialEnhanced from "./pages/CommercialEnhanced";
-import TechnologyEnhanced from "./pages/TechnologyEnhanced";
-import ContactEnhanced from "./pages/ContactEnhanced";
+
+// Main pages - Lazy loaded for better performance
+const ResidentialEnhanced = lazy(() => import("./pages/ResidentialEnhanced"));
+const InstallersEnhanced = lazy(() => import("./pages/InstallersEnhanced"));
+const CommercialEnhanced = lazy(() => import("./pages/CommercialEnhanced"));
+const TechnologyEnhanced = lazy(() => import("./pages/TechnologyEnhanced"));
+const ContactEnhanced = lazy(() => import("./pages/ContactEnhanced"));
 
 // Product pages - Lazy loaded
 const NessAcSync = lazy(() => import("./pages/products/NessAcSync"));
@@ -31,7 +33,7 @@ const News = lazy(() => import("./pages/company/News"));
 const NewsArticle = lazy(() => import("./pages/company/NewsArticle"));
 const KnowledgeHub = lazy(() => import("./pages/KnowledgeHub"));
 const KnowledgeArticle = lazy(() => import("./pages/KnowledgeArticle"));
-import ContactHomeowner from "./pages/contact/ContactHomeowner";
+const ContactHomeowner = lazy(() => import("./pages/contact/ContactHomeowner"));
 const ContactDistributor = lazy(() => import("./pages/contact/ContactDistributor"));
 const ContactInstaller = lazy(() => import("./pages/contact/ContactInstaller"));
 const Troubleshooting = lazy(() => import("./pages/Troubleshooting"));

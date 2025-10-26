@@ -32,8 +32,23 @@ export default defineConfig(({ mode }) => ({
     },
     rollupOptions: {
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router-dom']
+        manualChunks: (id) => {
+          // Vendor chunk for React ecosystem
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+              return 'react-vendor';
+            }
+            // Framer Motion separate chunk (heavy animation library)
+            if (id.includes('framer-motion')) {
+              return 'framer-motion';
+            }
+            // UI components chunk
+            if (id.includes('@radix-ui')) {
+              return 'ui-vendor';
+            }
+            // Other vendors
+            return 'vendor';
+          }
         }
       }
     }
