@@ -204,8 +204,12 @@ const ContactHomeowner = () => {
       </section>
 
       {/* Personalised Design Section - Cinematic Selector */}
-      <section id="configurator" className="py-20 md:py-32 bg-gradient-to-b from-muted/20 via-background to-background">
-        <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/5">
+      <section id="configurator" className="py-20 md:py-32 relative overflow-hidden">
+        {/* Premium Background Layers */}
+        <div className="absolute inset-0 bg-gradient-to-b from-muted/20 via-background to-background"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent"></div>
+        
+        <div className="relative min-h-screen bg-gradient-to-b from-background/50 via-background/80 to-background">
           <AnimatePresence mode="wait">
             {/* STEP 0: Opening Scene */}
             {step === 'intro' && (
@@ -222,13 +226,15 @@ const ContactHomeowner = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 0.8 }}
-                    className="space-y-6"
+                    className="space-y-8"
                   >
-                    <div className="w-16 h-1 bg-primary mx-auto rounded-full animate-pulse" />
-                    <h2 className="text-6xl sm:text-7xl md:text-8xl font-light tracking-tight text-foreground">
+                    <div className="relative w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto rounded-full">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary to-transparent rounded-full animate-pulse blur-sm"></div>
+                    </div>
+                    <h2 className="text-6xl sm:text-7xl md:text-8xl font-extralight tracking-[-0.03em] text-foreground leading-[0.95]">
                       Choose your NESS
                     </h2>
-                    <p className="text-xl sm:text-2xl text-muted-foreground font-light max-w-2xl mx-auto">
+                    <p className="text-xl sm:text-2xl text-muted-foreground/70 font-light max-w-2xl mx-auto leading-relaxed">
                       Because every home deserves intelligent energy.
                     </p>
                   </motion.div>
@@ -265,49 +271,59 @@ const ContactHomeowner = () => {
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="text-center mb-16 space-y-4"
+                    className="text-center mb-20 space-y-6"
                   >
-                    <p className="text-sm uppercase tracking-widest text-primary">Step 1 of 3</p>
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-light text-foreground">
+                    <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border border-primary/20 backdrop-blur-md">
+                      <div className="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_rgba(0,200,83,0.6)]"></div>
+                      <p className="text-xs uppercase tracking-[0.2em] text-primary font-medium">Step 1 of 3</p>
+                    </div>
+                    <h2 className="text-5xl sm:text-6xl md:text-7xl font-extralight text-foreground tracking-[-0.02em] leading-[1.1]">
                       Your Energy Setup
                     </h2>
-                    <p className="text-xl text-muted-foreground font-light">
+                    <p className="text-xl sm:text-2xl text-muted-foreground/70 font-light max-w-2xl mx-auto leading-relaxed">
                       How does your home get its power today?
                     </p>
                   </motion.div>
 
                   {isTransitioning && (
-                    <div className="flex justify-center mb-8">
-                      <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
+                    <div className="flex justify-center mb-12">
+                      <div className="relative">
+                        <div className="w-12 h-12 border-2 border-primary/20 rounded-full"></div>
+                        <div className="absolute inset-0 w-12 h-12 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
+                      </div>
                     </div>
                   )}
 
-                  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4">
                     {/* Card 1: New Solar */}
                     <motion.div
                       initial={{ opacity: 0, y: 40 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.1, duration: 0.5 }}
-                      whileHover={{ scale: 1.02, y: -8 }}
+                      whileHover={{ scale: 1.03, y: -12 }}
                       onClick={() => handleSetupSelect('new-solar')}
                       onKeyDown={(e) => e.key === 'Enter' && handleSetupSelect('new-solar')}
                       tabIndex={0}
                       role="button"
                       aria-label="Select new solar installation option"
-                      className="group cursor-pointer bg-card/80 backdrop-blur-sm rounded-3xl p-8 border border-border/50 hover:border-primary/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all duration-300 shadow-lg hover:shadow-[0_20px_60px_rgba(0,200,83,0.2)]"
+                      className="group cursor-pointer relative bg-gradient-to-br from-card/90 via-card/95 to-card/90 backdrop-blur-xl rounded-[2rem] p-10 border border-border/40 hover:border-amber-500/40 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500/20 focus:ring-offset-2 transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_60px_rgba(251,146,60,0.15)]"
                     >
-                      <div className="space-y-6">
-                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <Sun className="w-8 h-8 text-amber-500" />
+                      {/* Glow effect on hover */}
+                      <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-amber-500/5 via-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      
+                      <div className="relative space-y-8">
+                        <div className="w-20 h-20 rounded-[1.25rem] bg-gradient-to-br from-amber-500/20 via-orange-500/15 to-amber-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-[0_8px_24px_rgba(251,146,60,0.12)] group-hover:shadow-[0_12px_32px_rgba(251,146,60,0.25)]">
+                          <Sun className="w-9 h-9 text-amber-500 drop-shadow-[0_2px_8px_rgba(251,146,60,0.3)]" />
                         </div>
-                        <div className="space-y-2">
-                          <h3 className="text-xl font-medium text-foreground">Planning new solar</h3>
-                          <p className="text-sm text-muted-foreground leading-relaxed">
+                        <div className="space-y-3">
+                          <h3 className="text-2xl font-light text-foreground tracking-tight">Planning new solar</h3>
+                          <p className="text-sm text-muted-foreground/80 leading-relaxed font-light">
                             I'm setting up solar soon and want an all-in-one system.
                           </p>
                         </div>
-                        <div className="pt-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                          <ArrowRight className="w-5 h-5 text-primary" />
+                        <div className="pt-2 flex items-center gap-2 text-amber-500 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">
+                          <span className="text-sm font-medium">Explore</span>
+                          <ArrowRight className="w-4 h-4" />
                         </div>
                       </div>
                     </motion.div>
@@ -317,26 +333,29 @@ const ContactHomeowner = () => {
                       initial={{ opacity: 0, y: 40 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.2, duration: 0.5 }}
-                      whileHover={{ scale: 1.02, y: -8 }}
+                      whileHover={{ scale: 1.03, y: -12 }}
                       onClick={() => handleSetupSelect('existing-solar')}
                       onKeyDown={(e) => e.key === 'Enter' && handleSetupSelect('existing-solar')}
                       tabIndex={0}
                       role="button"
                       aria-label="Select existing solar with backup option"
-                      className="group cursor-pointer bg-card/80 backdrop-blur-sm rounded-3xl p-8 border border-border/50 hover:border-primary/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all duration-300 shadow-lg hover:shadow-[0_20px_60px_rgba(0,200,83,0.2)]"
+                      className="group cursor-pointer relative bg-gradient-to-br from-card/90 via-card/95 to-card/90 backdrop-blur-xl rounded-[2rem] p-10 border border-border/40 hover:border-primary/40 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 focus:ring-offset-2 transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_60px_rgba(0,200,83,0.15)]"
                     >
-                      <div className="space-y-6">
-                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-emerald-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <Zap className="w-8 h-8 text-primary" />
+                      <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-primary/5 via-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      
+                      <div className="relative space-y-8">
+                        <div className="w-20 h-20 rounded-[1.25rem] bg-gradient-to-br from-primary/20 via-emerald-500/15 to-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-[0_8px_24px_rgba(0,200,83,0.12)] group-hover:shadow-[0_12px_32px_rgba(0,200,83,0.25)]">
+                          <Zap className="w-9 h-9 text-primary drop-shadow-[0_2px_8px_rgba(0,200,83,0.3)]" />
                         </div>
-                        <div className="space-y-2">
-                          <h3 className="text-xl font-medium text-foreground">Already have solar</h3>
-                          <p className="text-sm text-muted-foreground leading-relaxed">
+                        <div className="space-y-3">
+                          <h3 className="text-2xl font-light text-foreground tracking-tight">Already have solar</h3>
+                          <p className="text-sm text-muted-foreground/80 leading-relaxed font-light">
                             I have solar panels on my roof and need backup power.
                           </p>
                         </div>
-                        <div className="pt-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                          <ArrowRight className="w-5 h-5 text-primary" />
+                        <div className="pt-2 flex items-center gap-2 text-primary opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">
+                          <span className="text-sm font-medium">Explore</span>
+                          <ArrowRight className="w-4 h-4" />
                         </div>
                       </div>
                     </motion.div>
@@ -346,26 +365,29 @@ const ContactHomeowner = () => {
                       initial={{ opacity: 0, y: 40 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.3, duration: 0.5 }}
-                      whileHover={{ scale: 1.02, y: -8 }}
+                      whileHover={{ scale: 1.03, y: -12 }}
                       onClick={() => handleSetupSelect('backup-only')}
                       onKeyDown={(e) => e.key === 'Enter' && handleSetupSelect('backup-only')}
                       tabIndex={0}
                       role="button"
                       aria-label="Select backup power only option"
-                      className="group cursor-pointer bg-card/80 backdrop-blur-sm rounded-3xl p-8 border border-border/50 hover:border-primary/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all duration-300 shadow-lg hover:shadow-[0_20px_60px_rgba(0,200,83,0.2)]"
+                      className="group cursor-pointer relative bg-gradient-to-br from-card/90 via-card/95 to-card/90 backdrop-blur-xl rounded-[2rem] p-10 border border-border/40 hover:border-blue-500/40 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:ring-offset-2 transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_60px_rgba(59,130,246,0.15)]"
                     >
-                      <div className="space-y-6">
-                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500/20 to-indigo-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <Battery className="w-8 h-8 text-blue-500" />
+                      <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-blue-500/5 via-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      
+                      <div className="relative space-y-8">
+                        <div className="w-20 h-20 rounded-[1.25rem] bg-gradient-to-br from-blue-500/20 via-indigo-500/15 to-blue-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-[0_8px_24px_rgba(59,130,246,0.12)] group-hover:shadow-[0_12px_32px_rgba(59,130,246,0.25)]">
+                          <Battery className="w-9 h-9 text-blue-500 drop-shadow-[0_2px_8px_rgba(59,130,246,0.3)]" />
                         </div>
-                        <div className="space-y-2">
-                          <h3 className="text-xl font-medium text-foreground">Need backup only</h3>
-                          <p className="text-sm text-muted-foreground leading-relaxed">
+                        <div className="space-y-3">
+                          <h3 className="text-2xl font-light text-foreground tracking-tight">Need backup only</h3>
+                          <p className="text-sm text-muted-foreground/80 leading-relaxed font-light">
                             I just want reliable backup power during outages.
                           </p>
                         </div>
-                        <div className="pt-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                          <ArrowRight className="w-5 h-5 text-primary" />
+                        <div className="pt-2 flex items-center gap-2 text-blue-500 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">
+                          <span className="text-sm font-medium">Explore</span>
+                          <ArrowRight className="w-4 h-4" />
                         </div>
                       </div>
                     </motion.div>
@@ -375,26 +397,29 @@ const ContactHomeowner = () => {
                       initial={{ opacity: 0, y: 40 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4, duration: 0.5 }}
-                      whileHover={{ scale: 1.02, y: -8 }}
+                      whileHover={{ scale: 1.03, y: -12 }}
                       onClick={() => handleSetupSelect('custom')}
                       onKeyDown={(e) => e.key === 'Enter' && handleSetupSelect('custom')}
                       tabIndex={0}
                       role="button"
                       aria-label="Select custom inverter integration option"
-                      className="group cursor-pointer bg-card/80 backdrop-blur-sm rounded-3xl p-8 border border-border/50 hover:border-primary/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all duration-300 shadow-lg hover:shadow-[0_20px_60px_rgba(0,200,83,0.2)]"
+                      className="group cursor-pointer relative bg-gradient-to-br from-card/90 via-card/95 to-card/90 backdrop-blur-xl rounded-[2rem] p-10 border border-border/40 hover:border-purple-500/40 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20 focus:ring-offset-2 transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_60px_rgba(168,85,247,0.15)]"
                     >
-                      <div className="space-y-6">
-                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <Settings className="w-8 h-8 text-purple-500" />
+                      <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-purple-500/5 via-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      
+                      <div className="relative space-y-8">
+                        <div className="w-20 h-20 rounded-[1.25rem] bg-gradient-to-br from-purple-500/20 via-pink-500/15 to-purple-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-[0_8px_24px_rgba(168,85,247,0.12)] group-hover:shadow-[0_12px_32px_rgba(168,85,247,0.25)]">
+                          <Settings className="w-9 h-9 text-purple-500 drop-shadow-[0_2px_8px_rgba(168,85,247,0.3)]" />
                         </div>
-                        <div className="space-y-2">
-                          <h3 className="text-xl font-medium text-foreground">Other / Custom</h3>
-                          <p className="text-sm text-muted-foreground leading-relaxed">
+                        <div className="space-y-3">
+                          <h3 className="text-2xl font-light text-foreground tracking-tight">Other / Custom</h3>
+                          <p className="text-sm text-muted-foreground/80 leading-relaxed font-light">
                             I have my own inverter setup (Victron, Studer, etc.).
                           </p>
                         </div>
-                        <div className="pt-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                          <ArrowRight className="w-5 h-5 text-primary" />
+                        <div className="pt-2 flex items-center gap-2 text-purple-500 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">
+                          <span className="text-sm font-medium">Explore</span>
+                          <ArrowRight className="w-4 h-4" />
                         </div>
                       </div>
                     </motion.div>
