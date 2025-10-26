@@ -36,149 +36,183 @@ const Index = () => {
       <section 
         ref={heroRef}
         className="relative min-h-screen w-full overflow-hidden"
+        style={{
+          background: 'linear-gradient(135deg, #0B1220 0%, #1C1F26 100%)'
+        }}
       >
-        {/* Full-screen Product Image Background */}
-        <motion.div 
-          className="absolute inset-0 w-full h-full"
-          style={{ y: imageY, opacity: imageOpacity }}
-        >
-          {/* Ambient glow behind product */}
-          <motion.div
-            className="absolute inset-0 flex items-center justify-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.08 }}
-            transition={{ duration: 3, ease: "easeOut" }}
-          >
-            <motion.div
-              className="w-full h-full"
-              style={{
-                background: 'radial-gradient(circle at 60% 50%, #00C853 0%, transparent 70%)',
-                filter: 'blur(120px)'
-              }}
-              animate={{
-                opacity: [0.08, 0.12, 0.08],
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-          </motion.div>
-
-          {/* Product Image - Full Screen */}
-          <motion.img
-            src={nessHeroProduct}
-            alt="NESS home battery — reliable backup for Indian homes"
-            className="absolute inset-0 w-full h-full object-cover"
-            loading="eager"
-            initial={{ opacity: 0, x: 20, filter: 'blur(8px)' }}
-            animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
-            transition={{ duration: 0.9, delay: 0.4 }}
-            style={{
-              filter: 'brightness(0.7)'
-            }}
-          />
-
-          {/* Dark gradient overlay for text readability */}
-          <div 
-            className="absolute inset-0"
-            style={{
-              background: 'linear-gradient(135deg, #0B1220ee 0%, #0B122088 40%, #1C1F2644 70%, transparent 100%)'
-            }}
-          />
-        </motion.div>
-
-        {/* Text Content Overlaid */}
         <div className="relative z-10 h-screen flex items-center max-w-[1600px] mx-auto px-8 md:px-16">
-          <motion.div 
-            className="space-y-8 md:space-y-10 max-w-2xl"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-          >
-            {/* Headline with word-by-word stagger */}
-            <motion.h1 
-              className="font-display text-[42px] md:text-[72px] font-bold leading-[1.05] tracking-[-0.02em] text-white"
+          <div className="grid md:grid-cols-2 gap-16 items-center w-full">
+            {/* Left: Text Content */}
+            <motion.div 
+              className="space-y-8 md:space-y-10 max-w-2xl"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8 }}
             >
-              {["When", "the", "grid", "goes", "dark,", "your", "life", "stays", "on."].map((word, i) => (
+              {/* Headline with colored highlights */}
+              <motion.h1 
+                className="font-display text-[42px] md:text-[72px] font-bold leading-[1.05] tracking-[0.02em] text-white"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                {["When", "the", "grid", "goes"].map((word, i) => (
+                  <motion.span
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
+                    className="inline-block mr-[0.3em]"
+                  >
+                    {word}
+                  </motion.span>
+                ))}{" "}
                 <motion.span
-                  key={i}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
+                  transition={{ duration: 0.5, delay: 0.7 }}
                   className="inline-block mr-[0.3em]"
+                  style={{ color: '#00C853' }}
                 >
-                  {word}
+                  dark
                 </motion.span>
-              ))}
-            </motion.h1>
-            
-            {/* Subtext */}
-            <motion.p 
-              className="font-sans text-[18px] font-normal leading-[1.4] tracking-[-0.011em] max-w-[420px]"
-              style={{ color: '#E5E7EB' }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.5 }}
-            >
-              Meet NESS, the intelligent home battery that keeps your lights, Wi-Fi, and life running—silently, automatically, beautifully.
-              <br />
-              Engineered in India for homes that never pause.
-            </motion.p>
-
-            {/* CTA */}
-            <motion.div 
-              className="pt-4 space-y-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.8 }}
-            >
-              <Link to="/residential">
-                <motion.div
-                  onHoverStart={() => setShowCtaSubtext(true)}
-                  onHoverEnd={() => setShowCtaSubtext(false)}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <Button 
-                    size="lg" 
-                    className="font-sans bg-[#00C853] hover:bg-[#00E676] text-white font-semibold px-10 py-7 text-lg rounded-xl shadow-[0_0_30px_rgba(0,200,83,0.3)] hover:shadow-[0_0_44px_rgba(0,230,118,0.5)] transition-all duration-300"
-                    style={{
-                      transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)'
-                    }}
+                {[",", "your", "life", "stays"].map((word, i) => (
+                  <motion.span
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.8 + i * 0.1 }}
+                    className="inline-block mr-[0.3em]"
                   >
-                    Design My System →
-                  </Button>
-                </motion.div>
-              </Link>
+                    {word}
+                  </motion.span>
+                ))}{" "}
+                <motion.span
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ 
+                    opacity: [0.8, 1, 0.8],
+                    y: 0,
+                    textShadow: [
+                      '0 0 10px rgba(0,200,83,0.3)',
+                      '0 0 20px rgba(0,200,83,0.5)',
+                      '0 0 10px rgba(0,200,83,0.3)'
+                    ]
+                  }}
+                  transition={{ 
+                    opacity: { duration: 1.5, repeat: Infinity, ease: "easeInOut" },
+                    textShadow: { duration: 1.5, repeat: Infinity, ease: "easeInOut" },
+                    y: { duration: 0.5, delay: 1.2 }
+                  }}
+                  className="inline-block"
+                  style={{ color: '#00C853' }}
+                >
+                  lit.
+                </motion.span>
+              </motion.h1>
               
-              {/* CTA Subtext */}
-              <motion.p
-                className="font-sans text-[14px] font-normal tracking-[0.005em]"
-                style={{ color: '#A1A1AA' }}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: showCtaSubtext ? 1 : 0 }}
-                transition={{ duration: 0.15 }}
+              {/* Subtext */}
+              <motion.p 
+                className="font-sans text-[18px] font-normal leading-[1.4] tracking-[-0.011em] max-w-[440px]"
+                style={{ color: '#E5E7EB' }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.5 }}
               >
-                Find your perfect setup in under 30 seconds.
+                Meet NESS — the intelligent home battery that keeps your home bright, connected, and alive.
+                <br />
+                Clean energy. Seamlessly delivered. Beautifully lit.
+              </motion.p>
+
+              {/* CTA */}
+              <motion.div 
+                className="pt-4 space-y-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.8 }}
+              >
+                <Link to="/residential">
+                  <motion.div
+                    onHoverStart={() => setShowCtaSubtext(true)}
+                    onHoverEnd={() => setShowCtaSubtext(false)}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <Button 
+                      size="lg" 
+                      className="font-sans bg-[#00C853] hover:bg-[#00E676] text-white font-semibold px-10 py-7 text-lg rounded-xl shadow-[0_0_30px_rgba(0,200,83,0.3)] hover:shadow-[0_0_44px_rgba(0,230,118,0.5)] transition-all duration-300"
+                      style={{
+                        transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)'
+                      }}
+                    >
+                      Design My System →
+                    </Button>
+                  </motion.div>
+                </Link>
+                
+                {/* CTA Subtext */}
+                <motion.p
+                  className="font-sans text-[14px] font-normal tracking-[0.005em]"
+                  style={{ color: '#A1A1AA' }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: showCtaSubtext ? 1 : 0 }}
+                  transition={{ duration: 0.15 }}
+                >
+                  Find your perfect setup in under 30 seconds.
+                </motion.p>
+              </motion.div>
+
+              {/* Footer Tagline */}
+              <motion.p
+                className="font-sans text-[14px] font-normal tracking-[0.01em]"
+                style={{ color: '#9CA3AF' }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 2.5 }}
+              >
+                Engineered in India for homes that never pause.
               </motion.p>
             </motion.div>
 
-            {/* Footer Tagline */}
-            <motion.p
-              className="font-sans text-[14px] font-normal tracking-[0.01em]"
-              style={{ color: '#9CA3AF' }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 2.5 }}
+            {/* Right: Product Image */}
+            <motion.div 
+              className="relative flex items-center justify-center"
+              initial={{ opacity: 0, x: 20, filter: 'blur(8px)' }}
+              animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
+              transition={{ duration: 0.9, delay: 0.4 }}
             >
-              Clean energy that never lets you down.
-            </motion.p>
-          </motion.div>
+              {/* Ambient glow behind product */}
+              <motion.div
+                className="absolute inset-0 flex items-center justify-center"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.06 }}
+                transition={{ duration: 2.5, ease: "easeOut" }}
+              >
+                <motion.div
+                  className="w-full h-full"
+                  style={{
+                    background: 'radial-gradient(circle at center, #00C853 0%, transparent 60%)',
+                    filter: 'blur(120px)'
+                  }}
+                  animate={{
+                    opacity: [0.06, 0.08, 0.06],
+                  }}
+                  transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                />
+              </motion.div>
+
+              {/* Product Image */}
+              <img
+                src={nessHeroProduct}
+                alt="NESS home battery — reliable backup power for modern Indian homes"
+                className="relative w-full h-auto max-w-[600px] object-contain drop-shadow-2xl"
+                loading="eager"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 
