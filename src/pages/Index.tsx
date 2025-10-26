@@ -125,10 +125,9 @@ const Index = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.5 }}
             >
-              The lights stay on. Work continues. Life doesn't stop.
+              Meet NESS, the intelligent home battery that keeps your lights, Wi-Fi, and life running—silently, automatically, beautifully.
               <br />
-              Because NESS was built for the moments that matter —
-              engineered to outlast India's harshest conditions.
+              Engineered in India for homes that never pause.
             </motion.p>
 
             {/* CTA */}
