@@ -7,7 +7,7 @@ import { LazySection } from "@/components/ui/lazy-section";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { PerformanceImage } from "@/components/ui/performance-image";
 import { cn } from "@/lib/utils";
-import heroHome from "@/assets/hero-homeowners.jpg";
+import nessHeroProduct from "@/assets/ness-hero-product.webp";
 import nessPodProduct from "@/assets/ness-pod-product.png";
 import nessProProduct from "@/assets/ness-pro-product.png";
 import nessCubeProduct from "@/assets/ness-cube-resort.webp";
@@ -31,12 +31,12 @@ const Index = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <PerformanceImage
-            src={heroHome}
-            alt="Modern Indian villa with NESS Powerwall"
+            src={nessHeroProduct}
+            alt="NESS Battery Energy Storage System"
             className="w-full h-full"
             priority={true}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
         </div>
 
         {/* Content */}
@@ -372,7 +372,7 @@ const Index = () => {
                     <Play className="w-10 h-10 text-white ml-1" />
                   </div>
                 </div>
-                <img src={heroHome} alt="NESS in action" className="w-full h-full object-cover opacity-70" />
+                <img src={nessHeroProduct} alt="NESS Battery in action" className="w-full h-full object-cover opacity-70" />
               </div>
 
               {/* Right - Stats */}
