@@ -99,7 +99,7 @@ const Index = () => {
           >
             {/* Headline with word-by-word stagger */}
             <motion.h1 
-              className="text-[42px] md:text-[72px] font-bold text-white leading-[1.05] tracking-[0.02em]"
+              className="font-display text-[42px] md:text-[72px] font-bold leading-[1.05] tracking-[-0.02em] text-white"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -119,7 +119,7 @@ const Index = () => {
             
             {/* Subtext */}
             <motion.p 
-              className="text-lg leading-[1.4] max-w-[420px]"
+              className="font-sans text-[18px] font-normal leading-[1.4] tracking-[-0.011em] max-w-[420px]"
               style={{ color: '#E5E7EB' }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -146,7 +146,7 @@ const Index = () => {
                 >
                   <Button 
                     size="lg" 
-                    className="bg-[#00C853] hover:bg-[#00E676] text-white px-10 py-7 text-lg rounded-xl shadow-[0_0_30px_rgba(0,200,83,0.3)] hover:shadow-[0_0_44px_rgba(0,230,118,0.5)] transition-all duration-300"
+                    className="font-sans bg-[#00C853] hover:bg-[#00E676] text-white font-semibold px-10 py-7 text-lg rounded-xl shadow-[0_0_30px_rgba(0,200,83,0.3)] hover:shadow-[0_0_44px_rgba(0,230,118,0.5)] transition-all duration-300"
                     style={{
                       transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)'
                     }}
@@ -158,7 +158,7 @@ const Index = () => {
               
               {/* CTA Subtext */}
               <motion.p
-                className="text-sm"
+                className="font-sans text-[14px] font-normal tracking-[0.005em]"
                 style={{ color: '#A1A1AA' }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: showCtaSubtext ? 1 : 0 }}
@@ -170,7 +170,7 @@ const Index = () => {
 
             {/* Footer Tagline */}
             <motion.p
-              className="text-sm tracking-[0.01em]"
+              className="font-sans text-[14px] font-normal tracking-[0.01em]"
               style={{ color: '#9CA3AF' }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
