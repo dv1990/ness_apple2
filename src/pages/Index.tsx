@@ -36,14 +36,61 @@ const Index = () => {
       <section 
         ref={heroRef}
         className="relative min-h-screen w-full overflow-hidden"
-        style={{
-          background: 'linear-gradient(135deg, #0B1220 0%, #1C1F26 100%)'
-        }}
       >
-        {/* Grid layout: Text left, Image right */}
-        <div className="relative z-10 h-screen grid md:grid-cols-2 gap-8 items-center max-w-[1600px] mx-auto px-8 md:px-16">
-          
-          {/* LEFT: Text Content */}
+        {/* Full-screen Product Image Background */}
+        <motion.div 
+          className="absolute inset-0 w-full h-full"
+          style={{ y: imageY, opacity: imageOpacity }}
+        >
+          {/* Ambient glow behind product */}
+          <motion.div
+            className="absolute inset-0 flex items-center justify-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.08 }}
+            transition={{ duration: 3, ease: "easeOut" }}
+          >
+            <motion.div
+              className="w-full h-full"
+              style={{
+                background: 'radial-gradient(circle at 60% 50%, #00C853 0%, transparent 70%)',
+                filter: 'blur(120px)'
+              }}
+              animate={{
+                opacity: [0.08, 0.12, 0.08],
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+          </motion.div>
+
+          {/* Product Image - Full Screen */}
+          <motion.img
+            src={nessHeroProduct}
+            alt="NESS home battery — reliable backup for Indian homes"
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="eager"
+            initial={{ opacity: 0, x: 20, filter: 'blur(8px)' }}
+            animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
+            transition={{ duration: 0.9, delay: 0.4 }}
+            style={{
+              filter: 'brightness(0.7)'
+            }}
+          />
+
+          {/* Dark gradient overlay for text readability */}
+          <div 
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(135deg, #0B1220ee 0%, #0B122088 40%, #1C1F2644 70%, transparent 100%)'
+            }}
+          />
+        </motion.div>
+
+        {/* Text Content Overlaid */}
+        <div className="relative z-10 h-screen flex items-center max-w-[1600px] mx-auto px-8 md:px-16">
           <motion.div 
             className="space-y-8 md:space-y-10 max-w-2xl"
             initial={{ opacity: 0 }}
@@ -133,70 +180,7 @@ const Index = () => {
               Clean energy that never lets you down.
             </motion.p>
           </motion.div>
-
-          {/* RIGHT: NESS Unit with ambient glow */}
-          <motion.div 
-            className="relative hidden md:flex items-center justify-center h-full w-full"
-            style={{ y: imageY, opacity: imageOpacity }}
-          >
-            {/* Ambient glow behind product */}
-            <motion.div
-              className="absolute inset-0 flex items-center justify-center"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.08 }}
-              transition={{ duration: 3, ease: "easeOut" }}
-            >
-              <motion.div
-                className="w-full h-full rounded-full"
-                style={{
-                  background: 'radial-gradient(circle, #00C853 0%, transparent 70%)',
-                  filter: 'blur(80px)'
-                }}
-                animate={{
-                  opacity: [0.08, 0.12, 0.08],
-                }}
-                transition={{
-                  duration: 8,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              />
-            </motion.div>
-
-            {/* Product Image */}
-            <motion.div
-              initial={{ opacity: 0, x: 20, filter: 'blur(8px)' }}
-              animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
-              transition={{ duration: 0.9, delay: 0.4 }}
-              className="relative z-10 w-full h-full flex items-center justify-center"
-            >
-              <img
-                src={nessHeroProduct}
-                alt="NESS home battery — reliable backup for Indian homes"
-                className="w-full h-full object-contain"
-                loading="eager"
-                style={{
-                  filter: 'drop-shadow(0 20px 60px rgba(0, 0, 0, 0.4))'
-                }}
-              />
-            </motion.div>
-          </motion.div>
         </div>
-
-        {/* Mobile: Show image below text */}
-        <motion.div 
-          className="md:hidden relative px-8 pb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 2 }}
-        >
-          <img
-            src={nessHeroProduct}
-            alt="NESS home battery — reliable backup for Indian homes"
-            className="w-full h-auto max-w-md mx-auto object-contain"
-            loading="eager"
-          />
-        </motion.div>
       </section>
 
       {/* 2. ONE KEY DIFFERENTIATOR */}
