@@ -9,6 +9,7 @@ import { PerformanceImage } from "@/components/ui/performance-image";
 import { cn } from "@/lib/utils";
 import nessHeroProduct from "@/assets/ness-hero-product.webp";
 import nessPodProduct from "@/assets/ness-pod-product.png";
+import nessProProduct from "@/assets/ness-pro-product.png";
 import { useState, useEffect } from "react";
 
 const Index = () => {
@@ -138,6 +139,72 @@ const Index = () => {
                   className="w-full h-auto rounded-2xl"
                   priority={false}
                 />
+              </div>
+            </div>
+          </div>
+        </section>
+      </LazySection>
+
+      {/* 3B. C&I PRODUCT SPOTLIGHT - NESS Pod */}
+      <LazySection>
+        <section className="py-20 px-6 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="relative order-2 md:order-1">
+                <PerformanceImage
+                  src={nessProProduct}
+                  alt="NESS Pod - Commercial & Industrial battery backup system"
+                  className="w-full h-auto rounded-2xl"
+                  priority={false}
+                />
+              </div>
+
+              <div className="order-1 md:order-2">
+                <p className="text-energy text-sm uppercase tracking-widest mb-4">For Business</p>
+                <h2 className="text-5xl md:text-6xl font-light text-graphite mb-6 tracking-tight">
+                  NESS Pod
+                </h2>
+                <p className="text-xl text-graphite/70 mb-8 leading-relaxed font-light">
+                  When downtime isn't an option. Built for businesses that can't afford to stop.
+                </p>
+                
+                <div className="space-y-4 mb-10">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-energy flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="font-medium text-lg text-graphite">Scalable power</p>
+                      <p className="text-graphite/60 font-light">20-50 kWh systems for commercial needs</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-energy flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="font-medium text-lg text-graphite">Cut diesel costs</p>
+                      <p className="text-graphite/60 font-light">Reduce dependency by 80%</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-energy flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="font-medium text-lg text-graphite">Remote monitoring</p>
+                      <p className="text-graphite/60 font-light">Track performance from anywhere</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link to="/commercial">
+                    <Button size="lg" className="bg-energy hover:bg-energy-glow text-white px-8 py-6 text-lg rounded-full shadow-glow hover:shadow-[0_0_40px_rgba(0,200,83,0.4)] transition-all duration-500">
+                      Explore Commercial
+                      <ArrowRight className="ml-2 w-5 h-5" />
+                    </Button>
+                  </Link>
+                  <Link to="/commercial">
+                    <Button variant="outline" size="lg" className="border-2 border-graphite/30 text-graphite hover:bg-graphite/5 px-8 py-6 text-lg rounded-full">
+                      Get a Quote
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
