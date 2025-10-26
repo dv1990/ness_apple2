@@ -67,18 +67,20 @@ const Index = () => {
           </motion.div>
 
           {/* Product Image - Full Screen */}
-          <motion.img
-            src={nessHeroProduct}
-            alt="NESS home battery — reliable backup power for modern Indian homes"
-            className="absolute inset-0 w-full h-full object-cover"
-            loading="eager"
+          <motion.div
             initial={{ opacity: 0, x: 20, filter: 'blur(8px)' }}
             animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
             transition={{ duration: 0.9, delay: 0.4 }}
-            style={{
-              filter: 'brightness(0.7)'
-            }}
-          />
+            className="absolute inset-0 w-full h-full"
+            style={{ filter: 'brightness(0.7)' }}
+          >
+            <PerformanceImage
+              src={nessHeroProduct}
+              alt="NESS home battery — reliable backup power for modern Indian homes"
+              className="w-full h-full object-cover"
+              priority={true}
+            />
+          </motion.div>
 
           {/* Dark gradient overlay for text readability */}
           <div 
