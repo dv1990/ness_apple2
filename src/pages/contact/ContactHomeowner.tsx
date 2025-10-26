@@ -14,10 +14,31 @@ type EnergySetup = 'new-solar' | 'existing-solar' | 'backup-only' | 'custom' | n
 const ContactHomeowner = () => {
   const [step, setStep] = useState<'intro' | 'selector' | 'product' | 'summary'>('intro');
   const [selectedSetup, setSelectedSetup] = useState<EnergySetup>(null);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const handleSetupSelect = (setup: EnergySetup) => {
+    setIsTransitioning(true);
     setSelectedSetup(setup);
-    setTimeout(() => setStep('product'), 600);
+    setTimeout(() => {
+      setStep('product');
+      setIsTransitioning(false);
+    }, 600);
+  };
+
+  const handleBackToSelector = () => {
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setStep('selector');
+      setIsTransitioning(false);
+    }, 300);
+  };
+
+  const handleBackToProduct = () => {
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setStep('product');
+      setIsTransitioning(false);
+    }, 300);
   };
 
   const getProductForSetup = () => {
@@ -71,7 +92,7 @@ const ContactHomeowner = () => {
 
   return <Layout>
       {/* Full-Screen Hero Section */}
-      <section className="relative h-screen w-full overflow-hidden">
+      <section className="relative min-h-[90vh] md:h-screen w-full overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <PerformanceImage
@@ -117,12 +138,18 @@ const ContactHomeowner = () => {
               </div>
 
               <div className="pt-6">
-                <a href="#configurator">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-full shadow-2xl hover:shadow-primary/50 transition-all duration-300">
-                    Design Your System
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                </a>
+                <Button 
+                  size="lg" 
+                  onClick={() => {
+                    setStep('selector');
+                    document.getElementById('configurator')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-full shadow-2xl hover:shadow-primary/50 transition-all duration-300"
+                  aria-label="Start the product selection process to find your perfect NESS system"
+                >
+                  Find Your Perfect System
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
               </div>
             </div>
           </div>
@@ -166,6 +193,7 @@ const ContactHomeowner = () => {
             <div className="space-y-2">
               <div className="text-4xl font-extralight text-primary">500+</div>
               <div className="text-sm text-muted-foreground">Homes Protected</div>
+              <div className="text-xs text-muted-foreground/60">Across India since 2020</div>
             </div>
             <div className="space-y-2">
               <div className="text-4xl font-extralight text-primary">15yr</div>
@@ -213,7 +241,8 @@ const ContactHomeowner = () => {
                     <Button
                       size="lg"
                       onClick={() => setStep('selector')}
-                      className="bg-primary text-primary-foreground hover:bg-primary/90 px-12 py-7 rounded-full text-lg font-medium shadow-[0_0_40px_rgba(0,200,83,0.3)] hover:shadow-[0_0_60px_rgba(0,200,83,0.5)] transition-all duration-500"
+                      className="bg-primary text-primary-foreground hover:bg-primary/90 px-12 py-7 rounded-full text-lg font-medium shadow-[0_0_40px_rgba(0,200,83,0.3)] hover:shadow-[0_0_60px_rgba(0,200,83,0.5)] transition-all duration-500 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                      aria-label="Begin the product selection process"
                     >
                       Begin
                     </Button>
@@ -238,7 +267,7 @@ const ContactHomeowner = () => {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-center mb-16 space-y-4"
                   >
-                    <p className="text-sm uppercase tracking-widest text-primary">Step 1</p>
+                    <p className="text-sm uppercase tracking-widest text-primary">Step 1 of 3</p>
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-light text-foreground">
                       Your Energy Setup
                     </h2>
@@ -247,7 +276,13 @@ const ContactHomeowner = () => {
                     </p>
                   </motion.div>
 
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {isTransitioning && (
+                    <div className="flex justify-center mb-8">
+                      <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
+                    </div>
+                  )}
+
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {/* Card 1: New Solar */}
                     <motion.div
                       initial={{ opacity: 0, y: 40 }}
@@ -255,7 +290,11 @@ const ContactHomeowner = () => {
                       transition={{ delay: 0.1, duration: 0.5 }}
                       whileHover={{ scale: 1.02, y: -8 }}
                       onClick={() => handleSetupSelect('new-solar')}
-                      className="group cursor-pointer bg-card/80 backdrop-blur-sm rounded-3xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-[0_20px_60px_rgba(0,200,83,0.2)]"
+                      onKeyDown={(e) => e.key === 'Enter' && handleSetupSelect('new-solar')}
+                      tabIndex={0}
+                      role="button"
+                      aria-label="Select new solar installation option"
+                      className="group cursor-pointer bg-card/80 backdrop-blur-sm rounded-3xl p-8 border border-border/50 hover:border-primary/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all duration-300 shadow-lg hover:shadow-[0_20px_60px_rgba(0,200,83,0.2)]"
                     >
                       <div className="space-y-6">
                         <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -280,7 +319,11 @@ const ContactHomeowner = () => {
                       transition={{ delay: 0.2, duration: 0.5 }}
                       whileHover={{ scale: 1.02, y: -8 }}
                       onClick={() => handleSetupSelect('existing-solar')}
-                      className="group cursor-pointer bg-card/80 backdrop-blur-sm rounded-3xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-[0_20px_60px_rgba(0,200,83,0.2)]"
+                      onKeyDown={(e) => e.key === 'Enter' && handleSetupSelect('existing-solar')}
+                      tabIndex={0}
+                      role="button"
+                      aria-label="Select existing solar with backup option"
+                      className="group cursor-pointer bg-card/80 backdrop-blur-sm rounded-3xl p-8 border border-border/50 hover:border-primary/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all duration-300 shadow-lg hover:shadow-[0_20px_60px_rgba(0,200,83,0.2)]"
                     >
                       <div className="space-y-6">
                         <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-emerald-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -305,7 +348,11 @@ const ContactHomeowner = () => {
                       transition={{ delay: 0.3, duration: 0.5 }}
                       whileHover={{ scale: 1.02, y: -8 }}
                       onClick={() => handleSetupSelect('backup-only')}
-                      className="group cursor-pointer bg-card/80 backdrop-blur-sm rounded-3xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-[0_20px_60px_rgba(0,200,83,0.2)]"
+                      onKeyDown={(e) => e.key === 'Enter' && handleSetupSelect('backup-only')}
+                      tabIndex={0}
+                      role="button"
+                      aria-label="Select backup power only option"
+                      className="group cursor-pointer bg-card/80 backdrop-blur-sm rounded-3xl p-8 border border-border/50 hover:border-primary/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all duration-300 shadow-lg hover:shadow-[0_20px_60px_rgba(0,200,83,0.2)]"
                     >
                       <div className="space-y-6">
                         <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500/20 to-indigo-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -330,7 +377,11 @@ const ContactHomeowner = () => {
                       transition={{ delay: 0.4, duration: 0.5 }}
                       whileHover={{ scale: 1.02, y: -8 }}
                       onClick={() => handleSetupSelect('custom')}
-                      className="group cursor-pointer bg-card/80 backdrop-blur-sm rounded-3xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-[0_20px_60px_rgba(0,200,83,0.2)]"
+                      onKeyDown={(e) => e.key === 'Enter' && handleSetupSelect('custom')}
+                      tabIndex={0}
+                      role="button"
+                      aria-label="Select custom inverter integration option"
+                      className="group cursor-pointer bg-card/80 backdrop-blur-sm rounded-3xl p-8 border border-border/50 hover:border-primary/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all duration-300 shadow-lg hover:shadow-[0_20px_60px_rgba(0,200,83,0.2)]"
                     >
                       <div className="space-y-6">
                         <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -367,6 +418,21 @@ const ContactHomeowner = () => {
                     const product = getProductForSetup();
                     return (
                       <div className="space-y-16">
+                        {/* Back Button */}
+                        <motion.div
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          className="flex justify-start"
+                        >
+                          <button
+                            onClick={handleBackToSelector}
+                            className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+                            aria-label="Go back to energy setup selection"
+                          >
+                            <ArrowRight className="w-4 h-4 rotate-180 group-hover:-translate-x-1 transition-transform" />
+                            <span className="text-sm">Back to options</span>
+                          </button>
+                        </motion.div>
                         {/* Product Image */}
                         <motion.div
                           initial={{ opacity: 0, scale: 0.9 }}
@@ -409,16 +475,16 @@ const ContactHomeowner = () => {
                             <Button
                               size="lg"
                               onClick={() => setStep('summary')}
-                              className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-6 rounded-full text-lg font-medium shadow-[0_0_40px_rgba(0,200,83,0.3)] hover:shadow-[0_0_60px_rgba(0,200,83,0.5)] transition-all duration-500"
+                              className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-6 rounded-full text-lg font-medium shadow-[0_0_40px_rgba(0,200,83,0.3)] hover:shadow-[0_0_60px_rgba(0,200,83,0.5)] transition-all duration-500 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                             >
-                              Design it for my home
+                              See Details & Pricing
                               <ArrowRight className="ml-2 w-5 h-5" />
                             </Button>
                             <Button
                               variant="outline"
                               size="lg"
-                              onClick={() => setStep('selector')}
-                              className="border-2 border-border/50 hover:border-primary/50 px-10 py-6 rounded-full text-lg"
+                              onClick={handleBackToSelector}
+                              className="border-2 border-border/50 hover:border-primary/50 px-10 py-6 rounded-full text-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                             >
                               View Other Options
                             </Button>
@@ -446,12 +512,28 @@ const ContactHomeowner = () => {
                     const product = getProductForSetup();
                     return (
                       <div className="space-y-12">
+                        {/* Back Button */}
+                        <motion.div
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          className="flex justify-start"
+                        >
+                          <button
+                            onClick={handleBackToProduct}
+                            className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+                            aria-label="Go back to product details"
+                          >
+                            <ArrowRight className="w-4 h-4 rotate-180 group-hover:-translate-x-1 transition-transform" />
+                            <span className="text-sm">Back</span>
+                          </button>
+                        </motion.div>
+
                         <motion.div
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           className="text-center space-y-4"
                         >
-                          <p className="text-sm uppercase tracking-widest text-primary">Your Perfect Match</p>
+                          <p className="text-sm uppercase tracking-widest text-primary">Step 3 of 3 • Your Perfect Match</p>
                           <h2 className="text-4xl sm:text-5xl md:text-6xl font-light text-foreground">
                             {product.name}
                           </h2>
@@ -466,7 +548,7 @@ const ContactHomeowner = () => {
                         >
                           <div className="grid md:grid-cols-3 gap-8 mb-12">
                             <div className="text-center space-y-2">
-                              <p className="text-sm text-muted-foreground uppercase tracking-wider">Estimated Savings</p>
+                              <p className="text-sm text-muted-foreground uppercase tracking-wider">Estimated Savings*</p>
                               <p className="text-4xl font-light text-primary">₹ {product.savings.toLocaleString()}</p>
                               <p className="text-xs text-muted-foreground">per month</p>
                             </div>
@@ -486,6 +568,9 @@ const ContactHomeowner = () => {
                             <p className="text-muted-foreground">
                               Smart monitoring included • 15-year warranty • Expert support
                             </p>
+                            <p className="text-xs text-muted-foreground/60">
+                              *Based on typical 5kW system with 8 hours daily grid outage. Actual savings vary by usage and location.
+                            </p>
                           </div>
                         </motion.div>
 
@@ -499,22 +584,36 @@ const ContactHomeowner = () => {
                           <Button
                             size="lg"
                             onClick={() => (window.location.href = '/contact/homeowner')}
-                            className="bg-primary text-primary-foreground hover:bg-primary/90 px-12 py-7 rounded-full text-lg font-medium shadow-[0_0_40px_rgba(0,200,83,0.3)] hover:shadow-[0_0_60px_rgba(0,200,83,0.5)] transition-all duration-500"
+                            className="bg-primary text-primary-foreground hover:bg-primary/90 px-12 py-7 rounded-full text-lg font-medium shadow-[0_0_40px_rgba(0,200,83,0.3)] hover:shadow-[0_0_60px_rgba(0,200,83,0.5)] transition-all duration-500 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                           >
-                            Book Design Call
+                            Get Instant Quote
                             <ArrowRight className="ml-2 w-5 h-5" />
                           </Button>
                           <Button
                             variant="outline"
                             size="lg"
+                            onClick={() => (window.location.href = '/contact')}
+                            className="border-2 border-border/50 hover:border-primary/50 px-12 py-7 rounded-full text-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                          >
+                            Talk to Expert
+                          </Button>
+                        </motion.div>
+
+                        <motion.div
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ delay: 0.5 }}
+                          className="text-center"
+                        >
+                          <button
                             onClick={() => {
                               setSelectedSetup(null);
                               setStep('intro');
                             }}
-                            className="border-2 border-border/50 hover:border-primary/50 px-12 py-7 rounded-full text-lg"
+                            className="text-sm text-muted-foreground hover:text-primary transition-colors underline"
                           >
-                            Restart Selector
-                          </Button>
+                            Start over
+                          </button>
                         </motion.div>
 
                         {/* Tagline */}
@@ -634,13 +733,30 @@ const ContactHomeowner = () => {
               </div>
               <div className="text-3xl font-light mb-2">500+</div>
               <div className="text-sm text-muted-foreground">Homes Protected</div>
+              <div className="text-xs text-muted-foreground/60 mt-1">Since 2020</div>
+            </div>
+          </div>
+
+          {/* Customer Testimonial */}
+          <div className="mt-16 max-w-3xl mx-auto">
+            <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 border border-border/30">
+              <div className="flex gap-1 mb-4 justify-center">
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
+              </div>
+              <blockquote className="text-lg text-center text-muted-foreground leading-relaxed mb-4">
+                "What made me choose NESS was the silence. My generator used to wake the neighborhood. Now, nobody even knows when the power goes out. It's been flawless for 18 months."
+              </blockquote>
+              <div className="text-center">
+                <p className="text-sm font-medium text-foreground">Rajesh Malhotra</p>
+                <p className="text-xs text-muted-foreground">Villa Owner • Bangalore</p>
+              </div>
             </div>
           </div>
 
           <div className="text-center mt-12">
             <Link to="/">
-              <Button variant="outline" size="lg" className="rounded-full px-8">
-                Explore NESS Systems
+              <Button variant="outline" size="lg" className="rounded-full px-8 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                Explore All NESS Systems
               </Button>
             </Link>
           </div>
