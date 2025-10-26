@@ -13,6 +13,8 @@ import { LiveTicker } from "@/components/ui/live-ticker";
 import batteryTechnology from "@/assets/battery-technology.jpg";
 import rdLaboratory from "@/assets/rd-laboratory.jpg";
 import systemArchitecture from "@/assets/system-architecture.jpg";
+import nucuPcb from "@/assets/nucu-pcb-premium.webp";
+import NucuSection from "@/components/NucuSection";
 
 const TechnologyEnhanced = () => {
 
@@ -248,6 +250,9 @@ const TechnologyEnhanced = () => {
           </div>
         </div>
       </section>
+
+      {/* NUCU - The Brain Behind NESS */}
+      <NucuSection nucuPcb={nucuPcb} />
 
       {/* Live Intelligence - Human Comfort */}
       <section className="py-32 bg-charcoal text-pearl">
