@@ -136,7 +136,7 @@ const Index = () => {
 
           {/* RIGHT: NESS Unit with ambient glow */}
           <motion.div 
-            className="relative hidden md:flex items-center justify-center h-full"
+            className="relative hidden md:flex items-center justify-center h-full w-full"
             style={{ y: imageY, opacity: imageOpacity }}
           >
             {/* Ambient glow behind product */}
@@ -147,7 +147,7 @@ const Index = () => {
               transition={{ duration: 3, ease: "easeOut" }}
             >
               <motion.div
-                className="w-[420px] h-[420px] rounded-full"
+                className="w-full h-full rounded-full"
                 style={{
                   background: 'radial-gradient(circle, #00C853 0%, transparent 70%)',
                   filter: 'blur(80px)'
@@ -168,12 +168,12 @@ const Index = () => {
               initial={{ opacity: 0, x: 20, filter: 'blur(8px)' }}
               animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
               transition={{ duration: 0.9, delay: 0.4 }}
-              className="relative z-10 max-w-[600px]"
+              className="relative z-10 w-full h-full flex items-center justify-center"
             >
               <img
                 src={nessHeroProduct}
                 alt="NESS home battery — reliable backup for Indian homes"
-                className="w-full h-auto object-contain"
+                className="w-full h-full object-contain"
                 loading="eager"
                 style={{
                   filter: 'drop-shadow(0 20px 60px rgba(0, 0, 0, 0.4))'
