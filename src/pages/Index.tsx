@@ -30,7 +30,7 @@ const Index = () => {
       <section className="relative h-screen w-full overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-full h-full scale-[1.2]">
+          <div className="w-full h-full scale-[0.8]">
             <PerformanceImage
               src={nessHeroProduct}
               alt="NESS Battery Energy Storage System"
