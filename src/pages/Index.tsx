@@ -29,13 +29,15 @@ const Index = () => {
       {/* 1. HERO SECTION */}
       <section className="relative h-screen w-full overflow-hidden">
         {/* Background Image */}
-        <div className="absolute inset-0">
-          <PerformanceImage
-            src={nessHeroProduct}
-            alt="NESS Battery Energy Storage System"
-            className="w-full h-full"
-            priority={true}
-          />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-full h-full scale-[1.2]">
+            <PerformanceImage
+              src={nessHeroProduct}
+              alt="NESS Battery Energy Storage System"
+              className="w-full h-full"
+              priority={true}
+            />
+          </div>
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
         </div>
 
