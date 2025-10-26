@@ -50,17 +50,11 @@ const Index = () => {
               The lights stay on. Work continues. Life doesn't stop. Because NESS was built for moments that matter—engineered to outlast India's harshest conditions.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="pt-4">
               <Link to="/residential">
                 <Button size="lg" className="bg-energy hover:bg-energy-glow text-white px-10 py-7 text-lg rounded-full shadow-glow hover:shadow-[0_0_50px_rgba(0,200,83,0.5)] transition-all duration-500">
                   Design My System
                   <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
-              
-              <Link to="/residential">
-                <Button variant="outline" size="lg" className="border-2 border-white/30 bg-white/10 backdrop-blur-md text-white hover:bg-white/20 px-10 py-7 text-lg rounded-full">
-                  Explore Products
                 </Button>
               </Link>
             </div>
@@ -76,17 +70,6 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 animate-bounce" style={{
-        animationDuration: '3s'
-      }}>
-          <div className="flex flex-col items-center gap-3 opacity-40 hover:opacity-60 transition-opacity">
-            <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2">
-              <div className="w-1 h-3 bg-white/60 rounded-full"></div>
-            </div>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 font-light">Scroll</span>
-          </div>
-        </div>
       </section>
 
       {/* 2. WHY NESS SECTION */}
@@ -137,8 +120,8 @@ const Index = () => {
                   Heavy. Hot. Half usable.
                 </p>
                 <div className="pt-4 space-y-2 text-sm text-graphite/50">
-                  <p>• 500-800 cycles only</p>
-                  <p>• 50% usable capacity</p>
+                  <p>• Replace every 2 years</p>
+                  <p>• Half your battery wasted</p>
                   <p>• Constant maintenance</p>
                 </div>
               </div>
@@ -172,8 +155,8 @@ const Index = () => {
                   Silent. Instant. Lasts 10+ years.
                 </p>
                 <div className="pt-4 space-y-2 text-sm text-energy font-medium">
-                  <p>• 6000+ cycles</p>
-                  <p>• 95% usable capacity</p>
+                  <p>• Lasts 10+ years</p>
+                  <p>• Use almost everything you store</p>
                   <p>• Zero maintenance</p>
                 </div>
               </div>
