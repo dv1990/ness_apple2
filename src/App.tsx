@@ -11,7 +11,6 @@ import React, { Suspense, lazy } from 'react';
 import Index from "./pages/Index";
 
 // Main pages - Lazy loaded for better performance
-const ResidentialEnhanced = lazy(() => import("./pages/ResidentialEnhanced"));
 const InstallersEnhanced = lazy(() => import("./pages/InstallersEnhanced"));
 const CommercialEnhanced = lazy(() => import("./pages/CommercialEnhanced"));
 const TechnologyEnhanced = lazy(() => import("./pages/TechnologyEnhanced"));
@@ -68,7 +67,6 @@ const App = () => {
           <Route path="/" element={<Index />} />
           
           {/* Enhanced Product Routes */}
-          <Route path="/residential-enhanced" element={<ResidentialEnhanced />} />
           <Route path="/commercial-enhanced" element={<CommercialEnhanced />} />
           <Route path="/technology-enhanced" element={<TechnologyEnhanced />} />
           <Route path="/installers-enhanced" element={<InstallersEnhanced />} />
@@ -107,7 +105,7 @@ const App = () => {
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           
           {/* Legacy redirects for existing routes */}
-          <Route path="/residential" element={<ResidentialEnhanced />} />
+          <Route path="/residential" element={<ContactHomeowner />} />
           <Route path="/commercial" element={<CommercialEnhanced />} />
           <Route path="/hiring" element={<Hiring />} />
           <Route path="/knowledge-hub" element={<KnowledgeHub />} />
