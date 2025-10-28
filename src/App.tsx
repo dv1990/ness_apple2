@@ -62,7 +62,7 @@ const App = () => {
           <Toaster />
           <Sonner />
           <ScrollProgressBar />
-          <BrowserRouter>
+          <Router>
             <Suspense fallback={<PageLoadingFallback />}>
               <Routes>
           {/* Overview (Landing) */}
@@ -120,7 +120,7 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
-          </BrowserRouter>
+          </Router>
         </TooltipProvider>
       </QueryClientProvider>
     </ErrorBoundary>
