@@ -27,13 +27,6 @@
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
     </noscript>
     
-    <!-- Critical Hero Image Preload -->
-    <link 
-      rel="preload" 
-      as="image"
-      href="/src/assets/ness-hero-product.webp"
-      fetchpriority="high"
-    />
     
     <!-- Preconnect to optimize external resources -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
@@ -57,5 +50,17 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      (function () {
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.getRegistrations().then(regs => {
+            regs.forEach(r => r.unregister());
+          }).catch(() => {});
+        }
+        if (window.caches && caches.keys) {
+          caches.keys().then(keys => keys.forEach(k => caches.delete(k))).catch(() => {});
+        }
+      })();
+    </script>
   </body>
 </html>
