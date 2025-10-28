@@ -17,19 +17,11 @@ export default defineConfig(({ mode }) => ({
     dedupe: ['react', 'react-dom', 'react-router-dom']
   },
   build: {
-    target: 'es2015',
-    minify: 'terser',
+    target: 'es2017',
+    minify: 'esbuild',
     cssCodeSplit: true,
     sourcemap: false,
     chunkSizeWarningLimit: 1500,
-    terserOptions: {
-      compress: {
-        // Remove all console statements in production
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
-      }
-    },
     rollupOptions: {
       output: {
         manualChunks: (id) => {
