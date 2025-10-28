@@ -7,16 +7,12 @@ import { LazySection } from "@/components/ui/lazy-section";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { PerformanceImage } from "@/components/ui/performance-image";
 import { cn } from "@/lib/utils";
-import nessHeroWall from "@/assets/ness-hero-wall.jpg";
+import nessHeroProduct from "@/assets/ness-hero-product.webp";
 import nessPodProduct from "@/assets/ness-pod-product.png";
 import nessProProduct from "@/assets/ness-pro-product.png";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import { ChevronDown } from "lucide-react";
 
 const Index = () => {
-  const navigate = useNavigate();
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   // Testimonial auto-rotation
@@ -28,105 +24,106 @@ const Index = () => {
   }, []);
 
   return <Layout>
-      {/* 1. PREMIUM HERO SECTION - Full Screen */}
-      <section className="relative h-screen w-full flex items-center overflow-hidden">
-        {/* Background Image with Vignette */}
-        <div className="absolute inset-0 z-0">
-          <PerformanceImage
-            src={nessHeroWall}
-            alt="NESS home battery mounted on modern wall"
-            priority={true}
-            className="w-full h-full object-cover object-[60%_center] lg:object-center"
-          />
-          {/* Gradient vignette for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0B1220]/85 via-[#0B1220]/60 to-transparent lg:from-[#0B1220]/70 lg:via-[#0B1220]/40" />
-          {/* Mobile: stronger vignette on top-left */}
-          <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-[#0B1220]/60 to-transparent lg:hidden" />
-        </div>
-
-        {/* Hero Content Container */}
-        <div className="relative z-10 w-full h-full flex items-center">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
-            <div className="max-w-[92vw] lg:max-w-[46rem] space-y-6 lg:space-y-8">
-              {/* Headline */}
-              <motion.h1
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                className="text-[clamp(34px,7vw,52px)] md:text-[clamp(46px,6.2vw,72px)] lg:text-[clamp(64px,5.5vw,96px)] font-bold leading-[1.1] text-[#E5E7EB]"
-              >
-                Get your home{' '}
-                <span className="font-sacramento text-[108%] md:text-[110%] text-[#00C853]">
-                  NESS'ed
-                </span>
-                .
-              </motion.h1>
-
-              {/* Subtext */}
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                className="text-lg md:text-xl lg:text-[22px] text-[#E5E7EB] leading-relaxed max-w-[92vw] md:max-w-full"
-              >
-                The all-in-one home battery that stores solar, powers essentials, and disappears on your wall.
-              </motion.p>
-
-              {/* Definition */}
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                className="text-base md:text-lg lg:text-lg text-[#A1A1AA] leading-relaxed max-w-[92vw] md:max-w-full mt-2 md:mt-3"
-              >
-                <span className="font-sacramento text-[#00C853]">'NESS'ed'</span> means your home runs on clean, silent power — even when the grid doesn't.
-              </motion.p>
-
-              {/* CTA Group */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start sm:items-center pt-2 md:pt-4"
-              >
-                <Button
-                  onClick={() => navigate('/homeowners')}
-                  size="lg"
-                  className="min-h-[48px] px-8 md:px-10 py-3.5 md:py-4 rounded-full bg-[#00C853] hover:bg-[#19B86C] text-white text-base md:text-lg font-semibold transition-colors duration-300 shadow-lg"
-                >
-                  Design My System
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <span className="text-sm md:text-base text-[#A1A1AA] leading-snug">
-                  Find your perfect setup in 30 seconds.
-                </span>
-              </motion.div>
-
-              {/* Footer Tagline */}
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                className="text-sm md:text-base text-[#A1A1AA] pt-4 md:pt-6 lg:pt-8"
-              >
-                Engineered in India for homes that never pause.
-              </motion.p>
-            </div>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden lg:flex"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.8 }}
+      {/* 1. HERO SECTION */}
+      <section 
+        className="relative min-h-screen w-full overflow-hidden"
+      >
+        {/* Full-screen Product Image Background */}
+        <div 
+          className="absolute inset-0 w-full h-full"
         >
-          <div className="flex flex-col items-center gap-2 text-[#A1A1AA]">
-            <span className="text-sm">Scroll to explore</span>
-            <ChevronDown className="h-6 w-6 animate-bounce" />
+          {/* Ambient glow behind product */}
+          <div
+            className="absolute inset-0 flex items-center justify-center"
+            style={{ opacity: 0.08 }}
+          >
+            <div
+              className="w-full h-full"
+              style={{
+                background: 'radial-gradient(circle at 60% 50%, #00C853 0%, transparent 70%)',
+                filter: 'blur(120px)'
+              }}
+            />
           </div>
-        </motion.div>
+
+          {/* Product Image - Full Screen */}
+          <div
+            className="absolute inset-0 w-full h-full"
+            style={{ filter: 'brightness(0.7)' }}
+          >
+            <PerformanceImage
+              src={nessHeroProduct}
+              alt="NESS home battery — reliable backup power for modern Indian homes"
+              className="w-full h-full object-cover"
+              priority={true}
+            />
+          </div>
+
+          {/* Dark gradient overlay for text readability */}
+          <div 
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(135deg, #0B1220ee 0%, #0B122088 40%, #1C1F2644 70%, transparent 100%)'
+            }}
+          />
+        </div>
+
+        {/* Text Content Overlaid */}
+        <div className="relative z-10 h-screen flex items-center max-w-[1600px] mx-auto px-8 md:px-16">
+          <div 
+            className="space-y-8 md:space-y-10 max-w-2xl"
+          >
+            {/* Headline with colored highlights */}
+            <h1 
+              className="font-display text-[42px] md:text-[72px] font-bold leading-[1.05] tracking-[0.02em] text-white"
+            >
+              When the grid goes <span className="mr-[0.3em]" style={{ color: '#00C853' }}>dark</span>, your life stays <span style={{ color: '#00C853' }}>lit.</span>
+            </h1>
+            
+            {/* Subtext */}
+            <p 
+              className="font-sans text-[18px] font-normal leading-[1.4] tracking-[-0.011em] max-w-[440px]"
+              style={{ color: '#E5E7EB' }}
+            >
+              Meet NESS — the intelligent home battery that keeps your home bright, connected, and alive.
+              <br />
+              Clean energy. Seamlessly delivered. Beautifully lit.
+            </p>
+
+            {/* CTA */}
+            <div 
+              className="pt-4 space-y-4"
+            >
+              <Link to="/residential">
+                <Button 
+                  size="lg" 
+                  className="font-sans bg-[#00C853] hover:bg-[#00E676] text-white font-semibold px-10 py-7 text-lg rounded-xl shadow-[0_0_30px_rgba(0,200,83,0.3)] hover:shadow-[0_0_44px_rgba(0,230,118,0.5)] transition-all duration-300"
+                  style={{
+                    transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)'
+                  }}
+                >
+                  Design My System →
+                </Button>
+              </Link>
+              
+              {/* CTA Subtext */}
+              <p
+                className="font-sans text-[14px] font-normal tracking-[0.005em]"
+                style={{ color: '#A1A1AA' }}
+              >
+                Find your perfect setup in under 30 seconds.
+              </p>
+            </div>
+
+            {/* Footer Tagline */}
+            <p
+              className="font-sans text-[14px] font-normal tracking-[0.01em]"
+              style={{ color: '#9CA3AF' }}
+            >
+              Engineered in India for homes that never pause.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* 2. ONE KEY DIFFERENTIATOR */}
