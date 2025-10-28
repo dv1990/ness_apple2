@@ -20,6 +20,9 @@ const ContactEnhanced = lazy(() => import("./pages/ContactEnhanced"));
 const NessAcSync = lazy(() => import("./pages/products/NessAcSync"));
 const EVChargingMicrogrid = lazy(() => import("./pages/EVChargingMicrogrid"));
 
+// Critical homeowner page - Eager loaded to prevent blank screen
+import ContactHomeowner from "./pages/contact/ContactHomeowner";
+
 // Secondary pages - Lazy loaded
 const TrueWarranty = lazy(() => import("./pages/TrueWarranty"));
 const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
@@ -32,7 +35,6 @@ const News = lazy(() => import("./pages/company/News"));
 const NewsArticle = lazy(() => import("./pages/company/NewsArticle"));
 const KnowledgeHub = lazy(() => import("./pages/KnowledgeHub"));
 const KnowledgeArticle = lazy(() => import("./pages/KnowledgeArticle"));
-const ContactHomeowner = lazy(() => import("./pages/contact/ContactHomeowner"));
 const ContactDistributor = lazy(() => import("./pages/contact/ContactDistributor"));
 const ContactInstaller = lazy(() => import("./pages/contact/ContactInstaller"));
 const Troubleshooting = lazy(() => import("./pages/Troubleshooting"));
@@ -60,7 +62,7 @@ const App = () => {
           <Toaster />
           <Sonner />
           <ScrollProgressBar />
-          <BrowserRouter>
+          <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
             <Suspense fallback={<PageLoadingFallback />}>
               <Routes>
           {/* Overview (Landing) */}

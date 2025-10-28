@@ -12,16 +12,22 @@ import nessProProduct from "@/assets/ness-pro-product.png";
 
 type EnergySetup = 'new-solar' | 'existing-solar' | 'backup-only' | 'custom' | null;
 const ContactHomeowner = () => {
+  console.log('[ContactHomeowner] Component mounted');
+  
   const [step, setStep] = useState<'intro' | 'selector' | 'product' | 'summary'>('intro');
   const [selectedSetup, setSelectedSetup] = useState<EnergySetup>(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
+  console.log('[ContactHomeowner] Current step:', step, 'Selected setup:', selectedSetup);
+
   const handleSetupSelect = (setup: EnergySetup) => {
+    console.log('[ContactHomeowner] Setup selected:', setup);
     setIsTransitioning(true);
     setSelectedSetup(setup);
     setTimeout(() => {
       setStep('product');
       setIsTransitioning(false);
+      console.log('[ContactHomeowner] Transitioned to product step');
     }, 600);
   };
 
