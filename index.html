@@ -49,6 +49,29 @@
   </head>
   <body>
     <div id="root"></div>
+    
+    <!-- Runtime Error Capture -->
+    <script>
+      // Global error handler
+      window.onerror = function(msg, url, lineNo, columnNo, error) {
+        console.error('🔴 Runtime Error:', { msg, url, lineNo, columnNo, error });
+        const banner = document.createElement('div');
+        banner.style.cssText = 'position:fixed;top:0;left:0;right:0;background:#dc2626;color:white;padding:12px;text-align:center;z-index:99999;font-family:sans-serif;font-size:14px;';
+        banner.textContent = '⚠️ App Error: ' + msg;
+        document.body.appendChild(banner);
+        return false;
+      };
+      
+      // Unhandled promise rejection handler
+      window.addEventListener('unhandledrejection', function(event) {
+        console.error('🔴 Unhandled Promise Rejection:', event.reason);
+        const banner = document.createElement('div');
+        banner.style.cssText = 'position:fixed;top:40px;left:0;right:0;background:#dc2626;color:white;padding:12px;text-align:center;z-index:99999;font-family:sans-serif;font-size:14px;';
+        banner.textContent = '⚠️ Promise Error: ' + (event.reason?.message || event.reason);
+        document.body.appendChild(banner);
+      });
+    </script>
+    
     <script>
       (function () {
         try {

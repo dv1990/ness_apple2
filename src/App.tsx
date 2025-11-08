@@ -61,7 +61,7 @@ const App = () => {
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <ScrollProgressBar />
+          {/* <ScrollProgressBar /> Temporarily disabled for debugging */}
           <Router>
             <Suspense fallback={<PageLoadingFallback />}>
               <Routes>
