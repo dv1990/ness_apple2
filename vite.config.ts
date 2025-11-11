@@ -27,9 +27,9 @@ export default defineConfig(({ mode }) => ({
         manualChunks: (id) => {
           // Vendor chunk for React ecosystem
           if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
-              return 'react-vendor';
-            }
+        if (id.includes('node_modules/react/') || id.includes('node_modules/react-dom/') || id.includes('node_modules/react-router')) {
+          return 'react-vendor';
+        }
             // Framer Motion separate chunk (heavy animation library)
             if (id.includes('framer-motion')) {
               return 'framer-motion';
